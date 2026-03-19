@@ -212,11 +212,11 @@ html, body {
 }
 
 /* ============================================================
-   2-COLUMN GRID CARDS
-   ============================================================ */
+2-COLUMN GRID CARDS
+============================================================ */
 .grid-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
   padding: 0 20px;
 }
@@ -228,39 +228,51 @@ html, body {
   box-shadow: var(--shadow-sm);
   transition: transform 0.15s;
 }
-.grid-card:active { transform: scale(0.97); }
+
+.grid-card:active {
+  transform: scale(0.97);
+}
 
 .grid-card-inner {
-  padding: 16px 14px 14px;
-  min-height: 130px;
+  padding: 16px 12px 12px;
+  min-height: 150px; /* slightly taller to fit 3–4 lines of summary */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.grid-cat-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: rgba(255,255,255,0.75);
-  text-transform: uppercase;
-}
+/* no category label anymore */
 
 .grid-title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.2;
-  margin-top: 6px;
-  flex: 1;
+  margin-bottom: 6px;
 }
 
-.grid-explore {
-  font-size: 12px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.85);
-  margin-top: 10px;
+/* new summary text inside the card */
+.grid-summary {
+  font-size: 11px;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.90);
+  margin-bottom: 6px;
 }
+
+/* Explore row */
+.grid-explore {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.90);
+}
+
+/* optional small badge when some concepts are read */
+.grid-explore .grid-read-badge {
+  font-weight: 600;
+  font-size: 10px;
+  opacity: 0.9;
+}
+
 
 /* ============================================================
    LIST CARDS
