@@ -1,0 +1,200 @@
+{
+  "id": "fractions",
+  "title": "Fractions",
+  "category": "Science and Math",
+  "summary": "Fractions are one of the most useful ideas in everyday math because they describe parts of a whole, comparisons between quantities, and numbers that are not written as whole numbers. A fraction like 1/2 means one equal part out of two, but fractions can also represent division, ratios, and measurements. People use them in cooking, shopping, construction, and many kinds of problem solving. The topic becomes easier once you understand how the numerator and denominator work and why equal parts matter. Learning fractions well also helps with decimals, percentages, and algebra later on.",
+  "concepts": [
+    {
+      "id": "what_fractions_are",
+      "title": "What Fractions Are",
+      "summary": "Fractions show parts of a whole or parts of a group. The bottom number, called the denominator, tells how many equal parts the whole is split into. The top number, called the numerator, tells how many of those parts you have. This idea sounds simple, but it is the foundation for nearly everything else you do with fractions. Once you understand that a fraction only makes sense when the parts are equal, you can start reading, drawing, comparing, and using fractions correctly. Fractions also connect to division, because a fraction like 3/4 can mean 3 divided by 4. That makes fractions a bridge between counting, sharing, measuring, and more advanced math.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Fractions usually appear when something is not whole. That might be a pizza cut into slices, a measuring cup with a line in the middle, or a number that falls between whole numbers on a number line. People often meet fractions early in school, but they keep showing up in practical work and daily life.",
+            "A lot of fraction confusion comes from the fact that the same symbol can represent several ideas at once. It can mean part of a whole, division, or a ratio. Understanding the basic meaning first makes those later uses much easier."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key ideas here are the numerator, denominator, and equal parts. The numerator counts what you have, while the denominator tells the size of each part in relation to the whole. Equal partitioning is the force that makes the whole system work.",
+            "The biggest challenge is that students often focus on the two numbers separately instead of reading the fraction as one relationship. Fractions only make sense when both numbers are understood together."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "A fraction is a number that describes a relationship between parts and a whole. It is not just two stacked numbers. The top and bottom work together to tell you how much you have and what size unit you are using.",
+            "This is why 1/2 is larger than 1/4: the whole is split into fewer pieces, so each piece is bigger. The denominator changes the size of the pieces, not just the count."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To read a fraction, identify the denominator first so you know the whole is being divided into equal pieces. Then look at the numerator to see how many of those pieces are being counted. Drawing simple shapes or using a number line can make this much easier.",
+            "You can also think of fractions as division. For example, 3/4 means 3 divided by 4, which helps explain why fractions can be smaller than 1, equal to 1, or larger than 1."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Once fractions make sense, a lot of later math becomes easier. Decimals, percentages, ratios, and algebra all rely on the same basic idea that numbers can represent parts of a larger relationship.",
+            "People who understand fractions well are better prepared for measurement, recipe adjustments, and other real-world tasks that involve sharing or scaling amounts."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept is the starting point for the whole topic because every later fraction skill depends on knowing what a fraction means. It connects directly to comparing fractions, operations with fractions, and converting between fractions, decimals, and percentages."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comparing_fractions",
+      "title": "Comparing Fractions",
+      "summary": "Comparing fractions means deciding which fraction is larger, which is smaller, or whether two fractions are equal. This becomes easier when the fractions have the same denominator or the same numerator, because then you can compare the numbers more directly. When they do not, you may need to find a common denominator or use benchmark fractions like 1/2. Comparing fractions is important because it helps you estimate, order values, and check whether an answer makes sense. It also builds number sense, which is the ability to understand how numbers relate to one another. In real life, comparison helps when you are choosing sizes, measuring ingredients, or deciding which amount is greater. The main goal is to see fractions as quantities, not just symbols.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Comparing fractions comes up any time you want to know which amount is greater. A recipe may call for 2/3 cup of milk in one place and 3/4 cup in another, and you need to know which is larger. On a number line, comparing fractions helps you place them in the right order.",
+            "This skill matters because fractions can look misleading. A fraction with a larger denominator is not always larger, so you need a strategy instead of guessing based on the numbers alone."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The important forces are common denominators, common numerators, and benchmark values like 1/2, 1, or 0. These give you reference points for comparison. Equal-sized wholes are also essential, because fractions can only be compared fairly if they refer to the same whole.",
+            "The main obstacle is that people often compare only the top numbers or only the bottom numbers. That works sometimes, but not always, so a better method is needed."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Fractions are compared by looking at how much of the same kind of whole they represent. If the pieces are the same size, the fraction with more pieces is bigger. If the number of pieces is the same, the one with smaller pieces is bigger only in the sense that each piece is larger, which changes the value of the fraction.",
+            "The idea is to compare quantities, not appearances. That is why common denominators and benchmark fractions are so useful."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If fractions have the same denominator, compare numerators. If they have the same numerator, compare denominators. If neither matches, rewrite them with a common denominator or compare each one to a benchmark like 1/2.",
+            "For example, 3/4 is greater than 2/3 because 3/4 is closer to 1. A number line or visual model can make that relationship easier to see."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Comparing fractions helps with ordering data, checking estimates, and making decisions in practical settings. It also lays the groundwork for more advanced fraction operations because you begin to understand how fraction size changes.",
+            "This skill is especially useful later when fractions appear inside algebra or measurement problems, where quick judgment matters."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects to equivalent fractions and common denominators, because those are often the tools you use to compare unlike fractions. It also leads naturally into adding and subtracting fractions, where matching denominators becomes essential."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fraction_operations",
+      "title": "Adding, Subtracting, Multiplying, and Dividing Fractions",
+      "summary": "Fraction operations are the rules for combining or changing fractions in a calculation. Adding and subtracting fractions usually require a common denominator, because you can only combine pieces that are the same size. Multiplying fractions is more direct: you multiply across the top and across the bottom, which often makes the result smaller. Dividing fractions uses the idea of multiplying by the reciprocal, which can feel strange at first but follows a logical pattern. These rules matter because fraction calculations show up in recipes, measurements, rates, and algebra. The most important thing is understanding why the rules work instead of memorizing them as tricks. Once the logic is clear, the procedures become much easier to remember.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Fraction operations are what people usually mean when they say they are ‘doing fractions.’ These operations appear in schoolwork, but also in practical tasks like scaling a recipe or dividing a length into equal parts. They are the working tools of fraction math.",
+            "Many students struggle here because the rules for each operation are different. Addition is not handled the same way as multiplication, so it helps to understand the reason behind each rule."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The central ideas are the common denominator, reciprocal, and equal-sized parts. For addition and subtraction, equal parts are necessary. For division, the reciprocal changes the problem into multiplication.",
+            "The biggest force shaping this topic is the structure of the fraction itself. What works for one operation does not always work for another, because the meaning of the operation changes the meaning of the numbers."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Adding and subtracting fractions means combining quantities of the same size. Multiplying fractions means taking a part of a part. Dividing fractions means asking how many groups of a fraction fit into another amount.",
+            "These ideas explain why the rules look the way they do. The procedures are not random; they reflect the meaning of each operation."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To add or subtract, rewrite the fractions with the same denominator, then combine the numerators. To multiply, multiply numerators together and denominators together, then simplify if possible. To divide, flip the second fraction and multiply.",
+            "For example, 1/2 + 1/3 becomes 3/6 + 2/6, which equals 5/6. For division, 2/3 ÷ 4/5 becomes 2/3 × 5/4. The steps are mechanical, but the reasoning is about matching the structure of the problem."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Once you can perform fraction operations, you can solve many everyday and academic problems that involve scale, rate, and proportional thinking. You also become more comfortable with algebraic expressions, where fractions appear often.",
+            "This concept is one of the most important gateways from basic arithmetic into higher math because it teaches both procedure and structure."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept builds directly on what fractions are and how to compare them. It also connects to equivalent fractions, decimals, percentages, and ratios, because those ideas often use the same reasoning in different forms."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fractions_decimals_percentages",
+      "title": "Fractions, Decimals, and Percentages",
+      "summary": "Fractions, decimals, and percentages are three different ways to write the same kind of idea: a part of a whole. A fraction like 1/4, a decimal like 0.25, and a percentage like 25% all represent the same value. Learning how to move between them makes math much more flexible and practical. Fractions are often better for exact parts, decimals are often easier for money and measurement, and percentages are useful for comparison and change. This topic matters because real life does not always use just one format. When you can convert between all three, you can understand discounts, grades, statistics, and many kinds of data more easily. The key is to see them as connected languages, not separate topics.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "People encounter these forms in different places. Fractions show up in recipes and measurements, decimals show up in money and calculators, and percentages show up in sales, polls, and scores. They all describe the same underlying idea in different formats.",
+            "Students often treat them as separate topics, which makes math feel harder than it needs to be. Seeing the connection among them reduces that confusion."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The main force is conversion. A fraction can be rewritten as a decimal by division, and a decimal can be rewritten as a percentage by moving the decimal point and multiplying by 100. Benchmark values like 1/2, 1/4, and 1/10 help make the conversions easier.",
+            "The important idea is that the form changes, but the value does not. 0.5, 1/2, and 50% are different notations for the same amount."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Fractions, decimals, and percentages are equivalent ways to describe parts of a whole. The choice depends on which form makes the problem easiest to understand or calculate.",
+            "This is why math becomes more flexible when you can move among them. You are not learning three separate systems; you are learning one system with three representations."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To convert a fraction to a decimal, divide the numerator by the denominator. To convert a decimal to a percentage, multiply by 100 and add the percent sign. To convert a percentage to a decimal, divide by 100.",
+            "For example, 3/4 becomes 0.75, and 0.75 becomes 75%. These conversions are useful because they let you choose the most convenient form for the problem in front of you."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Knowing these conversions makes shopping, budgeting, grading, and data reading much easier. It also prepares you for algebra and statistics, where switching formats is a normal part of problem solving.",
+            "This concept gives fractions a real-world purpose because it shows that the same value can be expressed in multiple useful ways."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept ties together the whole fractions topic. It links to comparison, operations, and mental math, because conversions often make calculations simpler and faster."
+          ]
+        }
+      ]
+    }
+  ]
+}
