@@ -48,7 +48,9 @@ function getTotalReadCount() {
 // ============================================================
 async function loadTopicsIndex() {
   const res = await fetch(`${BASE}/data/topics.json`);
-  state.topics = await res.json();
+  if (!res.ok) throw new Error(`topics.json fetch failed: HTTP ${res.status}`);
+  const data = await res.json();
+  state.topics = Array.isArray(data) ? data : [];
 }
 async function loadTopic(id) {
   const res = await fetch(`${BASE}/data/topics/${id}.json`);
@@ -135,9 +137,10 @@ function renderHome(filterCat) {
   const short = { 'All':'All','History and Culture':'History','Psychology':'Psych',
                    'Economics and Finance':'Finance','Science and Math':'Science','Languages':'Languages' };
 
+  const topicsList = Array.isArray(state.topics) ? state.topics : [];
   const filtered = (filterCat && filterCat!=='All')
-    ? state.topics.filter(t => t.category===filterCat)
-    : state.topics;
+    ? topicsList.filter(t => t.category===filterCat)
+    : topicsList;
 
   const hero    = filtered[0];
   const grid    = filtered.slice(1, 3);
