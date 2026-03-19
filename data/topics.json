@@ -35,5 +35,12 @@
   "category": "History and Culture",
   "summary": "World War II began in 1939 after Nazi Germany invaded Poland, following years of aggressive expansion and failed appeasement by Britain and France. The invasion triggered declarations of war and turned a European crisis into a global conflict."
   }
+  {
+  "id": "solar_system",
+  "title": "The Solar System",
+  "category": "Science",
+  "summary": "The Solar System is the Sun and all the objects that orbit it, including eight planets, dwarf planets, moons, asteroids, and comets. It formed about 4.6 billion years ago from a cloud of gas and dust that collapsed into a spinning disk."
+  }
+
 ]
 
