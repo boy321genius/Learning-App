@@ -1,11 +1,11 @@
 const CACHE_NAME = 'learnapp-v1';
 const APP_SHELL = [
-  '/learning-app/',
-  '/learning-app/index.html',
-  '/learning-app/src/app.js',
-  '/learning-app/src/styles.css',
-  '/learning-app/manifest.json',
-  '/learning-app/icons/icon-180.png'
+  '/Learning-App/',
+  '/Learning-App/index.html',
+  '/Learning-App/src/app.js',
+  '/Learning-App/src/styles.css',
+  '/Learning-App/manifest.json',
+  '/Learning-App/icons/icon-180.png'
 ];
 
 self.addEventListener('install', event => {
@@ -27,7 +27,6 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   if (url.pathname.includes('/data/')) {
-    // Network-first for ALL data files (topics index + per-topic JSON)
     event.respondWith(
       fetch(event.request)
         .then(res => {
@@ -38,7 +37,6 @@ self.addEventListener('fetch', event => {
         .catch(() => caches.match(event.request))
     );
   } else {
-    // Cache-first for app shell
     event.respondWith(
       caches.match(event.request).then(cached => cached || fetch(event.request))
     );
