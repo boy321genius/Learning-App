@@ -142,10 +142,6 @@ function renderHome(filterCat) {
     ? topicsList.filter(t => t.category===filterCat)
     : topicsList;
 
-  const hero    = filtered[0];
-  const grid    = filtered.slice(1, 3);
-  const list    = filtered.slice(3);
-
   app.innerHTML = `
     <div class="screen home-screen">
       <header class="app-header">
@@ -176,20 +172,24 @@ function renderHome(filterCat) {
             <p>Content is coming soon.<br>Check back after the first topics are added.</p>
           </div>
         ` : `
-          <div class="section-label">Featured</div>
-          ${heroCardHTML(hero)}
+          <div class="section-label">TOPICS</div>
+          <div class="grid-cards">
+            ${filtered.map(topic => {
+              const cc = catColor(topic.category);
+              const readCount = getTopicReadCount(topic.id);
+              return `
+                <div class="grid-card" onclick="navigate('#topic/${topic.id}/0')"
+                     style="background: linear-gradient(135deg, ${cc.g1}, ${cc.g2});">
+                  <div class="grid-card-inner">
+                    <div class="grid-title">${topic.title}</div>
+                    <div class="grid-summary">${topic.summary || ''}</div>
+                    <div class="grid-explore">Explore &rarr;${readCount ? ` · ${readCount} read` : ''}</div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
 
-          ${grid.length > 0 ? `
-            <div class="section-label">More Topics</div>
-            <div class="grid-cards" id="grid-cards">
-              ${grid.map(gridCardHTML).join('')}
-            </div>` : ''}
-
-          ${list.length > 0 ? `
-            <div class="section-label">All Topics</div>
-            <div class="list-cards" id="list-cards">
-              ${list.map(listCardHTML).join('')}
-            </div>` : ''}
         `}
       </div>
 
