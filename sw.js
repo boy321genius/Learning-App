@@ -6,8 +6,8 @@ const APP_SHELL = [
   '/learning-app/src/styles.css',
   '/learning-app/manifest.json',
   '/learning-app/icons/icon-180.png',
-  '/learning-app/data/topics.json'
 ];
+
 
 // Install: cache the app shell
 self.addEventListener('install', event => {
@@ -30,8 +30,9 @@ self.addEventListener('activate', event => {
 // Fetch: cache-first for shell, network-first for topic JSON
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
-  if (url.pathname.includes('/data/topics/')) {
-    // Network-first for per-topic data (you'll be adding new files frequently)
+
+  if (url.pathname.includes('/data/')) {
+    // Network-first for ALL data files (topics.json index + per-topic files)
     event.respondWith(
       fetch(event.request)
         .then(res => {
@@ -42,10 +43,11 @@ self.addEventListener('fetch', event => {
         .catch(() => caches.match(event.request))
     );
   } else {
-    // Cache-first for app shell
+    // Cache-first for app shell (JS, CSS, HTML, icons)
     event.respondWith(
       caches.match(event.request).then(cached => cached || fetch(event.request))
     );
   }
 });
+
 
