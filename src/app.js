@@ -1,7 +1,7 @@
 // ============================================================
-// CONFIG  –  change BASE if your repo is named differently
+// CONFIG  –  BASE must exactly match your GitHub repo name (case-sensitive)
 // ============================================================
-const BASE = '/learning-app';
+const BASE = '/Learning-App';
 
 const CATEGORY_COLORS = {
   'History and Culture':     '#FF6B6B',
@@ -75,40 +75,26 @@ function handleRoute() {
   const parts = hash.replace('#', '').split('/');
   const screen = parts[0];
 
-  if (!screen || screen === 'home') {
-    renderHome();
-  } else if (screen === 'topic') {
-    renderTopic(parts[1], parseInt(parts[2] || '0'));
-  } else if (screen === 'deepdive') {
-    renderDeepDive(parts[1], parts[2]);
-  } else {
-    renderHome();
-  }
+  if (!screen || screen === 'home') renderHome();
+  else if (screen === 'topic')      renderTopic(parts[1], parseInt(parts[2] || '0'));
+  else if (screen === 'deepdive')   renderDeepDive(parts[1], parts[2]);
+  else                              renderHome();
 }
 
 // ============================================================
 // RENDER: HOME
 // ============================================================
 function renderHome(filterCategory) {
-  const app      = document.getElementById('app');
+  const app       = document.getElementById('app');
   const totalRead = getTotalReadCount();
 
   const categories = [
-    'All',
-    'History and Culture',
-    'Psychology',
-    'Economics and Finance',
-    'Science and Math',
-    'Languages'
+    'All','History and Culture','Psychology',
+    'Economics and Finance','Science and Math','Languages'
   ];
-
   const catShort = {
-    'All':                     'All',
-    'History and Culture':     'History',
-    'Psychology':              'Psych',
-    'Economics and Finance':   'Finance',
-    'Science and Math':        'Science',
-    'Languages':               'Languages'
+    'All':'All','History and Culture':'History','Psychology':'Psych',
+    'Economics and Finance':'Finance','Science and Math':'Science','Languages':'Languages'
   };
 
   const filtered = (filterCategory && filterCategory !== 'All')
@@ -117,7 +103,6 @@ function renderHome(filterCategory) {
 
   app.innerHTML = `
     <div class="screen home-screen">
-
       <header class="app-header">
         <div class="header-left">
           <div class="app-logo">🧠</div>
@@ -134,8 +119,7 @@ function renderHome(filterCategory) {
 
       <div class="category-tabs" id="category-tabs">
         ${categories.map(cat => `
-          <button
-            class="cat-tab ${(!filterCategory && cat === 'All') || filterCategory === cat ? 'active' : ''}"
+          <button class="cat-tab ${(!filterCategory && cat==='All')||filterCategory===cat?'active':''}"
             data-cat="${cat}">${catShort[cat]}</button>
         `).join('')}
       </div>
@@ -158,13 +142,11 @@ function renderHome(filterCategory) {
                   <p class="topic-summary">${topic.summary}</p>
                   ${read > 0 ? `<div class="topic-progress-badge">${read} read</div>` : ''}
                 </div>
-              </div>
-            `;
+              </div>`;
           }).join('')}
       </div>
     </div>
 
-    <!-- Settings bottom sheet -->
     <div class="modal-overlay hidden" id="settings-modal">
       <div class="modal">
         <div class="modal-header">
@@ -175,20 +157,19 @@ function renderHome(filterCategory) {
           <button class="action-btn" id="export-btn">
             <span class="btn-icon">📤</span><span>Export Progress</span>
           </button>
-          <label class="action-btn" id="import-label">
+          <label class="action-btn">
             <span class="btn-icon">📥</span><span>Import Progress</span>
             <input type="file" accept=".json" id="import-input" class="hidden" />
           </label>
           <p class="settings-note">
             Your progress is stored only on this device.
-            Use Export / Import to back it up or move it to another device.
+            Export/Import to back it up or move it to another device.
           </p>
         </div>
       </div>
     </div>
   `;
 
-  // ── event bindings ──
   document.getElementById('settings-btn').addEventListener('click', () =>
     document.getElementById('settings-modal').classList.remove('hidden'));
   document.getElementById('close-settings').addEventListener('click', () =>
@@ -196,19 +177,15 @@ function renderHome(filterCategory) {
   document.getElementById('settings-modal').addEventListener('click', e => {
     if (e.target === e.currentTarget) e.currentTarget.classList.add('hidden');
   });
-
   document.getElementById('export-btn').addEventListener('click', exportProgress);
   document.getElementById('import-input').addEventListener('change', e => {
     if (e.target.files[0]) importProgress(e.target.files[0]);
   });
-
   document.getElementById('category-tabs').addEventListener('click', e => {
     const btn = e.target.closest('.cat-tab');
     if (!btn) return;
-    const cat = btn.dataset.cat;
-    renderHome(cat === 'All' ? null : cat);
+    renderHome(btn.dataset.cat === 'All' ? null : btn.dataset.cat);
   });
-
   document.getElementById('topics-grid').addEventListener('click', e => {
     const card = e.target.closest('.topic-card');
     if (card) navigate(`#topic/${card.dataset.topicId}/0`);
@@ -216,7 +193,7 @@ function renderHome(filterCategory) {
 }
 
 // ============================================================
-// RENDER: TOPIC  (concept cards)
+// RENDER: TOPIC
 // ============================================================
 async function renderTopic(topicId, conceptIndex = 0) {
   const app = document.getElementById('app');
@@ -224,14 +201,12 @@ async function renderTopic(topicId, conceptIndex = 0) {
 
   let topic;
   try {
-    if (state.currentTopic && state.currentTopic.id === topicId) {
-      topic = state.currentTopic;
-    } else {
-      topic = await loadTopic(topicId);
-      state.currentTopic = topic;
-    }
+    topic = (state.currentTopic && state.currentTopic.id === topicId)
+      ? state.currentTopic
+      : await loadTopic(topicId);
+    state.currentTopic = topic;
   } catch {
-    app.innerHTML = `<div class="screen"><div class="error-state">Could not load topic. Check your connection.</div></div>`;
+    app.innerHTML = `<div class="screen"><div class="error-state">Could not load topic.</div></div>`;
     return;
   }
 
@@ -243,7 +218,6 @@ async function renderTopic(topicId, conceptIndex = 0) {
 
   app.innerHTML = `
     <div class="screen topic-screen">
-
       <header class="app-header">
         <button class="back-btn" id="back-btn">‹ Back</button>
         <h1 class="header-title">${topic.title}</h1>
@@ -251,21 +225,21 @@ async function renderTopic(topicId, conceptIndex = 0) {
       </header>
 
       <div class="concept-progress-bar">
-        <div class="concept-progress-fill" style="width:${((conceptIndex + 1) / total) * 100}%"></div>
+        <div class="concept-progress-fill" style="width:${((conceptIndex+1)/total)*100}%"></div>
       </div>
-      <div class="concept-counter">${conceptIndex + 1} / ${total}</div>
+      <div class="concept-counter">${conceptIndex+1} / ${total}</div>
 
       <div class="concept-card-wrapper" id="card-wrapper">
-        <div class="concept-card ${isRead ? 'is-read' : ''}" id="concept-card">
+        <div class="concept-card ${isRead?'is-read':''}" id="concept-card">
           <div class="concept-card-top">
             <span class="concept-category-chip"
-              style="background:${color}22; color:${color}">${topic.category}</span>
+              style="background:${color}22;color:${color}">${topic.category}</span>
             ${isRead ? '<span class="read-badge">✓ Read</span>' : ''}
           </div>
           <h2 class="concept-title">${concept.title}</h2>
           <div class="concept-summary">${concept.summary}</div>
           <div class="concept-card-actions">
-            <button class="mark-read-btn ${isRead ? 'marked' : ''}" id="mark-read-btn">
+            <button class="mark-read-btn ${isRead?'marked':''}" id="mark-read-btn">
               ${isRead ? '✓ Read' : 'Mark as Read'}
             </button>
             <button class="deep-dive-btn" id="deep-dive-btn">Deep‑Dive →</button>
@@ -274,51 +248,41 @@ async function renderTopic(topicId, conceptIndex = 0) {
       </div>
 
       <div class="concept-nav">
-        <button class="nav-btn prev-btn ${conceptIndex === 0 ? 'disabled' : ''}"
-          id="prev-btn" ${conceptIndex === 0 ? 'disabled' : ''}>‹</button>
-
+        <button class="nav-btn ${conceptIndex===0?'disabled':''}"
+          id="prev-btn" ${conceptIndex===0?'disabled':''}>‹</button>
         <div class="dots-container" id="dots-container">
-          ${topic.concepts.map((c, i) => `
-            <div class="dot
-              ${i === conceptIndex ? 'active' : ''}
-              ${isConceptRead(topicId, c.id) ? 'read' : ''}"
+          ${topic.concepts.map((c,i) => `
+            <div class="dot ${i===conceptIndex?'active':''} ${isConceptRead(topicId,c.id)?'read':''}"
               data-index="${i}"></div>
           `).join('')}
         </div>
-
-        <button class="nav-btn next-btn ${conceptIndex === total - 1 ? 'disabled' : ''}"
-          id="next-btn" ${conceptIndex === total - 1 ? 'disabled' : ''}>›</button>
+        <button class="nav-btn ${conceptIndex===total-1?'disabled':''}"
+          id="next-btn" ${conceptIndex===total-1?'disabled':''}>›</button>
       </div>
     </div>
   `;
 
   document.getElementById('back-btn').addEventListener('click', () => navigate('#home'));
-
   document.getElementById('mark-read-btn').addEventListener('click', () => {
     markConceptRead(topicId, concept.id);
     renderTopic(topicId, conceptIndex);
   });
-
   document.getElementById('deep-dive-btn').addEventListener('click', () =>
     navigate(`#deepdive/${topicId}/${concept.id}`));
-
   document.getElementById('prev-btn').addEventListener('click', () => {
-    if (conceptIndex > 0) navigate(`#topic/${topicId}/${conceptIndex - 1}`);
+    if (conceptIndex > 0) navigate(`#topic/${topicId}/${conceptIndex-1}`);
   });
-
   document.getElementById('next-btn').addEventListener('click', () => {
-    if (conceptIndex < total - 1) navigate(`#topic/${topicId}/${conceptIndex + 1}`);
+    if (conceptIndex < total-1) navigate(`#topic/${topicId}/${conceptIndex+1}`);
   });
-
   document.getElementById('dots-container').addEventListener('click', e => {
     const dot = e.target.closest('.dot');
     if (dot) navigate(`#topic/${topicId}/${dot.dataset.index}`);
   });
-
   setupSwipe(
     document.getElementById('card-wrapper'),
-    () => { if (conceptIndex < total - 1) navigate(`#topic/${topicId}/${conceptIndex + 1}`); },
-    () => { if (conceptIndex > 0)         navigate(`#topic/${topicId}/${conceptIndex - 1}`); }
+    () => { if (conceptIndex < total-1) navigate(`#topic/${topicId}/${conceptIndex+1}`); },
+    () => { if (conceptIndex > 0)       navigate(`#topic/${topicId}/${conceptIndex-1}`); }
   );
 }
 
@@ -331,12 +295,10 @@ async function renderDeepDive(topicId, conceptId) {
 
   let topic;
   try {
-    if (state.currentTopic && state.currentTopic.id === topicId) {
-      topic = state.currentTopic;
-    } else {
-      topic = await loadTopic(topicId);
-      state.currentTopic = topic;
-    }
+    topic = (state.currentTopic && state.currentTopic.id === topicId)
+      ? state.currentTopic
+      : await loadTopic(topicId);
+    state.currentTopic = topic;
   } catch {
     app.innerHTML = `<div class="screen"><div class="error-state">Could not load content.</div></div>`;
     return;
@@ -349,23 +311,20 @@ async function renderDeepDive(topicId, conceptId) {
 
   app.innerHTML = `
     <div class="screen deepdive-screen">
-
       <header class="app-header">
         <button class="back-btn" id="back-btn">‹</button>
         <h1 class="header-title">${concept.title}</h1>
         <div style="width:40px"></div>
       </header>
-
       <div class="deepdive-content">
         <div class="deepdive-intro">
           <span class="concept-category-chip"
-            style="background:${color}22; color:${color}">${topic.category} · ${topic.title}</span>
+            style="background:${color}22;color:${color}">${topic.category} · ${topic.title}</span>
         </div>
-
-        ${concept.sections.map((section, i) => `
+        ${concept.sections.map((section,i) => `
           <div class="deepdive-section">
             <div class="section-header" data-section="${i}">
-              <span class="section-number">${String(i + 1).padStart(2, '0')}</span>
+              <span class="section-number">${String(i+1).padStart(2,'0')}</span>
               <h3 class="section-title">${section.title}</h3>
               <span class="section-toggle">▾</span>
             </div>
@@ -374,7 +333,6 @@ async function renderDeepDive(topicId, conceptId) {
             </div>
           </div>
         `).join('')}
-
         <div class="deepdive-actions">
           ${!alreadyRead ? `
             <button class="mark-read-btn" id="mark-read-btn">Mark as Read ✓</button>
@@ -387,40 +345,33 @@ async function renderDeepDive(topicId, conceptId) {
 
   document.getElementById('back-btn').addEventListener('click', () =>
     navigate(`#topic/${topicId}/${conceptIndex}`));
-
   const markBtn = document.getElementById('mark-read-btn');
-  if (markBtn) {
-    markBtn.addEventListener('click', () => {
-      markConceptRead(topicId, conceptId);
-      navigate(`#topic/${topicId}/${conceptIndex}`);
-    });
-  }
-
+  if (markBtn) markBtn.addEventListener('click', () => {
+    markConceptRead(topicId, conceptId);
+    navigate(`#topic/${topicId}/${conceptIndex}`);
+  });
   document.getElementById('back-topic-btn').addEventListener('click', () =>
     navigate(`#topic/${topicId}/${conceptIndex}`));
-
   document.querySelectorAll('.section-header').forEach(header => {
     header.addEventListener('click', () => {
-      const i      = header.dataset.section;
-      const body   = document.getElementById(`section-body-${i}`);
-      const toggle = header.querySelector('.section-toggle');
+      const i    = header.dataset.section;
+      const body = document.getElementById(`section-body-${i}`);
+      const tog  = header.querySelector('.section-toggle');
       body.classList.toggle('open');
-      toggle.textContent = body.classList.contains('open') ? '▾' : '▸';
+      tog.textContent = body.classList.contains('open') ? '▾' : '▸';
     });
   });
 }
 
 // ============================================================
-// SWIPE SUPPORT
+// SWIPE
 // ============================================================
 function setupSwipe(el, onLeft, onRight) {
   let startX = 0, startY = 0;
-
   el.addEventListener('touchstart', e => {
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
   }, { passive: true });
-
   el.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].clientX - startX;
     const dy = e.changedTouches[0].clientY - startY;
@@ -463,18 +414,12 @@ function importProgress(file) {
 // ============================================================
 async function init() {
   loadProgress();
-
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () =>
       navigator.serviceWorker.register(`${BASE}/sw.js`));
   }
-
-  try {
-    await loadTopicsIndex();
-  } catch (e) {
-    console.error('Could not load topics index:', e);
-  }
-
+  try { await loadTopicsIndex(); }
+  catch (e) { console.error('Could not load topics index:', e); }
   window.addEventListener('hashchange', handleRoute);
   handleRoute();
 }
