@@ -160,7 +160,7 @@ function renderHome(filterCat) {
         <div class="cat-tabs" id="cat-tabs">
           ${cats.map(c => `
             <button class="cat-tab ${(!filterCat&&c==='All')||filterCat===c?'active':''}"
-              data-cat="${c}">${short[c]}</button>`).join('')}
+              data-cat="${c}"></button>`).join('')}
         </div>
 
         ${filtered.length === 0 ? `
