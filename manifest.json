@@ -1,11 +1,11 @@
 {
-  "name": "Learning-App",
+  "name": "LearnApp",
   "short_name": "LearnApp",
   "start_url": "/learning-app/",
   "scope": "/learning-app/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#1a1a2e",
+  "background_color": "#0d0d1f",
+  "theme_color": "#0d0d1f",
   "icons": [
     {
       "src": "/learning-app/icons/icon-192.png",
