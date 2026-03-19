@@ -52,6 +52,12 @@
   "title": "The Periodic Table",
   "category": "Science and Math",
   "summary": "The periodic table organizes all known elements by atomic number and reveals repeating patterns in their properties. It helps explain how elements are grouped, why they behave similarly, and how periodic trends predict chemical behavior."
+  },
+  {
+  "id": "ida_b_wells",
+  "title": "Ida B. Wells",
+  "category": "History and Culture",
+  "summary": "Ida B. Wells was a journalist, anti-lynching activist, suffragist, and civil rights leader who used investigation and public writing to expose racial violence and fight injustice. Her work helped shape the Black freedom struggle in the United States."
   }
 
 ]
