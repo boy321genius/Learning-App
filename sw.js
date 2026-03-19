@@ -1,4 +1,4 @@
-const CACHE_NAME = 'learnapp-v1';
+const CACHE_NAME = 'learnapp-v2';
 const APP_SHELL = [
   '/Learning-App/',
   '/Learning-App/index.html',
@@ -9,9 +9,7 @@ const APP_SHELL = [
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(APP_SHELL))
-  );
+  event.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(APP_SHELL)));
   self.skipWaiting();
 });
 
@@ -29,16 +27,10 @@ self.addEventListener('fetch', event => {
   if (url.pathname.includes('/data/')) {
     event.respondWith(
       fetch(event.request)
-        .then(res => {
-          const clone = res.clone();
-          caches.open(CACHE_NAME).then(c => c.put(event.request, clone));
-          return res;
-        })
+        .then(res => { const c = res.clone(); caches.open(CACHE_NAME).then(ca => ca.put(event.request, c)); return res; })
         .catch(() => caches.match(event.request))
     );
   } else {
-    event.respondWith(
-      caches.match(event.request).then(cached => cached || fetch(event.request))
-    );
+    event.respondWith(caches.match(event.request).then(cached => cached || fetch(event.request)));
   }
 });
