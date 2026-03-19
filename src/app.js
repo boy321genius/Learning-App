@@ -134,8 +134,6 @@ function renderHome(filterCat) {
   const totalRead = getTotalReadCount();
 
   const cats = ['All','History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
-  const short = { 'All':'All','History and Culture':'History','Psychology':'Psych',
-                   'Economics and Finance':'Finance','Science and Math':'Science','Languages':'Languages' };
 
   const topicsList = Array.isArray(state.topics) ? state.topics : [];
   const filtered = (filterCat && filterCat!=='All')
