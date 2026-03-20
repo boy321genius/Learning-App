@@ -1,0 +1,440 @@
+{
+  "id": "solar_system",
+  "title": "The Solar System",
+  "category": "Science and Math",
+  "summary": "The Solar System is the Sun and all the objects that orbit it, including eight planets, dwarf planets, moons, asteroids, and comets. It formed about 4.6 billion years ago from a cloud of gas and dust that collapsed into a spinning disk.",
+  "concepts": [
+    {
+      "id": "solar_system_overview",
+      "title": "What Is the Solar System?",
+      "summary": "The Solar System is the collection of objects held together by the gravity of the Sun. At its center is the Sun, a star that contains almost all the mass in the system. Orbiting it are eight planets, five officially recognized dwarf planets, hundreds of moons, millions of asteroids, countless icy bodies, and a great deal of dust and gas. The Solar System is enormous, but it is not random: its objects follow patterns shaped by gravity, motion, and their shared history.\n\nUnderstanding the Solar System begins with scale and structure. The planets are not spaced evenly, and the system extends far beyond Neptune into regions filled with icy objects and comets. The inner system is rocky and crowded, while the outer system is much colder and more spread out. Even though Earth feels like the center of our world, it is only one small part of a much larger cosmic family. The Solar System is both a local neighborhood in space and a record of how planets form and evolve.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The Solar System is part of the Milky Way galaxy and formed about 4.6 billion years ago. Astronomers think it began as a cloud of gas and dust that collapsed under gravity, forming a central star surrounded by a spinning disk. Over time, the material in that disk clumped together into planets, moons, asteroids, and comets. Because those objects came from the same cloud, they share a common origin even though they look very different today.",
+            "From Earth, the Solar System once seemed to be just the Sun, Moon, planets, and stars visible to the naked eye. Telescopes and spacecraft changed that picture dramatically. We now know that the Solar System includes dwarf planets such as Pluto, giant planets with dozens of moons, and distant reservoirs of icy bodies far beyond the orbit of Neptune. The modern scientific view is not just that the Solar System is bigger than it appears, but that it is structured in a way that reveals its formation."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The central figure is the Sun, whose gravity dominates the entire system. The planets — Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune — are the best-known major bodies, but they are only part of the picture. Dwarf planets like Pluto, Eris, Haumea, Makemake, and Ceres show that the boundary between planet and smaller body is more complex than it first seems.",
+            "The key force is gravity. Gravity shapes orbits, holds planets around the Sun, and pulls smaller bodies into moons or rings. Angular momentum is another major force, because the rotating cloud that formed the Solar System created a flat disk instead of a sphere of objects scattered in all directions. Those physical laws give the Solar System its overall shape and motion."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that the Solar System is a gravitational system, not just a list of planets. Its parts are connected by motion, mass, and origin. What looks like a collection of separate worlds is actually a single system with shared rules.",
+            "The system also shows how nature can create both order and variety. The same collapsing cloud produced tiny rocky worlds near the Sun, giant gas and ice planets farther out, and belts of leftover debris. The arrangement is a clue to the conditions under which the planets formed. Understanding the Solar System means understanding both the parts and the pattern that links them."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "The Solar System works through orbital motion. Each body moves around more massive bodies because gravity bends its path into an orbit instead of allowing it to fly off in a straight line. Planets orbit the Sun, moons orbit planets, and smaller bodies may be trapped, scattered, or ejected depending on gravitational interactions.",
+            "This system is dynamic rather than static. Objects can collide, be captured, migrate, or change over time. The planets themselves have reshaped the space around them by clearing debris and influencing smaller bodies. The Solar System today is the result of billions of years of such interactions."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "The Solar System provides the physical setting for Earth and therefore for life as we know it. It also gives scientists a natural laboratory for studying how planetary systems form elsewhere in the universe. By learning how our own system works, astronomers can better interpret exoplanets and compare different planetary systems.",
+            "Human exploration of the Solar System has also transformed science and culture. Spacecraft have visited or studied every major planet, many moons, asteroids, and comets. These missions have revealed that our neighborhood is more diverse, active, and surprising than older models suggested."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept introduces the whole topic. The next concept explains how the Solar System formed from a cloud of gas and dust, which is the origin story behind all the structure described here. The later concepts on the Sun, planets, and small bodies unpack the pieces of the system in more detail."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solar_formation",
+      "title": "How the Solar System Formed",
+      "summary": "The Solar System formed about 4.6 billion years ago from a cloud of gas and dust called the solar nebula. Gravity caused the cloud to collapse, probably triggered by a nearby shock wave from a supernova or another disturbance. As the cloud spun faster, it flattened into a disk, with the young Sun forming in the center and the remaining material clumping together into planets, moons, asteroids, and comets. This process is known as accretion.\n\nThe formation story explains why the Solar System has different kinds of planets in different regions. Near the Sun, high temperatures allowed only rock and metal to solidify, so the inner planets became small and rocky. Farther out, where it was colder, ice could form and large planets could gather more gas, leading to the giant planets. Leftover material became the asteroid belt, Kuiper Belt, and other reservoirs of small bodies. The Solar System is therefore a fossil record of its own birth.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Before the Solar System formed, the region of space that would become our neighborhood contained a giant cloud of interstellar gas and dust. Such clouds are common in galaxies, but only a tiny fraction collapse into stars and planetary systems. When collapse begins, gravity pulls material inward, and conservation of angular momentum causes the cloud to spin faster and flatten into a disk.",
+            "This model, known as the nebular hypothesis, is supported by observations of other young stars and protoplanetary disks in the universe. Astronomers can actually see systems at different stages of formation, which helps confirm that our Solar System likely formed in a similar way. The study of meteorites and planetary composition also supports the idea that all the system’s bodies grew from a shared disk of material."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key forces are gravity, rotation, temperature, and accretion. Gravity pulled gas and dust together. Rotation flattened the cloud into a disk. Temperature determined what kinds of materials could solidify at different distances from the Sun. Accretion caused dust grains to stick together, then form pebbles, then planetesimals, and eventually planets.",
+            "There are no human figures in the original event, but modern scientists such as astronomers and planetary geologists have built the current model from observation and theory. Evidence from meteorites, telescopic observations, and spacecraft data all point to the same basic story: a collapsing cloud formed a disk, and the disk produced the Solar System we see today."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that planets grow from leftover material around a young star. The Sun formed first, and the rest of the disk gradually turned into larger bodies. This explains why the Solar System is layered: small rocky planets close to the Sun, giant planets farther out, and icy bodies in the outer reaches.",
+            "The formation process was not smooth or tidy. Collisions, migration, and changing conditions shaped which objects survived and which were destroyed or ejected. The Solar System is therefore not a perfectly planned machine. It is the result of a messy but law-governed process of growth and rearrangement."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "In the earliest stage, the cloud collapsed and the center became hot enough for nuclear fusion to ignite the Sun. In the surrounding disk, tiny dust grains collided and stuck together. Over time, these grew into planetesimals, then into protoplanets. In the inner system, heat prevented ice from lasting, so only rock and metal could build planets. Beyond the frost line, ice could survive and help planets grow much larger.",
+            "Some early bodies became planetary embryos that merged or were ejected. Jupiter and Saturn likely formed early enough to influence the distribution of material throughout the disk. Their gravity helped clear zones and shape the orbits of smaller objects. The final architecture of the Solar System was the result of both growth and clearing."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "The nebular formation model explains the broad structure of the Solar System and helps astronomers compare it with other planetary systems. It also tells us why Earth ended up where it did: at a distance where liquid water could exist. That made Earth particularly important for life.",
+            "Formation also left behind evidence in the form of meteorites, cratered surfaces, and the distribution of small bodies. These clues allow scientists to reconstruct a history billions of years old. The next concept on the Sun explains the star that sits at the center of this process and powers the entire system."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept is the origin story for everything else in the topic. It links directly to the Sun, the inner planets, the giant planets, and the leftover belts of debris. The Solar System’s current structure makes sense only when viewed as the outcome of its formation process."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sun",
+      "title": "The Sun",
+      "summary": "The Sun is the star at the center of the Solar System and by far its most massive object. It contains about 99.8 percent of the Solar System’s mass, which is why its gravity governs the motion of every planet, moon, asteroid, and comet. The Sun produces energy through nuclear fusion, converting hydrogen into helium in its core and releasing the light and heat that make life on Earth possible.\n\nThe Sun is not only important because it provides energy. It also shaped the formation of the entire Solar System. The young Sun’s gravity pulled matter inward during the system’s birth, while its radiation and solar wind helped clear away leftover gas and dust. Over time, the Sun has remained stable enough to support Earth for billions of years, though it will eventually change dramatically as it exhausts its fuel. Understanding the Sun is essential because it is the engine of the whole system.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The Sun is a middle-aged star, formed along with the rest of the Solar System about 4.6 billion years ago. It belongs to the common class of stars called G-type main-sequence stars. Although it appears ordinary in astronomical terms, it is extraordinary in its importance to life on Earth. Its energy warms the planet, drives weather and climate, and makes photosynthesis possible.",
+            "From the beginning, the Sun dominated the system because it contained almost all of the mass. That concentration of mass is why planets orbit rather than drift freely. The Sun also set the boundary conditions for planet formation. Close to it, only the toughest materials could survive; farther away, ices could exist and larger planets could grow."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The Sun itself is the key figure, but the physical process at work is nuclear fusion. In its core, hydrogen nuclei combine under extreme pressure and temperature to form helium, releasing huge amounts of energy. Gravity balances the outward pressure of that energy, keeping the Sun stable for long periods.",
+            "Solar wind and radiation are also major forces. The solar wind is a stream of charged particles that flows outward through space, influencing planetary atmospheres and shaping comet tails. Radiation from the Sun affects temperatures, climate, and the chemistry of planets and moons. In effect, the Sun governs both motion and environment."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that the Sun is the source of the Solar System’s structure and energy. Its gravity holds the system together. Its fusion powers the light and heat that reach Earth. Without the Sun, the Solar System would not be a living, organized environment but a cold collection of dark bodies.",
+            "The Sun also shows how stars can have lifecycles. It was born from a collapsing cloud, it will shine for billions of years, and eventually it will expand into a red giant and shed its outer layers. Even the center of the Solar System is not permanent."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "The Sun works by fusing about 600 million tons of hydrogen each second in its core, converting a small fraction of mass into energy according to Einstein’s relation between mass and energy. That energy moves outward through the Sun’s layers before leaving as sunlight and heat. It takes a long time for energy to travel from the core to the surface, but once released, it reaches Earth in about eight minutes.",
+            "The Sun also interacts with planetary atmospheres and magnetic fields. Solar storms and flares can affect satellites, communication systems, and auroras on Earth. On longer timescales, changes in solar output influence climate patterns only slightly compared with many other factors, but the Sun remains the dominant energy source for the whole system."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "The Sun makes Earth habitable and determines the basic conditions for life. It also serves as the central reference point for all planetary motion. Every planet’s orbit is a response to solar gravity.",
+            "For science, the Sun is crucial because it allows astronomers to study a star up close and use that knowledge to understand other stars and planetary systems. The next concept on the rocky inner planets shows how the Sun’s heat shaped the small worlds closest to it."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept sits at the center of the whole topic. It connects to formation, planetary structure, climate, and the long-term fate of the Solar System. Everything else orbits around the Sun literally and conceptually."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "terrestrial_planets",
+      "title": "The Rocky Inner Planets",
+      "summary": "The four inner planets — Mercury, Venus, Earth, and Mars — are called terrestrial planets because they are made mostly of rock and metal. They are smaller than the giant planets, denser, and located closer to the Sun. Their surfaces tell the story of collisions, volcanism, atmospheres, water, and in Earth’s case, life. Each one is different, but they share a common origin in the hot inner part of the early Solar System.\n\nThe inner planets are important because they show what planets look like when only heavy materials can condense. Mercury is small and heavily cratered. Venus is similar in size to Earth but has a thick, scorching atmosphere. Earth has liquid water and a life-supporting climate. Mars is cold and dry today, but its surface preserves signs that water once flowed there. Together, these planets show how small changes in distance from the Sun and planetary history can produce very different worlds.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The terrestrial planets formed in the hottest part of the early Solar System, close to the Sun. Because temperatures were too high for ice and many gases to survive, only rock and metal were available to build planets. That is why the inner planets are small, dense, and solid-surfaced. They formed from the same disk as the outer planets, but under very different conditions.",
+            "Their surfaces have also been reshaped by billions of years of impacts, volcanism, erosion, and atmospheric change. Mercury preserves an ancient cratered surface. Venus has been resurfaced by volcanism and trapped in a runaway greenhouse effect. Earth has oceans and active plate tectonics. Mars preserves a colder, drier record of an earlier epoch. These differences make the inner planets a laboratory for comparative planetology."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The main forces shaping the rocky planets are heat, gravity, volcanism, impacts, and atmosphere. Heat near the young Sun limited what materials could form there. Gravity allowed planets to accumulate mass. Later geological and atmospheric processes changed each planet in different ways.",
+            "Each planet has its own distinctive story. Mercury is heavily cratered and has an oversized iron core. Venus may have once been more Earth-like but evolved into a hostile greenhouse world. Earth developed oceans and life. Mars lost much of its atmosphere and surface water. These outcomes show how the same basic starting material can lead to very different planetary histories."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that the inner planets are products of a hot, rocky zone in the early Solar System. Because ice could not survive there, they never became huge gas-rich worlds. Instead, they remained smaller and denser.",
+            "The rocky planets also show that habitability is fragile. Earth is habitable not because all terrestrial planets are habitable, but because a particular combination of distance, atmosphere, geology, and liquid water happened to work. Venus and Mars demonstrate how different outcomes can arise from similar beginnings."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Mercury, closest to the Sun, has extreme temperature swings and little atmosphere. Venus has a thick carbon dioxide atmosphere that traps heat and makes it the hottest planet. Earth’s atmosphere and water cycle moderate temperature and support life. Mars has a thin atmosphere and evidence of ancient river channels, suggesting a wetter past.",
+            "These planets continue to evolve. Volcanoes, impacts, atmospheric loss, and chemical weathering have all left marks. Space missions have mapped their surfaces and atmospheres, revealing that even the seemingly familiar rocky planets are dynamic and varied worlds."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Studying the inner planets helps scientists understand Earth’s uniqueness and its vulnerabilities. It also helps answer a broader question: what conditions allow a planet to be habitable? Venus and Mars are especially important comparisons because they show what can happen when conditions move away from the narrow range that supports liquid water.",
+            "The terrestrial planets are also the places where humans might someday live beyond Earth, at least through technology and adaptation. For now, they remain the most accessible worlds in the Solar System and the clearest record of how rocky planets develop. The next concept turns to the much larger giant planets farther from the Sun."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept follows the Sun and formation stages by showing how distance from the Sun shaped planetary type. It leads directly to the giant planets, which formed in the colder outer system. The rocky inner planets are the Solar System’s terrestrial core."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gas_ice_giants",
+      "title": "The Giant Planets",
+      "summary": "Jupiter, Saturn, Uranus, and Neptune are the giant planets of the Solar System. Jupiter and Saturn are gas giants, made mostly of hydrogen and helium, while Uranus and Neptune are often called ice giants because they contain more water, ammonia, and methane compounds. These planets formed farther from the Sun, where colder temperatures allowed more material to accumulate and grow into much larger worlds.\n\nThe giant planets are important because they dominate the outer Solar System. Jupiter is so massive that it influences the orbits of many smaller bodies. Saturn is famous for its rings. Uranus and Neptune are colder, darker, and less well studied, but they are still major worlds with complex atmospheres and moons. Their formation and motion helped shape the architecture of the entire Solar System, including the asteroid belt and Kuiper Belt. Without the giant planets, the Solar System would look very different.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The giant planets formed beyond the frost line, where ices could condense and provide extra building material. That made it possible for them to grow much larger than the rocky inner planets. Once a big core formed, it could capture huge amounts of gas from the disk before the Sun’s radiation cleared the remaining gas away.",
+            "The giant planets occupy the outer regions of the Solar System, where sunlight is weaker and orbital periods are much longer. Their atmospheres, storms, rings, and moons reflect the complexity of planetary systems far from the Sun. Because they are so large, they also strongly influence the movement of smaller bodies around them."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The four giant planets each have distinctive characteristics. Jupiter is the largest planet and has the Great Red Spot, a massive storm. Saturn has the most visible ring system. Uranus is tilted on its side, suggesting a violent past. Neptune has powerful winds and a deep blue color due to methane in its atmosphere.",
+            "The major forces are gravity, gas accretion, ice condensation, and orbital migration. Jupiter in particular may have moved early in the Solar System’s history, influencing where other bodies formed and how they were distributed. The giant planets were not just passive objects; they actively shaped the rest of the system."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The giant planets show how the outer Solar System could build massive worlds from abundant cold material. Their size is linked to the environment in which they formed. Because the outer disk was colder, ices could contribute to planetary cores and help them grow quickly.",
+            "They also show that giant planets are not all alike. Jupiter and Saturn are mostly gas, while Uranus and Neptune have more icy material. This difference makes the giant planets a key clue to the early history of the Solar System and to the physics of planetary formation in general."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Jupiter and Saturn likely formed first or very early, reaching sizes that allowed them to pull in large amounts of gas. Uranus and Neptune formed farther out and may have migrated from their original positions. Their gravity influenced the asteroid belt, scattered icy bodies, and helped shape the Kuiper Belt.",
+            "The giant planets also generate internal heat and powerful weather systems. Their moons and rings are part of complex orbital systems that continue to evolve. Cassini, Voyager, Juno, and other missions have shown that these worlds are active and diverse rather than simple gas balls."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "The giant planets are central to understanding the Solar System’s architecture. They may have protected the inner planets at times by deflecting or capturing comets, but they also sent many icy bodies inward. Their gravity helped shape the distribution of small objects and the stability of orbits throughout the system.",
+            "In astronomy more broadly, the giant planets matter because many exoplanet systems also contain large worlds close to or far from their stars. Studying our own gas and ice giants helps scientists understand how planetary systems can form and migrate in many different ways. The next concept turns to moons and rings, which are especially numerous around these giant planets."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept follows the rocky inner planets by moving outward to the colder part of the Solar System. It connects directly to the small-body reservoirs shaped by giant-planet gravity. The outer planets are the major sculptors of the Solar System’s layout."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moons_rings",
+      "title": "Moons & Rings",
+      "summary": "Moons and rings are among the most varied features of the Solar System. Moons, or natural satellites, orbit planets and dwarf planets, while rings are thin disks of ice, rock, and dust circling some planets. Some moons are small and irregular, while others are large enough to have their own atmospheres, geology, and even subsurface oceans. Rings can be bright and spectacular, like Saturn’s, or faint and hard to see.\n\nThese objects matter because they show that planets are not isolated worlds. They are surrounded by smaller bodies that can form from debris, be captured by gravity, or arise from collisions. Earth’s Moon probably formed after a giant impact, while many outer-planet moons may have been captured or assembled from disk material. Moons and rings reveal the dynamic history of planets, collisions, and gravitational interactions. They are also some of the most visually striking parts of the Solar System.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Moons exist around most planets in the Solar System, but the number and type vary widely. Mercury and Venus have none, Earth has one large Moon, Mars has two tiny moons, and the giant planets have many. Some moons are ancient and heavily cratered; others are geologically active. Rings appear around all four giant planets, though Saturn’s are the most prominent.",
+            "These features formed through different processes. Some moons formed alongside their planets, some were captured, and some may have resulted from collisions. Rings usually consist of debris that could not gather into a moon because of tidal forces. The study of moons and rings helps scientists understand planetary systems as interactive environments rather than simple isolated bodies."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key forces are gravity, tidal heating, collision, and capture. Gravity holds moons in orbit. Tidal forces can stretch and heat a moon’s interior, driving volcanic or icy activity. Collisions can create moons or rings, and capture can trap an object into orbit around a planet.",
+            "Among the most famous moons are Earth’s Moon, Jupiter’s Io, Europa, Ganymede, and Callisto, and Saturn’s Titan and Enceladus. Some of these worlds are especially important because they may harbor subsurface oceans. Rings are made of countless particles, from dust to ice chunks, all moving in carefully balanced orbits around their planet."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that moons and rings are evidence of ongoing planetary history. They are not just decorations. They preserve traces of collisions, captures, and tidal interactions. In that sense, they are records of how the Solar System evolved.",
+            "They also broaden the meaning of a planetary system. A planet is often a whole environment with multiple smaller bodies, not a single isolated object. Moons can have oceans and geology of their own, and rings can be temporary or ancient structures depending on the planet."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Earth’s Moon is thought to have formed when a Mars-sized object collided with the early Earth, ejecting material that later coalesced. Jupiter’s large moons formed in a disk around the planet, while many small outer moons may be captured asteroids or leftover debris. Saturn’s rings are held in place by the balance between gravity and orbital motion.",
+            "Some moons are geologically alive. Io experiences intense volcanism from Jupiter’s tidal forces. Europa and Enceladus show signs of subsurface oceans beneath icy crusts. These processes make moons important targets in the search for conditions that might support life."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Moons and rings have changed how scientists think about habitability and planetary evolution. They show that even small bodies can be active and complex. They also provide clues about the history of collisions and migration in the Solar System.",
+            "They are also central to public fascination with space. Saturn’s rings, Jupiter’s moons, and Earth’s Moon have shaped astronomy, exploration, and imagination for centuries. The next concept turns to the asteroid belt and the smaller leftover bodies scattered through the system."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects the giant planets to the many smaller bodies they host and influence. It leads naturally to the asteroid belt, comets, and other debris left from planet formation. Moons and rings show that the Solar System is full of secondary structures as well as primary planets."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "asteroid_belt",
+      "title": "Asteroid Belt & Small Bodies",
+      "summary": "The asteroid belt is a region between Mars and Jupiter filled with rocky remnants left over from the formation of the Solar System. It contains asteroids, which are small rocky or metallic bodies, along with smaller fragments called meteoroids and the occasional meteorite that falls to Earth. This region is not a dense crowd of rocks; it is mostly empty space with objects spread far apart.\n\nSmall bodies matter because they preserve clues about the early Solar System. Some never became planets because Jupiter’s gravity and the conditions of the early disk prevented them from growing together. Others are fragments from collisions. Comets, which come from icy reservoirs farther out, also belong to the broader category of small bodies. Together, these objects are leftover material from planet formation, and their shapes, compositions, and orbits tell scientists about the system’s earliest history.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The asteroid belt lies between the orbits of Mars and Jupiter. Early in Solar System history, this region contained material that might have formed a planet, but Jupiter’s gravity disturbed the process. Instead of becoming a planet, the material remained as many smaller objects. The belt is therefore a kind of failed building zone, a leftover region rather than a finished world.",
+            "Asteroids are not all the same. Some are rocky, some metallic, and some rich in carbonaceous material. Meteoroids are smaller fragments, often produced by collisions. When a meteoroid survives passage through Earth’s atmosphere and lands on the ground, it becomes a meteorite. These objects allow scientists to study primitive Solar System material without leaving Earth."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key forces are gravity, collision, and resonance with Jupiter. Jupiter’s immense mass prevented the asteroid belt from coalescing into a planet and continues to shape the orbits of many asteroids. Collisions break larger bodies into smaller ones, creating families of asteroids and debris. Solar radiation and impact processes also matter for the smallest objects.",
+            "Well-known objects include Ceres, the largest body in the belt and now classified as a dwarf planet, and many smaller asteroids such as Vesta and Pallas. Comets from farther out are also part of the Solar System’s small-body population. Their behavior gives clues about the mix of ice and rock in the early disk."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that the asteroid belt is a leftover record of planet formation. It shows that not every region of the disk became a planet. Some material remained because conditions were unstable or because giant-planet gravity prevented accretion.",
+            "Small bodies also remind us that the Solar System is dynamic and still changing. Asteroids and comets can strike planets, reshaping surfaces and sometimes affecting life. They are not just debris; they are active participants in Solar System history."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Asteroids orbit the Sun, mostly in the belt but also in near-Earth and Trojan populations. Collisions can create dust and fragments, some of which eventually cross Earth’s orbit. Meteors are the streaks of light produced when these fragments burn in Earth’s atmosphere.",
+            "Comets are usually icy bodies from the outer Solar System. When they approach the Sun, heat causes their ices to vaporize and create glowing tails. The interplay of orbital dynamics and collisions means small bodies are constantly being redistributed through the system."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Small bodies help scientists date the Solar System and reconstruct its early chemistry. Meteorites often contain ancient material older than most rocks on Earth. Asteroid impacts have also shaped planetary surfaces and, in Earth’s case, influenced biological evolution.",
+            "The asteroid belt and related debris fields are also a reminder that planetary systems are not tidy. They contain leftovers, fragments, and hazards. The next concept turns outward to the Kuiper Belt and the distant icy edge of the Solar System."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept follows the planets and moons by focusing on leftover material that never became planets. It connects to the giant planets, which shaped the belt’s structure, and to the distant reservoirs of icy bodies beyond Neptune. The asteroid belt is the Solar System’s rocky debris zone."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kuiper_oort",
+      "title": "The Kuiper Belt & Beyond",
+      "summary": "Beyond Neptune lies the Kuiper Belt, a region of icy objects that includes Pluto and many other dwarf planets and small bodies. Farther still may be the Oort Cloud, a distant, spherical reservoir of comets that surrounds the Solar System. These remote regions are cold, dark, and only partially explored, but they are essential for understanding the full extent of the Solar System.\n\nThe Kuiper Belt matters because it preserves ancient icy material from the Solar System’s outer formation zone. Pluto is the best-known example, but it is only one of many bodies out there. Some objects have unusual orbits, and their behavior helps scientists infer the gravitational history of the giant planets. The farthest parts of the Solar System show that the system is much larger than the eight planets. They also reveal the boundary between the familiar planetary neighborhood and the deep outer darkness of space.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The Kuiper Belt begins beyond Neptune’s orbit, where temperatures are low enough for water, methane, and ammonia ices to remain stable. It contains many small icy objects, plus dwarf planets such as Pluto, Haumea, and Makemake. These bodies are remnants of the outer Solar System’s formation and were not incorporated into a larger planet.",
+            "The Oort Cloud, if it exists as theorized, lies much farther away and may extend thousands of times farther from the Sun than the Kuiper Belt. It would be the source of many long-period comets. Because these regions are so distant, they are difficult to study directly, but telescopes and orbital analysis have given astronomers strong reason to think they exist."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "Pluto is the most famous Kuiper Belt object, though it is only one member of a much larger population. Other notable dwarf planets include Eris, Haumea, and Makemake. Observations of comet trajectories and distant icy bodies have led scientists to infer the possible structure of the Oort Cloud.",
+            "The main forces are cold temperature, gravity, and orbital scattering by the giant planets. Jupiter and Neptune in particular helped shape the outer Solar System by moving objects around and preventing them from forming into a single large planet. These interactions left behind a vast reservoir of icy leftovers."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that the Solar System has an outer frontier full of icy leftovers from its early history. These bodies are not random objects drifting in space. They are a preserved record of the conditions under which the Solar System formed.",
+            "The Kuiper Belt and Oort Cloud also show that the Solar System’s boundaries are diffuse. Instead of ending neatly at Neptune, the system fades into a huge region of scattered debris and distant comets. That makes the Solar System much larger and more complex than a simple diagram suggests."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Some Kuiper Belt objects move in stable orbits beyond Neptune, while others are influenced by resonances with the giant planets. Pluto’s orbit, for example, is linked to Neptune’s motion. Objects from the outer reservoirs can occasionally be nudged inward and become visible as comets when they warm near the Sun.",
+            "The Oort Cloud, if real in the form scientists expect, would act like a distant shell of comet sources. Passing stars and galactic tides may disturb those objects and send some into the inner Solar System. These mechanisms show that even the most distant parts of the system remain connected to the center."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "The discovery of the Kuiper Belt and the reclassification of Pluto as a dwarf planet changed the way people think about the Solar System. It also expanded scientific understanding of how many small icy bodies exist beyond Neptune. These discoveries revealed that the outer Solar System is a vast, structured region, not an empty void.",
+            "The study of distant icy bodies also helps explain the origin of comets and the early history of planetary migration. The next concept looks at the Solar System today — how it continues to move, evolve, and serve as a target for exploration."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept follows the asteroid belt by moving to the even more distant icy frontier. It connects to the giant planets, whose gravity shaped the outer reservoirs. The Kuiper Belt and Oort Cloud are the Solar System’s outer memory."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "solar_system_today",
+      "title": "The Solar System Today",
+      "summary": "The Solar System today is a dynamic system of motion, exploration, and ongoing change. The planets continue to orbit the Sun, moons continue to circle their planets, and small bodies continue to collide, drift, and occasionally strike Earth. While the system is stable on human timescales, it is not static. Tides, impacts, orbital resonances, and solar activity all continue to shape it.\n\nModern exploration has transformed understanding of the Solar System. Telescopes, space probes, landers, rovers, and sample-return missions have revealed details that were invisible from Earth. We now know that Mars once had water, that Europa and Enceladus may have subsurface oceans, that Pluto is a complex icy world, and that asteroids and comets preserve ancient material. The Solar System remains both our home and a frontier of discovery. Its present is still tied to its deep past.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "The Solar System is stable enough that its major bodies follow predictable orbits, but small changes still happen constantly. Earth experiences seasons, tides, eclipses, and meteor showers as part of its motion through the system. Space weather from the Sun can affect satellites and power systems. The whole system is active, even when it appears calm.",
+            "Human knowledge of the Solar System has expanded enormously in the last century. Space missions have visited planets, moons, asteroids, and comets, and telescopes have discovered thousands of exoplanets beyond our system. By comparing our Solar System to others, scientists have learned that planetary systems can be very diverse. Our system is one example of a much larger cosmic pattern."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The main forces are gravity, sunlight, magnetism, and collision. Gravity maintains orbits. The Sun provides energy. Magnetic fields shield some planets from solar wind. Collisions continue to shape surfaces and small-body populations. These forces work together to keep the Solar System in motion.",
+            "Modern scientists, engineers, and mission teams are the human figures who have expanded our understanding of the system. Voyager, Cassini, Galileo, Juno, New Horizons, and many other missions have acted like scouts and messengers. Their data turned distant worlds from points of light into real places with surfaces, atmospheres, and histories."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core idea is that the Solar System is not just a static map of planets but an evolving system of interactions. Its parts move and influence one another. Its history is still visible in its present form.",
+            "The second core idea is that exploration changes knowledge. Every mission refines the picture of what the Solar System contains and how it works. The more closely we observe it, the more complex it becomes. That is why the Solar System remains a living subject of science rather than a closed chapter."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "The planets orbit according to gravity and conservation of motion. Moons create tides. The Sun emits solar wind and radiation. Small bodies move through resonances and collisions. These processes continue whether or not humans are watching.",
+            "Exploration works by using spacecraft to measure, image, sample, and analyze these worlds. Data from orbiters and landers reveal composition, temperature, geology, and atmosphere. Sample-return missions bring pieces of asteroids or comets back to Earth for detailed study. This combination of natural motion and scientific observation defines the Solar System today."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Understanding the Solar System today has practical benefits: it helps protect Earth from asteroid impacts, improves satellite operations, and supports the search for life elsewhere. It also deepens knowledge of Earth’s own origin and future. The Solar System is our nearest model for how planetary systems work.",
+            "Its study also shapes culture and imagination. Images from space missions have transformed how people see the planets and their moons. The Solar System is no longer a distant abstraction. It is a real, diverse neighborhood that continues to reveal new surprises."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This final concept pulls together the whole topic. It connects the Sun, formation, planets, moons, rings, asteroids, and distant icy bodies into one living system. The Solar System’s story is still unfolding, and exploration continues to add new chapters."
+          ]
+        }
+      ]
+    }
+  ]
+}
