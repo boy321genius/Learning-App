@@ -118,6 +118,12 @@
   "title": "Chemical Bonding and Compounds",
   "category": "Science and Math",
   "summary": "Atoms bond together to form compounds, and the type of bond determines almost everything about a substance — its structure, stability, melting point, and how it reacts. This topic explains ionic, covalent, and metallic bonding, and how compounds are named and classified."
+  },
+  {
+  "id": "atoms_molecules_cells",
+  "title": "Atoms, Molecules, and Cells",
+  "category": "Science and Math",
+  "summary": "Atoms are the smallest units of matter that retain an element's identity, molecules are groups of atoms bonded together, and cells are the smallest units of life built from molecules. This topic shows how matter is organized from the chemical level to the biological level."
   }
 
 ]
