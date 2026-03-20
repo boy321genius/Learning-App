@@ -65,6 +65,12 @@
   "category": "Science and Math",
   "summary": "Fractions describe parts of a whole and are used in everyday math, measurement, and comparison. They also connect to decimals, percentages, and algebra."
   }
-  
+  {
+  "id": "venice",
+  "title": "Venice: The City on the Water",
+  "category": "History and Culture",
+  "summary": "Venice is a city built on a lagoon in northeastern Italy, founded by refugees seeking safety in the marshes and transformed over centuries into one of the most powerful trading empires in the world."
+  }
+
 ]
 
