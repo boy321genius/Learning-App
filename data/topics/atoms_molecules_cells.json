@@ -1,0 +1,248 @@
+{
+  "id": "atoms_molecules_cells",
+  "title": "Atoms, Molecules, and Cells",
+  "category": "Science and Math",
+  "summary": "Atoms are the smallest units of matter that retain an element's identity, molecules are groups of atoms bonded together, and cells are the smallest units of life built from molecules. This topic shows how matter is organized from the chemical level to the biological level.",
+  "concepts": [
+    {
+      "id": "atoms",
+      "title": "Atoms: The Smallest Building Blocks",
+      "summary": "Atoms are the basic units that make up all matter. Each atom has a nucleus containing protons and neutrons, with electrons moving around it. Different atoms are different elements, like hydrogen, oxygen, carbon, and iron. Atoms are tiny, but they are not simple lumps of stuff. Their structure determines how they behave, what they bond with, and what kinds of substances they help form. When we talk about matter at the most basic level, atoms are where the story begins. They are the pieces that everything else is built from.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Everything in the physical world is made of matter, and matter is made of atoms. This is true for living things, rocks, water, air, and metals.",
+            "Before you can understand molecules or cells, you need to understand what an atom is and how it behaves."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key parts of an atom are protons, neutrons, and electrons. Protons and neutrons sit in the nucleus. Electrons occupy the space around the nucleus.",
+            "The main force that matters is electric attraction between the positive nucleus and the negative electrons. That force keeps atoms together and sets up chemical behavior."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "An atom is the smallest unit of an element that still behaves like that element. Hydrogen atoms are hydrogen, oxygen atoms are oxygen, and so on. The number of protons defines the element.",
+            "Atoms are the foundation for all chemistry because their electrons determine how they bond and react."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Atoms can exist by themselves in some cases, but they often bond with other atoms to become more stable. Their outer electrons are the ones most involved in bonding.",
+            "The arrangement of those electrons is what makes one atom reactive and another stable."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Atoms are the starting point for all substances, from gases in the air to proteins in your body. The structure of atoms determines what kinds of molecules and materials can exist.",
+            "Without atoms, there would be nothing to build from. They are the lowest-level units in this topic."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept sets up everything that follows. Molecules are built from atoms, and cells are built from molecules organized into structures."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bonding",
+      "title": "How Atoms Bond to Form Molecules",
+      "summary": "Atoms do not usually stay isolated for long. They bond because bonding helps them reach a more stable arrangement of electrons. Some atoms transfer electrons, some share them, and those choices create different kinds of bonds. When atoms bond, they form molecules or compounds. Water is one familiar example: two hydrogen atoms bond with one oxygen atom to form H₂O. Bonding is the bridge from individual atoms to larger structures. It is also what makes chemistry interesting, because the way atoms connect determines the behavior of the substance that results.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Atoms by themselves are often less stable than atoms that have formed bonds. Bonding allows them to lower their energy and become more stable.",
+            "This is the chemical step that turns separate building blocks into organized structures."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key force is attraction between electrons and nuclei. Depending on the atoms involved, bonding can involve transfer, sharing, or a collective pool of electrons.",
+            "The number of valence electrons strongly influences which atoms bond and how they do it."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Bonding connects atoms into molecules or compounds. The type of bond determines the substance's structure and properties.",
+            "This is the point where atom-level behavior begins to create larger chemical identity."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Hydrogen and oxygen can bond to make water. Carbon can bond to four other atoms, which is why it forms so many different molecules. In every case, atoms arrange electrons to reach a more stable state.",
+            "Once the atoms are bonded, the resulting molecule has properties that are different from the individual atoms alone."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Bonding is how chemistry creates the diversity of substances in the world. It explains why water behaves differently from oxygen gas, even though both contain oxygen.",
+            "It also creates the molecular structures that cells depend on."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept links directly to the chemical bonding topic and prepares the learner for molecules and then cellular structure."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "molecules",
+      "title": "Molecules: Atoms Working Together",
+      "summary": "A molecule is a group of atoms bonded together. Some molecules are simple, like oxygen gas or water. Others are very large and complex, like proteins or DNA. Molecules are important because they are the chemical forms that cells use to build structures, store energy, and carry out life processes. A molecule is more than a collection of atoms. It has a shape, a size, and properties that come from how its atoms are arranged. That arrangement controls how the molecule behaves with other molecules. In chemistry and biology, molecules are where abstract atomic structure becomes something useful and functional.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Once atoms bond together, the result is usually a molecule or compound. Molecules are common in both chemistry and biology, from simple gases to giant biomolecules.",
+            "They are the intermediate scale between atoms and cells."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key factors are the types of atoms involved, the bonds between them, and the molecule's shape. Shape matters because it affects how the molecule interacts with water, enzymes, membranes, and other molecules.",
+            "Bond type and molecular geometry together determine the molecule's behavior."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Molecules are combinations of atoms held together by chemical bonds. Their properties depend not only on which atoms they contain, but on how those atoms are arranged.",
+            "That is why the same elements can make very different substances when arranged differently."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Water molecules bond in a bent shape, which helps explain many of water's unusual properties. Carbon-based molecules can form long chains and rings, which makes complex life molecules possible.",
+            "Cells use molecules as building blocks, signals, fuels, and machinery."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Molecules are the level at which chemistry begins to become life chemistry. They determine whether a substance is fuel, nutrient, toxin, signal, or structural material.",
+            "Without molecules, cells could not exist in any organized form."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects atoms to cells by showing the middle layer of organization. It also overlaps with chemical bonding because bonds are what make molecules possible."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cells",
+      "title": "Cells: The Smallest Living Units",
+      "summary": "A cell is the smallest unit that can be considered alive. Cells are not made of atoms directly in a simple way. They are made of many molecules arranged into membranes, fluids, structures, and machines that work together. That includes water, proteins, lipids, DNA, RNA, and many other molecules. Cells can grow, respond, use energy, and reproduce because their molecules are organized in very specific ways. The chemical level becomes the biological level when those molecules are arranged into a living system. That is why cells are where atoms and molecules finally become life. Understanding cells starts with understanding the chemistry inside them.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Cells are the basic units of life in all living organisms. Bacteria are made of single cells, and plants and animals are made of many cells working together.",
+            "To understand a cell, you have to understand the molecules that build and power it."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key building blocks are water, proteins, lipids, nucleic acids, and carbohydrates. The force that organizes them is chemical interaction: bonding, attraction, and membrane formation.",
+            "A cell's membrane, internal structures, and genetic material all depend on molecular organization."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "A cell is a highly organized system of molecules. It is alive because those molecules cooperate in a controlled environment.",
+            "Life emerges when chemistry is organized in a way that can maintain itself, use energy, and reproduce."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "The cell membrane separates the inside from the outside. Proteins do most of the work inside the cell. DNA stores instructions. Mitochondria help release energy. All of this depends on molecular structure.",
+            "If the molecules are damaged or not arranged properly, the cell cannot function well."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Cells are the bridge between chemistry and biology. They explain how nonliving matter can form living systems. Every tissue, organ, and organism depends on cells doing their jobs.",
+            "Understanding cells helps explain health, disease, growth, and reproduction."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept completes the hierarchy: atoms form molecules, and molecules organize into cells. The rest of biology builds on this foundation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cell_chemistry",
+      "title": "How Cell Chemistry Works",
+      "summary": "Cells work because their molecules are constantly interacting in controlled ways. Some molecules store energy, some build structures, some carry messages, and some speed up reactions. Water helps create the chemical environment that makes those reactions possible. Proteins fold into shapes that let them do specific jobs. Lipids build membranes that separate the cell from its surroundings. DNA stores the instructions for making all of it. Cell chemistry is the practical place where atoms and molecules become function. Without the right chemical conditions, a cell cannot survive.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Cells are not static bags of stuff. They are active chemical systems with constant reactions happening inside them.",
+            "The molecules inside cells must be arranged and balanced carefully for life to continue."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The main molecules are proteins, lipids, carbohydrates, nucleic acids, and water. The important forces are bonding, attraction, and molecular shape.",
+            "Enzymes are especially important because they control reaction speed and allow the cell to function efficiently."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Cell chemistry is the set of molecular interactions that make life possible. Molecules are not just present in the cell; they are doing work.",
+            "The function of a cell depends on the chemistry of its molecules and the way they are organized."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Proteins fold into shapes that let them act as enzymes or structural parts. Lipids self-assemble into membranes. DNA can be copied when the cell needs to divide. Energy molecules like ATP help power cellular work.",
+            "All of these processes rely on atomic and molecular structure."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Cell chemistry explains growth, repair, metabolism, and inheritance. It also explains what happens when something goes wrong, such as a mutation, a damaged protein, or a broken membrane.",
+            "This is where chemistry becomes directly tied to health and disease."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept ties together atoms, molecules, and cells by showing how chemistry functions inside living systems. It is the practical payoff of the whole topic."
+          ]
+        }
+      ]
+    }
+  ]
+}
