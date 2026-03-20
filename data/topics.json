@@ -82,6 +82,12 @@
   "title": "Mental Math",
   "category": "Economics and Finance",
   "summary": "Mental math is the skill of doing calculations in your head without a calculator. It uses strategies like rounding, breaking numbers apart, and spotting patterns."
+  },
+  {
+  "id": "interest_rates",
+  "title": "What Are Interest Rates",
+  "category": "Economics and Finance",
+  "summary": "Interest rates are the cost of borrowing money or the reward for saving it. They shape loans, mortgages, credit cards, savings accounts, and the broader economy."
   }
 
 ]
