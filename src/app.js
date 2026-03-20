@@ -134,8 +134,6 @@ function renderHome(filterCat) {
   const totalRead = getTotalReadCount();
 
   const cats = ['All','History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
-  const short = { 'All':'All','History and Culture':'History','Psychology':'Psych',
-                   'Economics and Finance':'Finance','Science and Math':'Science','Languages':'Languages' };
 
   const topicsList = Array.isArray(state.topics) ? state.topics : [];
   const filtered = (filterCat && filterCat!=='All')
@@ -162,7 +160,7 @@ function renderHome(filterCat) {
         <div class="cat-tabs" id="cat-tabs">
           ${cats.map(c => `
             <button class="cat-tab ${(!filterCat&&c==='All')||filterCat===c?'active':''}"
-              data-cat="${c}">${short[c]}</button>`).join('')}
+              data-cat="${c}">${c}</button>`).join('')}
         </div>
 
         ${filtered.length === 0 ? `

@@ -1,0 +1,248 @@
+{
+  "id": "mental_math",
+  "title": "Mental Math",
+  "category": "Economics and Finance",
+  "summary": "Mental math is the skill of doing calculations in your head without a calculator. It uses strategies like rounding, breaking numbers apart, and spotting patterns.",
+  "concepts": [
+    {
+      "id": "what_mental_math_is",
+      "title": "What Mental Math Is",
+      "summary": "Mental math is the ability to solve arithmetic problems in your head. It is not about being magically fast or memorizing every answer. It is about using smart strategies that make numbers easier to work with. People use mental math when they are shopping, budgeting, estimating time, or checking a calculator answer. The skill depends on number sense, which means understanding how numbers relate to each other. If you can see 9 + 6 as 10 + 5, or 100 - 48 as 100 - 50 + 2, you are already using mental math. The goal is not always to get an exact answer immediately. Often the goal is to think clearly, estimate well, and reach the answer efficiently.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Mental math shows up in ordinary life all the time. You use it when splitting a bill, checking whether a price is a good deal, or estimating how much time something will take. It is one of the most practical math skills because it saves time and reduces dependence on tools.",
+            "It also helps students understand arithmetic more deeply. When you solve a problem mentally, you have to think about the structure of the numbers, not just follow a written procedure."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key ideas are number sense, memory, and strategy. Number sense helps you see relationships, memory helps with facts like multiplication tables, and strategy helps you choose a good method. The number line is another useful mental model.",
+            "The main force behind mental math is flexibility. A good mental calculator can change a problem into an easier one without losing track of the original value."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Mental math is about making numbers friendlier. Instead of forcing yourself to calculate in the hardest possible way, you reshape the problem so it becomes easier. That might mean rounding, decomposing, compensating, or using patterns.",
+            "This means mental math is less about speed alone and more about thinking clearly. Fast answers are nice, but smart answers are the real goal."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "For addition and subtraction, people often break numbers into parts or adjust them to friendly numbers. For multiplication, they may use repeated patterns, doubling, or distributing. For estimation, they round numbers to nearby values and calculate an approximate result.",
+            "For example, 48 + 36 can become 50 + 34 or 40 + 40 + 4. Both routes make the calculation easier to hold in mind."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Mental math improves speed, confidence, and checking ability. It helps people notice when a calculator result seems wrong and gives students a stronger sense of how operations work. It is also useful in many jobs where quick estimates matter.",
+            "This concept is a foundation for the rest of the topic because every other mental math strategy builds on the same general idea: change the problem so your brain can handle it comfortably."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept introduces the whole topic. It connects directly to rounding, compensation, decomposition, and everyday estimation."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rounding_and_estimation",
+      "title": "Rounding and Estimation",
+      "summary": "Rounding is one of the easiest mental math tools because it replaces a number with a nearby value that is simpler to work with. Estimation uses rounded numbers to produce an answer that is close enough for a quick decision. If you are trying to add 48 and 27, it is often easier to think 50 + 30 and then adjust. Estimation is especially useful when you do not need an exact answer right away, like when shopping, budgeting, or checking whether a result makes sense. It also protects you from obvious mistakes by giving you a quick reality check. The key idea is that you trade a little precision for a lot of speed.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Rounding is often the first mental math strategy people learn. It is used in classrooms, in everyday conversation, and in practical work whenever exact precision is not necessary. People naturally round in real life more often than they realize.",
+            "Estimation is especially valuable when numbers are awkward or when you are deciding whether something is worth doing. It helps you get a quick answer without getting stuck in details."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The main force is place value. You round to the nearest ten, hundred, or other place because those are easier to manage mentally. Friendly numbers like 10, 50, and 100 are much simpler than awkward values like 47 or 83.",
+            "The key skill is knowing how much accuracy you can afford to lose. Estimation works best when you understand the context of the problem."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Rounding changes a number into a nearby one that is easier to calculate with. Estimation uses the rounded numbers to get an approximate answer. The point is not exactness; the point is usefulness.",
+            "This is why estimation is so powerful. You can solve hard-looking problems quickly by using close-enough numbers and then checking whether the answer is reasonable."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To round, look at the digit to the right of the place you want. If it is 5 or more, round up. If it is less than 5, round down. Then use the rounded numbers to do the math.",
+            "For example, 57 + 48 can become 60 + 50, which is 110, or 60 + 40 plus small adjustments depending on how exact you want to be. The method is simple but very effective."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Rounding and estimation make mental math much faster and help people avoid overthinking. They are also useful in science, finance, and daily life because many decisions do not require exact values.",
+            "This concept connects directly to later strategies because many mental math tricks begin with making numbers friendlier."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept supports the whole mental math topic. It leads into compensation, decomposition, and using benchmarks for quick reasoning."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compensation",
+      "title": "Compensation",
+      "summary": "Compensation is a mental math strategy where you make a number easier to work with and then correct for the change afterward. For example, if you want to add 58 + 39, you might think 58 + 40 = 98 and then subtract 1 to get 97. This works because one number is adjusted to a friendlier value, and the other part of the calculation balances that change. Compensation is especially useful with addition and subtraction, but it can also help in multiplication. It saves time because friendly numbers are easier to hold in your head. This strategy depends on understanding that the total value stays the same if you adjust one side and then undo the difference. Once you get used to it, compensation feels like a very natural way to think.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Compensation is used whenever a number is close to a friendly target. It is common in shopping, arithmetic drills, and quick calculations. People often use it without naming it because it matches how the brain likes to work.",
+            "The strategy is especially useful when one number is almost a round number but not quite. That small difference can be handled at the end."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key forces are balance and adjustment. You change a number to make the main calculation easier, then compensate for the change. The difference between the original number and the adjusted number is what you add or subtract back.",
+            "Friendly targets like 10, 20, 50, or 100 are central because they simplify the arithmetic dramatically."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Compensation works because the total value does not change if you add and subtract the same amount. You are not cheating the math. You are just moving the difficulty to a place that is easier to manage.",
+            "This makes mental arithmetic more flexible and less stressful. The method is especially handy when a number is almost convenient but not quite."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To use compensation, change one number to a friendlier one and then adjust the answer. For example, 64 - 28 can become 64 - 30 + 2, which is easier to calculate mentally. In addition, 39 + 58 can become 40 + 58 - 1.",
+            "The trick is to keep track of the adjustment so you do not lose the original value. Once that becomes automatic, the method speeds up a lot of everyday calculations."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Compensation helps with speed and accuracy because it turns awkward numbers into simpler ones. It also deepens understanding of equality and equivalence, since the method depends on the idea that balanced changes preserve value.",
+            "This concept links closely to decomposing numbers, because both strategies make hard problems easier by reorganizing them."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects to rounding and decomposition. It is one of the most useful all-purpose mental math strategies because it works in so many ordinary calculations."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decomposition",
+      "title": "Breaking Numbers Apart",
+      "summary": "Breaking numbers apart, also called decomposition, means splitting a number into smaller pieces that are easier to add, subtract, multiply, or divide. For example, 37 + 25 can become 30 + 20 + 7 + 5. This strategy works because the value stays the same when a number is written in parts. Decomposition is especially useful in addition and subtraction, but it also helps with multiplication by using the distributive property. It gives you more control over the calculation because you can attack one part at a time instead of all at once. This is one of the most important mental math habits because it turns large problems into manageable ones. It also reinforces place value, which makes other math topics easier later.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Decomposition is a natural way to think about numbers because most numbers are made of parts anyway. Place value already tells you that 37 means 30 plus 7. Mental math simply makes that idea more active and flexible.",
+            "This strategy appears constantly in classroom number talks and in real-life calculations when people split bills, totals, or measurements into simpler chunks."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The main force is place value. Tens, hundreds, and ones are easier to manage separately than as one combined number. The distributive property also matters because it lets multiplication work across parts.",
+            "The important skill is choosing useful parts. Some splits are more convenient than others, and the best one depends on the problem."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "A number can be written as a sum of smaller numbers without changing its value. Once split apart, the pieces can be combined in a way that is easier for the brain to handle. This is why decomposition is so powerful.",
+            "It makes hidden structure visible. Instead of seeing 47 as one big object, you see 40 and 7, which are easier to process."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To add 37 + 25 mentally, you might break them into tens and ones: 30 + 20 + 7 + 5 = 62. To multiply 6 × 14, you can think 6 × (10 + 4) = 60 + 24 = 84. The same idea works across many operations.",
+            "The strategy becomes more powerful as you get used to choosing splits that make the arithmetic easy, not awkward."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Decomposition improves fluency and supports later algebra because it teaches that expressions can be reorganized without changing their meaning. It also gives people more confidence with larger numbers.",
+            "This concept is one of the core engines of mental math because it shows how a hard problem can be made simple by breaking it into pieces."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects directly to compensation, multiplication strategies, and place value understanding. It is one of the most flexible tools in the topic."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "patterns_and_checks",
+      "title": "Patterns and Checking Your Answer",
+      "summary": "Mental math is not only about solving a problem. It is also about noticing patterns and checking whether an answer makes sense. Numbers often behave in regular ways, especially in multiplication tables, doubling patterns, and common benchmarks like 25, 50, and 100. If you know these patterns well, many calculations become almost automatic. Checking is just as important because a quick mental estimate can tell you whether a result is reasonable. A calculator may give an exact number, but your brain still needs to know whether that number passes the reality test. Pattern recognition and checking make mental math safer and smarter. They turn the skill from a set of tricks into a reliable habit.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Patterns are everywhere in arithmetic. The same multiplication facts repeat, numbers often cluster around benchmarks, and many calculations can be checked by inverse operations. People who are good at mental math usually notice these regularities quickly.",
+            "Checking matters because even a small mental slip can lead to a wrong answer. A fast estimate gives you a way to catch mistakes before they matter."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key forces are repetition, symmetry, and inverse operations. Doubling and halving, multiplying by 10, and recognizing factors of 5 or 25 are all pattern-based shortcuts. Addition and subtraction can check one another, and multiplication can be checked by division.",
+            "The main skill is pattern recognition. Once you see a pattern, you do not have to recalculate from scratch each time."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Patterns reduce effort because the brain can reuse known relationships. Checking improves reliability because it keeps mental math from becoming guesswork. Together, they make calculations both faster and more trustworthy.",
+            "Mental math is strongest when speed and accuracy work together. Pattern awareness helps with speed, and checking helps with accuracy."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you need to multiply by 25, you can think of dividing by 4 and then multiplying by 100. If you want to check 48 + 29, you can estimate 50 + 30 = 80 and see whether your exact answer is near that number. If the answer looks far away, you know to look again.",
+            "Many people also use known facts to build new ones. If you know 6 × 7 = 42, you can use that to reason about 6 × 14 or 12 × 7."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Pattern-based thinking makes mental math feel less like memorization and more like understanding. Checking also builds trust in your own reasoning, because you know how to verify a result instead of just hoping it is right.",
+            "This final concept ties the topic together by showing that mental math is both a strategy and a habit of mind."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept closes the topic by connecting all the other strategies. It reinforces rounding, compensation, decomposition, and estimation, while adding the important skill of self-checking."
+          ]
+        }
+      ]
+    }
+  ]
+}

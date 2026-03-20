@@ -10,6 +10,91 @@
   "title": "Origins of Judaism",
   "category": "History and Culture",
   "summary": "One of the oldest monotheistic traditions, emerging among the ancient Israelites of Canaan and shaped by covenant, Torah, exile, and the rise and fall of the Temple in Jerusalem."
+  },
+  {
+  "id": "origins_of_christianity",
+  "title": "Origins of Christianity",
+  "category": "History and Culture",
+  "summary": "Christianity began as a Jewish movement in 1st‑century Palestine, centered on Jesus of Nazareth and the belief that he was the crucified and risen Messiah. From this small group of Jewish disciples, it grew into a diverse, increasingly Gentile faith that spread across the Roman Empire."
+  },
+  {
+  "id": "origins_of_islam",
+  "title": "Origins of Islam",
+  "category": "History and Culture",
+  "summary": "Islam emerged in 7th-century Arabia through the Prophet Muhammad, who received revelations from God that became the Quran. From a small community in Mecca, it grew into a faith and civilization that spread rapidly across the Middle East, North Africa, and beyond."
+  },
+  {
+  "id": "start_of_wwi",
+  "title": "The Start of World War I",
+  "category": "History and Culture",
+  "summary": "World War I began in 1914 after the assassination of Archduke Franz Ferdinand triggered the July Crisis, a chain of alliances, ultimatums, mobilizations, and declarations of war. What started as a conflict between Austria-Hungary and Serbia quickly spread into a continent-wide war."
+  },
+  {
+  "id": "start_of_ww2",
+  "title": "The Start of World War II",
+  "category": "History and Culture",
+  "summary": "World War II began in 1939 after Nazi Germany invaded Poland, following years of aggressive expansion and failed appeasement by Britain and France. The invasion triggered declarations of war and turned a European crisis into a global conflict."
+  },
+  {
+  "id": "solar_system",
+  "title": "The Solar System",
+  "category": "Science and Math",
+  "summary": "The Solar System is the Sun and all the objects that orbit it, including eight planets, dwarf planets, moons, asteroids, and comets. It formed about 4.6 billion years ago from a cloud of gas and dust that collapsed into a spinning disk."
+  },
+  {
+  "id": "nutrition_label_literacy",
+  "title": "Nutrition Label Literacy and Food Marketing",
+  "category": "Science and Math",
+  "summary": "Nutrition labels can be technically accurate while still misleading shoppers through serving sizes, front-of-package claims, and marketing language. Understanding labels helps consumers see the difference between a product’s presentation and its actual nutritional profile."
+  },
+  {
+  "id": "periodic_table",
+  "title": "The Periodic Table",
+  "category": "Science and Math",
+  "summary": "The periodic table organizes all known elements by atomic number and reveals repeating patterns in their properties. It helps explain how elements are grouped, why they behave similarly, and how periodic trends predict chemical behavior."
+  },
+  {
+  "id": "ida_b_wells",
+  "title": "Ida B. Wells",
+  "category": "History and Culture",
+  "summary": "Ida B. Wells was a journalist, anti-lynching activist, suffragist, and civil rights leader who used investigation and public writing to expose racial violence and fight injustice. Her work helped shape the Black freedom struggle in the United States."
+  },
+  {
+  "id": "fractions",
+  "title": "Fractions",
+  "category": "Science and Math",
+  "summary": "Fractions describe parts of a whole and are used in everyday math, measurement, and comparison. They also connect to decimals, percentages, and algebra."
+  },
+  {
+  "id": "venice",
+  "title": "Venice: The City on the Water",
+  "category": "History and Culture",
+  "summary": "Venice is a city built on a lagoon in northeastern Italy, founded by refugees seeking safety in the marshes and transformed over centuries into one of the most powerful trading empires in the world."
+  },
+  {  
+  "id": "inflation",
+  "title": "How Inflation Works",
+  "category": "Economics and Finance",
+  "summary": "Inflation is the general rise in prices over time, which means money buys less than it used to. It is measured with price indexes like the CPI and is influenced by demand, supply, and policy."
+  },
+  {
+  "id": "mental_math",
+  "title": "Mental Math",
+  "category": "Economics and Finance",
+  "summary": "Mental math is the skill of doing calculations in your head without a calculator. It uses strategies like rounding, breaking numbers apart, and spotting patterns."
+  },
+  {
+  "id": "interest_rates",
+  "title": "What Are Interest Rates",
+  "category": "Economics and Finance",
+  "summary": "Interest rates are the cost of borrowing money or the reward for saving it. They shape loans, mortgages, credit cards, savings accounts, and the broader economy."
+  },
+  {
+  "id": "how_banks_make_money",
+  "title": "How Banks Make Money",
+  "category": "Economics and Finance",
+  "summary": "Banks make money primarily by charging more interest on loans than they pay on deposits. They also earn fees, process transactions, and use your deposits to fund lending at scale."
   }
+
 ]
 
