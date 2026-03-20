@@ -1,0 +1,392 @@
+{
+  "id": "time_value_of_money",
+  "title": "Time Value of Money",
+  "category": "Economics and Finance",
+  "summary": "Money today is worth more than the same amount in the future because it can be invested, earn interest, and avoid uncertainty. Time value of money explains present value, future value, and discounting.",
+  "concepts": [
+    {
+      "id": "why_time_matters",
+      "title": "Why Time Matters",
+      "summary": "Money changes value over time because it can be used, invested, or lost to inflation. That is why a dollar today is worth more than a dollar later. The basic logic behind the time value of money is simple: if you have money now, you can put it to work. If you only get it later, you miss out on that opportunity. This idea is the foundation for almost every formula in finance. It explains why people prefer earlier payments, why lenders charge interest, and why investors compare cash flows that happen in different years. The key takeaway is that timing is not a detail. Timing changes the value.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Financial decisions often involve money arriving at different times. A job offer with a signing bonus today is not the same as the same bonus paid years later. A business project that pays back slowly is not the same as one that pays back quickly. Timing affects value.",
+            "This is why finance uses formulas instead of simple intuition. The formula is what adjusts for time."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The main forces are interest rates, inflation, and opportunity cost. If money can earn a return, then keeping it today is valuable. If prices rise over time, future money buys less. If you have to wait, you give up other uses of the money in the meantime.",
+            "These forces are the reason the discount rate exists. It turns timing into a measurable cost."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "The core formula logic is that future money is discounted and present money is compounded. That means the same amount has different values depending on when it is received. The further away the payment, the more the formula reduces its present value.",
+            "This is the base principle behind present value, future value, discounting, and net present value."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you have $100 today and can earn 5% per year, it becomes $105 in one year. That is the future value formula in action. If someone offers you $105 in one year, its present value is $100 if the discount rate is 5%. The formulas are just reversals of each other.",
+            "Once you can move between today and the future using the right rate, you can compare almost any financial choice."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "This concept makes finance consistent. Without it, you would compare a payment today and a payment ten years from now as if they were equal, which would lead to bad decisions.",
+            "Everything later in the topic depends on this first idea."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept introduces the timing logic behind all the formulas that follow: present value, future value, discounting, annuities, and NPV."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "simple_interest",
+      "title": "Simple Interest",
+      "summary": "Simple interest grows money in a straight line because it is calculated only on the original amount. It is easy to understand, easy to compute, and still shows up in some short-term loans, bonds, and classroom examples. The practical lesson is that a principal, a rate, and a time period are enough to estimate how much interest accumulates when compounding is not involved. Simple interest is a useful starting point because it shows the basic link between money, rate, and time without extra complexity.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Simple interest is often the first interest formula people learn because it is straightforward. It helps show how interest grows when there is no compounding.",
+            "It still appears in some financial products and is useful as a conceptual baseline for understanding more complex formulas."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are P, r, and t. A larger principal, a higher rate, or more time all increase interest in a straight line. There is no interest on interest.",
+            "Because the formula is linear, doubling the time doubles the interest."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "I = Prt means interest equals principal times rate times time. That gives a simple and predictable growth pattern. If you borrow or invest the same principal at the same rate for twice as long, the interest doubles.",
+            "This is why simple interest is much easier to predict than compound interest."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you invest $1,000 at 6% simple interest for 3 years, the interest is 1,000 × 0.06 × 3 = $180. The total amount is $1,180. The calculation does not change from year to year because the base stays the same.",
+            "This makes the formula easy to use when you want a quick estimate or when the contract explicitly uses simple interest."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Simple interest gives a clean comparison point for understanding how compounding changes outcomes. It also helps people identify when a loan or investment is using a simpler structure.",
+            "The contrast between simple and compound interest is one of the most important distinctions in the whole topic."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept supports future value and compounding by showing the simpler version first. It also helps explain why compounding can create much larger results over time."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compound_interest",
+      "title": "Compound Interest",
+      "summary": "Compound interest is what happens when interest gets added back into the balance and then earns interest too. In real life, this is the version that matters most because it describes savings accounts, investments, and many loans. The practical lesson is that time becomes a force multiplier: starting earlier, waiting longer, or earning a slightly higher rate can lead to much larger outcomes. Compound interest is powerful when you are saving and dangerous when you are carrying debt.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Compound interest is how most modern savings and borrowing actually work. It applies to bank accounts, loans, investments, and retirement funds. It is the real-world version of interest growth.",
+            "The formula matters because it captures the effect of reinvesting or re-adding interest over time."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are P, r, n, and t. Frequency of compounding matters because monthly compounding grows slightly faster than annual compounding. Time is the biggest force because the effect accumulates over many periods.",
+            "The stronger the rate and the longer the time, the more powerful the compounding effect becomes."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "A = P(1 + r/n)^(nt) means your money grows by repeated multiplication rather than simple addition. Each round of compounding creates a larger base for the next round.",
+            "That is why compound interest is sometimes called exponential growth."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you invest $1,000 at 6% compounded monthly for one year, the formula uses n = 12. The balance grows a little each month, and the final amount is slightly higher than with annual compounding.",
+            "The formula lets you compare different accounts and loans by showing the full effect of compounding."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Compound interest rewards early saving and punishes long-term debt. It explains why even small differences in rate or timing can lead to huge differences in final outcomes.",
+            "This formula is central to almost every other concept in the topic."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept links simple interest to future value and is the reason the time value of money matters so much in practice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discounting",
+      "title": "Discounting",
+      "summary": "Discounting is the practical habit of asking how much a future payment is worth today. It is the bridge between future cash flows and present decisions. Instead of treating a payment years from now as equal to cash in hand, discounting reduces it to reflect time, risk, and opportunity cost. This is the step that lets you compare very different offers fairly.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Discounting is everywhere in finance because almost every meaningful cash flow happens at a different time. A bond payment next year, a business profit in five years, and a pension payment in twenty years all need to be translated into today's value.",
+            "The discount factor is the tool that performs that translation."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are DF, r, and n. As r increases, DF falls. As n increases, DF also falls. That means both risk and time reduce value.",
+            "The discount rate is the judgment call inside the math because it represents what you think the money is worth given risk and alternatives."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Discounting is just present value in factor form. Instead of thinking of the formula as a separate operation, you can think of it as a multiplier that shrinks future cash flows to today's terms.",
+            "This makes the logic easier to see when comparing many future payments at once."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If a payment is $1,000 in three years and the discount rate is 8%, the discount factor is 1 / (1.08)^3. Multiply that factor by $1,000 to get the present value. The farther the payment is delayed, the smaller the factor becomes.",
+            "This is how companies and investors compare cash flows that arrive at different times."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Discounting determines how attractive long-term projects look. A project with large future payouts can still be unattractive if those payouts are too far away or too uncertain.",
+            "This concept is the bridge between raw future cash flows and real decisions."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept is the mechanical heart of present value and the setup for annuities and NPV."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present_value",
+      "title": "Present Value",
+      "summary": "Present value is what a future amount is worth today after discounting. It answers the practical question: if I had this money now and could earn a return, how much should I be willing to accept later instead? This idea is used in loans, investments, business decisions, and almost any choice that involves waiting for money. Present value is the math version of the real-world instinct that sooner is usually better than later.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "If someone promises you money later, you need a way to compare that promise with money you could have today. Present value does that job. It is the standard way to translate future money into today's dollars.",
+            "The formula is used constantly in finance because nearly every serious decision involves timing."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are FV, r, and n. FV is the future amount. r is the discount rate. n is how many periods you wait. A higher r or larger n lowers PV.",
+            "The discount rate reflects both earning power and risk. A risky future payment is worth less today than a reliable one."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "PV = FV / (1 + r)^n means you divide the future amount by a growth factor to bring it back to today. The factor gets larger as time or rate increases, so the present value shrinks.",
+            "This is just the reverse of compounding."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you are promised $110 in one year and the rate is 5%, the present value is 110 / 1.05, or about $104.76. If the payment is in two years, you divide again by 1.05. The value falls each time you move it farther into the future.",
+            "This allows you to compare multiple future offers using the same yardstick: today's money."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Present value is used to judge whether an investment, loan, or contract is worth it. It keeps people from overpaying for future cash flows. It also feeds into valuation and NPV.",
+            "If you understand this formula, you can understand most of the rest of finance."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept depends on the timing logic introduced earlier and leads directly to future value, discounting, and NPV."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "future_value",
+      "title": "Future Value",
+      "summary": "Future value answers the opposite question from present value: how much will money be worth later if it grows at a rate r for n periods? The formula is FV = PV(1 + r)^n. PV is the amount you start with, r is the rate, and n is the number of periods. If you invest money and let it compound, the balance grows by the growth factor (1 + r)^n. Future value is one of the most useful formulas for saving, investing, retirement planning, and comparing goals over time. It shows why early money matters so much: the earlier you start, the more periods your money has to compound. Like present value, future value becomes much more powerful when you use it with compounding rather than simple growth.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "People often want to know what a current amount will become later. A retirement account, college fund, or business savings plan all depend on future value. The formula tells you where today's money can end up.",
+            "This is the forward-looking side of time value of money."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are PV, r, and n. Higher rates and longer time periods increase future value. More frequent compounding also increases it, though this summary keeps the core formula at the annual level.",
+            "The point is that time acts like a multiplier on return."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "FV = PV(1 + r)^n means you take what you have today and multiply it by a growth factor. Each period adds more because the balance has grown. This is the mathematical reason compounding is so powerful.",
+            "The formula is simple, but the result can become very large over long periods."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you invest $100 at 5% for 2 years, future value is 100(1.05)^2 = $110.25. The first year adds $5, and the second year adds interest on the larger amount, not just the original $100.",
+            "This is why small contributions made early can grow into large balances later."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Future value helps with saving goals, retirement planning, and investment comparisons. It also helps people understand the power of time in building wealth.",
+            "It is the mirror image of present value, and together they give finance its basic time-adjusted language."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept reverses present value and leads into discounting, annuities, and NPV. It is the growth half of the same underlying idea."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "annuities",
+      "title": "Annuities",
+      "summary": "An annuity is a stream of equal payments made at regular intervals. The present value formula is PV = PMT × [1 - (1 + r)^(-n)] / r, and the future value formula is FV = PMT × [(1 + r)^n - 1] / r. PMT is the payment amount, r is the rate, and n is the number of payments. Annuities appear in mortgages, retirement accounts, pensions, and any contract where money is paid or received in a steady sequence. These formulas matter because most real financial life is not a one-time payment. It is a series of payments. Annuity formulas let you value that stream as a single number today or in the future.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Many financial arrangements involve repeated payments rather than one lump sum. Rent, mortgage payments, retirement contributions, and pension receipts all work this way. Annuity formulas turn that sequence into one comparable value.",
+            "This is a major extension of present value and future value because it handles real-life payment streams."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are PMT, r, and n. The size of the payment, the rate, and the number of payments all affect the value. More payments or a higher rate change the result significantly.",
+            "The formulas assume equal payments at regular intervals, which is what makes them neat and usable."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "An annuity is just a repeated cash flow. The present value formula discounts each payment back to today and sums them. The future value formula compounds each payment forward and sums them.",
+            "These formulas compress a whole sequence into one number, which makes comparison possible."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you contribute $200 each month to a retirement account, the future value formula tells you how much you will have after a set number of months at a given rate. If you are evaluating a mortgage, the present value formula tells you what the stream of payments is worth today.",
+            "This is why annuities are so useful in personal finance and lending."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Annuity formulas help people understand long-term commitments. They make it easier to compare salary offers, pensions, loans, and savings plans.",
+            "This concept closes the topic by showing how the basic formulas work on the kinds of repeated payments people actually deal with."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects all earlier formulas and shows how they apply to real payment streams. It is the practical capstone of time value of money."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "npv",
+      "title": "Net Present Value",
+      "summary": "Net present value, or NPV, is the formula that combines all discounted future cash flows and subtracts the initial cost. The formula is NPV = sum(CF_t / (1 + r)^t) - C_0. If the result is positive, the project is expected to create value. If the result is negative, it is expected to destroy value. NPV is one of the most important decision tools in finance because it compares all costs and benefits in today's dollars. Businesses use it to decide whether to invest in a project, launch a product, or buy another company. The formula is powerful because it turns a complicated multi-year decision into a single number that is based on timing, scale, and risk. It is the clearest example of why the time value of money matters.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Investments and projects usually involve money flowing out now and money flowing in later. NPV handles that pattern directly. It is the standard way to judge whether those future inflows are enough to justify the present cost.",
+            "This is why NPV is often considered the most important formula in corporate finance."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are CF_t, r, and C_0. CF_t is each future cash flow, r is the discount rate, and C_0 is the initial cost. Every cash flow must be discounted to the present before it is summed.",
+            "Riskier projects usually use higher discount rates, which lowers their NPV."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "NPV adds up the present value of all future cash inflows and subtracts the present cost. The sign of the result tells you whether the project is worth more than it costs.",
+            "That makes NPV a simple yes-or-no decision rule built from the time value of money."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If a project costs $10,000 today and its discounted future inflows sum to $12,500, the NPV is $2,500. That suggests the project adds value. If the discounted inflows only total $8,000, the NPV is negative and the project should usually be rejected.",
+            "This formula can be used for everything from buying equipment to choosing between investments."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "NPV helps people avoid being misled by large future numbers that sound good but are not worth much in today's dollars. It is one of the best tools for disciplined decision making.",
+            "This final formula brings the whole topic together because it uses present value, discounting, and timing all at once."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept closes the topic and pulls together every earlier formula. It is the practical decision rule built on the rest of the time value of money framework."
+          ]
+        }
+      ]
+    }
+  ]
+}

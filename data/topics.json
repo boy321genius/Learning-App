@@ -3,98 +3,161 @@
     "id": "bpp",
     "title": "Black Panther Party",
     "category": "History and Culture",
-    "summary": "A revolutionary Black liberation organization founded in 1966 in Oakland that used community programs, armed self‑defense, and a radical critique of American racism and capitalism."
+    "summary": "A revolutionary Black liberation organization founded in 1966 in Oakland that used community programs, armed self‑defense, and a radical critique of American racism and capitalism.",
+    "concept_count": 8
   },
   {
-  "id": "origins_of_judaism",
-  "title": "Origins of Judaism",
-  "category": "History and Culture",
-  "summary": "One of the oldest monotheistic traditions, emerging among the ancient Israelites of Canaan and shaped by covenant, Torah, exile, and the rise and fall of the Temple in Jerusalem."
+    "id": "origins_of_judaism",
+    "title": "Origins of Judaism",
+    "category": "History and Culture",
+    "summary": "One of the oldest monotheistic traditions, emerging among the ancient Israelites of Canaan and shaped by covenant, Torah, exile, and the rise and fall of the Temple in Jerusalem.",
+    "concept_count": 9
   },
   {
-  "id": "origins_of_christianity",
-  "title": "Origins of Christianity",
-  "category": "History and Culture",
-  "summary": "Christianity began as a Jewish movement in 1st‑century Palestine, centered on Jesus of Nazareth and the belief that he was the crucified and risen Messiah. From this small group of Jewish disciples, it grew into a diverse, increasingly Gentile faith that spread across the Roman Empire."
+    "id": "origins_of_christianity",
+    "title": "Origins of Christianity",
+    "category": "History and Culture",
+    "summary": "Christianity began as a Jewish movement in 1st‑century Palestine, centered on Jesus of Nazareth and the belief that he was the crucified and risen Messiah. From this small group of Jewish disciples, it grew into a diverse, increasingly Gentile faith that spread across the Roman Empire.",
+    "concept_count": 9
   },
   {
-  "id": "origins_of_islam",
-  "title": "Origins of Islam",
-  "category": "History and Culture",
-  "summary": "Islam emerged in 7th-century Arabia through the Prophet Muhammad, who received revelations from God that became the Quran. From a small community in Mecca, it grew into a faith and civilization that spread rapidly across the Middle East, North Africa, and beyond."
+    "id": "origins_of_islam",
+    "title": "Origins of Islam",
+    "category": "History and Culture",
+    "summary": "Islam emerged in 7th-century Arabia through the Prophet Muhammad, who received revelations from God that became the Quran. From a small community in Mecca, it grew into a faith and civilization that spread rapidly across the Middle East, North Africa, and beyond.",
+    "concept_count": 10
   },
   {
-  "id": "start_of_wwi",
-  "title": "The Start of World War I",
-  "category": "History and Culture",
-  "summary": "World War I began in 1914 after the assassination of Archduke Franz Ferdinand triggered the July Crisis, a chain of alliances, ultimatums, mobilizations, and declarations of war. What started as a conflict between Austria-Hungary and Serbia quickly spread into a continent-wide war."
+    "id": "start_of_wwi",
+    "title": "The Start of World War I",
+    "category": "History and Culture",
+    "summary": "World War I began in 1914 after the assassination of Archduke Franz Ferdinand triggered the July Crisis, a chain of alliances, ultimatums, mobilizations, and declarations of war. What started as a conflict between Austria-Hungary and Serbia quickly spread into a continent-wide war.",
+    "concept_count": 9
   },
   {
-  "id": "start_of_ww2",
-  "title": "The Start of World War II",
-  "category": "History and Culture",
-  "summary": "World War II began in 1939 after Nazi Germany invaded Poland, following years of aggressive expansion and failed appeasement by Britain and France. The invasion triggered declarations of war and turned a European crisis into a global conflict."
+    "id": "start_of_ww2",
+    "title": "The Start of World War II",
+    "category": "History and Culture",
+    "summary": "World War II began in 1939 after Nazi Germany invaded Poland, following years of aggressive expansion and failed appeasement by Britain and France. The invasion triggered declarations of war and turned a European crisis into a global conflict.",
+    "concept_count": 9
   },
   {
-  "id": "solar_system",
-  "title": "The Solar System",
-  "category": "Science and Math",
-  "summary": "The Solar System is the Sun and all the objects that orbit it, including eight planets, dwarf planets, moons, asteroids, and comets. It formed about 4.6 billion years ago from a cloud of gas and dust that collapsed into a spinning disk."
+    "id": "solar_system",
+    "title": "The Solar System",
+    "category": "Science and Math",
+    "summary": "The Solar System is the Sun and all the objects that orbit it, including eight planets, dwarf planets, moons, asteroids, and comets. It formed about 4.6 billion years ago from a cloud of gas and dust that collapsed into a spinning disk.",
+    "concept_count": 9
   },
   {
-  "id": "nutrition_label_literacy",
-  "title": "Nutrition Label Literacy and Food Marketing",
-  "category": "Science and Math",
-  "summary": "Nutrition labels can be technically accurate while still misleading shoppers through serving sizes, front-of-package claims, and marketing language. Understanding labels helps consumers see the difference between a product’s presentation and its actual nutritional profile."
+    "id": "nutrition_label_literacy",
+    "title": "Nutrition Label Literacy and Food Marketing",
+    "category": "Science and Math",
+    "summary": "Nutrition labels can be technically accurate while still misleading shoppers through serving sizes, front-of-package claims, and marketing language. Understanding labels helps consumers see the difference between a product’s presentation and its actual nutritional profile.",
+    "concept_count": 9
   },
   {
-  "id": "periodic_table",
-  "title": "The Periodic Table",
-  "category": "Science and Math",
-  "summary": "The periodic table organizes all known elements by atomic number and reveals repeating patterns in their properties. It helps explain how elements are grouped, why they behave similarly, and how periodic trends predict chemical behavior."
+    "id": "periodic_table",
+    "title": "The Periodic Table",
+    "category": "Science and Math",
+    "summary": "The periodic table organizes all known elements by atomic number and reveals repeating patterns in their properties. It helps explain how elements are grouped, why they behave similarly, and how periodic trends predict chemical behavior.",
+    "concept_count": 9
   },
   {
-  "id": "ida_b_wells",
-  "title": "Ida B. Wells",
-  "category": "History and Culture",
-  "summary": "Ida B. Wells was a journalist, anti-lynching activist, suffragist, and civil rights leader who used investigation and public writing to expose racial violence and fight injustice. Her work helped shape the Black freedom struggle in the United States."
+    "id": "ida_b_wells",
+    "title": "Ida B. Wells",
+    "category": "History and Culture",
+    "summary": "Ida B. Wells was a journalist, anti-lynching activist, suffragist, and civil rights leader who used investigation and public writing to expose racial violence and fight injustice. Her work helped shape the Black freedom struggle in the United States.",
+    "concept_count": 9
   },
   {
-  "id": "fractions",
-  "title": "Fractions",
-  "category": "Science and Math",
-  "summary": "Fractions describe parts of a whole and are used in everyday math, measurement, and comparison. They also connect to decimals, percentages, and algebra."
+    "id": "fractions",
+    "title": "Fractions",
+    "category": "Science and Math",
+    "summary": "Fractions describe parts of a whole and are used in everyday math, measurement, and comparison. They also connect to decimals, percentages, and algebra.",
+    "concept_count": 4
   },
   {
-  "id": "venice",
-  "title": "Venice: The City on the Water",
-  "category": "History and Culture",
-  "summary": "Venice is a city built on a lagoon in northeastern Italy, founded by refugees seeking safety in the marshes and transformed over centuries into one of the most powerful trading empires in the world."
-  },
-  {  
-  "id": "inflation",
-  "title": "How Inflation Works",
-  "category": "Economics and Finance",
-  "summary": "Inflation is the general rise in prices over time, which means money buys less than it used to. It is measured with price indexes like the CPI and is influenced by demand, supply, and policy."
+    "id": "venice",
+    "title": "Venice: The City on the Water",
+    "category": "History and Culture",
+    "summary": "Venice is a city built on a lagoon in northeastern Italy, founded by refugees seeking safety in the marshes and transformed over centuries into one of the most powerful trading empires in the world.",
+    "concept_count": 7
   },
   {
-  "id": "mental_math",
-  "title": "Mental Math",
-  "category": "Economics and Finance",
-  "summary": "Mental math is the skill of doing calculations in your head without a calculator. It uses strategies like rounding, breaking numbers apart, and spotting patterns."
+    "id": "inflation",
+    "title": "How Inflation Works",
+    "category": "Economics and Finance",
+    "summary": "Inflation is the general rise in prices over time, which means money buys less than it used to. It is measured with price indexes like the CPI and is influenced by demand, supply, and policy.",
+    "concept_count": 5
   },
   {
-  "id": "interest_rates",
-  "title": "What Are Interest Rates",
-  "category": "Economics and Finance",
-  "summary": "Interest rates are the cost of borrowing money or the reward for saving it. They shape loans, mortgages, credit cards, savings accounts, and the broader economy."
+    "id": "mental_math",
+    "title": "Mental Math",
+    "category": "Economics and Finance",
+    "summary": "Mental math is the skill of doing calculations in your head without a calculator. It uses strategies like rounding, breaking numbers apart, and spotting patterns.",
+    "concept_count": 5
   },
   {
-  "id": "how_banks_make_money",
-  "title": "How Banks Make Money",
-  "category": "Economics and Finance",
-  "summary": "Banks make money primarily by charging more interest on loans than they pay on deposits. They also earn fees, process transactions, and use your deposits to fund lending at scale."
+    "id": "interest_rates",
+    "title": "What Are Interest Rates",
+    "category": "Economics and Finance",
+    "summary": "Interest rates are the cost of borrowing money or the reward for saving it. They shape loans, mortgages, credit cards, savings accounts, and the broader economy.",
+    "concept_count": 6
+  },
+  {
+    "id": "how_banks_make_money",
+    "title": "How Banks Make Money",
+    "category": "Economics and Finance",
+    "summary": "Banks make money primarily by charging more interest on loans than they pay on deposits. They also earn fees, process transactions, and use your deposits to fund lending at scale.",
+    "concept_count": 8
+  },
+  {
+    "id": "time_value_of_money",
+    "title": "Time Value of Money",
+    "category": "Economics and Finance",
+    "summary": "Money today is worth more than the same amount in the future because it can be invested, earn interest, and avoid uncertainty. Time value of money explains present value, future value, and discounting.",
+    "concept_count": 8
+  },
+  {
+    "id": "spanish_greetings_introductions",
+    "title": "Spanish: Greetings and Introductions",
+    "category": "Languages",
+    "summary": "Learn to greet people, introduce yourself, and start basic conversations in Spanish using practical phrases and everyday patterns.",
+    "concept_count": 6
+  },
+  {
+    "id": "spanish_pronunciation",
+    "title": "Spanish: Pronunciation and Sounding Words Out",
+    "category": "Languages",
+    "summary": "Learn the Spanish alphabet, vowel sounds, stress rules, and spelling patterns so you can pronounce new words with confidence.",
+    "concept_count": 6
+  },
+  {
+    "id": "chemical_bonding",
+    "title": "Chemical Bonding and Compounds",
+    "category": "Science and Math",
+    "summary": "Atoms bond together to form compounds, and the type of bond determines almost everything about a substance — its structure, stability, melting point, and how it reacts. This topic explains ionic, covalent, and metallic bonding, and how compounds are named and classified.",
+    "concept_count": 7
+  },
+  {
+    "id": "atoms_molecules_cells",
+    "title": "Atoms, Molecules, and Cells",
+    "category": "Science and Math",
+    "summary": "Atoms are the smallest units of matter that retain an element's identity, molecules are groups of atoms bonded together, and cells are the smallest units of life built from molecules. This topic shows how matter is organized from the chemical level to the biological level.",
+    "concept_count": 5
+  },
+  {
+    "id": "genghis_khan_mongol_empire",
+    "title": "Genghis Khan and the Mongol Empire",
+    "category": "History and Culture",
+    "summary": "Genghis Khan united the Mongol tribes in the early 1200s and built the largest contiguous land empire in history. The Mongol Empire reshaped warfare, trade, and political power across Eurasia.",
+    "concept_count": 6
+  },
+  {
+    "id": "great_wall_of_china",
+    "title": "The Great Wall of China",
+    "category": "History and Culture",
+    "summary": "The Great Wall of China was built and rebuilt over many centuries as a northern defense system against invasions, especially under the Qin and Ming dynasties. It became one of the most famous symbols of Chinese history, state power, and engineering.",
+    "concept_count": 7
   }
-
 ]
-

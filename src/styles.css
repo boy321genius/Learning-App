@@ -852,3 +852,324 @@ html, body {
 @keyframes spin { to { transform: rotate(360deg); } }
 
 .error-state { text-align: center; color: var(--text-2); padding: 40px 20px; }
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:           #0f0f1a;
+    --card:         #1a1a2e;
+    --card-tint:    #1f1f35;
+    --border:       #2e2e4a;
+    --text:         #e8e8f5;
+    --text-2:       #8888aa;
+    --text-3:       #505070;
+    --success:      #22c55e;
+    --success-tint: #0a2315;
+    --primary-tint: #1c1840;
+    --shadow:       0 4px 24px rgba(0,0,0,0.55);
+    --shadow-sm:    0 2px 12px rgba(0,0,0,0.45);
+    --shadow-xs:    0 1px 6px  rgba(0,0,0,0.35);
+  }
+}
+
+/* ============================================================
+   REVIEW COLOR TOKEN
+   ============================================================ */
+:root { --review-color: #d97706; }
+@media (prefers-color-scheme: dark) { :root { --review-color: #fbbf24; } }
+
+/* ============================================================
+   SEARCH BAR
+   ============================================================ */
+.search-bar-wrap {
+  padding: 12px 20px 4px;
+}
+.search-input {
+  width: 100%;
+  padding: 10px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  font-size: 15px;
+  color: var(--text);
+  outline: none;
+  box-shadow: var(--shadow-xs);
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.search-input::placeholder { color: var(--text-3); }
+.search-input:focus { border-color: var(--primary); }
+
+/* ============================================================
+   GRID REVIEW BADGE
+   ============================================================ */
+.grid-review-badge {
+  display: inline-block;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* ============================================================
+   REVIEW BADGE (on concept card)
+   ============================================================ */
+.review-badge {
+  font-size: 12px;
+  color: var(--review-color);
+  font-weight: 700;
+  background: rgba(217,119,6,0.1);
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+/* ============================================================
+   CONCEPT CARD — NEEDS REVIEW STATE
+   ============================================================ */
+.concept-card.card-needs-review {
+  border-color: var(--review-color);
+}
+
+/* Mark-read button — needs-review variant */
+.mark-read-btn.btn-needs-review {
+  background: rgba(217,119,6,0.08);
+  border-color: var(--review-color);
+  color: var(--review-color);
+}
+
+/* Dots — needs-review state */
+.dot.dot-review {
+  background: var(--review-color);
+}
+
+/* ============================================================
+   RECALL MODAL
+   ============================================================ */
+.recall-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(13,13,43,0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 200;
+  padding: 0 0 env(safe-area-inset-bottom, 0px);
+}
+.recall-modal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--card);
+  border-radius: 28px 28px 0 0;
+  padding: 28px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recall-eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.recall-concept-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+}
+.recall-prompt {
+  font-size: 15px;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+.recall-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+.recall-btn {
+  flex: 1;
+  padding: 14px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s;
+}
+.recall-btn:active { opacity: 0.82; }
+.recall-got-it {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(108,71,255,0.35);
+}
+.recall-fuzzy {
+  background: var(--card-tint);
+  border: 1.5px solid var(--border);
+  color: var(--text-2);
+}
+.recall-note {
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.5;
+  margin-top: 2px;
+}
+
+/* ============================================================
+   DEEP DIVE — NEXT CONCEPT BUTTON
+   ============================================================ */
+.cta-next-btn {
+  padding: 14px;
+  background: var(--card-tint);
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background 0.18s;
+}
+.cta-next-btn:active { background: var(--primary-tint); }
+
+/* ============================================================
+   PROGRESS SCREEN
+   ============================================================ */
+.progress-screen { overflow-y: auto; }
+
+.progress-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 88px;
+}
+
+.progress-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 20px 8px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.progress-ring-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+.progress-ring-pct {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.progress-hero-text { flex: 1; }
+.progress-hero-main {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+}
+.progress-hero-sub {
+  font-size: 13px;
+  color: var(--text-2);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.progress-review-row {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0 20px 10px;
+  padding: 14px 16px;
+  background: var(--card);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.progress-review-row:active { transform: scale(0.98); }
+.progress-review-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+.progress-review-count {
+  font-size: 12px;
+  color: var(--review-color);
+  font-weight: 600;
+}
+
+.progress-topic-item {
+  margin: 0 20px 12px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.progress-topic-item:active { transform: scale(0.98); }
+
+.progress-topic-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.progress-topic-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+  margin-right: 10px;
+}
+.progress-topic-stat {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-3);
+  flex-shrink: 0;
+}
+
+.progress-bar-bg {
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+  min-width: 0;
+}
+
+.progress-topic-review-note {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--review-color);
+  margin-top: 6px;
+}
