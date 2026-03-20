@@ -10,35 +10,35 @@
       "summary": "A bank's most basic job is to sit between two groups of people: those who have money they are not using right now, and those who need money they do not have yet. The people with money deposit it in savings accounts. The bank takes that money and lends it to people who need a mortgage, a car loan, or business financing. The depositor gets a small return for letting the bank use their money. The borrower pays a higher rate for access to funds they need. The bank keeps the difference. That gap between what it pays depositors and what it charges borrowers is where most of a bank's profit comes from. Everything else a bank does — the app, the branches, the credit cards — is built on top of this simple act of connecting savers to borrowers.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Before banks existed, someone who needed money had to find a willing lender themselves. Someone with savings had no easy way to earn a return on idle funds. Banks solved both problems at once by creating a reliable place where money could flow from people who have it to people who need it.",
             "This middleman role is what makes banks useful to society. They collect small deposits from millions of people and pool that money into large loans that individuals or businesses could never arrange on their own."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The two key forces are depositors on one side and borrowers on the other. Depositors want safety and a return. Borrowers want access to funds at a manageable cost. The bank manages both relationships simultaneously and profits from the spread between them.",
             "Trust is also a critical force. Depositors only leave their money with a bank if they believe it will be there when they want it back. That trust is what makes the whole system work."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "A bank makes money by charging borrowers more than it pays depositors. If it pays 2% on savings and charges 7% on loans, the 5% difference is its gross income before expenses. That spread, multiplied across billions of dollars in deposits and loans, is enormous.",
             "This simple idea explains why banks care so much about both sides of the relationship. Lose depositors and you lose the raw material. Lose borrowers and you lose the revenue."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "When you deposit $1,000 in a savings account, the bank does not store your specific dollars in a vault. It uses your deposit as part of a pool of funds it lends out. When you need your money back, the bank pays you from new deposits coming in or from its own reserves.",
             "This constant cycling of money in and out is what keeps the system running. The bank is always managing how much is coming in versus going out, and its profit depends on pricing that flow correctly."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "The middleman model makes credit available to people who would otherwise have no access to it. It also means that the health of banks is tied directly to the health of the economy. When borrowers cannot repay loans, banks lose income and can threaten the savings of depositors.",
             "This connection between lending and stability is why banks are so closely watched and regulated."
@@ -58,35 +58,35 @@
       "summary": "The single most important number in a bank's business is the gap between what it pays to borrow money and what it charges to lend it. This gap is called the net interest margin. If a bank pays depositors 2% and charges mortgage borrowers 7%, it earns a 5% spread on every dollar it has deployed. Multiply that across tens of billions of dollars in loans and the income is massive. Banks obsess over this spread because it is their core engine. When interest rates rise, the spread can widen and banks often profit more. When rates fall or competition heats up, the spread compresses and profits shrink. Understanding this one idea explains most of what banks do and most of how they think.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Banks have been earning money this way for centuries. The terminology changes, the products change, and the scale grows, but the underlying logic is always the same: charge more for money than you pay for it.",
             "Net interest income is still the largest single source of revenue for most retail and commercial banks. Everything else, fees, trading, advisory services, is secondary to the spread."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The forces shaping the spread are competition, interest rate levels, and credit risk. Competition from other banks pushes deposit rates up and loan rates down, compressing the margin. Rising base rates from the Fed can widen margins if banks raise loan rates faster than deposit rates.",
             "Credit risk also matters because banks charge higher rates on riskier loans to compensate for the possibility of default. A risky borrower subsidizes the spread the bank earns on safer ones."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "The net interest margin is the percentage difference between the interest a bank earns on its loans and the interest it pays on its deposits and borrowings. A wider margin means more profit per dollar deployed. A narrower margin means the bank has to work harder with the same pool of money.",
             "This is why banks pay very close attention to central bank rate decisions. A rate hike can expand their margins. A rate cut can squeeze them."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "Imagine a bank with $10 billion in loans at an average rate of 6% and $10 billion in deposits at an average rate of 1.5%. Its gross interest income is $600 million. Its interest expense is $150 million. Its net interest income is $450 million before any other costs. That $450 million is what pays for branches, staff, technology, and shareholder returns.",
             "Banks manage this spread actively by adjusting what they offer on deposits, which loan products they promote, and how they price risk."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "When the spread narrows, banks may reduce services, tighten lending standards, or charge more fees to compensate. When the spread is wide, banks tend to lend more aggressively and compete harder for deposits.",
             "This dynamic directly affects consumers because the spread influences the rates you are offered on both sides of the ledger."
@@ -106,35 +106,35 @@
       "summary": "Banks are in the business of taking risks to make money. Left completely unchecked, a bank has every incentive to lend aggressively, pay depositors as little as possible, and chase the highest returns it can find. That works well when the economy is strong. But when things go wrong, an overleveraged bank can collapse quickly, and because millions of ordinary people have their savings there, the damage spreads far beyond the bank itself. Regulation exists to manage that tension. Rules like capital requirements force banks to keep enough of their own money at risk so they have a cushion when loans go bad. Deposit insurance like the FDIC protects savers so a single bank failure does not cause a panic. The goal is not to stop banks from being profitable — it is to make sure their pursuit of profit does not blow up the whole system.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Before modern bank regulation, bank failures were common and devastating. A rumor that a bank was in trouble could trigger a run, where every depositor tried to withdraw at once, guaranteeing the collapse the rumor predicted. The Great Depression saw thousands of bank failures that wiped out ordinary savings and deepened the economic crisis.",
             "The regulatory system that exists today was built largely in response to those failures. Each major financial crisis, including the 2008 financial crisis, produced new rules designed to close the gaps that the previous disaster revealed."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The central tension is between profitability and stability. Banks want to maximize returns, which usually means lending more and holding less in reserve. Regulators want banks to hold enough capital to absorb losses without failing. These goals are in permanent conflict.",
             "Key regulatory tools include capital requirements, which force banks to fund a portion of their assets with equity rather than debt. Reserve requirements historically limited how much banks could lend relative to deposits. Deposit insurance removes the incentive for depositors to panic, which prevents runs."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "Regulation is a guardrail, not a cage. It does not stop banks from being aggressive about profits. It just requires them to keep enough of their own money on the line so that when bets go wrong, the bank absorbs the loss instead of passing it on to depositors or taxpayers.",
             "The 2008 financial crisis is the clearest modern example of what happens when those guardrails are too weak. Banks had taken enormous risks funded mostly by borrowed money, with very little equity cushion. When mortgage values collapsed, there was nothing to absorb the losses and the system nearly froze."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "Capital requirements, shaped by international rules called the Basel Accords, require banks to hold a minimum percentage of their own equity relative to their risk-weighted assets. The riskier the loan book, the more equity the bank must hold. This limits how much risk a bank can take relative to the capital it has.",
             "The FDIC insures deposits up to $250,000 per account, which means ordinary savers do not need to monitor their bank's health. That removes the incentive for bank runs, which are often self-fulfilling."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Regulation makes banking safer but also more expensive. Holding more capital means lower returns for shareholders. Meeting compliance requirements costs money. Banks often push back against stricter rules arguing they reduce lending and slow economic growth, while regulators argue that undercapitalized banks are a systemic risk.",
             "Finding the right balance is an ongoing political and economic argument, and the answer often shifts depending on whether a crisis just happened or feels far away."
@@ -154,35 +154,35 @@
       "summary": "When you deposit $1,000 in a bank, you might assume the bank holds all of it in a vault waiting for you. It does not. The bank keeps only a fraction of your deposit in reserve and lends the rest out. That loan gets deposited into another bank, which lends most of it out again. The same dollar gets multiplied across the system into many times its original value in loans. This is called fractional reserve banking, and it is how a relatively small pool of real deposits supports a much larger pool of credit in the economy. It is also why bank runs are so dangerous: if everyone asks for their money at once, the bank physically cannot return it all, because most of it has been lent out.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Fractional reserve banking developed naturally as early goldsmiths realized that not all depositors wanted their gold back at the same time. They could lend most of it out and earn interest while keeping only enough to handle normal withdrawals. Modern banking operates on the same principle at enormous scale.",
             "The system works smoothly under normal conditions because withdrawals and deposits largely balance out. Problems arise when confidence breaks down and too many people want their money back at once."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are the reserve ratio, confidence, and the money multiplier. The reserve ratio is the fraction of deposits a bank must hold. The money multiplier describes how many dollars of lending a given amount of reserves can support. Confidence is what keeps depositors from all demanding their money simultaneously.",
             "Historically, central banks set minimum reserve requirements. In recent years the Fed moved to zero reserve requirements, relying instead on capital rules and liquidity standards to manage risk."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "Fractional reserve banking means that banks create credit far in excess of the actual deposits they hold. If a bank holds 10% in reserve, a $1,000 deposit can theoretically support up to $10,000 in loans across the banking system as money cycles through multiple institutions.",
             "This is not fraud. It is the designed mechanism that allows banks to fund the mortgages, business loans, and consumer credit that the economy runs on. But it does mean the system depends on trust."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "You deposit $1,000. The bank holds $100 as a reserve and lends $900 to someone buying a car. That person's car dealer deposits the $900 at their bank, which holds $90 and lends $810. The chain continues until the original $1,000 has supported several thousand dollars in total lending.",
             "This multiplication is why banks are so powerful as credit creators and why their collective behavior has such a large effect on economic growth and contraction."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Fractional reserve banking makes credit available and drives economic growth, but it also makes banks inherently fragile. A bank that is perfectly solvent on paper can fail if depositors lose confidence and withdraw faster than the bank can liquidate loans.",
             "The 2023 collapse of Silicon Valley Bank was a modern example. Its assets exceeded its liabilities, but when large depositors rushed to withdraw simultaneously, the bank could not convert its assets to cash fast enough to survive the run."
@@ -202,35 +202,35 @@
       "summary": "Interest is a bank's biggest revenue source, but it is not the only one. Banks also earn money through fees, and those fees add up to billions of dollars every year. Overdraft fees charge you when you spend more than your balance. Monthly maintenance fees charge you just for having an account. ATM fees charge you for using a machine outside the bank's network. When you swipe a debit or credit card, the bank earns an interchange fee from the merchant. When you wire money internationally, the bank takes a cut on the exchange rate and charges a processing fee. None of these feel large individually, but they are a significant and very reliable revenue stream. Unlike interest income, fees do not depend on the rate environment — the bank earns them regardless of what the Fed does.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Fee income became increasingly important to banks after the 2008 financial crisis, when low interest rates compressed the spread between deposit and loan rates. With margins squeezed, banks leaned harder on fees to maintain profitability.",
             "Consumer awareness of fees has grown over time, and competition from fintech companies offering free accounts has pushed some banks to reduce or eliminate certain fees. But many fees remain deeply embedded in how banks earn money."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are consumer behavior, regulation, and competition. Overdraft fees depend on customers spending more than they have. Interchange fees depend on card usage volume. Regulatory changes have limited some fees, like caps on debit interchange for large banks introduced after 2010.",
             "Fintech banks and credit unions have used fee-free models as a competitive weapon, forcing traditional banks to reconsider fee structures to retain customers."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "Fees are the part of bank revenue that does not require lending. They are earned for services, transactions, and account management. Unlike loan interest, they are not tied to credit risk or interest rate movements, which makes them a stable and attractive revenue source.",
             "Banks design products and processes partly to generate fee income. Overdraft protection programs, for example, are structured so that fees are triggered predictably by common customer behavior."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "When you use a credit card, the merchant pays an interchange fee, typically 1.5% to 3.5% of the transaction. That fee is split between the card network and your bank. Rewards programs are funded largely from this income, which is why premium cards with better rewards tend to charge higher interchange rates.",
             "Overdraft fees have historically been as high as $35 per transaction. A customer who overdrafts multiple times in a week could owe more in fees than the original amount they spent, which is why these fees have attracted regulatory scrutiny."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Fee income disproportionately affects lower-income customers who are more likely to overdraft, use out-of-network ATMs, or maintain smaller balances that trigger maintenance charges. Critics argue that the fee structure effectively penalizes people for being poor.",
             "For banks, fee income diversification is a buffer against interest rate cycles. When the spread is thin, fees keep the lights on."
@@ -250,35 +250,35 @@
       "summary": "To lend money, a bank first has to get money from somewhere. It has three main sources: deposits from customers, borrowing from other banks or financial markets, and equity raised from shareholders. Deposits are the cheapest and most stable source because customers accept low rates in exchange for safety and convenience. Borrowed funds from wholesale markets are more expensive and can dry up quickly in a crisis. Equity is the most expensive because shareholders expect high returns, but it is also the safest cushion because equity absorbs losses without triggering default. The mix of these three sources is called the bank's capital structure, and getting it right is one of the most important and consequential decisions a bank makes. Too much borrowed funding and the bank is fragile. Too much equity and it is inefficient.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Banks are unusual businesses because their raw material is money itself. Unlike a manufacturer that buys steel and sells cars, a bank borrows money at one price and lends it at another. That means how it funds itself is inseparable from its core business model.",
             "The 2008 financial crisis was in large part a story of banks that had funded themselves too heavily with short-term borrowing and too little equity. When those funding markets froze, banks with thin capital buffers had no room to absorb losses."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are cost, stability, and risk absorption. Deposits are cheap and sticky. Wholesale borrowing is flexible but volatile. Equity is expensive but permanent. Regulation, specifically capital requirements, sets a floor on how much equity banks must hold relative to their risk.",
             "The tension is between efficiency and resilience. Borrowed money amplifies returns when things go well, but it amplifies losses when things go wrong. Equity buffers protect against the downside but dilute returns for shareholders."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "A bank that funds itself almost entirely with borrowed money is like a person who buys a house with no down payment and a variable-rate mortgage. Everything is fine as long as prices rise and income is steady. But any disruption can be catastrophic because there is no cushion.",
             "Equity is the bank's own skin in the game. When a loan goes bad, equity absorbs the loss before depositors are touched. The more equity a bank holds, the more losses it can survive. Regulators require minimums; prudent banks often hold more."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "A bank raises equity by issuing shares to investors, retaining profits instead of paying them all as dividends, or raising new capital in a crisis. It borrows by taking in deposits, issuing bonds, or borrowing in short-term money markets. Each source has a different cost, stability profile, and regulatory treatment.",
             "During the 2008 crisis, several major banks had to raise emergency equity from governments or sovereign wealth funds because their capital had been wiped out by loan losses. Banks that had maintained stronger equity ratios weathered the storm without needing bailouts."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "The funding structure determines how vulnerable a bank is when economic conditions deteriorate. A well-capitalized bank can absorb losses, keep lending, and support the economy. An undercapitalized bank may survive good times but amplifies crises by cutting lending exactly when borrowers need it most.",
             "This is why debates about capital requirements are never just technical. They are debates about how much risk society wants its banking system to carry."
@@ -298,35 +298,35 @@
       "summary": "Not all banks work the same way or make money the same way. A commercial bank takes deposits and makes loans to individuals and businesses. An investment bank helps companies raise money by issuing stocks and bonds, advises on mergers, and trades financial instruments for its own account. A credit union is a member-owned cooperative that operates like a bank but returns profits to members rather than shareholders, usually in the form of lower loan rates and higher deposit rates. Each type operates under different rules, serves different customers, and faces different risks. Understanding the differences helps explain why your savings account and Goldman Sachs are both called banks but almost nothing else about them is the same.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "The term bank covers a wide range of institutions that share some features but differ significantly in what they do and who they serve. That diversity developed over time as different financial needs called for different structures.",
             "After the Great Depression, the United States separated commercial banking from investment banking under the Glass-Steagall Act to prevent the conflicts of interest that had contributed to the crisis. That separation was largely undone in 1999, and the mixing of activities became a factor in the 2008 crisis."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "Commercial banks are regulated by the Fed, the OCC, and the FDIC. Their core business is deposits and loans. Investment banks like Goldman Sachs and Morgan Stanley are regulated by the SEC and make money from fees, trading, and advisory services rather than the deposit-loan spread.",
             "Credit unions are regulated by the NCUA and are owned by their members. Because they do not have outside shareholders demanding returns, they can often offer better rates. But they are typically smaller and serve defined membership groups."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "The type of bank determines what it is trying to do with money and who bears the risk. Commercial banks intermediate between savers and borrowers. Investment banks facilitate the flow of capital between companies and investors. Credit unions redistribute profit back to members.",
             "Each model creates different incentives. Commercial banks want to make safe loans at good spreads. Investment banks want to win deals and earn fees. Credit unions want to serve members at low cost."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "If a company wants to raise $500 million by issuing bonds, it hires an investment bank to structure the deal, find buyers, and manage the process. The investment bank earns a percentage of the deal as a fee. It may also trade those bonds for its own account.",
             "If an individual wants a car loan, they go to a commercial bank or credit union. The institution checks their credit, funds the loan from deposits, and earns the interest over the loan term. The mechanics are completely different from an investment bank transaction."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "The type of bank you use matters for the rates and fees you pay. Credit unions often beat commercial banks on loan rates and savings rates because they are not maximizing shareholder returns. But investment banks affect you indirectly through the companies they finance and the markets they influence.",
             "Understanding the differences helps you choose where to keep your money and gives you a clearer picture of how the financial system is structured."
@@ -346,35 +346,35 @@
       "summary": "Understanding how banks make money changes how you use them. Banks are not neutral services. They are businesses that profit from your behavior, and knowing which behaviors generate revenue for them helps you make choices that keep more money in your pocket. The interest rate spread means that shopping around for loan rates is worth the effort because even a small difference compounds into real savings. The fee structure means that choosing a bank with no maintenance fees and no overdraft charges can save hundreds of dollars a year. The equity and funding concepts mean you can recognize when a bank is taking on too much risk and protect your savings accordingly. Financial literacy does not require trusting banks less — it just means understanding the relationship clearly.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Most people use banks without thinking much about the business model behind them. They accept the default savings rate, pay fees without questioning them, and take the first loan rate they are offered. The result is that they often pay more than they need to or earn less than they could.",
             "The good news is that competition between banks, credit unions, and fintech companies means that better options are usually available. The challenge is knowing what to look for."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are competition, information, and behavior. Banks compete for your deposits and loans, which means you have leverage if you are willing to use it. Information about rates and fees is publicly available. And your behavior, whether you carry a balance, overdraft, or shop rates, directly determines how much of your money the bank keeps.",
             "Switching costs are real but not prohibitive. Most people do not move banks often, which is why banks can offer low rates on savings to existing customers while advertising higher rates to attract new ones."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "A bank's profit is not separate from your financial experience. Its profit comes from the spread on your loans, the fees on your account, and the gap between what it earns on your deposits and what it pays you. Every dollar the bank earns in those ways is a dollar that did not stay in your account.",
             "That is not a reason to avoid banks. It is a reason to choose them carefully and use them strategically."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "Compare APY on savings accounts before choosing where to keep your money. A high-yield savings account at an online bank often pays several times more than a standard savings account at a large retail bank. On loans, compare APR across at least three lenders before accepting an offer.",
             "Avoid carrying a credit card balance if possible, because card interest rates are among the highest in consumer finance. Set up low-balance alerts to avoid overdraft fees. Check whether your bank charges a monthly maintenance fee and whether there is a way to waive it."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Small improvements compound over time. Moving $10,000 from a 0.5% savings account to a 4.5% high-yield account earns an extra $400 per year. Avoiding $35 overdraft fees even a few times a year adds up. Refinancing a mortgage at a rate that is 1% lower on a $300,000 loan saves about $60,000 over 30 years.",
             "None of these require sophisticated financial knowledge. They mostly require knowing that the difference exists and being willing to act on it."

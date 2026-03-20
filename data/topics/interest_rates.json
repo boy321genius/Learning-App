@@ -10,35 +10,35 @@
       "summary": "Interest is the price of borrowing money or the reward for lending it. When you take out a loan, the lender charges you interest because they are giving up access to their money for a period of time and taking on the risk that you might not repay. When you put money in a savings account, the bank pays you interest because it is using your money to lend to others. In both cases, interest is expressed as a percentage of the amount involved. That percentage is the interest rate. A 5% annual interest rate on a $1,000 loan means you owe $50 in interest for one year of borrowing. Interest exists because money has time value: a dollar available today is worth more than a dollar promised in the future, and interest compensates for that difference.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Borrowing and lending are as old as civilization. Farmers borrowed grain before a harvest and repaid more afterward. Merchants borrowed to finance trade and shared profits with backers. In all these cases, the extra amount paid on top of the original sum was a form of interest.",
             "Interest is fundamental to how modern economies work. Banks, mortgages, credit cards, government bonds, and business loans all use interest as the basic mechanism for pricing the use of money over time."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are time, risk, and opportunity cost. Time matters because money lent today cannot be used for other purposes in the meantime. Risk matters because there is always a chance the borrower will not repay. Opportunity cost matters because lending money means giving up what else you could have done with it.",
             "The interest rate reflects all three of these forces. A riskier loan carries a higher rate because the lender needs compensation for the extra uncertainty."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "Interest is the cost of using someone else's money. From the lender's perspective it is a return. From the borrower's perspective it is a fee. The interest rate is simply how large that cost or return is, expressed as a percentage per unit of time, usually per year.",
             "This idea is simple but powerful. It explains why debt grows over time if you do not pay it down, and why savings grow over time if you leave them alone."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "If you borrow $500 at a 10% annual interest rate, you owe $50 in interest after one year. If you save $500 at a 4% annual rate, you earn $20 in interest after one year. The mechanics are identical; the direction is just reversed depending on whether you are the borrower or the lender.",
             "Interest is calculated on the principal, which is the original amount. The rate and the time period together determine how much interest accumulates."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Interest shapes almost every major financial decision. Buying a home, financing a car, carrying a credit card balance, or opening a savings account all involve interest in some form. Understanding what interest is gives you the foundation to evaluate those decisions clearly.",
             "Without interest, lending would not happen at scale because there would be no incentive for lenders to take on risk or give up access to their money."
@@ -58,35 +58,35 @@
       "summary": "Simple interest is calculated only on the original amount you borrow or save. Compound interest is calculated on the original amount plus any interest that has already accumulated. That difference sounds small but becomes enormous over time. With compound interest, you earn interest on your interest, which causes money to grow at an accelerating rate. This is one of the most important ideas in personal finance because it explains why starting to save early matters so much, why high-interest debt is so dangerous, and why small differences in interest rates can produce very large differences over years or decades. Compound interest works for you when you are saving and against you when you are in debt.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "For most of history, simple interest was the common model because it was easier to calculate by hand. Compound interest became more important as financial systems grew more sophisticated and as the ability to calculate it precisely became easier.",
             "Today, compound interest is the standard for most savings accounts, investment accounts, mortgages, and credit cards. Simple interest still appears in some short-term loans and certain bonds."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are the interest rate, the compounding frequency, and time. Compounding frequency means how often interest is added to the balance: daily, monthly, or annually. More frequent compounding means faster growth.",
             "Time is the most powerful variable. The longer the period, the greater the difference between simple and compound interest becomes. This is why starting to save early has such a disproportionate effect."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "Simple interest grows in a straight line. Compound interest grows on a curve because each period's interest becomes part of the base for the next period. The longer the time horizon, the steeper that curve becomes.",
             "This is what people mean when they talk about interest earning interest. Each cycle of compounding adds slightly more than the last because the base keeps growing."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "With simple interest, $1,000 at 5% per year earns exactly $50 every year. After 10 years you have $1,500. With compound interest at the same rate, the balance after 10 years is about $1,629 because each year's interest is added to the base before the next calculation.",
             "The difference grows dramatically over longer periods. At 5% compounded annually, $1,000 becomes about $2,653 after 20 years and about $4,322 after 30 years. With simple interest over 30 years it would only reach $2,500."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "For savers and investors, compound interest is enormously beneficial over long periods. For borrowers carrying high-interest debt, it is equally harmful because unpaid balances grow in the same accelerating way.",
             "This concept explains why paying off high-interest credit card debt quickly saves a large amount of money, and why letting a balance sit for years can make the total owed far larger than the original amount borrowed."
@@ -106,35 +106,35 @@
       "summary": "APR stands for Annual Percentage Rate and APY stands for Annual Percentage Yield. They sound similar but measure different things. APR is most commonly used for loans and credit cards and tells you the yearly cost of borrowing before compounding is factored in. APY is most commonly used for savings and deposit accounts and tells you the real return after compounding is included. Because APY accounts for how often interest compounds, it is always equal to or higher than APR for the same stated rate. Banks are required to disclose both figures, but they tend to advertise APY on savings products and APR on loan products because each number looks more favorable from the consumer's perspective. Knowing the difference helps you compare financial products honestly.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Before standardized disclosure rules, lenders could describe interest rates in many ways that made comparisons very difficult. APR and APY were established as standardized measures so that consumers could compare different financial products on equal terms.",
             "The Truth in Lending Act in the United States requires lenders to disclose APR so that borrowers can see the true cost of a loan. Similar rules apply to savings products with APY disclosures."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key force is compounding frequency. When interest is compounded monthly rather than annually, the effective yearly rate is slightly higher than the stated rate. APY captures that difference. APR typically does not.",
             "Banks use the distinction strategically. For savings accounts, advertising a higher APY makes the product look more attractive. For loans, advertising a lower APR makes the cost appear smaller. Both figures are real but they measure different things."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "APR is the base interest rate plus certain fees, expressed as a yearly percentage without accounting for compounding. APY is the actual return you earn or pay in a year after compounding is included. APY is the truer measure of what money actually does over a year.",
             "For savings, APY tells you what your balance will actually grow by in a year. For loans, APR gives you a starting point for comparison, but the actual cost may be higher if fees and compounding are involved."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "If a savings account has a 5% APR and compounds monthly, the APY is slightly above 5%, around 5.12%, because the monthly compounding produces slightly more than a simple annual rate. That small difference matters more over time and with larger balances.",
             "When comparing loans, a lower APR is generally better but you should also check for fees, which can raise the true cost beyond what the APR alone suggests. When comparing savings accounts, APY is the most direct comparison tool."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Understanding APR versus APY helps you avoid being misled by attractive-sounding numbers. A savings account advertised at 5% APR and one at 5% APY are not the same thing, even though they look similar at first glance.",
             "This concept gives people a practical tool for reading financial products clearly and making better decisions about where to borrow and where to save."
@@ -154,35 +154,35 @@
       "summary": "The Federal Reserve, often called the Fed, is the central bank of the United States. One of its most important tools is the federal funds rate, which is the interest rate at which banks lend money to each other overnight. When the Fed raises or lowers this rate, it sends ripples through the entire economy because banks, lenders, and investors use it as a baseline for nearly every other interest rate. A higher federal funds rate makes borrowing more expensive across the board, which tends to slow spending and reduce inflation. A lower rate makes borrowing cheaper, which can stimulate spending and economic growth. The Fed does not directly set the rates on your mortgage or credit card, but its decisions strongly influence them.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "The Federal Reserve was created in 1913 to provide a stable monetary system for the United States. One of its core responsibilities is managing inflation and employment by adjusting the cost of money in the economy. The federal funds rate is its main lever for doing that.",
             "When the economy is overheating and prices are rising too fast, the Fed raises rates to cool demand. When growth slows or unemployment rises, it lowers rates to encourage borrowing and spending."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The Federal Open Market Committee, or FOMC, meets roughly eight times a year to decide on the federal funds rate. The committee includes the Fed's Board of Governors and presidents of regional Federal Reserve banks. Their decisions are closely watched by financial markets worldwide.",
             "The forces shaping those decisions include inflation data, employment numbers, GDP growth, and global economic conditions. The Fed tries to balance two goals it is legally required to pursue: stable prices and maximum employment."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "The federal funds rate is the foundation of the interest rate system in the United States. When it moves, almost every other rate moves with it because lenders use it as a starting point for what they charge. Raising it makes all borrowing more expensive. Lowering it makes all borrowing cheaper.",
             "The Fed uses this tool to influence behavior across the entire economy without directly controlling individual prices or wages."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "When the FOMC raises the federal funds rate, banks must pay more to borrow from each other overnight. They pass that cost on to consumers and businesses through higher rates on loans, mortgages, and credit cards. Savings rates also tend to rise because banks compete for deposits.",
             "When the Fed lowers rates, the reverse happens. Borrowing becomes cheaper, which can encourage people to take out loans, buy homes, expand businesses, and spend more. Lower rates also tend to push investors toward stocks and other assets because savings accounts become less attractive."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Fed rate decisions affect everything from 30-year mortgage rates to the returns on your savings account. A rate increase of one or two percentage points can add hundreds of dollars per month to a mortgage payment or tens of thousands of dollars to the total cost of a home loan.",
             "The Fed's decisions also influence exchange rates, bond prices, and stock markets, making them among the most consequential policy choices in the global economy."
@@ -202,35 +202,35 @@
       "summary": "The rate you are offered on a loan or savings account is not random. It reflects a combination of factors: the Fed's baseline rate, the level of inflation, the risk that you specifically might not repay, and the length of the loan. Lenders add a premium on top of the federal funds rate to cover their costs and risks. If inflation is high, rates tend to be higher because lenders need to earn a return that stays ahead of rising prices. If your credit score is low, you are seen as a riskier borrower and charged a higher rate to compensate. If you are locking in a rate for a long period, lenders typically charge more because longer time means more uncertainty. Understanding these factors helps you see why two people can get very different rates on similar loans.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Interest rates vary constantly and they vary by person, product, and economic environment. The same bank may offer very different rates to two borrowers on the same day depending on their financial profiles. That variation is not arbitrary; it reflects the lender's calculation of risk and return.",
             "Broader economic conditions also shape rates. When inflation is high or the economy is uncertain, rates across the board tend to rise. When conditions stabilize, rates often fall."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The main forces are the federal funds rate as a baseline, inflation expectations, credit risk, and loan term. Each adds or subtracts from the rate a lender charges. The federal funds rate sets the floor, and each additional risk factor adds to the rate above that floor.",
             "A credit score is the most visible measure of individual credit risk. A higher score signals a better repayment history and typically earns a lower rate. A lower score signals more risk and results in a higher rate."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "An interest rate is built up in layers. Start with the base rate set by the Fed. Add a margin to cover lender operating costs and profit. Add a risk premium based on the borrower's credit profile and the loan term. The result is the rate you are offered.",
             "This layered structure explains why you cannot directly control the interest rate on a loan but you can influence it by improving your credit score, choosing a shorter loan term, or shopping around."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "When you apply for a loan, the lender checks your credit history, income, debt levels, and the type and length of the loan. They combine those inputs with current market conditions to arrive at a rate. Borrowers with strong profiles get rates closer to the baseline; riskier borrowers get rates with larger premiums added.",
             "You can reduce the rate you are offered by improving your credit score before applying, making a larger down payment, shortening the loan term, or choosing a secured loan where collateral reduces the lender's risk."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Small differences in interest rates compound into large differences over time. On a 30-year mortgage, a 1% difference in interest rate can change the total repayment by tens of thousands of dollars. Understanding what determines your rate helps you take actions that reduce the cost of borrowing.",
             "This concept also explains why financial literacy matters. People who understand how rates are set can shop more effectively and avoid products where the true cost is hidden."
@@ -250,35 +250,35 @@
       "summary": "Interest rates shape the most important financial decisions most people make. When you take out a mortgage, the interest rate determines how much of each monthly payment goes to the bank versus to owning more of your home. When you carry a credit card balance, the interest rate determines how fast that debt grows. When you put money in a savings account or a certificate of deposit, the rate determines how quickly your balance builds. Even if you do not borrow or save, interest rates affect you indirectly through housing prices, car costs, and the broader economy. Understanding rates in daily life means knowing how to compare products, when to lock in a rate, and how the cost of borrowing changes your real purchasing power.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
             "Most adults interact with interest rates constantly, even when they do not think about it explicitly. A car loan, a mortgage, a student loan, a credit card, a savings account, and a retirement account all involve interest rates in some form.",
             "The difference between a good and a bad rate on a major loan can equal months or years of income over a lifetime. That makes rate awareness one of the most practical financial skills anyone can develop."
           ]
         },
         {
-          "title": "Key figures forces",
+          "title": "How it works",
           "body": [
             "The key forces are loan type, rate level, loan term, and payment behavior. For mortgages, even a half-point rate difference on a large loan produces a large difference in total cost. For credit cards, carrying a balance at a high rate can quickly overwhelm the original purchase amount.",
             "Savings rates matter too. When rates are high, keeping money in a high-yield savings account or CD can meaningfully outpace inflation. When rates are low, savers must look elsewhere to preserve purchasing power."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "The numbers",
           "body": [
             "Interest rates translate into real money gained or lost depending on whether you are a saver or a borrower. The rate is not just a percentage on paper; it is a number that compounds over time and changes the total cost or return of every financial product you use.",
             "The practical skill is comparison. Any time you borrow or save, comparing APR or APY across products and understanding the term length gives you information that can save or earn real money."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world impact",
           "body": [
             "For a mortgage, multiplying the loan amount by the rate gives a rough sense of annual interest cost. Over 30 years, even a modest difference in rate adds up quickly. Using an amortization schedule, which shows how each payment splits between principal and interest, makes this very clear.",
             "For credit cards, avoiding carrying a balance is the most powerful action because most cards charge rates between 20% and 30% annually. On a $2,000 balance at 25%, paying only the minimum can result in repaying more than double the original amount over time."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "What this means for you",
           "body": [
             "Rate awareness can influence major life decisions: when to buy a home, whether to refinance a loan, how much to keep in cash versus invested, and which credit products to use. Small improvements in the rates you pay or earn compound into large differences over a lifetime of financial decisions.",
             "This concept closes the topic by grounding everything in the practical world where interest rates matter most."
