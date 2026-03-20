@@ -1,0 +1,344 @@
+{
+  "id": "chemical_bonding",
+  "title": "Chemical Bonding and Compounds",
+  "category": "Science and Math",
+  "summary": "Atoms bond together to form compounds, and the type of bond determines almost everything about a substance — its structure, stability, melting point, and how it reacts. This topic explains ionic, covalent, and metallic bonding, and how compounds are named and classified.",
+  "concepts": [
+    {
+      "id": "why_atoms_bond",
+      "title": "Why Atoms Bond",
+      "summary": "Atoms bond with each other because doing so makes them more stable. Stability, in chemistry, comes down to electrons — specifically, the electrons in the outermost shell of an atom, called the valence shell. Most atoms are most stable when their valence shell is full. For most elements that means having eight electrons in the outer shell, a rule known as the octet rule. Atoms that have almost full or almost empty outer shells have a strong drive to gain, lose, or share electrons with other atoms to reach that stable state. When they do, they form a chemical bond. That bond is not just a connection — it is a lower-energy arrangement that both atoms prefer over being alone. Understanding this drive toward stability is the key to understanding every type of chemical bond that follows.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Chemistry begins with atoms, and atoms are mostly empty space surrounding a nucleus. The nucleus holds protons and neutrons. Electrons orbit the nucleus in shells, and the outermost shell is the one that interacts with other atoms.",
+            "Most elements in their natural isolated state are not at their lowest possible energy. Forming bonds releases energy and drops the system to a more stable, lower-energy state."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key force is electrostatic attraction: positively charged nuclei attract negatively charged electrons. When two atoms get close, their nuclei and electrons interact, and if the arrangement lowers the overall energy, a bond forms.",
+            "The octet rule is the guiding principle. Noble gases like helium, neon, and argon already have full outer shells and almost never form bonds. Every other element tends to bond until it reaches a similar configuration."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Atoms bond because it makes them more stable. Stability means lower energy. Lower energy means a full or near-full outer electron shell. The type of bond that forms depends on which atoms are involved and how they achieve that stable configuration.",
+            "This is why the periodic table matters: it tells you how many valence electrons each element has, which predicts how it will bond."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Sodium has one valence electron and chlorine has seven. Sodium would rather give away its one electron than try to collect seven more. Chlorine would rather receive one electron than give up seven. When they meet, sodium transfers its electron to chlorine, both achieve full outer shells, and the resulting attraction between the now-charged atoms is an ionic bond.",
+            "That is the bonding logic in action: identify the electron count, identify what each atom needs, and predict the bond type."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "The drive to achieve stable electron configurations explains almost all of chemistry. It determines which elements react with which, what compounds form, and how strong or weak those compounds are.",
+            "Without this principle, the entire periodic table would be a random list. With it, the table becomes a map for predicting chemical behavior."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept is the foundation for everything that follows. Ionic bonding, covalent bonding, metallic bonding, and intermolecular forces all begin with the same idea: atoms seek stable electron arrangements, and the path they take to get there determines the type of bond."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ionic_bonding",
+      "title": "Ionic Bonding",
+      "summary": "Ionic bonding happens when one atom gives electrons to another, creating two oppositely charged particles called ions. The atom that loses electrons becomes a positive ion, called a cation. The atom that gains electrons becomes a negative ion, called an anion. Opposite charges attract, so the two ions are held together by strong electrostatic force — that attraction is the ionic bond. Table salt, sodium chloride, is the clearest example: sodium gives one electron to chlorine, both reach stable outer shells, and the resulting ions lock together into a crystal lattice. Ionic compounds tend to be solid at room temperature, have high melting points, and conduct electricity when dissolved in water or melted, because the ions become free to move. This type of bonding is most common between metals on the left side of the periodic table and non-metals on the right.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Ionic bonding typically occurs between elements that are far apart on the periodic table — usually a metal and a non-metal. Metals tend to have few valence electrons and readily give them up. Non-metals tend to have nearly full outer shells and eagerly accept electrons.",
+            "The result is a pair of ions with opposite charges that attract each other strongly."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key force is electrostatic attraction between a cation and an anion. The strength of this attraction depends on the charge of the ions and the distance between them. Higher charges and smaller ions produce stronger bonds.",
+            "The periodic table predicts ion charges well. Group 1 metals form +1 ions, Group 2 form +2 ions, Group 17 non-metals form -1 ions, and Group 16 form -2 ions."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Ionic bonding is electron transfer. One atom loses electrons and becomes positive. Another atom gains those electrons and becomes negative. The attraction between the resulting ions is the bond.",
+            "This is different from sharing. In ionic bonding, the electrons fully leave one atom and join another."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Sodium has one valence electron. Chlorine has seven. Sodium loses its electron, becoming Na+. Chlorine gains it, becoming Cl-. The attraction between Na+ and Cl- forms sodium chloride. In a solid crystal, each Na+ is surrounded by six Cl- ions and vice versa, creating a stable lattice.",
+            "When dissolved in water or melted, the lattice breaks apart and the free ions conduct electricity. That is why saltwater conducts current."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Ionic compounds are generally hard, brittle solids with high melting points because the lattice requires a lot of energy to break. They dissolve well in water because water molecules surround and separate the individual ions.",
+            "Many essential minerals in the human body, like sodium, potassium, and calcium ions, are ionic in nature and critical for nerve signals and muscle function."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "Ionic bonding contrasts directly with covalent bonding, which involves sharing rather than transferring electrons. The difference between the two explains why salt and water behave so differently despite both being common compounds."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "covalent_bonding",
+      "title": "Covalent Bonding",
+      "summary": "Covalent bonding happens when two atoms share electrons instead of transferring them. This type of bonding is most common between non-metal atoms, which tend to hold onto their electrons tightly and prefer sharing over giving them up entirely. In a covalent bond, both atoms contribute electrons to a shared pair, and both atoms count those shared electrons toward their own stable outer shell. Water is a perfect example: each hydrogen atom shares one electron with oxygen, and the result is a stable molecule. Covalent bonds can be single, double, or triple depending on how many pairs of electrons are shared. They can also be polar or nonpolar depending on whether the atoms share electrons equally. Covalent compounds form discrete molecules rather than extended lattices, which is why they tend to have lower melting points than ionic compounds.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Covalent bonding is the dominant bonding type in organic chemistry and in the molecules that make up living things. DNA, proteins, fats, and carbohydrates are all held together by covalent bonds.",
+            "It typically forms between two non-metal atoms that both need electrons and neither is willing to give up electrons entirely."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key force is still electrostatic attraction, but now both nuclei are attracting the shared electron pair, and that shared attraction holds the atoms together. The more pairs shared, the stronger and shorter the bond.",
+            "Electronegativity is a key concept here. When two atoms with very different electronegativities share electrons, the more electronegative atom pulls the shared pair closer, creating a polar bond."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Covalent bonding is electron sharing. Both atoms count the shared electrons as their own, which lets each reach a stable outer shell without fully transferring electrons.",
+            "A single bond shares one pair, a double bond shares two pairs, and a triple bond shares three pairs. More shared pairs mean a stronger bond that requires more energy to break."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "In water, oxygen has six valence electrons and needs eight. Each hydrogen has one and needs two. Oxygen shares one electron with each hydrogen, forming two single covalent bonds. Each atom now counts the shared electrons, so hydrogen reaches two and oxygen reaches eight.",
+            "In oxygen gas, two oxygen atoms share two pairs of electrons, forming a double bond. In nitrogen gas, two nitrogen atoms share three pairs, forming a very strong triple bond."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Covalent compounds form distinct molecules with defined shapes. Those shapes matter enormously for how molecules interact and react. The shape of water explains its surface tension. The shape of proteins determines their biological function.",
+            "Polar covalent bonds create partial charges on molecules, which leads to hydrogen bonding and other intermolecular attractions that shape the physical properties of substances."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects directly to hydrogen bonding, which depends on polar covalent bonds to exist. It also sets up chemical formulas and naming conventions, since most covalent compounds are named differently from ionic ones."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "metallic_bonding",
+      "title": "Metallic Bonding",
+      "summary": "Metallic bonding is what holds metal atoms together in a solid metal. Unlike ionic or covalent bonds, metallic bonding does not involve specific pairs of atoms sharing or transferring electrons. Instead, metal atoms release their valence electrons into a shared pool that flows freely throughout the entire structure. This is called a sea of electrons or a delocalized electron cloud. The positive metal ions sit in a regular lattice, and the mobile electrons hold everything together by attracting all the positive ions at once. This model explains most of the distinctive properties of metals: electrical conductivity comes from freely moving electrons, thermal conductivity follows the same logic, and malleability exists because the layers of ions can slide past each other without breaking the bond since the electron sea adjusts to maintain attraction throughout.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Metals make up the majority of elements on the periodic table. They have low electronegativity and few valence electrons, which means they hold onto their outer electrons loosely.",
+            "When many metal atoms pack together in a solid, those loosely held electrons delocalize and form a collective electron cloud rather than staying attached to any one atom."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key force is electrostatic attraction between the delocalized electron cloud and the positive metal ions in the lattice. Because the electrons are mobile and spread throughout, every ion is attracted by the entire cloud, not just one neighboring atom.",
+            "The strength of metallic bonds generally increases with the number of valence electrons contributed and the charge of the metal ion, which is why transition metals tend to have stronger metallic bonds than alkali metals."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Metal atoms release valence electrons into a shared pool. The electrons move freely through the entire structure. The resulting attraction between the sea of electrons and the positive ions holds the metal together.",
+            "This delocalized model explains properties that neither ionic nor covalent bonding can fully account for."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "When a voltage is applied to a metal wire, the free electrons flow through the electron sea from one end to the other, carrying electrical current. When heat is applied, the energetic electrons quickly distribute that energy throughout the lattice, conducting heat efficiently.",
+            "When a metal is bent or hammered, the layers of ions shift position, but the electron sea redistributes to maintain attraction throughout the new shape, which is why metals are malleable and ductile rather than brittle."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Metallic bonding is responsible for the properties that make metals so useful: conductivity, malleability, ductility, and metallic luster. Alloys like steel or bronze mix two metals to modify those properties by disrupting the regular lattice and changing the bond strength.",
+            "Understanding metallic bonding explains why copper is used for wiring, why steel can be shaped into beams, and why mercury is liquid at room temperature while tungsten requires extreme heat to melt."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept completes the three main bond types alongside ionic and covalent bonding. Together they cover the entire spectrum from full electron transfer to sharing to complete delocalization. The differences between them explain the dramatic variation in physical properties across materials."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hydrogen_bonding",
+      "title": "Hydrogen Bonding and Intermolecular Forces",
+      "summary": "Not all attractive forces in chemistry are full chemical bonds. Some are weaker forces that act between molecules rather than within them. These intermolecular forces still have real consequences for how substances behave. The most important of these is hydrogen bonding, which forms when a hydrogen atom is covalently bonded to a highly electronegative atom like oxygen, nitrogen, or fluorine. That combination creates a strong partial positive charge on the hydrogen and a partial negative charge on the electronegative atom. The hydrogen on one molecule is then attracted to the electronegative atom on a neighboring molecule. This is why water has an unusually high boiling point for such a small molecule, why ice floats on liquid water, and why DNA's two strands can unzip for replication. Weaker intermolecular forces include dipole-dipole interactions and London dispersion forces, which affect all molecules to some degree.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Intermolecular forces explain why different substances have different boiling points, melting points, and solubilities even when their covalent bonds are similar in strength. They are weaker than full chemical bonds but strong enough to shape physical properties dramatically.",
+            "Hydrogen bonding is the strongest of the intermolecular forces and the one with the most visible effects in everyday substances."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key forces are electrostatic attraction between partial charges. In a polar covalent bond, the more electronegative atom pulls electron density toward itself, creating a partial negative charge. The less electronegative atom, usually hydrogen, develops a partial positive charge.",
+            "When the partially positive hydrogen on one molecule is attracted to the partially negative atom on another molecule, a hydrogen bond forms. These bonds are much weaker than covalent or ionic bonds but significant when many of them occur simultaneously."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Hydrogen bonding is an attraction between a partially positive hydrogen atom on one molecule and a highly electronegative atom on a neighboring molecule. It is not a full bond and involves no electron sharing or transfer. It is purely electrostatic.",
+            "Despite being weaker than covalent bonds, hydrogen bonds are strong enough to hold water molecules in a loose network, which explains many of water's unusual properties."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "In water, the oxygen atom pulls electron density away from the hydrogen atoms, making each hydrogen slightly positive and the oxygen slightly negative. These partial charges attract the hydrogens of one water molecule to the oxygen of a neighboring molecule, creating a hydrogen bond network.",
+            "In DNA, hydrogen bonds form between complementary base pairs on the two strands of the double helix. They are weak enough that enzymes can pull the strands apart for replication, but strong enough that the strands stay together under normal conditions."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Hydrogen bonding gives water properties that are extraordinary for a molecule of its size. Its boiling point, surface tension, and ability to dissolve many substances all depend on hydrogen bonding. Life as we know it depends on water's hydrogen bonding network.",
+            "London dispersion forces, the weakest intermolecular force, affect even nonpolar molecules and explain why larger molecules tend to have higher boiling points. Dipole-dipole forces fall between London forces and hydrogen bonds in strength."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept depends on polar covalent bonding from the previous concept, since hydrogen bonds only form when hydrogen is attached to a highly electronegative atom. It also connects to compounds and formulas because the formula of a molecule tells you whether hydrogen bonding is likely."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compounds_and_formulas",
+      "title": "Compounds and Chemical Formulas",
+      "summary": "A chemical compound is a substance made of two or more different elements bonded together in a fixed ratio. That ratio is what makes a compound different from a mixture. In a mixture, substances can combine in any proportion and can be separated physically. In a compound, the elements are chemically bonded, and the ratio is precise and always the same regardless of where the compound comes from. A chemical formula is the shorthand for expressing what atoms are in a compound and in what ratio. Water is H₂O, which tells you each molecule contains two hydrogen atoms and one oxygen atom. Carbon dioxide is CO₂: one carbon and two oxygens. The formula also gives information about molecular mass, which atoms might bond with what, and how much of one substance reacts with another. Reading chemical formulas is a basic but powerful skill in chemistry.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Chemical formulas developed as chemistry became more systematic in the 18th and 19th centuries. They allow chemists worldwide to communicate exactly what substance they are working with without ambiguity.",
+            "They also encode stoichiometry, which is the study of the quantitative relationships between reactants and products in chemical reactions."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key idea is fixed ratio. In any sample of water, no matter how large or small, hydrogen and oxygen are always present in a 2:1 ratio by number of atoms. This is called the law of definite proportions, and it is what distinguishes a compound from a mixture.",
+            "Subscript numbers in a formula show how many atoms of each element are in one formula unit or molecule. The absence of a subscript means one atom."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "A chemical formula gives the identity and ratio of the atoms in a compound. It is exact and universal. H₂O always means two hydrogens and one oxygen, and that ratio never changes regardless of the source of the water.",
+            "Formulas also come in two main types: molecular formulas, which show actual atom counts, and empirical formulas, which show the simplest whole-number ratio."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "To read a formula, identify each element symbol and its subscript number. NaCl means one sodium and one chlorine. CaCO₃ means one calcium, one carbon, and three oxygens. H₂SO₄ means two hydrogens, one sulfur, and four oxygens.",
+            "To write a formula for an ionic compound, use the charges of the ions to determine the ratio. A Ca²⁺ ion paired with Cl⁻ ions requires two chlorides to balance the charge, giving CaCl₂."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Chemical formulas make it possible to calculate exactly how much of one substance will react with another, predict the mass of products formed, and understand the composition of any compound down to the atomic level.",
+            "They also reveal something about structure and bonding. A formula like H₂O₂ versus H₂O tells you immediately that hydrogen peroxide contains an extra oxygen, which explains why it behaves very differently from water."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept bridges bonding and naming. Understanding what atoms are in a compound and in what ratio is the prerequisite for naming it correctly. It also ties back to ionic bonding and covalent bonding because the formula reflects the type and number of bonds."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "naming_compounds",
+      "title": "Naming Compounds",
+      "summary": "Chemical naming, called nomenclature, gives every compound a systematic name based on its composition. The naming rules differ depending on whether the compound is ionic or covalent, but in both cases the name tells you which elements are present and in what arrangement. For ionic compounds, the metal is named first and the non-metal gets an -ide suffix. Sodium chloride, calcium oxide, and magnesium bromide all follow this pattern. For covalent compounds between two non-metals, prefixes like mono-, di-, tri-, and tetra- are used to specify how many atoms of each element are present. Carbon dioxide and dinitrogen tetroxide are examples. Many compounds also have common names that are used in everyday life, like water instead of dihydrogen monoxide or ammonia instead of nitrogen trihydride. Knowing the systematic name helps you read the formula, and knowing the formula helps you understand the compound's properties.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Before systematic naming was developed, compounds had arbitrary names based on their source or discoverer. That made communication between chemists extremely difficult. Modern naming conventions, developed largely through the International Union of Pure and Applied Chemistry, or IUPAC, give every compound a unique, universally understood name.",
+            "The rules are learnable and logical once you understand the two main categories: ionic and covalent compounds."
+          ]
+        },
+        {
+          "title": "Key figures & forces",
+          "body": [
+            "The key distinction is the type of bond. Ionic compounds use a different naming system from covalent compounds. For ionic compounds with transition metals that form multiple ion charges, Roman numerals are added to specify the charge, as in iron(II) chloride versus iron(III) chloride.",
+            "The -ide ending signals a simple anion formed from a single non-metal element. More complex anions like sulfate, nitrate, and phosphate have their own names."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "For ionic compounds: name the cation first using the element name, then name the anion with an -ide suffix. For binary covalent compounds: use prefixes to count atoms, name the first element, then name the second with an -ide suffix.",
+            "The name encodes the formula, and the formula encodes the structure. That chain of information is the whole point of nomenclature."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "NaCl: sodium is Na, chloride is the anion of chlorine, so the name is sodium chloride. MgO: magnesium and oxide, so magnesium oxide. For covalent: NO₂ is nitrogen dioxide, N₂O₄ is dinitrogen tetroxide.",
+            "For transition metals, the charge matters: FeCl₂ is iron(II) chloride because iron is +2 to balance two Cl⁻. FeCl₃ is iron(III) chloride because iron is +3 to balance three Cl⁻."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Systematic naming allows chemists, doctors, pharmacists, and engineers worldwide to communicate about substances with complete precision. A drug label, a safety sheet, or a reaction equation all depend on this shared naming system.",
+            "Common names are useful in daily life but can obscure the chemical identity. Knowing that baking soda is sodium bicarbonate and that table salt is sodium chloride connects everyday substances to the broader system."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept closes the topic by tying together bonding type, formula, and identity. Understanding ionic bonding explains why ionic compounds are named cation first, and understanding covalent bonding explains why prefix-based naming is used instead. The topic has moved from why atoms bond all the way to how we label and communicate the result."
+          ]
+        }
+      ]
+    }
+  ]
+}
