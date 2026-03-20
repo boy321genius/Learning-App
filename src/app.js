@@ -1,5 +1,5 @@
 // ============================================================
-// CONFIG  — change BASE to match your GitHub repo name exactly
+// CONFIG
 // ============================================================
 const BASE = '/Learning-App';
 
@@ -51,12 +51,8 @@ function clearNeedsReview(topicId, conceptId) {
     saveNeedsReview();
   }
 }
-function isConceptRead(topicId, conceptId) {
-  return !!(state.progress[topicId]?.[conceptId]);
-}
-function isNeedsReview(topicId, conceptId) {
-  return !!(state.needsReview[topicId]?.[conceptId]);
-}
+function isConceptRead(topicId, conceptId) { return !!(state.progress[topicId]?.[conceptId]); }
+function isNeedsReview(topicId, conceptId) { return !!(state.needsReview[topicId]?.[conceptId]); }
 function getTopicReadCount(topicId) {
   return state.progress[topicId] ? Object.keys(state.progress[topicId]).length : 0;
 }
@@ -87,18 +83,11 @@ async function loadTopic(id) {
 
 // ============================================================
 // ROUTER
-// Two navigation modes:
-//   navigatePush    — major moves (home <-> topic <-> deepdive); adds a history entry
-//   navigateReplace — minor moves (card-to-card within a topic); replaces current entry
-//                     so back-button exits the topic rather than stepping through cards
+// navigatePush  — major moves (home <-> topic <-> deepdive); adds history entry
+// navigateReplace — card-to-card within a topic; replaces entry so back exits topic
 // ============================================================
-function navigatePush(hash) {
-  window.location.hash = hash;
-}
-function navigateReplace(hash) {
-  history.replaceState(null, '', '#' + hash);
-  handleRoute();
-}
+function navigatePush(hash) { window.location.hash = hash; }
+function navigateReplace(hash) { history.replaceState(null, '', '#' + hash); handleRoute(); }
 function handleRoute() {
   const hash  = window.location.hash || '#home';
   const parts = hash.replace('#','').split('/');
@@ -123,7 +112,7 @@ function settingsModalHTML() {
         <div class="modal-handle"></div>
         <div class="modal-header">
           <h2>Settings</h2>
-          <button class="icon-btn" id="close-settings">X</button>
+          <button class="icon-btn" id="close-settings">&#10005;</button>
         </div>
         <div class="modal-body">
           <button class="action-btn" id="export-btn">
@@ -142,38 +131,63 @@ function settingsModalHTML() {
 function wireSettingsModal(openTriggerIds) {
   const open  = () => document.getElementById('settings-modal').classList.remove('hidden');
   const close = () => document.getElementById('settings-modal').classList.add('hidden');
-  (openTriggerIds || []).forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('click', open);
-  });
+  (openTriggerIds || []).forEach(id => { const el = document.getElementById(id); if (el) el.addEventListener('click', open); });
   document.getElementById('close-settings').addEventListener('click', close);
-  document.getElementById('settings-modal').addEventListener('click', e => {
-    if (e.target===e.currentTarget) close();
-  });
+  document.getElementById('settings-modal').addEventListener('click', e => { if (e.target===e.currentTarget) close(); });
   document.getElementById('export-btn').addEventListener('click', exportProgress);
-  document.getElementById('import-input').addEventListener('change', e => {
-    if (e.target.files[0]) importProgress(e.target.files[0]);
-  });
+  document.getElementById('import-input').addEventListener('change', e => { if (e.target.files[0]) importProgress(e.target.files[0]); });
 }
 
 // ============================================================
-// RENDER: HOME
+// LANE CARD  (used in category lanes and Continue strip)
 // ============================================================
-function renderHome(filterCat, searchQuery) {
-  const app = document.getElementById('app');
-  const totalRead   = getTotalReadCount();
-  const reviewCount = getTotalNeedsReviewCount();
+function laneCardHTML(topic) {
+  const cc        = catColor(topic.category);
+  const readCount = getTopicReadCount(topic.id);
+  const total     = topic.concept_count || 0;
+  const pct       = total > 0 ? Math.round(readCount / total * 100) : 0;
+  const revCount  = getTopicReviewCount(topic.id);
+  const metaLine  = readCount > 0
+    ? readCount + '/' + total + ' read' + (revCount > 0 ? ' · &#8634; ' + revCount : '')
+    : total + ' concept' + (total !== 1 ? 's' : '');
 
-  const cats = ['All','History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
+  return `
+    <div class="lane-card" onclick="showTopicPreview('${topic.id}')"
+         style="background:linear-gradient(160deg,${cc.g1},${cc.g2})">
+      <div class="lane-card-inner">
+        <div class="lane-card-title">${topic.title}</div>
+        <div class="lane-card-meta">${metaLine}</div>
+      </div>
+      ${pct > 0 ? `
+        <div class="lane-card-progress-track">
+          <div class="lane-card-progress-fill" style="width:${pct}%"></div>
+        </div>` : ''}
+    </div>`;
+}
+
+// ============================================================
+// RENDER: HOME  (category lanes + surprise me + search)
+// ============================================================
+function renderHome(searchQuery) {
+  const app        = document.getElementById('app');
   const topicsList = Array.isArray(state.topics) ? state.topics : [];
 
-  let filtered = (filterCat && filterCat!=='All')
-    ? topicsList.filter(t => t.category===filterCat)
-    : topicsList;
+  // In-progress: started but not finished
+  const inProgress = topicsList.filter(t => {
+    const r = getTopicReadCount(t.id);
+    return r > 0 && r < (t.concept_count || 0);
+  });
 
+  const cats = ['History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
+  const byCat = {};
+  cats.forEach(c => { byCat[c] = []; });
+  topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
+
+  // Search mode
+  let searchResults = null;
   if (searchQuery && searchQuery.trim()) {
     const q = searchQuery.trim().toLowerCase();
-    filtered = filtered.filter(t =>
+    searchResults = topicsList.filter(t =>
       t.title.toLowerCase().includes(q) || t.category.toLowerCase().includes(q)
     );
   }
@@ -189,53 +203,75 @@ function renderHome(filterCat, searchQuery) {
       </header>
 
       <div class="home-scroll-area" id="scroll-area">
-        ${totalRead > 0 ? `
-          <div class="streak-banner">
-            <span>🔥</span>
-            <span>You've read <strong>${totalRead}</strong> concept${totalRead!==1?'s':''} so far${reviewCount > 0 ? ` &nbsp;·&nbsp; <strong>${reviewCount}</strong> to review` : ''}</span>
-          </div>` : ''}
 
         <div class="search-bar-wrap">
           <input class="search-input" id="search-input" type="search"
             placeholder="Search topics..." value="${searchQuery||''}" autocomplete="off" />
         </div>
 
-        <div class="cat-tabs" id="cat-tabs">
-          ${cats.map(c => `
-            <button class="cat-tab ${(!filterCat&&c==='All')||filterCat===c?'active':''}"
-              data-cat="${c}">${c}</button>`).join('')}
-        </div>
+        ${searchResults !== null ? `
 
-        ${filtered.length === 0 ? `
-          <div class="empty-state">
-            <div class="empty-icon">📚</div>
-            <h3>${searchQuery ? 'No results' : 'No topics yet'}</h3>
-            <p>${searchQuery ? 'Nothing matched "'+searchQuery+'".' : 'Content is coming soon.'}</p>
-          </div>
-        ` : `
-          <div class="section-label">TOPICS</div>
-          <div class="grid-cards">
-            ${filtered.map(topic => {
-              const cc         = catColor(topic.category);
-              const readCount  = getTopicReadCount(topic.id);
-              const total      = topic.concept_count || '?';
-              const revCount   = getTopicReviewCount(topic.id);
-              return `
-                <div class="grid-card" onclick="navigatePush('#topic/${topic.id}/0')"
-                     style="background:linear-gradient(135deg,${cc.g1},${cc.g2});">
-                  <div class="grid-card-inner">
-                    <div class="grid-title">${topic.title}</div>
-                    <div class="grid-summary">${topic.summary||''}</div>
-                    <div class="grid-explore">
-                      Explore &rarr;&nbsp;
-                      ${readCount ? readCount+'/'+total+' read' : total+' concepts'}
-                      ${revCount ? '<span class="grid-review-badge">&#8634; '+revCount+'</span>' : ''}
+          ${searchResults.length === 0 ? `
+            <div class="empty-state">
+              <div class="empty-icon">🔍</div>
+              <h3>No results</h3>
+              <p>Nothing matched "${searchQuery}".</p>
+            </div>
+          ` : `
+            <div class="section-label">RESULTS — ${searchResults.length} topic${searchResults.length!==1?'s':''}</div>
+            <div class="search-results-list">
+              ${searchResults.map(topic => {
+                const cc        = catColor(topic.category);
+                const readCount = getTopicReadCount(topic.id);
+                const total     = topic.concept_count || '?';
+                return `
+                  <div class="search-result-item" onclick="showTopicPreview('${topic.id}')">
+                    <div class="search-result-accent" style="background:linear-gradient(${cc.g1},${cc.g2})"></div>
+                    <div class="search-result-body">
+                      <div class="search-result-cat" style="color:${cc.text}">${topic.category}</div>
+                      <div class="search-result-title">${topic.title}</div>
+                      <div class="search-result-meta">${readCount ? readCount+'/'+total+' read · ' : ''}${total} concepts</div>
                     </div>
-                  </div>
-                </div>`;
-            }).join('')}
-          </div>
+                    <div class="search-result-arrow">&#8250;</div>
+                  </div>`;
+              }).join('')}
+            </div>
+          `}
+
+        ` : `
+
+          <button class="surprise-btn" id="surprise-btn">
+            <span class="surprise-icon">✨</span>
+            <div class="surprise-text-wrap">
+              <span class="surprise-title">Surprise me</span>
+              <span class="surprise-sub">Pick something random</span>
+            </div>
+            <span class="surprise-arrow">&#8594;</span>
+          </button>
+
+          ${inProgress.length > 0 ? `
+            <div class="section-label lane-section-label">CONTINUE</div>
+            <div class="lane-scroll">
+              ${inProgress.map(t => laneCardHTML(t)).join('')}
+            </div>
+          ` : ''}
+
+          ${cats.map(cat => {
+            const topics = byCat[cat];
+            if (!topics || topics.length === 0) return '';
+            const cc = catColor(cat);
+            return `
+              <div class="lane-header">
+                <span class="lane-title" style="color:${cc.text}">${cat}</span>
+                <span class="lane-count">${topics.length} topic${topics.length!==1?'s':''}</span>
+              </div>
+              <div class="lane-scroll">
+                ${topics.map(t => laneCardHTML(t)).join('')}
+              </div>`;
+          }).join('')}
+
         `}
+
         <div style="height:88px"></div>
       </div>
 
@@ -255,24 +291,125 @@ function renderHome(filterCat, searchQuery) {
         </button>
       </nav>
     </div>
-
     ${settingsModalHTML()}
   `;
 
   wireSettingsModal(['settings-btn','nav-settings-nav']);
   document.getElementById('nav-progress').addEventListener('click', () => navigatePush('#progress'));
 
-  document.getElementById('cat-tabs').addEventListener('click', e => {
-    const btn = e.target.closest('.cat-tab');
-    if (btn) renderHome(btn.dataset.cat==='All' ? null : btn.dataset.cat,
-                        document.getElementById('search-input')?.value);
+  const surpriseBtn = document.getElementById('surprise-btn');
+  if (surpriseBtn) surpriseBtn.addEventListener('click', () => {
+    const unstarted = topicsList.filter(t => getTopicReadCount(t.id) === 0);
+    const pool = unstarted.length > 0 ? unstarted : topicsList;
+    showTopicPreview(pool[Math.floor(Math.random() * pool.length)].id);
   });
 
   let searchTimer;
   document.getElementById('search-input').addEventListener('input', e => {
     clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => renderHome(filterCat, e.target.value), 200);
+    searchTimer = setTimeout(() => renderHome(e.target.value), 200);
   });
+  document.getElementById('search-input').addEventListener('search', e => {
+    if (!e.target.value) renderHome();
+  });
+}
+
+// ============================================================
+// TOPIC PREVIEW SHEET
+// ============================================================
+async function showTopicPreview(topicId) {
+  const topicMeta = state.topics.find(t => t.id === topicId);
+  if (!topicMeta) return;
+  const cc = catColor(topicMeta.category);
+
+  const app = document.getElementById('app');
+  const overlay = document.createElement('div');
+  overlay.className = 'preview-overlay';
+
+  // Show immediately with loading header
+  overlay.innerHTML = `
+    <div class="preview-sheet" id="preview-sheet">
+      <div class="preview-handle-bar"></div>
+      <div class="preview-header-loading" style="background:linear-gradient(135deg,${cc.g1},${cc.g2})">
+        <div class="spinner spinner-white"></div>
+      </div>
+    </div>`;
+  app.appendChild(overlay);
+  requestAnimationFrame(() => overlay.classList.add('visible'));
+
+  overlay.addEventListener('click', e => { if (e.target === overlay) dismissPreview(overlay); });
+
+  let topic;
+  try {
+    topic = (state.currentTopic?.id===topicId) ? state.currentTopic : await loadTopic(topicId);
+    state.currentTopic = topic;
+  } catch {
+    overlay.remove();
+    return;
+  }
+
+  const readCount  = getTopicReadCount(topicId);
+  const total      = topic.concepts.length;
+  const revCount   = getTopicReviewCount(topicId);
+  const firstUnread = topic.concepts.findIndex(c => !isConceptRead(topicId, c.id));
+  const resumeIndex = firstUnread >= 0 ? firstUnread : 0;
+  const btnLabel   = readCount === 0   ? 'Start Learning'
+                   : readCount === total ? 'Review Again'
+                   : 'Continue (' + readCount + '/' + total + ')';
+
+  document.getElementById('preview-sheet').innerHTML = `
+    <div class="preview-handle-bar"></div>
+    <div class="preview-header" style="background:linear-gradient(135deg,${cc.g1},${cc.g2})">
+      <button class="preview-close-btn" id="preview-close">&#10005;</button>
+      <div class="preview-cat-label">${topic.category}</div>
+      <h2 class="preview-title">${topic.title}</h2>
+      <div class="preview-pills">
+        <span class="preview-pill">${total} concept${total!==1?'s':''}</span>
+        ${readCount > 0 ? '<span class="preview-pill">' + readCount + ' read</span>' : ''}
+        ${revCount > 0  ? '<span class="preview-pill preview-pill-review">&#8634; ' + revCount + ' to review</span>' : ''}
+      </div>
+    </div>
+    <div class="preview-body" id="preview-body">
+      <p class="preview-summary">${topic.summary}</p>
+      <div class="preview-concepts-label">Concepts</div>
+      ${topic.concepts.map((c, i) => {
+        const read = isConceptRead(topicId, c.id);
+        const rev  = isNeedsReview(topicId, c.id);
+        return `
+          <div class="preview-concept-row ${read ? 'pcr-read' : ''}" data-index="${i}">
+            <div class="preview-concept-num" style="color:${cc.g1}">${String(i+1).padStart(2,'0')}</div>
+            <div class="preview-concept-name">${c.title}</div>
+            <div class="preview-concept-status">
+              ${rev  ? '<span class="pcr-review-icon">&#8634;</span>'
+                     : read ? '<span class="pcr-check">&#10003;</span>' : '<span class="pcr-arrow">&#8250;</span>'}
+            </div>
+          </div>`;
+      }).join('')}
+    </div>
+    <div class="preview-footer">
+      <button class="preview-cta-btn" id="preview-cta"
+              style="background:linear-gradient(135deg,${cc.g1},${cc.g2})">${btnLabel} &#8594;</button>
+    </div>
+  `;
+
+  document.getElementById('preview-close').addEventListener('click', () => dismissPreview(overlay));
+  document.getElementById('preview-cta').addEventListener('click', () => {
+    dismissPreview(overlay);
+    navigatePush('#topic/' + topicId + '/' + resumeIndex);
+  });
+  document.getElementById('preview-body').addEventListener('click', e => {
+    const row = e.target.closest('.preview-concept-row');
+    if (row) {
+      dismissPreview(overlay);
+      navigatePush('#topic/' + topicId + '/' + row.dataset.index);
+    }
+  });
+}
+
+function dismissPreview(overlay) {
+  overlay.classList.remove('visible');
+  overlay.classList.add('dismissing');
+  setTimeout(() => overlay.remove(), 300);
 }
 
 // ============================================================
@@ -319,8 +456,7 @@ async function renderTopic(topicId, conceptIndex) {
 
       <div class="concept-card-wrapper" id="card-wrapper">
         <div class="concept-card ${isRead?'is-read':''} ${needsRev?'card-needs-review':''}" id="concept-card">
-          <div class="concept-card-accent-bar"
-               style="background:linear-gradient(90deg,${cc.g1},${cc.g2})"></div>
+          <div class="concept-card-accent-bar" style="background:linear-gradient(90deg,${cc.g1},${cc.g2})"></div>
           <div class="concept-card-body">
             <div class="concept-card-top">
               <span class="cat-chip" style="background:${cc.chip};color:${cc.text}">${topic.category}</span>
@@ -348,10 +484,8 @@ async function renderTopic(topicId, conceptIndex) {
           ${topic.concepts.map((c,i) => {
             const r  = isConceptRead(topicId,c.id);
             const nr = isNeedsReview(topicId,c.id);
-            return '<div class="dot '+
-              (i===conceptIndex?'active ':'')+
-              (r?(nr?'dot-review':'read'):'')+
-              '" data-index="'+i+'"></div>';
+            return '<div class="dot '+(i===conceptIndex?'active ':'')+
+              (r?(nr?'dot-review':'read'):'')+'" data-index="'+i+'"></div>';
           }).join('')}
         </div>
         <button class="nav-btn ${conceptIndex<total-1?'next-active':'disabled'}"
@@ -363,17 +497,11 @@ async function renderTopic(topicId, conceptIndex) {
   document.getElementById('back-btn').addEventListener('click', () => navigatePush('#home'));
   document.getElementById('deep-dive-btn').addEventListener('click', () =>
     navigatePush('#deepdive/'+topicId+'/'+concept.id));
-
   document.getElementById('mark-read-btn').addEventListener('click', () => {
     if (isRead && !needsRev) return;
-    if (needsRev) {
-      clearNeedsReview(topicId, concept.id);
-      renderTopic(topicId, conceptIndex);
-      return;
-    }
+    if (needsRev) { clearNeedsReview(topicId, concept.id); renderTopic(topicId, conceptIndex); return; }
     showRecallModal(topicId, concept, conceptIndex, total);
   });
-
   document.getElementById('prev-btn').addEventListener('click', () => {
     if (conceptIndex>0) navigateReplace('topic/'+topicId+'/'+(conceptIndex-1));
   });
@@ -384,7 +512,6 @@ async function renderTopic(topicId, conceptIndex) {
     const d = e.target.closest('.dot');
     if (d) navigateReplace('topic/'+topicId+'/'+d.dataset.index);
   });
-
   setupSwipe(document.getElementById('topic-screen'),
     () => { if (conceptIndex<total-1) navigateReplace('topic/'+topicId+'/'+(conceptIndex+1)); },
     () => { if (conceptIndex>0)       navigateReplace('topic/'+topicId+'/'+(conceptIndex-1)); }
@@ -404,25 +531,18 @@ function showRecallModal(topicId, concept, conceptIndex, total) {
       <div class="recall-prompt">Without looking, could you explain the core idea to someone else?</div>
       <div class="recall-actions">
         <button class="recall-btn recall-got-it" id="recall-got-it">&#10003; Got it</button>
-        <button class="recall-btn recall-fuzzy"  id="recall-fuzzy">&#8634; Still fuzzy</button>
+        <button class="recall-btn recall-fuzzy" id="recall-fuzzy">&#8634; Still fuzzy</button>
       </div>
       <div class="recall-note">"Still fuzzy" marks it read but flags it for review on the Progress screen.</div>
-    </div>
-  `;
+    </div>`;
   document.getElementById('app').appendChild(overlay);
-
   document.getElementById('recall-got-it').addEventListener('click', () => {
-    markConceptRead(topicId, concept.id);
-    clearNeedsReview(topicId, concept.id);
-    overlay.remove();
+    markConceptRead(topicId, concept.id); clearNeedsReview(topicId, concept.id); overlay.remove();
     if (conceptIndex < total-1) navigateReplace('topic/'+topicId+'/'+(conceptIndex+1));
     else renderTopic(topicId, conceptIndex);
   });
-
   document.getElementById('recall-fuzzy').addEventListener('click', () => {
-    markConceptRead(topicId, concept.id);
-    markNeedsReview(topicId, concept.id);
-    overlay.remove();
+    markConceptRead(topicId, concept.id); markNeedsReview(topicId, concept.id); overlay.remove();
     if (conceptIndex < total-1) navigateReplace('topic/'+topicId+'/'+(conceptIndex+1));
     else renderTopic(topicId, conceptIndex);
   });
@@ -434,7 +554,6 @@ function showRecallModal(topicId, concept, conceptIndex, total) {
 async function renderDeepDive(topicId, conceptId) {
   const app = document.getElementById('app');
   app.innerHTML = '<div class="screen loading-screen"><div class="spinner"></div></div>';
-
   let topic;
   try {
     topic = (state.currentTopic?.id===topicId) ? state.currentTopic : await loadTopic(topicId);
@@ -443,7 +562,6 @@ async function renderDeepDive(topicId, conceptId) {
     app.innerHTML = '<div class="screen"><div class="error-state">Could not load content.</div></div>';
     return;
   }
-
   const conceptIndex = topic.concepts.findIndex(c => c.id===conceptId);
   const concept      = topic.concepts[conceptIndex];
   const cc           = catColor(topic.category);
@@ -459,15 +577,12 @@ async function renderDeepDive(topicId, conceptId) {
         <h1 class="header-title">${concept.title}</h1>
         <div style="width:40px"></div>
       </header>
-
       <div class="deepdive-content">
         <div class="breadcrumb-chip">${topic.category} &middot; ${topic.title}</div>
-
         <div class="deepdive-label">
           <span class="deepdive-label-text">DEEP&#8209;DIVE</span>
           <span class="deepdive-label-count">${concept.sections.length} sections</span>
         </div>
-
         ${concept.sections.map((sec, i) => `
           <div class="dd-section ${i===0?'open':''}" id="dds-${i}">
             <div class="dd-section-header" data-section="${i}">
@@ -479,29 +594,21 @@ async function renderDeepDive(topicId, conceptId) {
             <div class="dd-section-body ${i===0?'open':''}" id="ddb-${i}">
               ${sec.body.map(p=>'<p>'+p+'</p>').join('')}
             </div>
-          </div>
-        `).join('')}
-
+          </div>`).join('')}
         <div class="deepdive-actions">
           ${needsRev
             ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as reviewed</button>'
             : !alreadyRead
               ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as Read</button>'
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
-          ${hasNext
-            ? '<button class="cta-next-btn" id="next-concept-btn">Next: '+nextConcept.title+' &#8594;</button>'
-            : ''}
+          ${hasNext ? '<button class="cta-next-btn" id="next-concept-btn">Next: '+nextConcept.title+' &#8594;</button>' : ''}
           <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${topic.title}</button>
         </div>
       </div>
-    </div>
-  `;
+    </div>`;
 
-  document.getElementById('back-btn').addEventListener('click', () =>
-    navigatePush('#topic/'+topicId+'/'+conceptIndex));
-  document.getElementById('back-topic-btn').addEventListener('click', () =>
-    navigatePush('#topic/'+topicId+'/'+conceptIndex));
-
+  document.getElementById('back-btn').addEventListener('click', () => navigatePush('#topic/'+topicId+'/'+conceptIndex));
+  document.getElementById('back-topic-btn').addEventListener('click', () => navigatePush('#topic/'+topicId+'/'+conceptIndex));
   const mrb = document.getElementById('mark-read-btn');
   if (mrb) mrb.addEventListener('click', () => {
     if (needsRev) clearNeedsReview(topicId, conceptId);
@@ -509,19 +616,15 @@ async function renderDeepDive(topicId, conceptId) {
     if (hasNext) navigatePush('#topic/'+topicId+'/'+(conceptIndex+1));
     else         navigatePush('#topic/'+topicId+'/'+conceptIndex);
   });
-
   const ncb = document.getElementById('next-concept-btn');
-  if (ncb) ncb.addEventListener('click', () =>
-    navigatePush('#topic/'+topicId+'/'+(conceptIndex+1)));
-
+  if (ncb) ncb.addEventListener('click', () => navigatePush('#topic/'+topicId+'/'+(conceptIndex+1)));
   document.querySelectorAll('.dd-section-header').forEach(hdr => {
     hdr.addEventListener('click', () => {
-      const i    = hdr.dataset.section;
-      const sec  = document.getElementById('dds-'+i);
+      const i = hdr.dataset.section;
       const body = document.getElementById('ddb-'+i);
       const tog  = hdr.querySelector('.dd-section-toggle');
       const open = body.classList.toggle('open');
-      sec.classList.toggle('open', open);
+      document.getElementById('dds-'+i).classList.toggle('open', open);
       tog.innerHTML = open ? '&#9662;' : '&#9656;';
     });
   });
@@ -537,15 +640,12 @@ function renderProgress() {
   const totalRead     = getTotalReadCount();
   const totalReview   = getTotalNeedsReviewCount();
   const pct = totalConcepts > 0 ? Math.round(totalRead/totalConcepts*100) : 0;
-
-  const CIRC = 214;  // 2 * pi * r=34
+  const CIRC = 214;
   const dash = Math.round(CIRC * pct / 100);
-
   const cats = ['History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
   const byCat = {};
   cats.forEach(c => { byCat[c] = []; });
   topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
-
   const reviewTopics = topicsList.filter(t => getTopicReviewCount(t.id) > 0);
 
   app.innerHTML = `
@@ -556,16 +656,13 @@ function renderProgress() {
           <h1 class="app-title">Progress</h1>
         </div>
       </header>
-
       <div class="progress-scroll-area">
-
         <div class="progress-hero">
           <div class="progress-ring-wrap">
             <svg viewBox="0 0 80 80" width="80" height="80">
               <circle cx="40" cy="40" r="34" fill="none" stroke="var(--border)" stroke-width="6"/>
               <circle cx="40" cy="40" r="34" fill="none" stroke="var(--primary)" stroke-width="6"
-                stroke-dasharray="${dash} ${CIRC}" stroke-linecap="round"
-                transform="rotate(-90 40 40)"/>
+                stroke-dasharray="${dash} ${CIRC}" stroke-linecap="round" transform="rotate(-90 40 40)"/>
             </svg>
             <div class="progress-ring-pct">${pct}%</div>
           </div>
@@ -578,85 +675,58 @@ function renderProgress() {
                 : '<div class="progress-hero-sub">Start any topic to begin</div>'}
           </div>
         </div>
-
         ${reviewTopics.length > 0 ? `
           <div class="section-label">NEEDS REVIEW</div>
           ${reviewTopics.map(topic => {
-            const cc  = catColor(topic.category);
-            const cnt = getTopicReviewCount(topic.id);
-            return `
-              <div class="progress-review-row" onclick="navigatePush('#topic/${topic.id}/0')"
+            const cc = catColor(topic.category); const cnt = getTopicReviewCount(topic.id);
+            return `<div class="progress-review-row" onclick="navigatePush('#topic/${topic.id}/0')"
                    style="border-left:4px solid ${cc.g1}">
-                <div class="progress-review-title">${topic.title}</div>
-                <div class="progress-review-count">${cnt} concept${cnt!==1?'s':''} &middot; tap to revisit &#8594;</div>
-              </div>`;
-          }).join('')}
-        ` : ''}
-
+              <div class="progress-review-title">${topic.title}</div>
+              <div class="progress-review-count">${cnt} concept${cnt!==1?'s':''} &middot; tap to revisit &#8594;</div>
+            </div>`;
+          }).join('')}` : ''}
         ${cats.map(cat => {
           const topics = byCat[cat];
           if (!topics || topics.length===0) return '';
           const cc = catColor(cat);
-          return `
-            <div class="section-label" style="color:${cc.text}">${cat.toUpperCase()}</div>
+          return `<div class="section-label" style="color:${cc.text}">${cat.toUpperCase()}</div>
             ${topics.map(topic => {
-              const readCount  = getTopicReadCount(topic.id);
-              const total      = topic.concept_count || 0;
-              const topicPct   = total > 0 ? Math.round(readCount/total*100) : 0;
-              const revCount   = getTopicReviewCount(topic.id);
-              return `
-                <div class="progress-topic-item" onclick="navigatePush('#topic/${topic.id}/0')">
-                  <div class="progress-topic-header">
-                    <div class="progress-topic-name">${topic.title}</div>
-                    <div class="progress-topic-stat">${readCount}/${total}</div>
-                  </div>
-                  <div class="progress-bar-bg">
-                    <div class="progress-bar-fill"
-                         style="width:${topicPct}%;background:linear-gradient(90deg,${cc.g1},${cc.g2})">
-                    </div>
-                  </div>
-                  ${revCount > 0
-                    ? '<div class="progress-topic-review-note">&#8634; '+revCount+' to review</div>'
-                    : ''}
-                </div>`;
+              const readCount = getTopicReadCount(topic.id);
+              const total     = topic.concept_count || 0;
+              const topicPct  = total > 0 ? Math.round(readCount/total*100) : 0;
+              const revCount  = getTopicReviewCount(topic.id);
+              return `<div class="progress-topic-item" onclick="navigatePush('#topic/${topic.id}/0')">
+                <div class="progress-topic-header">
+                  <div class="progress-topic-name">${topic.title}</div>
+                  <div class="progress-topic-stat">${readCount}/${total}</div>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill" style="width:${topicPct}%;background:linear-gradient(90deg,${cc.g1},${cc.g2})"></div>
+                </div>
+                ${revCount > 0 ? '<div class="progress-topic-review-note">&#8634; '+revCount+' to review</div>' : ''}
+              </div>`;
             }).join('')}`;
         }).join('')}
-
         <div style="height:88px"></div>
       </div>
-
       <nav class="bottom-nav">
-        <button class="nav-item" id="nav-home">
-          <span class="nav-icon">🏠</span>
-          <span class="nav-label">Home</span>
-        </button>
-        <button class="nav-item active">
-          <span class="nav-icon">📊</span>
-          <span class="nav-label">Progress</span>
-          <div class="nav-active-dot"></div>
-        </button>
-        <button class="nav-item" id="nav-settings-nav">
-          <span class="nav-icon">⚙️</span>
-          <span class="nav-label">Settings</span>
-        </button>
+        <button class="nav-item" id="nav-home"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></button>
+        <button class="nav-item active"><span class="nav-icon">📊</span><span class="nav-label">Progress</span><div class="nav-active-dot"></div></button>
+        <button class="nav-item" id="nav-settings-nav"><span class="nav-icon">⚙️</span><span class="nav-label">Settings</span></button>
       </nav>
     </div>
-
-    ${settingsModalHTML()}
-  `;
+    ${settingsModalHTML()}`;
 
   document.getElementById('nav-home').addEventListener('click', () => navigatePush('#home'));
   wireSettingsModal(['nav-settings-nav']);
 }
 
 // ============================================================
-// SWIPE  (attached to full screen element, not just the card)
+// SWIPE
 // ============================================================
 function setupSwipe(el, onLeft, onRight) {
   let sx=0, sy=0;
-  el.addEventListener('touchstart', e => {
-    sx=e.touches[0].clientX; sy=e.touches[0].clientY;
-  }, {passive:true});
+  el.addEventListener('touchstart', e => { sx=e.touches[0].clientX; sy=e.touches[0].clientY; }, {passive:true});
   el.addEventListener('touchend', e => {
     const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
     if (Math.abs(dx)>Math.abs(dy) && Math.abs(dx)>50) { if(dx<0) onLeft(); else onRight(); }
@@ -667,15 +737,9 @@ function setupSwipe(el, onLeft, onRight) {
 // IMPORT / EXPORT
 // ============================================================
 function exportProgress() {
-  const data = {
-    exportedAt: new Date().toISOString(),
-    progress: state.progress,
-    needsReview: state.needsReview,
-  };
+  const data = { exportedAt:new Date().toISOString(), progress:state.progress, needsReview:state.needsReview };
   const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
-  const a = Object.assign(document.createElement('a'), {
-    href: URL.createObjectURL(blob), download: 'learnapp-progress.json'
-  });
+  const a = Object.assign(document.createElement('a'), {href:URL.createObjectURL(blob), download:'learnapp-progress.json'});
   a.click(); URL.revokeObjectURL(a.href);
 }
 function importProgress(file) {
@@ -685,8 +749,7 @@ function importProgress(file) {
       const d = JSON.parse(e.target.result);
       state.progress    = d.progress    || {};
       state.needsReview = d.needsReview || {};
-      saveProgress();
-      saveNeedsReview();
+      saveProgress(); saveNeedsReview();
       document.getElementById('settings-modal').classList.add('hidden');
       renderHome();
     } catch { alert('Invalid file — please select a valid LearnApp export.'); }
@@ -705,5 +768,4 @@ async function init() {
   window.addEventListener('hashchange', handleRoute);
   handleRoute();
 }
-
 init();
