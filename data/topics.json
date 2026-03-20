@@ -88,6 +88,12 @@
   "title": "What Are Interest Rates",
   "category": "Economics and Finance",
   "summary": "Interest rates are the cost of borrowing money or the reward for saving it. They shape loans, mortgages, credit cards, savings accounts, and the broader economy."
+  },
+  {
+  "id": "how_banks_make_money",
+  "title": "How Banks Make Money",
+  "category": "Economics and Finance",
+  "summary": "Banks make money primarily by charging more interest on loans than they pay on deposits. They also earn fees, process transactions, and use your deposits to fund lending at scale."
   }
 
 ]
