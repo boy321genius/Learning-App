@@ -94,6 +94,12 @@
   "title": "How Banks Make Money",
   "category": "Economics and Finance",
   "summary": "Banks make money primarily by charging more interest on loans than they pay on deposits. They also earn fees, process transactions, and use your deposits to fund lending at scale."
+  },
+  {
+  "id": "time_value_of_money",
+  "title": "Time Value of Money",
+  "category": "Economics and Finance",
+  "summary": "Money today is worth more than the same amount in the future because it can be invested, earn interest, and avoid uncertainty. Time value of money explains present value, future value, and discounting."
   }
 
 ]
