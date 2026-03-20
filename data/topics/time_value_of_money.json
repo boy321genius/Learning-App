@@ -53,9 +53,153 @@
       ]
     },
     {
+      "id": "simple_interest",
+      "title": "Simple Interest",
+      "summary": "Simple interest grows money in a straight line because it is calculated only on the original amount. It is easy to understand, easy to compute, and still shows up in some short-term loans, bonds, and classroom examples. The practical lesson is that a principal, a rate, and a time period are enough to estimate how much interest accumulates when compounding is not involved. Simple interest is a useful starting point because it shows the basic link between money, rate, and time without extra complexity.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Simple interest is often the first interest formula people learn because it is straightforward. It helps show how interest grows when there is no compounding.",
+            "It still appears in some financial products and is useful as a conceptual baseline for understanding more complex formulas."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are P, r, and t. A larger principal, a higher rate, or more time all increase interest in a straight line. There is no interest on interest.",
+            "Because the formula is linear, doubling the time doubles the interest."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "I = Prt means interest equals principal times rate times time. That gives a simple and predictable growth pattern. If you borrow or invest the same principal at the same rate for twice as long, the interest doubles.",
+            "This is why simple interest is much easier to predict than compound interest."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you invest $1,000 at 6% simple interest for 3 years, the interest is 1,000 × 0.06 × 3 = $180. The total amount is $1,180. The calculation does not change from year to year because the base stays the same.",
+            "This makes the formula easy to use when you want a quick estimate or when the contract explicitly uses simple interest."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Simple interest gives a clean comparison point for understanding how compounding changes outcomes. It also helps people identify when a loan or investment is using a simpler structure.",
+            "The contrast between simple and compound interest is one of the most important distinctions in the whole topic."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept supports future value and compounding by showing the simpler version first. It also helps explain why compounding can create much larger results over time."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compound_interest",
+      "title": "Compound Interest",
+      "summary": "Compound interest is what happens when interest gets added back into the balance and then earns interest too. In real life, this is the version that matters most because it describes savings accounts, investments, and many loans. The practical lesson is that time becomes a force multiplier: starting earlier, waiting longer, or earning a slightly higher rate can lead to much larger outcomes. Compound interest is powerful when you are saving and dangerous when you are carrying debt.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Compound interest is how most modern savings and borrowing actually work. It applies to bank accounts, loans, investments, and retirement funds. It is the real-world version of interest growth.",
+            "The formula matters because it captures the effect of reinvesting or re-adding interest over time."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are P, r, n, and t. Frequency of compounding matters because monthly compounding grows slightly faster than annual compounding. Time is the biggest force because the effect accumulates over many periods.",
+            "The stronger the rate and the longer the time, the more powerful the compounding effect becomes."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "A = P(1 + r/n)^(nt) means your money grows by repeated multiplication rather than simple addition. Each round of compounding creates a larger base for the next round.",
+            "That is why compound interest is sometimes called exponential growth."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If you invest $1,000 at 6% compounded monthly for one year, the formula uses n = 12. The balance grows a little each month, and the final amount is slightly higher than with annual compounding.",
+            "The formula lets you compare different accounts and loans by showing the full effect of compounding."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Compound interest rewards early saving and punishes long-term debt. It explains why even small differences in rate or timing can lead to huge differences in final outcomes.",
+            "This formula is central to almost every other concept in the topic."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept links simple interest to future value and is the reason the time value of money matters so much in practice."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "discounting",
+      "title": "Discounting",
+      "summary": "Discounting is the practical habit of asking how much a future payment is worth today. It is the bridge between future cash flows and present decisions. Instead of treating a payment years from now as equal to cash in hand, discounting reduces it to reflect time, risk, and opportunity cost. This is the step that lets you compare very different offers fairly.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Discounting is everywhere in finance because almost every meaningful cash flow happens at a different time. A bond payment next year, a business profit in five years, and a pension payment in twenty years all need to be translated into today's value.",
+            "The discount factor is the tool that performs that translation."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key symbols are DF, r, and n. As r increases, DF falls. As n increases, DF also falls. That means both risk and time reduce value.",
+            "The discount rate is the judgment call inside the math because it represents what you think the money is worth given risk and alternatives."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Discounting is just present value in factor form. Instead of thinking of the formula as a separate operation, you can think of it as a multiplier that shrinks future cash flows to today's terms.",
+            "This makes the logic easier to see when comparing many future payments at once."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "If a payment is $1,000 in three years and the discount rate is 8%, the discount factor is 1 / (1.08)^3. Multiply that factor by $1,000 to get the present value. The farther the payment is delayed, the smaller the factor becomes.",
+            "This is how companies and investors compare cash flows that arrive at different times."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Discounting determines how attractive long-term projects look. A project with large future payouts can still be unattractive if those payouts are too far away or too uncertain.",
+            "This concept is the bridge between raw future cash flows and real decisions."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept is the mechanical heart of present value and the setup for annuities and NPV."
+          ]
+        }
+      ]
+    },
+    {
       "id": "present_value",
       "title": "Present Value",
-      "summary": "Present value answers a simple question: what is a future amount worth today? The formula is PV = FV / (1 + r)^n. FV is the future value, r is the discount rate, and n is the number of time periods. The formula works because each period of waiting reduces the value of the future payment relative to what you could earn elsewhere. If a future payment is farther away or if the discount rate is higher, the present value gets smaller. Present value is one of the most important formulas in finance because it lets you compare future cash flows on a common basis. It is used for investments, loans, business projects, and almost any decision that involves waiting for money.",
+      "summary": "Present value is what a future amount is worth today after discounting. It answers the practical question: if I had this money now and could earn a return, how much should I be willing to accept later instead? This idea is used in loans, investments, business decisions, and almost any choice that involves waiting for money. Present value is the math version of the real-world instinct that sooner is usually better than later.",
       "sections": [
         {
           "title": "Context",
@@ -144,150 +288,6 @@
           "title": "Connections",
           "body": [
             "This concept reverses present value and leads into discounting, annuities, and NPV. It is the growth half of the same underlying idea."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "discounting",
-      "title": "Discounting",
-      "summary": "Discounting is the process of turning future money into present money. The formula is DF = 1 / (1 + r)^n, where DF is the discount factor. That factor is then multiplied by the future cash flow to get present value. Discounting reflects the fact that future money is less valuable because of time, risk, and alternative uses. The higher the discount rate, the smaller the discount factor and the lower the present value. The farther in the future the money is, the more heavily it is discounted. Discounting is not a separate idea from present value; it is the mechanism that makes present value work.",
-      "sections": [
-        {
-          "title": "Context",
-          "body": [
-            "Discounting is everywhere in finance because almost every meaningful cash flow happens at a different time. A bond payment next year, a business profit in five years, and a pension payment in twenty years all need to be translated into today's value.",
-            "The discount factor is the tool that performs that translation."
-          ]
-        },
-        {
-          "title": "Key figures forces",
-          "body": [
-            "The key symbols are DF, r, and n. As r increases, DF falls. As n increases, DF also falls. That means both risk and time reduce value.",
-            "The discount rate is the judgment call inside the math because it represents what you think the money is worth given risk and alternatives."
-          ]
-        },
-        {
-          "title": "Core idea",
-          "body": [
-            "Discounting is just present value in factor form. Instead of thinking of the formula as a separate operation, you can think of it as a multiplier that shrinks future cash flows to today's terms.",
-            "This makes the logic easier to see when comparing many future payments at once."
-          ]
-        },
-        {
-          "title": "Actions / how it works",
-          "body": [
-            "If a payment is $1,000 in three years and the discount rate is 8%, the discount factor is 1 / (1.08)^3. Multiply that factor by $1,000 to get the present value. The farther the payment is delayed, the smaller the factor becomes.",
-            "This is how companies and investors compare cash flows that arrive at different times."
-          ]
-        },
-        {
-          "title": "Consequences / impact",
-          "body": [
-            "Discounting determines how attractive long-term projects look. A project with large future payouts can still be unattractive if those payouts are too far away or too uncertain.",
-            "This concept is the bridge between raw future cash flows and real decisions."
-          ]
-        },
-        {
-          "title": "Connections",
-          "body": [
-            "This concept is the mechanical heart of present value and the setup for annuities and NPV."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "simple_interest",
-      "title": "Simple Interest",
-      "summary": "Simple interest uses the formula I = Prt, where I is interest, P is principal, r is the rate, and t is time. Unlike compound interest, it is calculated only on the original principal, not on accumulated interest. That makes the growth linear rather than exponential. Simple interest is easier to calculate by hand and still appears in some loans, bonds, and short-term financial contracts. It is useful as a learning tool because it shows the basic relationship between principal, rate, and time without the extra layer of compounding. Even though compound interest is more common in practice, simple interest is important because it makes the logic of interest growth very clear.",
-      "sections": [
-        {
-          "title": "Context",
-          "body": [
-            "Simple interest is often the first interest formula people learn because it is straightforward. It helps show how interest grows when there is no compounding.",
-            "It still appears in some financial products and is useful as a conceptual baseline for understanding more complex formulas."
-          ]
-        },
-        {
-          "title": "Key figures forces",
-          "body": [
-            "The key symbols are P, r, and t. A larger principal, a higher rate, or more time all increase interest in a straight line. There is no interest on interest.",
-            "Because the formula is linear, doubling the time doubles the interest."
-          ]
-        },
-        {
-          "title": "Core idea",
-          "body": [
-            "I = Prt means interest equals principal times rate times time. That gives a simple and predictable growth pattern. If you borrow or invest the same principal at the same rate for twice as long, the interest doubles.",
-            "This is why simple interest is much easier to predict than compound interest."
-          ]
-        },
-        {
-          "title": "Actions / how it works",
-          "body": [
-            "If you invest $1,000 at 6% simple interest for 3 years, the interest is 1,000 × 0.06 × 3 = $180. The total amount is $1,180. The calculation does not change from year to year because the base stays the same.",
-            "This makes the formula easy to use when you want a quick estimate or when the contract explicitly uses simple interest."
-          ]
-        },
-        {
-          "title": "Consequences / impact",
-          "body": [
-            "Simple interest gives a clean comparison point for understanding how compounding changes outcomes. It also helps people identify when a loan or investment is using a simpler structure.",
-            "The contrast between simple and compound interest is one of the most important distinctions in the whole topic."
-          ]
-        },
-        {
-          "title": "Connections",
-          "body": [
-            "This concept supports future value and compounding by showing the simpler version first. It also helps explain why compounding can create much larger results over time."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "compound_interest",
-      "title": "Compound Interest",
-      "summary": "Compound interest uses the formula A = P(1 + r/n)^(nt), where A is the amount after compounding, P is the principal, r is the annual rate, n is the number of compounding periods per year, and t is time in years. This formula shows that interest can be added not just once a year but monthly, daily, or even more often. Each time interest is added, the next round is calculated on the larger balance. That is why compounding causes money to grow faster than simple interest. The more frequently compounding happens, the slightly larger the final result. Over long periods, that difference can become enormous. Compound interest is one of the most important formulas in all of finance because it explains both wealth building and debt growth.",
-      "sections": [
-        {
-          "title": "Context",
-          "body": [
-            "Compound interest is how most modern savings and borrowing actually work. It applies to bank accounts, loans, investments, and retirement funds. It is the real-world version of interest growth.",
-            "The formula matters because it captures the effect of reinvesting or re-adding interest over time."
-          ]
-        },
-        {
-          "title": "Key figures forces",
-          "body": [
-            "The key symbols are P, r, n, and t. Frequency of compounding matters because monthly compounding grows slightly faster than annual compounding. Time is the biggest force because the effect accumulates over many periods.",
-            "The stronger the rate and the longer the time, the more powerful the compounding effect becomes."
-          ]
-        },
-        {
-          "title": "Core idea",
-          "body": [
-            "A = P(1 + r/n)^(nt) means your money grows by repeated multiplication rather than simple addition. Each round of compounding creates a larger base for the next round.",
-            "That is why compound interest is sometimes called exponential growth."
-          ]
-        },
-        {
-          "title": "Actions / how it works",
-          "body": [
-            "If you invest $1,000 at 6% compounded monthly for one year, the formula uses n = 12. The balance grows a little each month, and the final amount is slightly higher than with annual compounding.",
-            "The formula lets you compare different accounts and loans by showing the full effect of compounding."
-          ]
-        },
-        {
-          "title": "Consequences / impact",
-          "body": [
-            "Compound interest rewards early saving and punishes long-term debt. It explains why even small differences in rate or timing can lead to huge differences in final outcomes.",
-            "This formula is central to almost every other concept in the topic."
-          ]
-        },
-        {
-          "title": "Connections",
-          "body": [
-            "This concept links simple interest to future value and is the reason the time value of money matters so much in practice."
           ]
         }
       ]
