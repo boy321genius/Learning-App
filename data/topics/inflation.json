@@ -1,0 +1,248 @@
+{
+  "id": "inflation",
+  "title": "How Inflation Works",
+  "category": "Economics and Finance",
+  "summary": "Inflation is the general rise in prices over time, which means money buys less than it used to. It is measured with price indexes like the CPI and is influenced by demand, supply, and policy.",
+  "concepts": [
+    {
+      "id": "what_inflation_is",
+      "title": "What Inflation Is",
+      "summary": "Inflation means the overall price level of goods and services rises over time. It is not the same as one item getting more expensive; it is a broad change across the economy. When inflation happens, the same amount of money buys less than it did before, so purchasing power falls. That is why a dollar today does not always stretch as far as a dollar in the past. Inflation matters because it affects everyday life, savings, wages, and borrowing. Some inflation is normal in a growing economy, but very high or very low inflation can cause problems. Understanding inflation starts with seeing it as a change in the value of money, not just a change in prices.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "People notice inflation most clearly in daily expenses like groceries, rent, gas, and restaurant bills. Even when one price rises a lot, economists only call it inflation if the general level of prices is moving upward. That broader view is important because the economy contains many prices at once.",
+            "Inflation becomes a major issue when people feel their money is not keeping up with costs. It affects planning, saving, and decisions about work or investment."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The central ideas are prices, purchasing power, and the overall price level. Inflation is measured against a reference period, so the change over time is what matters. Wages, savings, and interest rates all interact with inflation too.",
+            "The force behind inflation is not one single thing. It can come from higher demand, higher costs, or expectations that prices will keep rising."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Inflation is a decrease in the buying power of money caused by rising prices across the economy. If inflation is 4%, something that cost 100 dollars before would, on average, cost about 104 dollars later. The exact items people buy may differ, but the overall pattern is what matters.",
+            "This idea helps explain why economists watch inflation closely. It changes how people spend, save, borrow, and plan for the future."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "As prices rise over time, each unit of currency buys fewer goods and services. Workers may ask for higher wages, businesses may raise prices, and governments may try to slow the process with policy. The change usually happens gradually, but it can speed up or slow down depending on the economy.",
+            "To understand inflation, it helps to compare prices at two different times and ask how much more money is needed to buy the same basket of items."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Moderate inflation can be normal, but high inflation can make life harder because salaries and savings may not rise as fast as prices. Low or falling inflation can also be a problem if it signals weak demand or economic slowdown.",
+            "This concept is the foundation for understanding budgeting, wage negotiations, borrowing, and long-term financial planning."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This is the starting point for the topic because every other inflation concept depends on knowing what inflation means. It connects directly to measurement, causes, and how central banks respond."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "measuring_inflation",
+      "title": "How Inflation Is Measured",
+      "summary": "Inflation is measured with price indexes that track changes in the cost of a typical basket of goods and services over time. In the United States, the Consumer Price Index, or CPI, is one of the best-known measures. The CPI follows prices for a weighted set of items that households commonly buy, such as food, housing, transportation, and medical care. Economists compare the index from one month or year to another to estimate the inflation rate. Because the basket is weighted, some items matter more than others. That makes the index more realistic than simply averaging all prices equally. The goal is not to track one person's spending exactly, but to measure the general movement of prices for a large group of consumers.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "To talk about inflation accurately, economists need a way to measure it. A price index makes that possible by comparing a basket of goods and services over time. Without measurement, inflation would just be a feeling.",
+            "Different countries and institutions use different indexes, but they all try to capture the same basic thing: how the overall cost of living changes."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The main tool is the Consumer Price Index, or CPI, which tracks a representative basket of consumer purchases. Other measures exist too, but CPI is one of the most familiar. The weighting of categories matters because housing affects most households more than, say, movie tickets.",
+            "Price index methodology also matters. The index may adjust for substitution, quality changes, or seasonal patterns, depending on the formula used."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Inflation is measured by comparing the cost of a basket now with the cost of the same basket before. If the basket costs more, inflation is present. The index is a tool for turning many different prices into one useful number.",
+            "This does not mean every item rises at the same rate. It means the overall average trend is upward or downward."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Economists collect prices for many goods and services, give each category a weight, and calculate an index number. They then compare the current index with a previous one to find the inflation rate. For example, if the CPI rises from 100 to 104, the inflation rate is 4 percent over that period.",
+            "Because prices can jump around from month to month, policymakers often look at longer periods or core measures that leave out especially volatile items."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Measurement affects policy, wages, pensions, and contracts because many decisions are tied to inflation data. If the measure is too broad or too narrow, it can shape responses in different ways.",
+            "This concept helps people read economic news without confusing one item's price with the whole economy."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept builds on what inflation is by showing how economists detect it. It connects directly to causes and responses because policy makers cannot react without reliable data."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causes_of_inflation",
+      "title": "What Causes Inflation",
+      "summary": "Inflation usually happens because demand rises faster than supply, or because the costs of producing goods and services go up. Economists often describe these as demand-pull inflation and cost-push inflation. Demand-pull inflation appears when consumers, businesses, or governments spend more than the economy can easily produce. Cost-push inflation happens when higher wages, energy prices, shipping costs, or shortages make production more expensive. A third factor is expectations: if people believe prices will keep rising, they may act in ways that help push prices up further. Inflation can also be affected by supply chain disruptions, exchange rates, and policy choices. In real life, more than one cause is usually at work at the same time.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Inflation rarely has a single cause. Economies are complex, so prices can rise because of demand, supply problems, shocks, or expectations all at once. That is why inflation often needs careful analysis instead of a simple answer.",
+            "The same price increase can have different causes in different moments. A jump in gas prices may come from geopolitical conflict, while a broad rise in prices may come from strong consumer demand."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The major forces are demand-pull, cost-push, and built-in or expectation-driven inflation. Demand-pull inflation happens when too much money chases too few goods. Cost-push inflation happens when it becomes more expensive to make and move goods.",
+            "Expectations matter because businesses may raise prices in advance and workers may seek higher wages in anticipation of future inflation. Those reactions can keep inflation going."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Inflation is usually a mismatch between what people want to buy and what the economy can supply at current prices. If demand exceeds supply, prices rise. If supply becomes more expensive, prices rise too.",
+            "These causes help explain why inflation can appear even when the economy is growing or slowing. The trigger and the effect do not always move in a simple line."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "In demand-pull inflation, households or firms spend aggressively, pushing up prices for limited goods. In cost-push inflation, firms pass higher input costs on to consumers. In expectation-driven inflation, people act as though higher prices are coming, and those actions help create the outcome.",
+            "A supply shock, like a crop failure or shipping disruption, can also reduce available goods and push prices upward even if demand stays the same."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Understanding causes matters because different causes call for different policy responses. If inflation comes from excessive demand, higher interest rates may help. If it comes from supply problems, policy has fewer direct tools.",
+            "This concept explains why inflation can be frustrating: the solution depends on knowing where the pressure is coming from."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects measurement to policy. Once you know how inflation is measured, the next question is why it is happening and what can be done about it."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "inflation_and_people",
+      "title": "How Inflation Affects People",
+      "summary": "Inflation changes how far money goes in everyday life. When prices rise faster than wages, households feel poorer even if their pay has not changed in name. Savers can lose purchasing power if their money earns less interest than the inflation rate. Borrowers may benefit if they repay loans with money that is worth less than the money they borrowed. Businesses also have to adjust pricing, payroll, and inventory decisions. Inflation can be especially painful for people on fixed incomes, because their cash flow does not automatically rise when prices do. The main effect is that inflation changes the real value of money, not just the numbers printed on price tags.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Inflation becomes personal very quickly. A family notices it when groceries, rent, or gasoline take a bigger share of the budget. Even small changes add up over time if incomes do not rise at the same pace.",
+            "The impact also depends on whether someone is a saver, borrower, worker, retiree, or business owner. Different people experience inflation differently."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The key forces are wages, savings, debt, and fixed income. If wages lag behind prices, living standards fall. If savings earn too little interest, their value erodes in real terms.",
+            "Borrowers can sometimes benefit because they repay with cheaper money, but lenders lose unless interest rates compensate for inflation. That is why inflation changes both personal finance and lending markets."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Inflation changes the real value of money. Real value means what your money can actually buy, not just the number on your paycheck or bank statement. A higher nominal wage is not helpful if prices rise faster than the wage.",
+            "This is why people care so much about inflation even when the economy looks healthy on paper. The lived experience is whether a paycheck covers the same life as before."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "Families respond by changing spending habits, looking for deals, delaying purchases, or moving money into assets that may better preserve value. Businesses may raise prices, renegotiate contracts, or adjust wages. Governments may also index pensions or benefits to inflation.",
+            "Because inflation changes over time, people often need to plan not just for today but for next year and beyond."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "Inflation can widen inequality if some people can protect themselves better than others. People with assets or adjustable incomes may cope more easily than those on fixed incomes. That makes inflation more than a technical economic issue; it is also a social one.",
+            "This concept helps explain why inflation debates are so emotional and politically important."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This concept connects the abstract idea of inflation to daily life. It shows why the measurement and causes of inflation matter to real households and businesses."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "central_banks_and_inflation",
+      "title": "How Central Banks Fight Inflation",
+      "summary": "Central banks try to keep inflation from becoming too high or too unstable. In the United States, the Federal Reserve does this mainly by adjusting interest rates and shaping expectations about future policy. When rates go up, borrowing becomes more expensive, which can slow spending and reduce pressure on prices. Central banks also watch price indexes, wages, labor markets, and longer-term trends before acting. They have to balance inflation control against the risk of slowing the economy too much. If they move too aggressively, they can contribute to recession or unemployment. If they move too slowly, inflation can spread and become harder to stop. The job is not to eliminate all inflation, but to keep it at a manageable level.",
+      "sections": [
+        {
+          "title": "Context",
+          "body": [
+            "Modern economies usually rely on central banks to keep inflation stable. The idea is that price stability helps households and businesses plan. Without some confidence about future prices, contracts and investment become harder.",
+            "Central banks act with delay because their policy choices affect the economy over months or even years. That makes inflation fighting partly a forecasting problem."
+          ]
+        },
+        {
+          "title": "Key figures forces",
+          "body": [
+            "The main tools are interest rates, communication, and balance sheet policy. Interest rates are the most visible tool because they influence the cost of borrowing for mortgages, credit cards, and business loans. Expectations are also a force because people change behavior when they believe the central bank is serious.",
+            "The Federal Reserve pays attention to inflation measures, labor market data, and economic growth. It tries to see whether inflation is temporary or likely to persist."
+          ]
+        },
+        {
+          "title": "Core idea",
+          "body": [
+            "Central banks reduce inflation by cooling demand and shaping behavior. Higher interest rates make borrowing and spending more expensive, which can slow price increases. The goal is to bring inflation down without causing unnecessary economic damage.",
+            "This balance is delicate because the economy does not respond instantly. Policy has to work through a moving target."
+          ]
+        },
+        {
+          "title": "Actions / how it works",
+          "body": [
+            "When a central bank raises rates, consumers may borrow less for cars, homes, and credit purchases. Businesses may delay investment. That reduced demand can ease price pressure over time. Central banks also communicate their goals to influence expectations before actual policy changes fully take effect.",
+            "In some cases, they may also use other tools such as selling assets or changing reserve conditions, depending on the country and the situation."
+          ]
+        },
+        {
+          "title": "Consequences / impact",
+          "body": [
+            "If successful, policy can bring inflation back toward a target range. If unsuccessful or too aggressive, it can slow growth and raise unemployment. That tradeoff is why central bank decisions are watched so closely.",
+            "This concept shows that inflation is not just a market outcome. It is also something governments try to manage."
+          ]
+        },
+        {
+          "title": "Connections",
+          "body": [
+            "This final concept connects all the others. It depends on measuring inflation correctly, understanding the cause, and seeing how it affects people. Once those pieces are clear, central bank policy makes more sense."
+          ]
+        }
+      ]
+    }
+  ]
+}
