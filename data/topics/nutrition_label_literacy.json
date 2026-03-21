@@ -2,52 +2,51 @@
   "id": "nutrition_label_literacy",
   "title": "Nutrition Label Literacy and Food Marketing",
   "category": "Science and Math",
-  "summary": "Nutrition labels can be technically accurate while still misleading shoppers through serving sizes, front-of-package claims, and marketing language. Understanding labels helps consumers see the difference between a product’s presentation and its actual nutritional profile.",
+  "summary": "Nutrition labels can be technically accurate while still misleading shoppers through serving sizes, front-of-package claims, and marketing language. Understanding labels helps consumers see the difference between a product's presentation and its actual nutritional profile.",
   "concepts": [
     {
       "id": "nutrition_facts_basics",
       "title": "How the Nutrition Facts Label Works",
-      "summary": "The Nutrition Facts label is the standardized panel on packaged foods that shows calories, nutrients, serving size, and % Daily Value. It is designed to help shoppers compare foods, but it only works well if people know how to read it. The label separates facts from marketing, but the numbers can still be misunderstood if the serving size is overlooked or if a person focuses on only one nutrient.\n\nThis concept teaches the foundation for everything else in the topic. Before someone can spot label tricks, they need to understand what the Nutrition Facts panel is actually saying. Calories, fat, sodium, sugars, fiber, protein, and micronutrients all have different roles, and the % Daily Value helps show whether a food is high or low in a nutrient. Learning the label turns a package from a sales pitch into a source of information.",
+      "summary": "Every packaged food in the United States carries a standardized Nutrition Facts panel mandated by the FDA. The panel's value is comparability: because the format is identical across all products, any two foods can be read side by side. The key to using it correctly is checking the serving size first — every number on the label applies to one serving, not the whole package — and using the 5%/20% Daily Value rule to quickly assess whether a nutrient amount is low or high.",
       "sections": [
         {
           "title": "What it is",
           "body": [
-            "Packaged foods in the United States use a standardized Nutrition Facts panel so consumers can compare products more easily. The label was created to make nutrition information more visible and consistent. It is one of the main tools people have for understanding what is in a food before they buy it.",
-            "The modern label includes calories, serving size, total fat, saturated fat, trans fat, cholesterol, sodium, carbohydrates, fiber, sugars, added sugars, protein, and selected vitamins and minerals. The panel has changed over time as public health priorities have shifted, especially around added sugars and realistic serving sizes."
+            "Every packaged food sold in the United States is required to carry a standardized Nutrition Facts panel — the rectangular box of numbers on the back or side of the package. The FDA mandates its format, its contents, and its typography, which means you can compare any two packaged foods directly by reading their panels side by side. That comparability is the label's core value: not any single number, but the ability to compare.",
+            "The panel is organized in a specific order that is the same on every product. It begins with serving size and servings per container — critical context for everything that follows. Then calories per serving. Then a list of nutrients divided into those to generally limit (saturated fat, trans fat, cholesterol, sodium, added sugars) and those to generally get enough of (dietary fiber, vitamin D, calcium, iron, potassium). Each nutrient shows its amount in grams or milligrams and its % Daily Value — the percentage of the recommended daily intake for an average adult that one serving provides."
           ]
         },
         {
           "title": "The rule",
           "body": [
-            "The key institution is the FDA, which sets the rules for the Nutrition Facts label. Food manufacturers must follow those rules when presenting nutrient information. Nutrition educators, dietitians, and public health organizations also help people interpret the label correctly.",
-            "The main forces are standardization, comparison, and interpretation. Standardization makes the label consistent across products. Comparison lets shoppers judge one food against another. Interpretation is where problems begin, because the same numbers can seem healthy or unhealthy depending on portion size, context, and what else is in the diet."
+            "The single most important habit when reading the Nutrition Facts panel is to check the serving size first, before looking at any other number. Every figure on the label applies to one serving as defined by the manufacturer, not to the entire package. A bag of chips showing 140 calories may contain three servings; eat the whole bag and you consumed 420 calories. A bottle of juice showing 25 grams of sugar may contain 2.5 servings; drink the whole bottle and you consumed 62.5 grams of sugar.",
+            "For the nutrient lines, the FDA provides a simple two-point guide: 5% Daily Value or less per serving is low; 20% Daily Value or more is high. For nutrients to limit — saturated fat, sodium, added sugars — look for low % DV. For nutrients to seek — fiber, vitamin D, calcium, iron — look for high % DV. This 5%/20% rule works consistently across all nutrients and all products, making it a fast comparison tool that requires no memorization of absolute amounts."
           ]
         },
         {
           "title": "Worked example",
           "body": [
-            "The core idea is that the Nutrition Facts label is a tool for informed comparison, not a simple verdict on whether a food is good or bad. A product can be high in one nutrient and low in another. The label helps people make tradeoffs rather than giving a yes-or-no answer.",
-            "It also matters that the label reflects a portion framework. If someone eats more than the listed serving, the nutrient amounts scale up. That means understanding the label requires understanding both the numbers and the amount actually eaten."
+            "You are choosing between two breakfast cereals. Cereal A lists a serving size of 28 grams (about 1 cup). Cereal B lists a serving size of 55 grams (also described as about 1 cup). Already the comparison requires adjustment — the same described volume contains twice as many grams in Cereal B, so all its numbers will be proportionally larger. You would need to halve Cereal B's figures to compare them fairly against Cereal A's.",
+            "Within a consistent serving size, use % DV to scan quickly. If Cereal A shows 15% DV sodium and Cereal B shows 4% DV, Cereal A is approaching the high-sodium threshold while Cereal B is low. If Cereal A shows 25% DV fiber and Cereal B shows 8% DV, Cereal A is the clear winner on fiber. You do not need to know what 6 grams of fiber means in absolute terms — the % DV does the comparison work for you."
           ]
         },
         {
           "title": "Common mistakes",
           "body": [
-            "The label starts with serving size and servings per container, then lists calories and nutrients. % Daily Value helps show how much a serving contributes to a typical day’s intake. Higher percentages usually mean more of a nutrient; lower percentages usually mean less.",
-            "A practical way to use the label is to compare calories, sodium, added sugars, and saturated fat across similar foods, while also looking for fiber and protein. The point is not to memorize every number but to read the panel in relation to your needs."
+            "The most common mistake is reading the calorie count without checking the serving size first — picking up a package, seeing '100 calories,' and assuming that means 100 calories for the whole product. Always confirm how many servings the package contains. If it says 2.5 servings and you will eat the whole thing, multiply every number on the label by 2.5. A second common mistake is focusing on a single nutrient in isolation. A food that is 'low fat' is not automatically a good choice — manufacturers often add sugar to restore flavor when fat is removed. A food that is 'high protein' may be very high in sodium. The label is a multi-variable tool; reading only one line gives an incomplete picture.",
+            "A third common mistake is confusing 'total sugars' with 'added sugars.' Total sugars includes naturally occurring sugars found in milk (lactose) and fruit (fructose), which are a different dietary concern from sugars added by the manufacturer. The 'Added Sugars' line is the one to prioritize when evaluating how much sugar was put in by the maker."
           ]
         },
         {
           "title": "Try it yourself",
           "body": [
-            "People who understand the Nutrition Facts label are better able to compare foods and make choices that match their goals. This matters for public health because packaged foods make up a large share of many diets.",
-            "The label also creates accountability. Even if marketing is persuasive, manufacturers still have to present nutrient information in a standardized way. The next concept on ingredient lists shows how to read the actual components of a food beyond the nutrient panel."
+            "Pick up any two packages of the same type of food — two cereals, two yogurts, two crackers, two soups. Before looking at the front of the package, read both Nutrition Facts panels. First check: are the serving sizes the same? If not, adjust mentally. Then use % DV to compare on four dimensions: sodium, added sugars, saturated fat, and dietary fiber. Which product is lower in the first three? Which is higher in fiber? The product that comes out better on most of these will almost certainly be the more nutritionally sound choice — regardless of what the front of the package says."
           ]
         },
         {
           "title": "Where it shows up",
           "body": [
-            "This concept is the base layer for the entire topic. It leads directly into ingredient lists, serving sizes, and claims. Without this foundation, it is much easier to miss the ways packaging can mislead."
+            "The Nutrition Facts panel is the baseline for everything else in this topic. Every skill that follows — reading ingredient lists, evaluating front-of-package claims, spotting misleading serving sizes — builds on the ability to read the core panel accurately. In everyday life, this skill applies at the grocery store, when comparing restaurant nutrition disclosures, when evaluating packaged snacks, and anywhere food is sold with a standardized nutrition label attached."
           ]
         }
       ]
@@ -55,47 +54,46 @@
     {
       "id": "ingredient_lists",
       "title": "Ingredient Lists and Additives",
-      "summary": "Ingredient lists show exactly what a packaged food is made from, and the ingredients must be listed in descending order by weight. That makes the list one of the best places to look for added sugars, refined grains, oils, preservatives, and other additives. A product can have a short or long ingredient list, but the key is not the length alone. It is the quality and order of the ingredients.",
+      "summary": "The ingredient list shows exactly what a packaged food is made from, in descending order by weight. Two rules govern practical reading: the first three ingredients define the product's fundamental character, and added sugars hide under many aliases that must be recognized individually. Reading the ingredient list alongside the Nutrition Facts panel reveals what the numbers alone cannot — what kind of food something actually is.",
       "sections": [
         {
           "title": "What it is",
           "body": [
-            "Every packaged food has an ingredient list, and in the U.S. the ingredients must be listed from most to least by weight. That means the first few ingredients usually tell you a lot about the product. If sugar, refined flour, or a type of oil appears near the top, that ingredient makes up a large share of the food.",
-            "Ingredient lists matter because they reveal what the Nutrition Facts panel does not fully explain. The nutrient panel tells you how much fat or sugar a food contains, but not which specific ingredients provide them. The ingredient list fills in that gap and often exposes how processed a food really is."
+            "Below the Nutrition Facts panel is the ingredient list. Unlike the panel, which summarizes quantities of nutrients, the ingredient list shows exactly what a product is made from, in descending order by weight: the ingredient that weighs the most in the recipe is listed first; the one that weighs the least is listed last.",
+            "This ordering rule makes the ingredient list a powerful diagnostic tool. If the first ingredient is whole wheat flour, the product is primarily whole wheat flour. If the first ingredient is enriched bleached flour, that is mostly what you are eating. If sugar appears in the first three ingredients of a product marketed as 'lightly sweetened,' the front of the package and the ingredient list are telling different stories. The ingredient list does not tell you quantities — the Nutrition Facts panel handles that — but it tells you the hierarchy: what the food is primarily built from, and therefore what kind of food it fundamentally is."
           ]
         },
         {
           "title": "The rule",
           "body": [
-            "The main regulatory force is the requirement that ingredients be listed in order by weight. Food scientists and manufacturers decide the formula, but they must disclose it. Consumers, dietitians, and food-label educators use that list to identify patterns that matter for health.",
-            "Important ingredients to watch include added sugars under many names, refined starches, hydrogenated oils, emulsifiers, preservatives, and flavorings. None of these ingredients is automatically harmful on its own, but the list can reveal a heavily formulated product that looks simpler on the front than it really is."
+            "Two rules govern practical ingredient-list reading. Rule one: the first three ingredients define the product. Those three items make up the largest share of the food by weight, and their identity reveals its fundamental character. A granola bar whose first three ingredients are oats, nuts, and honey is structurally different from one whose first three are sugar, corn syrup, and enriched flour — even if their calorie counts are nearly identical.",
+            "Rule two: recognize added sugar by its many names. Manufacturers sometimes use multiple different sugar ingredients to prevent any single one from ranking prominently on the list. Common sugar aliases include: high-fructose corn syrup, corn syrup, cane sugar, brown sugar, evaporated cane juice, maltose, dextrose, sucrose, honey, agave nectar, maple syrup, molasses, fruit juice concentrate, and barley malt. When several of these appear in the same ingredient list, the product's true sugar contribution is likely higher than any single entry suggests."
           ]
         },
         {
           "title": "Worked example",
           "body": [
-            "The core idea is that ingredient lists show composition, not just nutrition numbers. Two foods can have similar calories and protein but very different ingredient quality. Reading ingredients helps you understand what the food actually is.",
-            "It also shows how food companies can rely on familiar-sounding ingredients while still building a highly processed product. The list is often the fastest way to spot whether a food is mostly whole ingredients or mostly industrial formulation."
+            "Compare two crackers with nearly identical Nutrition Facts panels — same calories, same fat, similar sodium. Cracker A: whole grain wheat flour, canola oil, salt, rosemary extract. Cracker B: enriched flour (wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), soybean oil, sugar, salt, high fructose corn syrup, artificial flavor, calcium phosphate.",
+            "The Nutrition Facts panels look similar, but the ingredient lists reveal very different products. Cracker A is primarily whole grain wheat, made with oil, salt, and a natural preservative. Cracker B is primarily refined enriched flour, contains two separate forms of added sugar, uses artificial flavor, and adds calcium via a chemical additive rather than through a food source. The label of Cracker B may legally carry phrases like 'made with real ingredients,' but the structure of the product is fundamentally different from Cracker A. The numbers alone would not show you this."
           ]
         },
         {
           "title": "Common mistakes",
           "body": [
-            "To read an ingredient list well, start at the top and look for the first three to five ingredients. Then scan for added sugars under multiple names, such as syrup, juice concentrate, dextrose, maltose, or cane sugar. Check for oils, refined grains, and additives that may affect texture, shelf life, or taste.",
-            "The list can also help you compare products within a category. If one bread has whole wheat flour first and another has enriched flour plus sugar first, that tells you something important even before you check the Nutrition Facts panel. Ingredient lists are a practical shortcut for spotting what a food is built from."
+            "The most common mistake is equating a short ingredient list with a healthy product, or a long list with an unhealthy one. Length is not the issue — composition is. A whole grain bread with fifteen ingredients (added vitamins, seeds, oil, and salt) can be a nutritionally sound food. A product with only three ingredients — sugar, palm oil, and cocoa powder — has a short list but is primarily sugar and saturated fat. A second common mistake is scanning for 'sugar' once, finding it listed fifth, and feeling reassured. If the same list contains corn syrup at seventh, dextrose at ninth, and brown rice syrup at eleventh, the product has four separate sweeteners that together may collectively outweigh several higher-ranked ingredients.",
+            "A third mistake is ignoring the ingredients after the first five. The early ingredients dominate by weight, but additives — emulsifiers, artificial flavors, colorings, preservatives — typically appear near the end in small quantities and are worth noticing. They signal industrial processing. A product whose list includes carrageenan, sodium stearoyl lactylate, and artificial flavor is a structurally different kind of food from one made with five recognizable kitchen ingredients, even if their calorie counts match."
           ]
         },
         {
           "title": "Try it yourself",
           "body": [
-            "Ingredient-list literacy helps consumers detect when a product is more industrially formulated than it first appears. That makes it easier to avoid being fooled by the front of the package. It also helps people with allergies or dietary restrictions identify problem ingredients.",
-            "The next concept expands from ingredient reading into a broader skill: combining the ingredient list and Nutrition Facts panel into one reading strategy. That is where label literacy becomes more useful than looking at any single number alone."
+            "Pick a product you buy regularly — a loaf of bread, a box of crackers, a container of yogurt, a jar of pasta sauce. Read the ingredient list from top to bottom without looking at the front of the package first. Identify the first three ingredients and ask what they tell you about what the product primarily is. Then scan the full list for sugar aliases and count how many distinct sweeteners appear. Finally, note any ingredients you would not find in a typical home kitchen — emulsifiers, stabilizers, artificial flavors, colorings. You are not judging the food as good or bad; you are building an accurate picture of what it actually is, so you can compare it honestly against alternatives."
           ]
         },
         {
           "title": "Where it shows up",
           "body": [
-            "This concept follows the Nutrition Facts basics and prepares the reader for broader label literacy. It also connects directly to ultra-processed foods, because many UPFs are identifiable first by their ingredient lists."
+            "Ingredient list reading applies any time a product's front-of-package claims feel inconsistent with what you would expect. It is essential for people managing dietary restrictions, food allergies, or specific health goals — the ingredient list is where hidden gluten, dairy, soy, and allergens appear. It connects directly to understanding ultra-processed foods, because the defining feature of ultra-processing is an ingredient list full of substances not found in home cooking. And it complements the Nutrition Facts panel: numbers tell you how much; ingredients tell you what."
           ]
         }
       ]
@@ -103,191 +101,46 @@
     {
       "id": "label_literacy",
       "title": "How to Read Labels Better",
-      "summary": "Label literacy is the skill of using the Nutrition Facts panel, ingredient list, serving size, and claims together instead of relying on any one part of the package. A food may look healthy because of one nutrient or one front-of-package phrase, but the full label often tells a more complicated story. The best readers compare similar products, check servings, and look for patterns rather than slogans.\n\nThis concept turns label reading into a practical habit. Instead of asking whether a product is simply healthy or unhealthy, a label-literate shopper asks what the food is made of, how much is in a serving, and how it compares to alternatives. That matters because many packaged foods are designed to look better than they are at a quick glance. Learning to read labels reduces that confusion and makes later concepts like serving-size tricks and front-of-package claims much easier to understand.",
+      "summary": "Reading the Nutrition Facts panel and ingredient list together, in a consistent five-step sequence, replaces the typical habit of glancing at the front and checking calories. The routine — serving size, calories, three nutrients to limit, two nutrients to seek, ingredient list top three — takes about thirty seconds per product and makes the label rather than the marketing the basis for comparison.",
       "sections": [
         {
           "title": "What it is",
           "body": [
-            "Most people do not read food labels from top to bottom in a careful way. They glance at the front, maybe check calories, and move on. Label literacy is the ability to slow down enough to interpret the whole package. It is especially important because food companies know that shoppers often make decisions quickly.",
-            "A label-literate consumer does not treat one nutrient as the whole story. For example, a snack might be low in fat but high in sugar, or high in protein but also high in sodium. Learning to compare multiple features at once is the real skill that nutrition education tries to build."
+            "Reading the Nutrition Facts panel and the ingredient list as separate exercises gives you pieces of information. Reading them together, in a consistent sequence, gives you a complete picture that is much harder for packaging design to distort.",
+            "The integrated label-reading skill replaces the typical supermarket habit — glance at the front, maybe check calories, move on — with a brief, disciplined routine that takes about thirty seconds per product and delivers a genuinely informative result. This is not about becoming a nutrition expert or memorizing specific daily values for every nutrient. It is about having a repeatable process that works across all products and all categories, and that puts the label rather than the marketing in charge of your decision."
           ]
         },
         {
           "title": "The rule",
           "body": [
-            "The main figure here is the consumer, but dietitians, public health educators, and regulatory agencies all help shape label literacy. FDA guidance gives people the basic framework, while health organizations teach how to use it in real life. Food companies, meanwhile, design labels to capture attention as efficiently as possible.",
-            "The key forces are attention, comparison, and tradeoff. People have limited time and mental energy, so they often focus on one clue. Label literacy improves judgment by making it easier to compare similar foods and see the tradeoffs clearly."
+            "Read in this order, every time: serving size → calories → three nutrients to limit → two nutrients to seek → ingredient list top three. Step one, serving size: confirm how much constitutes one serving and how many servings are in the package. This recalibrates every number that follows. Step two, calories: note the number; if you will eat more than one serving, multiply. Step three, three nutrients to limit: check sodium, saturated fat, and added sugars using % DV — flag anything at 20% DV or above. Step four, two nutrients to seek: check dietary fiber (% DV) and protein (grams) — these are the nutrients most commonly low in heavily processed packaged foods.",
+            "Step five, ingredient list top three: what are the first three ingredients? Do they match the product's front-of-package identity? Are any of the top five entries a sugar alias? That is the complete routine — five steps, about thirty seconds, applicable to any packaged food, producing a consistent and comparable result every time."
           ]
         },
         {
           "title": "Worked example",
           "body": [
-            "The core idea is that good label reading is contextual. No single number tells the whole story. A food that looks impressive for one reason may be weak in another area, so the reader has to consider the whole package.",
-            "Label literacy is also about skepticism without paranoia. The goal is not to assume every label is deceptive. The goal is to know where to look, what to compare, and how to make a decision based on evidence rather than packaging design."
+            "Two cereals, both marketed as 'whole grain,' same serving size of 30 grams. Cereal A: 110 calories. Sodium 5% DV. Saturated fat 0% DV. Added sugars 4% DV. Fiber 20% DV. Protein 4g. First three ingredients: whole grain oats, whole grain wheat, oat bran. Cereal B: 120 calories. Sodium 8% DV. Saturated fat 2% DV. Added sugars 22% DV. Fiber 8% DV. Protein 2g. First three ingredients: whole grain corn flour, sugar, corn syrup.",
+            "The calories are nearly the same. Both carry 'whole grain' on the front. But the five-step routine reveals that Cereal B has more than five times the added sugars at 22% DV, nearly half the fiber, and an ingredient list that follows its whole grain immediately with two forms of added sugar. Cereal A is the straightforwardly better choice, and the routine makes that clear in thirty seconds without any nutritional expertise required."
           ]
         },
         {
           "title": "Common mistakes",
           "body": [
-            "A practical label-reading routine starts with the serving size, then the calories, then the nutrients of concern for that food category. After that, the ingredient list can confirm whether the product is mostly made of familiar whole ingredients or heavily processed components. Finally, compare similar products side by side.",
-            "This method works because it reduces the influence of front-of-package marketing. If two cereals look similar on the shelf, the label-literate shopper checks fiber, added sugar, and ingredient order before choosing. That turns a vague impression into a reasoned decision."
+            "The most common mistake is performing only part of the routine — checking one number and stopping. The label is a system; each element compensates for the limitations of the others. The calorie count without the serving size is meaningless. The ingredient list without the Nutrition Facts misses quantities. The % DV without the ingredient list misses what is driving the numbers. A second common mistake is applying the routine selectively — using it when something looks suspicious but skipping it when the packaging looks clean, wholesome, and trustworthy. Marketing is most effective on products designed to look trustworthy. A product in kraft paper packaging with earthy typography and phrases like 'artisan' or 'clean ingredients' is not exempt from having a problematic label. Apply the routine regardless of how the product presents itself.",
+            "A third mistake is treating the exercise as a search for perfection. The goal is not to find a nutritionally perfect food — it is to make meaningfully better choices within the range of what is available. A cereal that is slightly higher in sodium than ideal but high in fiber and very low in added sugars is still a reasonable choice. The routine produces accurate comparisons; it does not require rejecting everything."
           ]
         },
         {
           "title": "Try it yourself",
           "body": [
-            "Better label literacy helps people choose foods that fit their goals and needs. It is also useful for families, schools, and institutions that buy large amounts of packaged food. The more people understand labels, the less power superficial packaging has.",
-            "This concept sits at the center of the topic because it prepares readers for the more specific label tactics that follow. Serving-size tricks and front-of-package claims only make sense once someone knows how to read the whole label first."
+            "The next time you are in front of packaged foods — in a store or at home — choose any category and apply the full five-step routine to three products side by side. Write down the results if that helps you track the comparisons. After running the routine, look at the front of each package and notice whether the marketing language matches what the label actually shows. You are practicing making the label, rather than the packaging, the basis for your comparison. Repeat this a few times and the routine becomes fast and nearly automatic."
           ]
         },
         {
           "title": "Where it shows up",
           "body": [
-            "This concept bridges the basics of the Nutrition Facts panel and the more specific tricks that follow. It is the practical skill layer of the topic. The next concept on serving-size tricks shows why even accurate numbers can mislead if the serving is framed strategically."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "nutrition_facts_basics",
-      "title": "How the Nutrition Facts Label Works",
-      "summary": "The Nutrition Facts label is the standardized panel on packaged foods that shows calories, nutrients, serving size, and % Daily Value. It is designed to help shoppers compare foods, but it only works well if people know how to read it. The label separates facts from marketing, but the numbers can still be misunderstood if the serving size is overlooked or if a person focuses on only one nutrient.\n\nThis concept teaches the foundation for everything else in the topic. Before someone can spot label tricks, they need to understand what the Nutrition Facts panel is actually saying. Calories, fat, sodium, sugars, fiber, protein, and micronutrients all have different roles, and the % Daily Value helps show whether a food is high or low in a nutrient. Learning the label turns a package from a sales pitch into a source of information.",
-      "sections": [
-        {
-          "title": "What it is",
-          "body": [
-            "Packaged foods in the United States use a standardized Nutrition Facts panel so consumers can compare products more easily. The label was created to make nutrition information more visible and consistent. It is one of the main tools people have for understanding what is in a food before they buy it.",
-            "The modern label includes calories, serving size, total fat, saturated fat, trans fat, cholesterol, sodium, carbohydrates, fiber, sugars, added sugars, protein, and selected vitamins and minerals. The panel has changed over time as public health priorities have shifted, especially around added sugars and realistic serving sizes."
-          ]
-        },
-        {
-          "title": "The rule",
-          "body": [
-            "The key institution is the FDA, which sets the rules for the Nutrition Facts label. Food manufacturers must follow those rules when presenting nutrient information. Nutrition educators, dietitians, and public health organizations also help people interpret the label correctly.",
-            "The main forces are standardization, comparison, and interpretation. Standardization makes the label consistent across products. Comparison lets shoppers judge one food against another. Interpretation is where problems begin, because the same numbers can seem healthy or unhealthy depending on portion size, context, and what else is in the diet."
-          ]
-        },
-        {
-          "title": "Worked example",
-          "body": [
-            "The core idea is that the Nutrition Facts label is a tool for informed comparison, not a simple verdict on whether a food is good or bad. A product can be high in one nutrient and low in another. The label helps people make tradeoffs rather than giving a yes-or-no answer.",
-            "It also matters that the label reflects a portion framework. If someone eats more than the listed serving, the nutrient amounts scale up. That means understanding the label requires understanding both the numbers and the amount actually eaten."
-          ]
-        },
-        {
-          "title": "Common mistakes",
-          "body": [
-            "The label starts with serving size and servings per container, then lists calories and nutrients. % Daily Value helps show how much a serving contributes to a typical day’s intake. Higher percentages usually mean more of a nutrient; lower percentages usually mean less.",
-            "A practical way to use the label is to compare calories, sodium, added sugars, and saturated fat across similar foods, while also looking for fiber and protein. The point is not to memorize every number but to read the panel in relation to your needs."
-          ]
-        },
-        {
-          "title": "Try it yourself",
-          "body": [
-            "People who understand the Nutrition Facts label are better able to compare foods and make choices that match their goals. This matters for public health because packaged foods make up a large share of many diets.",
-            "The label also creates accountability. Even if marketing is persuasive, manufacturers still have to present nutrient information in a standardized way. The next concept on ingredient lists shows how to read the actual components of a food beyond the nutrient panel."
-          ]
-        },
-        {
-          "title": "Where it shows up",
-          "body": [
-            "This concept is the base layer for the entire topic. It leads directly into ingredient lists, serving sizes, and claims. Without this foundation, it is much easier to miss the ways packaging can mislead."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ingredient_lists",
-      "title": "Ingredient Lists and Additives",
-      "summary": "Ingredient lists show exactly what a packaged food is made from, and the ingredients must be listed in descending order by weight. That makes the list one of the best places to look for added sugars, refined grains, oils, preservatives, and other additives. A product can have a short or long ingredient list, but the key is not the length alone. It is the quality and order of the ingredients.",
-      "sections": [
-        {
-          "title": "What it is",
-          "body": [
-            "Every packaged food has an ingredient list, and in the U.S. the ingredients must be listed from most to least by weight. That means the first few ingredients usually tell you a lot about the product. If sugar, refined flour, or a type of oil appears near the top, that ingredient makes up a large share of the food.",
-            "Ingredient lists matter because they reveal what the Nutrition Facts panel does not fully explain. The nutrient panel tells you how much fat or sugar a food contains, but not which specific ingredients provide them. The ingredient list fills in that gap and often exposes how processed a food really is."
-          ]
-        },
-        {
-          "title": "The rule",
-          "body": [
-            "The main regulatory force is the requirement that ingredients be listed in order by weight. Food scientists and manufacturers decide the formula, but they must disclose it. Consumers, dietitians, and food-label educators use that list to identify patterns that matter for health.",
-            "Important ingredients to watch include added sugars under many names, refined starches, hydrogenated oils, emulsifiers, preservatives, and flavorings. None of these ingredients is automatically harmful on its own, but the list can reveal a heavily formulated product that looks simpler on the front than it really is."
-          ]
-        },
-        {
-          "title": "Worked example",
-          "body": [
-            "The core idea is that ingredient lists show composition, not just nutrition numbers. Two foods can have similar calories and protein but very different ingredient quality. Reading ingredients helps you understand what the food actually is.",
-            "It also shows how food companies can rely on familiar-sounding ingredients while still building a highly processed product. The list is often the fastest way to spot whether a food is mostly whole ingredients or mostly industrial formulation."
-          ]
-        },
-        {
-          "title": "Common mistakes",
-          "body": [
-            "To read an ingredient list well, start at the top and look for the first three to five ingredients. Then scan for added sugars under multiple names, such as syrup, juice concentrate, dextrose, maltose, or cane sugar. Check for oils, refined grains, and additives that may affect texture, shelf life, or taste.",
-            "The list can also help you compare products within a category. If one bread has whole wheat flour first and another has enriched flour plus sugar first, that tells you something important even before you check the Nutrition Facts panel. Ingredient lists are a practical shortcut for spotting what a food is built from."
-          ]
-        },
-        {
-          "title": "Try it yourself",
-          "body": [
-            "Ingredient-list literacy helps consumers detect when a product is more industrially formulated than it first appears. That makes it easier to avoid being fooled by the front of the package. It also helps people with allergies or dietary restrictions identify problem ingredients.",
-            "The next concept expands from ingredient reading into a broader skill: combining the ingredient list and Nutrition Facts panel into one reading strategy. That is where label literacy becomes more useful than looking at any single number alone."
-          ]
-        },
-        {
-          "title": "Where it shows up",
-          "body": [
-            "This concept follows the Nutrition Facts basics and prepares the reader for broader label literacy. It also connects directly to ultra-processed foods, because many UPFs are identifiable first by their ingredient lists."
-          ]
-        }
-      ]
-    },
-    {
-      "id": "label_literacy",
-      "title": "How to Read Labels Better",
-      "summary": "Label literacy is the skill of using the Nutrition Facts panel, ingredient list, serving size, and claims together instead of relying on any one part of the package. A food may look healthy because of one nutrient or one front-of-package phrase, but the full label often tells a more complicated story. The best readers compare similar products, check servings, and look for patterns rather than slogans.\n\nThis concept turns label reading into a practical habit. Instead of asking whether a product is simply healthy or unhealthy, a label-literate shopper asks what the food is made of, how much is in a serving, and how it compares to alternatives. That matters because many packaged foods are designed to look better than they are at a quick glance. Learning to read labels reduces that confusion and makes later concepts like serving-size tricks and front-of-package claims much easier to understand.",
-      "sections": [
-        {
-          "title": "What it is",
-          "body": [
-            "Most people do not read food labels from top to bottom in a careful way. They glance at the front, maybe check calories, and move on. Label literacy is the ability to slow down enough to interpret the whole package. It is especially important because food companies know that shoppers often make decisions quickly.",
-            "A label-literate consumer does not treat one nutrient as the whole story. For example, a snack might be low in fat but high in sugar, or high in protein but also high in sodium. Learning to compare multiple features at once is the real skill that nutrition education tries to build."
-          ]
-        },
-        {
-          "title": "The rule",
-          "body": [
-            "The main figure here is the consumer, but dietitians, public health educators, and regulatory agencies all help shape label literacy. FDA guidance gives people the basic framework, while health organizations teach how to use it in real life. Food companies, meanwhile, design labels to capture attention as efficiently as possible.",
-            "The key forces are attention, comparison, and tradeoff. People have limited time and mental energy, so they often focus on one clue. Label literacy improves judgment by making it easier to compare similar foods and see the tradeoffs clearly."
-          ]
-        },
-        {
-          "title": "Worked example",
-          "body": [
-            "The core idea is that good label reading is contextual. No single number tells the whole story. A food that looks impressive for one reason may be weak in another area, so the reader has to consider the whole package.",
-            "Label literacy is also about skepticism without paranoia. The goal is not to assume every label is deceptive. The goal is to know where to look, what to compare, and how to make a decision based on evidence rather than packaging design."
-          ]
-        },
-        {
-          "title": "Common mistakes",
-          "body": [
-            "A practical label-reading routine starts with the serving size, then the calories, then the nutrients of concern for that food category. After that, the ingredient list can confirm whether the product is mostly made of familiar whole ingredients or heavily processed components. Finally, compare similar products side by side.",
-            "This method works because it reduces the influence of front-of-package marketing. If two cereals look similar on the shelf, the label-literate shopper checks fiber, added sugar, and ingredient order before choosing. That turns a vague impression into a reasoned decision."
-          ]
-        },
-        {
-          "title": "Try it yourself",
-          "body": [
-            "Better label literacy helps people choose foods that fit their goals and needs. It is also useful for families, schools, and institutions that buy large amounts of packaged food. The more people understand labels, the less power superficial packaging has.",
-            "This concept sits at the center of the topic because it prepares readers for the more specific label tactics that follow. Serving-size tricks and front-of-package claims only make sense once someone knows how to read the whole label first."
-          ]
-        },
-        {
-          "title": "Where it shows up",
-          "body": [
-            "This concept bridges the basics of the Nutrition Facts panel and the more specific tricks that follow. It is the practical skill layer of the topic. The next concept on serving-size tricks shows why even accurate numbers can mislead if the serving is framed strategically."
+            "This is the synthesis skill of the topic — the one that makes everything else practical. It applies every time you are in front of a packaged food. It also underpins the concepts that follow: understanding ultra-processed foods, evaluating front-of-package claims, and recognizing the gap between marketing and nutritional reality are all easier once you have a reliable reading routine. The routine transfers to restaurant nutrition disclosures, online food databases, and school cafeteria nutrition sheets, all of which present similar information in roughly similar formats."
           ]
         }
       ]
@@ -295,47 +148,47 @@
     {
       "id": "ultra_processed_foods",
       "title": "Ultra-Processed Foods",
-      "summary": "Ultra-processed foods are industrially formulated products made with ingredients and additives not commonly used in home cooking. They are usually classified as NOVA Group 4 foods. This category includes many packaged snacks, sweetened drinks, instant meals, and shelf-stable products designed for convenience, taste, and long life. Ultra-processed foods are not simply ‘bad food,’ but they are often nutritionally and structurally different from minimally processed foods.\n\nThis concept matters because ultra-processed foods can be accurately labeled while still being difficult to understand at a glance. A product may list its ingredients clearly and still be highly engineered for sweetness, texture, shelf life, and convenience. That means the issue is not always a label trick in the narrow sense. Sometimes the package tells the truth, but the truth is hard to interpret quickly. Understanding ultra-processed foods helps readers separate label deception from broader food-system design.",
+      "summary": "Ultra-processing is not just any degree of processing — it is industrial reformulation using ingredients and techniques with no equivalent in home cooking. The NOVA classification system defines Group 4 ultra-processed foods by manufacturing method rather than nutrient profile, which is why they cannot be identified by any single nutrient rule. The ingredient list is the primary detection tool: the presence of emulsifiers, modified starches, artificial flavors, colorings, and similar additives marks a structurally different kind of food from anything a home cook would make.",
       "sections": [
         {
           "title": "What it is",
           "body": [
-            "The NOVA system classifies foods by degree of processing rather than by nutrient content alone. Ultra-processed foods are the most heavily industrially formulated category. They often contain refined ingredients, flavorings, emulsifiers, colorings, stabilizers, and other additives that make the product convenient and consistent.",
-            "This category grew as food manufacturing became more sophisticated. Modern consumers often rely on packaged foods because they are cheap, portable, and ready to eat. That convenience has made ultra-processed foods a major part of many diets, especially in urban and busy lifestyles."
+            "Ultra-processed foods are not simply foods that have been processed — almost everything we eat has been processed in some way. Milling wheat into flour is processing. Pasteurizing milk is processing. Canning tomatoes is processing. Ultra-processing is something different: it is the industrial reformulation of raw food materials using ingredients and techniques that have no equivalent in home cooking, aimed at producing products that are shelf-stable, uniform, hyper-palatable, and profitable at scale.",
+            "The NOVA classification system, developed by researchers at the University of São Paulo, organizes foods into four groups by degree of processing. Group 1 is unprocessed or minimally processed foods — fresh fruit, plain meat, eggs, plain milk. Group 2 is processed culinary ingredients — oil, butter, flour, salt, sugar. Group 3 is processed foods made by combining Groups 1 and 2 — canned beans, fresh cheese, homemade bread. Group 4 is ultra-processed foods: products manufactured primarily from substances extracted or derived from foods, assembled using industrial processes and additives that serve no culinary purpose — emulsifiers, modified starches, hydrolyzed proteins, artificial flavors, colorings, foam stabilizers, and dozens of others."
           ]
         },
         {
-          "title": "The rule",
+          "title": "The science behind it",
           "body": [
-            "The key scientific framework is the NOVA classification, developed by food researchers to describe processing levels. Food manufacturers use industrial formulation methods to create products with specific textures, flavors, and shelf lives. Consumers often choose these foods because they are convenient and affordable.",
-            "The main forces are processing, formulation, convenience, and market demand. Unlike a single label trick, ultra-processing is a broader product design strategy. It shapes what the food is before the label even enters the picture."
+            "Ultra-processed foods are engineered to achieve specific sensory and commercial goals that whole foods cannot reliably deliver at scale. Food scientists manipulate texture, flavor, color, aroma, and mouthfeel with precision. A cheese-flavored snack may contain little or no actual cheese, deriving its flavor from a combination of artificial and natural flavoring compounds, salt, fat, and glutamate compounds calibrated to produce a cheese-like sensory response more intensely and consistently than real cheese does.",
+            "The nutritional consequence of this engineering is structural. To create a product that is inexpensive, highly palatable, shelf-stable for months, and uniform in every unit, manufacturers typically depend on refined carbohydrates for bulk and shelf stability, added sugars and salt for flavor, refined fats for texture and mouthfeel, and a roster of additives for consistency and extended shelf life. A large body of epidemiological research has associated high ultra-processed food intake with higher caloric consumption, poorer diet quality overall, and elevated risk for obesity, type 2 diabetes, and cardiovascular disease — though the relative contributions of nutrient profile versus the processing itself versus dietary displacement remain actively debated by researchers."
           ]
         },
         {
-          "title": "Worked example",
+          "title": "How it works",
           "body": [
-            "The core idea is that ultra-processed foods are defined by how they are made, not just by one nutrient. A food can be low in sugar or fat and still be ultra-processed. That is why the category cannot be reduced to a simple nutrient rule.",
-            "This concept also shows why ultra-processed foods are not always misleading in the same way as a front-of-package claim. The label may honestly list the ingredients, but the product’s overall design may still make it less like a home-cooked food and more like an engineered edible product."
+            "The ingredient list is the primary way to identify ultra-processed foods, because their defining feature is the presence of ingredients not found in typical home kitchens: modified corn starch, sodium stearoyl lactylate, carrageenan, xanthan gum, disodium phosphate, sodium nitrite, artificial flavors, artificial colors (Red 40, Yellow 5, Blue 1), TBHQ, BHA, BHT, high-fructose corn syrup, hydrolyzed vegetable protein, and dozens of similar compounds. Each serves a specific technological function — emulsification, preservation, texturization, flavor enhancement — that helps the product behave as engineered.",
+            "Ultra-processed foods can be low in fat, high in protein, or rich in added vitamins and still be ultra-processed. The NOVA classification is about manufacturing method and ingredient type, not nutrient profile. A protein bar loaded with whey protein isolate, modified corn starch, artificial sweeteners, and fifteen additives is ultra-processed even if its macronutrient breakdown looks favorable. This is why the concept does not reduce to any simple nutrient rule — it requires looking at the ingredient list and asking: could a home cook make this from recognizable food ingredients?"
           ]
         },
         {
-          "title": "Common mistakes",
+          "title": "Real-world examples",
           "body": [
-            "Ultra-processed foods are made by breaking raw ingredients down into refined components and rebuilding them with additives, emulsifiers, flavor enhancers, and stabilizers. The goal is often to create products that are cheap, highly palatable, shelf-stable, and easy to consume quickly. This process can make food more convenient but also more removed from whole ingredients.",
-            "Because these foods are designed for consistency, they can be easy to overeat. Their texture, flavor, and packaging often encourage repeated consumption. That is one reason the category is discussed so often in nutrition science and public health."
+            "Bread exists across the full processing spectrum. A loaf of sourdough made from whole wheat flour, water, salt, and a live starter culture is a Group 3 processed food. A standard supermarket white bread may have fifteen to twenty ingredients including dough conditioners (DATEM, sodium stearoyl lactylate), chemical preservatives (calcium propionate), emulsifiers, and vitamins added back after milling removed them — a Group 4 ultra-processed product, even though the end result looks and functions exactly like bread. Their Nutrition Facts panels may show similar calorie and protein counts. Their ingredient lists reveal structurally different kinds of food.",
+            "Ultra-processed foods now account for more than 50 percent of daily caloric intake in the United States, according to dietary surveys. This proportion is substantially lower in countries like Portugal, France, and Japan, where traditional food cultures have been more resistant to industrial replacement. This is not a minor variation — it represents a fundamental shift in what the human diet is made of, with consequences that nutrition researchers are still working to fully characterize."
           ]
         },
         {
-          "title": "Try it yourself",
+          "title": "Common misconceptions",
           "body": [
-            "Research has linked high intake of ultra-processed foods with poorer diet quality and several health concerns, although the strength and interpretation of that evidence are actively debated. The concept matters because it moves the discussion beyond single nutrients to the structure of the whole food environment.",
-            "Ultra-processed foods also complicate the label conversation. They may not be ‘tricking’ the shopper through one obvious claim, but they can still be misleading in a broader sense because their packaging may hide how far removed they are from minimally processed foods. The next concept explains why that matters for actual diet quality."
+            "A common misconception is that ultra-processed means unhealthy and minimally processed means healthy, as absolute categories. These are generalizations, not rules. Some ultra-processed foods have reasonable nutritional profiles. Some minimally processed foods — salted nuts, aged cheeses, cured meats — are high in sodium or saturated fat in ways that matter for certain health conditions. The NOVA category is a useful lens for understanding what kind of thing a food is; it is not a standalone verdict on whether to eat it.",
+            "Another common misconception is that the additives in ultra-processed foods are individually toxic or dangerous. Most food additives used in the United States have been approved as generally recognized as safe at the quantities used. The concern about ultra-processed foods is not primarily that each additive causes harm in isolation, but that a diet dominated by these products tends to displace whole and minimally processed foods, reduce fiber intake, and deliver calories in forms that may undermine normal appetite regulation. The issue is dietary pattern and food structure, not individual ingredient toxicity."
           ]
         },
         {
-          "title": "Where it shows up",
+          "title": "Connections",
           "body": [
-            "This concept connects the marketing and label-reading concepts to a broader food-system issue. It sits between the packaging story and the nutrition-outcomes story. Ultra-processing is where label honesty and food complexity begin to diverge."
+            "Understanding ultra-processed foods reframes the label-reading skills from earlier concepts. The Nutrition Facts panel helps you assess nutrient content. Recognizing ultra-processing via the ingredient list helps you assess the structural character of the food — what kind of thing it is, not just what numbers it carries. Both lenses together give a more complete picture than either alone. The next concept examines how front-of-package marketing claims interact with both kinds of information — and why a product can look good on the label and still be misleading."
           ]
         }
       ]
@@ -343,47 +196,46 @@
     {
       "id": "claims_vs_quality",
       "title": "Claims vs Actual Quality",
-      "summary": "A product can make a good impression through claims, images, and packaging while still being a weak nutritional choice. This is the difference between what a package says and what the food actually offers. A cereal can be ‘made with whole grains,’ a snack can be ‘high protein,’ or a meal can be ‘natural,’ yet the product may still be high in sodium, added sugar, or refined starch.\n\nThis concept is about separating the appearance of health from actual diet quality. Some labels are misleading because of wording, some because of serving size, and some because they highlight one positive feature while ignoring the rest. The key lesson is that claims should never replace the full Nutrition Facts panel and ingredient list. A product’s marketing can be true and still be a poor choice overall.",
+      "summary": "Front-of-package claims range from tightly regulated terms with legal definitions ('low sodium,' 'high fiber') to completely unregulated marketing language ('natural,' 'clean,' 'wholesome'). The skill is applying one rule to every claim: flip to the back and find what came with it. Every claim highlights one virtue — your job is to find the corresponding tradeoff the packaging is designed to obscure.",
       "sections": [
         {
           "title": "What it is",
           "body": [
-            "Food packages are built to attract attention in a few seconds. That means they often highlight one strong positive point, such as fiber, protein, or whole grains. But actual dietary quality depends on the full nutrient profile and the ingredients, not on one flattering feature.",
-            "This concept is where the earlier lessons come together. Serving size, ingredient order, regulated claims, and unregulated language can all create a more favorable impression than the food deserves. A label-literate shopper learns to ask whether the claim is relevant enough to matter."
+            "Front-of-package claims are the first thing you see when you pick up a packaged food. They are placed there deliberately, designed to create a positive impression in the few seconds before you decide whether to put the product in your cart. 'Made with whole grains.' 'Good source of fiber.' '25% less fat.' 'No artificial flavors.' 'Protein-packed.' 'Natural.' These phrases are marketing choices calibrated to signal health, quality, or virtue in response to the most common shopper concerns of the moment.",
+            "Some claims are tightly regulated by the FDA. 'Low sodium' has a legal definition: no more than 140 milligrams per serving. 'High fiber' means at least 5 grams per serving. 'Reduced fat' means at least 25 percent less fat than the reference food. When you see these specific regulatory terms, they mean something precise and legally enforceable. But many claims on food packaging are not regulated in the same way. 'Natural,' 'wholesome,' 'clean,' 'artisan,' 'simple ingredients,' and 'made with real [ingredient]' carry no FDA-enforced nutritional definition. A heavily processed product can legally carry any of these terms and mean almost anything — or nothing specific — by them."
           ]
         },
         {
           "title": "The rule",
           "body": [
-            "The main figures are food marketers and consumers. Marketers choose the strongest selling point, while consumers decide whether that point is meaningful. Dietitians and public health educators try to shift attention back toward the full label and overall diet pattern.",
-            "The main forces are selective attention and nutritional tradeoff. A food may improve in one respect while remaining poor in another. The package often encourages shoppers to focus on the improvement and ignore the tradeoff."
+            "For every front-of-package claim, flip to the back and find the corresponding number or ingredient — and then ask what came with it. 'Low fat'? Find the added sugars line. Fat removal almost always comes with sugar addition to restore flavor. 'High protein'? Find the sodium line. High-protein packaged foods are frequently very high in sodium. 'Made with whole grains'? Find whole grains in the ingredient list — if they are not the first ingredient, or appear after several refined grains and sugars, the claim is technically accurate but nutritionally marginal. '25% less sodium'? Less than what? The comparison product matters; 25% less than an extremely salty baseline may still be a high-sodium food.",
+            "'Natural'? This claim is unregulated for most foods and tells you nothing specific about ingredients, processing, or nutrition. Treat it as marketing copy, not nutritional information. 'No added sugar'? Check the ingredient list for non-caloric sweeteners — sucralose, acesulfame potassium, stevia, monk fruit extract. The claim is accurate — no sugar was added — but sweeteners are present, which may or may not matter depending on your goals."
           ]
         },
         {
           "title": "Worked example",
           "body": [
-            "The core idea is that a claim can be accurate without capturing the whole nutritional story. ‘High in fiber’ does not automatically mean healthy. ‘Made with real fruit’ does not automatically mean low in sugar. Claims are fragments of information, not full evaluations.",
-            "This concept is especially useful because it explains why consumers can feel tricked even when a label is technically correct. The product may not be lying, but the presentation can still distort judgment. That is the difference between truth and useful truth."
+            "A container of flavored yogurt carries the front-of-package claim 'Good source of protein' alongside a prominent image of fresh strawberries. The Nutrition Facts panel shows 12 grams of protein per serving — 24% DV, which genuinely meets the FDA definition of a good source. The claim is accurate. But the panel also shows added sugars at 22 grams per serving — 44% DV, nearly half the recommended daily maximum in a single serving. The ingredient list reads: cultured pasteurized low-fat milk, sugar, strawberries (6%), modified corn starch, natural flavor, carmine (for color), vitamin D3.",
+            "The protein claim is true and specific. But it focuses attention on one virtue while the label quietly reveals a very high-sugar product. The strawberry imagery implies more fruit than is present — strawberries appear third by weight at about 6 percent, and much of the strawberry flavor comes from 'natural flavor' rather than actual strawberry. Nothing on this label is false. But the presentation is designed to make you notice the protein and not the sugar. The skill is supplying the rest of the picture yourself."
           ]
         },
         {
           "title": "Common mistakes",
           "body": [
-            "To evaluate claims against quality, compare the claim to the full panel. If a food is advertised as low fat, ask what replaced the fat. If it is high protein, ask how much sodium or added sugar comes with that protein. If it is made with whole grains, check how far down the ingredient list they appear.",
-            "This method works because it forces the reader to move from slogan to structure. That shift often reveals that the appealing feature is real but not especially meaningful. Claims matter, but only when they fit into the entire nutritional picture."
+            "The most common mistake is treating a true claim as a complete recommendation. Marketing is the art of true selective emphasis. A claim can be accurate — 'high in fiber,' 'low in cholesterol,' 'made with real fruit' — and still fail to represent the product fairly. Your job as a reader is to supply the nutrients and ingredients the claim left out. A second common mistake is assuming that unregulated terms carry the same weight as regulated nutrient content claims. 'Natural' has no enforced nutritional definition for most foods. 'Clean' has no regulatory definition at all. When you see a purely image-and-adjective claim with no number attached, it is marketing language, not nutritional information.",
+            "A third mistake is failing to consider the comparison basis of relative claims. '33% less sugar' is only meaningful relative to the original product. If the original had 18 grams of added sugar per serving, 33% less still means 12 grams — which at 24% DV is still a high-sugar food. Relative claims without a named baseline can be used to present problematic products as healthy alternatives to their own unhealthy predecessors."
           ]
         },
         {
           "title": "Try it yourself",
           "body": [
-            "Understanding claims versus quality helps people avoid overvaluing one positive trait. It also improves comparisons within a category, where the best choice may not be obvious from the front of the package. This is a major part of nutrition literacy.",
-            "The final concept, on policy and reform, asks what governments and institutions can do to make labels easier to understand and less misleading. That closes the loop from consumer skill to system design."
+            "Go to the cereal aisle — in a store or online — and find three products with prominent front-of-package health claims. For each one, write down the claim, then run the five-step routine from the previous concept. Specifically: for every claim, find the corresponding tradeoff. Fiber claim? Check added sugars. Protein claim? Check sodium. Whole grain claim? Check the ingredient list for where whole grains actually appear relative to refined grains and sugars. You will almost certainly find at least one case where the claim is technically accurate but the full label tells a substantially different story. That gap — between what the front says and what the back shows — is exactly what this skill is designed to close."
           ]
         },
         {
           "title": "Where it shows up",
           "body": [
-            "This concept ties together serving-size tricks, regulated claims, unregulated language, and ultra-processed foods. It is the synthesis concept for the whole topic. Claims vs quality is the difference between marketing appeal and actual nutrition."
+            "This skill applies every time you encounter food marketing, which in practice means every time you enter a supermarket. It also applies to restaurant menus, fast food nutrition disclosures, online health food retailers, and anywhere food is sold with health language attached. It is the final layer of the reading routine: after you have run the five-step system from the previous concept, use this concept's rule to check whether any front-of-package claim is being used to redirect your attention away from a tradeoff the label is also showing you."
           ]
         }
       ]
@@ -391,47 +243,47 @@
     {
       "id": "policy_and_reform",
       "title": "Policy, Regulation, and Reform",
-      "summary": "Policy and reform shape how much food labels can help consumers. Regulators like the FDA set rules for the Nutrition Facts panel, ingredient lists, and many claims, but packaging can still be confusing or visually manipulative. Front-of-package labeling proposals, clearer standards, and consumer education all aim to make labels easier to use.\n\nThis concept matters because misleading labels are not only a personal reading problem. They are also a design and regulation problem. If labels are hard to interpret, then public policy can improve the information environment. Better labeling would not eliminate the need for label literacy, but it could reduce the number of traps people face. In that sense, reform is about making the truth easier to see.",
+      "summary": "The Nutrition Facts label is the product of decades of regulatory decisions, industry lobbying, and public health advocacy — not a neutral scientific document. The FDA tightly regulates specific nutrient content claims but leaves most marketing language essentially unregulated. The 2016 label update introduced the Added Sugars line and realistic serving sizes. International examples — including Chile's warning label system — show that stronger front-of-package requirements shift consumer behavior and drive manufacturer reformulation.",
       "sections": [
         {
           "title": "What it is",
           "body": [
-            "Food labels are regulated because consumers need reliable information to compare products. The FDA has updated the Nutrition Facts panel over time and has also explored front-of-package nutrition labeling. These efforts reflect the idea that the label should be useful, not just technically compliant.",
-            "Even with rules in place, packaging can still be confusing. The law can require facts, but it cannot fully control layout, emphasis, or emotional design. That is why public policy and consumer education have to work together."
+            "The Nutrition Facts label that exists today is not a neutral document. It is the product of decades of regulatory decisions, industry lobbying, public health advocacy, and political compromise. The FDA sets the rules for what must appear on the panel, how it must be formatted, what claims are permitted, and how nutrients must be declared. The current panel format — including the separate 'Added Sugars' line and updated serving size standards — resulted from a 2016 revision that took over twenty years of research and advocacy to produce. Every element of the label reflects a decision about what information matters, who has the right to present it, and how much flexibility manufacturers should have.",
+            "Understanding labeling as a policy system rather than just a consumer tool matters because it explains both the label's strengths and its gaps. The label is reliable where regulation is specific — the % Daily Value figures, the nutrient content claim thresholds, and the ingredient ordering rule are all tightly enforced. It is unreliable where regulation is absent or weak — 'natural,' 'wholesome,' 'artisan,' and similar marketing language are largely unregulated. And it is entirely silent on things the regulatory framework has not addressed: how food is produced, what its environmental impact is, or whether its ingredients were ethically sourced."
           ]
         },
         {
-          "title": "The rule",
+          "title": "The science behind it",
           "body": [
-            "The key institution is the FDA, but lawmakers, public health agencies, and consumer advocates also matter. Food companies influence the process by lobbying for flexible rules or voluntary systems. Researchers study which label formats help people make better choices.",
-            "The main forces are information clarity, industry resistance, and public health. Regulators want labels that communicate effectively. Companies often prefer designs that preserve marketing flexibility. Consumers benefit when the balance shifts toward clearer disclosure."
+            "Food labeling policy is shaped by competing forces in continuous tension. Public health researchers and consumer advocates push for more information, clearer formatting, and stricter standards for claims. The food and beverage industry pushes back against requirements it views as costly, likely to deter consumers, or not sufficiently supported by evidence. Government regulators — primarily the FDA for most packaged foods and the USDA for meat, poultry, and eggs — attempt to balance these interests within their statutory authority. The result is a system that is substantially more informative than it was thirty years ago but still less informative than many public health experts believe it should be.",
+            "The most important regulatory distinction for consumers to understand is between nutrient content claims (tightly regulated) and marketing language (loosely or not regulated). Nutrient content claims — 'low fat,' 'high fiber,' 'reduced sodium' — are defined with specific quantitative thresholds in the Code of Federal Regulations and manufacturers must demonstrate compliance. Health claims linking a nutrient or food to reduced disease risk require FDA pre-authorization. Structure/function claims — 'calcium builds strong bones,' 'fiber maintains digestive health' — do not require pre-authorization but must be truthful by a more permissive standard. And purely marketing language — 'natural,' 'clean,' 'wholesome,' 'artisan' — receives essentially no regulatory scrutiny for nutritional accuracy."
           ]
         },
         {
-          "title": "Worked example",
+          "title": "How it works",
           "body": [
-            "The core idea is that labels are part of a policy system, not just a packaging choice. If the system is confusing, people will make worse decisions even if they are trying to pay attention. Reform can make the label easier to understand by reducing ambiguity and emphasizing the most important information.",
-            "At the same time, no label can do all the work. Better rules help, but consumers still need label literacy. This concept shows how individual skill and public policy complement each other."
+            "The 2016 Nutrition Facts label update is the most significant reform in recent decades. Its most important changes were: requiring 'Added Sugars' as a distinct line item, since previously all sugars were combined in a single 'Sugars' line that made it impossible to know from the label how much sugar the manufacturer added; updating the reference values used to calculate % Daily Value to reflect current scientific evidence; increasing the type size for calories; and revising serving size standards to reflect amounts people actually typically eat rather than historically small reference amounts. A 20-ounce bottle of soda that might previously have been listed as 2.5 servings to keep the per-serving sugar number artificially low must now be listed as a single serving — so the label shows what is actually in what you drink.",
+            "Several other countries provide useful comparisons. Chile's front-of-package labeling system, introduced in 2016, requires prominent black stop-sign-shaped warning labels on products exceeding thresholds for calories, sodium, saturated fat, or sugar per 100 grams. Studies following implementation found significant shifts in purchasing behavior and manufacturer reformulations to avoid carrying the warnings — a 'reformulation pressure' effect that some researchers consider the most valuable downstream consequence of strong labeling requirements. Chile also restricted use of cartoon characters to market high-warning foods to children. The United States FDA has been developing its own front-of-package labeling proposal; proposed rules were released in the mid-2020s, with final implementation still pending as of the time of writing."
           ]
         },
         {
-          "title": "Common mistakes",
+          "title": "Real-world examples",
           "body": [
-            "Policy changes can include clearer Nutrition Facts formatting, front-of-package warnings or summaries, stricter standards for claims, and consumer education campaigns. These tools aim to reduce confusion before the shopper even starts comparing products. They do not eliminate choice; they improve the quality of information behind the choice.",
-            "Reform also includes ongoing scientific review. Regulators examine whether labels are actually helping consumers and whether new formats make people understand tradeoffs better. The goal is not perfect information, but better information."
+            "The 'Added Sugars' line addition in 2016 offers a concrete illustration of how regulatory change can shift both consumer information and manufacturer behavior. Before the change, a flavored yogurt with 18 grams of total sugars might include 10 grams of naturally occurring lactose and 8 grams of added sugar — but the label showed only '18g Sugars,' making it impossible to distinguish them. After the change, '8g Added Sugars' appears separately. In the years following the rule's implementation, several major food manufacturers preemptively reformulated products to reduce added sugars before their compliance deadlines, suggesting that the knowledge that this information would become visible changed manufacturing decisions.",
+            "The ongoing U.S. debate about front-of-package labeling illustrates the policy tension directly. The food and beverage industry has argued that mandatory warning labels are stigmatizing, scientifically reductive, potentially in conflict with First Amendment commercial speech protections, and likely to confuse consumers. Public health advocates have argued that warning labels have demonstrated effectiveness in other countries, that the current label system is too complex for many consumers to use effectively under real shopping conditions, and that the industry's opposition is primarily motivated by commercial interests. Resolving this tension involves questions of evidence, values, and political economy that go well beyond nutritional science."
           ]
         },
         {
-          "title": "Try it yourself",
+          "title": "Common misconceptions",
           "body": [
-            "If reforms work well, shoppers can more easily identify foods that fit their needs without decoding every package from scratch. That may improve diet quality across the population, especially for people who do not have time to study labels deeply. Clearer labels can also reduce the advantage of marketing over information.",
-            "This final concept closes the topic by showing that label tricks are not inevitable. They are partly a product of policy choices. The better the rules, the less room there is for confusion — but the need for critical reading never goes away."
+            "A common misconception is that U.S. food labeling is either extremely strict — ensuring that everything on a label is fully accurate — or extremely lax — allowing manufacturers to say whatever they want. The reality is selective: tightly regulated in some areas (nutrient content claims, ingredient listing rules, mandatory allergen disclosure), weakly regulated in others (marketing language, health imagery, front-of-package design), and entirely absent in still others (sustainability claims, sourcing claims, processing level). Understanding which parts of the label are legally enforceable and which are discretionary marketing choices helps you calibrate how much weight to assign to different types of packaging information.",
+            "Another common misconception is that better labeling would solve the problem of consumer confusion about nutrition. Research on labeling consistently finds that clearer labels improve consumer understanding and shift purchasing behavior, but effects are modest and concentrated among consumers who are already attentive to nutrition. Structural factors — cost, availability, time, habit, and marketing budgets that vastly outstrip consumer education resources — shape food choices in ways that labels alone cannot overcome. Labeling policy is a necessary piece of the nutritional environment, but not by itself a sufficient one."
           ]
         },
         {
-          "title": "Where it shows up",
+          "title": "Connections",
           "body": [
-            "This concept follows all the earlier ones and turns the topic toward solutions. It connects consumer skill to regulation and explains how the system itself could be improved. Policy and reform are the final layer of label literacy."
+            "This concept closes the topic by stepping back from individual label-reading skills to examine the system that makes those skills necessary. Understanding that labels are shaped by regulation and politics — rather than being neutral scientific documents — helps explain why some information is clearly presented (because the FDA requires it), some is obscured (because the regulatory framework permits it), and some is absent entirely (because no requirement exists). The reading skills in this topic help you extract the most from the information that is present. This concept explains why that information has the shape it does, and what is being done — and contested — to make it better."
           ]
         }
       ]
