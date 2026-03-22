@@ -778,7 +778,7 @@ body {
   border-radius: 22px;
   box-shadow: var(--shadow-xs);
   padding: 18px 18px 16px;
-  scroll-margin-top: 120px;
+  scroll-margin-top: 360px;
 }
 
 .dd-panel-head {
