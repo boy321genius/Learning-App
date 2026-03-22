@@ -25,7 +25,7 @@ function catColor(category) {
 }
 
 // ============================================================
-// ART CACHE (stores Wikipedia image URLs in localStorage)
+// ART CACHE
 // ============================================================
 function getCachedArt(topicId) {
   try { return localStorage.getItem('topic-art-' + topicId); }
@@ -35,27 +35,62 @@ function setCachedArt(topicId, url) {
   try { localStorage.setItem('topic-art-' + topicId, url); } catch {}
 }
 
-// Fetches a relevant image URL from Wikipedia's public REST API.
-// No API key, no backend, no cost. Falls back gracefully if no image found.
+// Shared helper — fetches a Wikipedia summary and returns image URL or null.
+async function fetchWikipediaImage(title) {
+  try {
+    const res = await fetch(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`,
+      { headers: { Accept: 'application/json' } }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.originalimage?.source || data.thumbnail?.source || null;
+  } catch {
+    return null;
+  }
+}
+
+// Three-stage lookup:
+// 1. Full title  (e.g. "Ida B. Wells" — direct hit)
+// 2. Core keyword stripped at — : -  (e.g. "Stoicism — What Can You..." → "Stoicism")
+// 3. Wikipedia search API fallback  (e.g. "How Banks Make Money" → closest article)
 async function generateTopicArt(topic) {
   const cached = getCachedArt(topic.id);
   if (cached) return cached;
 
-  try {
-    const res = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(topic.title)}`,
-      { headers: { Accept: 'application/json' } }
-    );
-    if (!res.ok) throw new Error(`Wikipedia ${res.status}`);
-    const data = await res.json();
-    const url = data.originalimage?.source || data.thumbnail?.source || null;
+  const coreTopic = topic.title.split(/\s*[—\-:]\s*/)[0].trim();
+  const candidates = [topic.title];
+  if (coreTopic !== topic.title) candidates.push(coreTopic);
+
+  for (const candidate of candidates) {
+    const url = await fetchWikipediaImage(candidate);
     if (url) {
       setCachedArt(topic.id, url);
       return url;
     }
-  } catch (e) {
-    console.warn('Art fetch failed for', topic.id, e);
   }
+
+  // Stage 3: search API
+  try {
+    const searchRes = await fetch(
+      `https://en.wikipedia.org/w/api.php?action=query&list=search` +
+      `&srsearch=${encodeURIComponent(coreTopic)}&srlimit=1&format=json&origin=*`
+    );
+    if (searchRes.ok) {
+      const searchData = await searchRes.json();
+      const firstTitle = searchData?.query?.search?.[0]?.title;
+      if (firstTitle) {
+        const url = await fetchWikipediaImage(firstTitle);
+        if (url) {
+          setCachedArt(topic.id, url);
+          return url;
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Wikipedia search failed for', topic.id, e);
+  }
+
   return null;
 }
 
@@ -66,7 +101,6 @@ let artGenerationRunning = false;
 async function generateMissingArt() {
   if (artGenerationRunning) return;
   artGenerationRunning = true;
-
   try {
     const topics = Array.isArray(state.topics) ? state.topics : [];
     for (const topic of topics) {
@@ -455,8 +489,8 @@ async function showTopicPreview(topicId) {
   const revCount    = getTopicReviewCount(topicId);
   const firstUnread = topic.concepts.findIndex(c => !isConceptRead(topicId, c.id));
   const resumeIndex = firstUnread >= 0 ? firstUnread : 0;
-  const btnLabel    = readCount === 0     ? 'Start Learning'
-                    : readCount === total  ? 'Review Again'
+  const btnLabel    = readCount === 0    ? 'Start Learning'
+                    : readCount === total ? 'Review Again'
                     : 'Continue (' + readCount + '/' + total + ')';
   const artUrl      = getCachedArt(topicId);
 
@@ -784,7 +818,6 @@ function renderProgress() {
     'Science and Math',
     'Languages'
   ];
-
   const byCat = {};
   cats.forEach(c => { byCat[c] = []; });
   topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
@@ -967,3 +1000,4 @@ async function init() {
 }
 
 init();
+
