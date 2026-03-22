@@ -1675,13 +1675,13 @@ body {
     --shadow-xs:    0 1px 6px rgba(0,0,0,0.35);
   }
 
-  .surprise-btn {
-    border-color: #3a3068;
+  /* FIX: nav was hardcoded white, invisible in dark mode */
+  .bottom-nav {
+    background: rgba(15, 15, 26, 0.92);
   }
 
-  .surprise-btn:active {
-    background: #261f50;
-  }
+  .surprise-btn { border-color: #3a3068; }
+  .surprise-btn:active { background: #261f50; }
 }
 
 /* ============================================================
