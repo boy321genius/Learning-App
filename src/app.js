@@ -768,16 +768,25 @@ async function renderDeepDive(topicId, conceptId) {
 function renderProgress() {
   const app        = document.getElementById('app');
   const topicsList = Array.isArray(state.topics) ? state.topics : [];
-  const totalConcepts = topicsList.reduce((s,t) => s + (t.concept_count||0), 0);
+  const totalConcepts = topicsList.reduce((s,t) => s + (t.concept_count || 0), 0);
   const totalRead     = getTotalReadCount();
   const totalReview   = getTotalNeedsReviewCount();
-  const pct  = totalConcepts > 0 ? Math.round(totalRead/totalConcepts*100) : 0;
-  const CIRC = 214;
-  const dash = Math.round(CIRC * pct / 100);
-  const cats = ['History and Culture','Mind and Human Nature','Economics and Finance','Science and Math','Languages'];
+  const pct           = totalConcepts > 0 ? Math.round(totalRead / totalConcepts * 100) : 0;
+  const CIRC          = 214;
+  const dash          = Math.round(CIRC * pct / 100);
+
+  const cats = [
+    'History and Culture',
+    'Mind and Human Nature',
+    'Economics and Finance',
+    'Science and Math',
+    'Languages'
+  ];
+
   const byCat = {};
   cats.forEach(c => { byCat[c] = []; });
   topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
+
   const reviewTopics = topicsList.filter(t => getTopicReviewCount(t.id) > 0);
 
   app.innerHTML = `
@@ -788,17 +797,193 @@ function renderProgress() {
           <h1 class="app-title">Progress</h1>
         </div>
       </header>
+
       <div class="progress-scroll-area">
         <div class="progress-hero">
           <div class="progress-ring-wrap">
             <svg viewBox="0 0 80 80" width="80" height="80">
               <circle cx="40" cy="40" r="34" fill="none" stroke="var(--border)" stroke-width="6"/>
-              <circle cx="40" cy="40" r="34" fill="none" stroke="var(--primary)" stroke-width="6"
-                stroke-dasharray="${dash} ${CIRC}" stroke-linecap="round" transform="rotate(-90 40 40)"/>
+              <circle
+                cx="40"
+                cy="40"
+                r="34"
+                fill="none"
+                stroke="var(--primary)"
+                stroke-width="6"
+                stroke-dasharray="${dash} ${CIRC}"
+                stroke-linecap="round"
+                transform="rotate(-90 40 40)"
+              />
             </svg>
             <div class="progress-ring-pct">${pct}%</div>
           </div>
+
           <div class="progress-hero-text">
             <div class="progress-hero-main">${totalRead} of ${totalConcepts} concepts</div>
-            ${totalReview > 0
-              ? '<div class="progress-hero-sub" style="color:var(--review-color)">&#8634; '+totalReview+' flagged for
+            ${
+              totalReview > 0
+                ? '<div class="progress-hero-sub" style="color:var(--review-color)">&#8634; ' + totalReview + ' flagged for review</div>'
+                : totalRead > 0
+                  ? '<div class="progress-hero-sub" style="color:var(--success)">&#10003; All caught up</div>'
+                  : '<div class="progress-hero-sub">Start any topic to begin</div>'
+            }
+          </div>
+        </div>
+
+        ${
+          reviewTopics.length > 0
+            ? `
+              <div class="section-label">NEEDS REVIEW</div>
+              ${reviewTopics.map(topic => {
+                const cc  = catColor(topic.category);
+                const cnt = getTopicReviewCount(topic.id);
+                return `
+                  <div class="progress-review-row" onclick="navigatePush('#topic/${escapeHTML(topic.id)}/0')"
+                       style="border-left:4px solid ${cc.g1}">
+                    <div class="progress-review-title">${escapeHTML(topic.title)}</div>
+                    <div class="progress-review-count">${cnt} concept${cnt !== 1 ? 's' : ''} &middot; tap to revisit &#8594;</div>
+                  </div>`;
+              }).join('')}
+            `
+            : ''
+        }
+
+        ${cats.map(cat => {
+          const topics = byCat[cat];
+          if (!topics || topics.length === 0) return '';
+          const cc = catColor(cat);
+
+          return `
+            <div class="section-label" style="color:${cc.text}">${escapeHTML(cat.toUpperCase())}</div>
+            ${topics.map(topic => {
+              const readCount = getTopicReadCount(topic.id);
+              const total     = topic.concept_count || 0;
+              const topicPct  = total > 0 ? Math.round(readCount / total * 100) : 0;
+              const revCount  = getTopicReviewCount(topic.id);
+
+              return `
+                <div class="progress-topic-item" onclick="navigatePush('#topic/${escapeHTML(topic.id)}/0')">
+                  <div class="progress-topic-header">
+                    <div class="progress-topic-name">${escapeHTML(topic.title)}</div>
+                    <div class="progress-topic-stat">${readCount}/${total}</div>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill"
+                         style="width:${topicPct}%;background:linear-gradient(90deg,${cc.g1},${cc.g2})"></div>
+                  </div>
+                  ${revCount > 0 ? '<div class="progress-topic-review-note">&#8634; ' + revCount + ' to review</div>' : ''}
+                </div>`;
+            }).join('')}
+          `;
+        }).join('')}
+
+        <div style="height:88px"></div>
+      </div>
+
+      <nav class="bottom-nav">
+        <button class="nav-item" id="nav-home">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-label">Home</span>
+        </button>
+        <button class="nav-item active">
+          <span class="nav-icon">📊</span>
+          <span class="nav-label">Progress</span>
+          <div class="nav-active-dot"></div>
+        </button>
+        <button class="nav-item" id="nav-settings-nav">
+          <span class="nav-icon">⚙️</span>
+          <span class="nav-label">Settings</span>
+        </button>
+      </nav>
+    </div>
+    ${settingsModalHTML()}
+  `;
+
+  document.getElementById('nav-home').addEventListener('click', () => navigatePush('#home'));
+  wireSettingsModal(['nav-settings-nav']);
+}
+
+// ============================================================
+// SWIPE
+// ============================================================
+function setupSwipe(el, onLeft, onRight) {
+  let sx = 0, sy = 0;
+  el.addEventListener('touchstart', e => {
+    sx = e.touches[0].clientX;
+    sy = e.touches[0].clientY;
+  }, { passive: true });
+
+  el.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - sx;
+    const dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 50) {
+      if (dx < 0) onLeft();
+      else onRight();
+    }
+  }, { passive: true });
+}
+
+// ============================================================
+// IMPORT / EXPORT
+// ============================================================
+function exportProgress() {
+  const data = {
+    exportedAt: new Date().toISOString(),
+    progress: state.progress,
+    needsReview: state.needsReview
+  };
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = Object.assign(document.createElement('a'), {
+    href: URL.createObjectURL(blob),
+    download: 'learnapp-progress.json'
+  });
+
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function importProgress(file) {
+  const r = new FileReader();
+  r.onload = e => {
+    try {
+      const d = JSON.parse(e.target.result);
+      state.progress    = d.progress || {};
+      state.needsReview = d.needsReview || {};
+      saveProgress();
+      saveNeedsReview();
+
+      const modal = document.getElementById('settings-modal');
+      if (modal) modal.classList.add('hidden');
+
+      renderHome();
+    } catch {
+      alert('Invalid file — please select a valid LearnApp export.');
+    }
+  };
+  r.readAsText(file);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+async function init() {
+  loadProgress();
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register(`${BASE}/sw.js`);
+    });
+  }
+
+  try {
+    await loadTopicsIndex();
+  } catch (e) {
+    console.error('Topics index failed:', e);
+  }
+
+  window.addEventListener('hashchange', handleRoute);
+  handleRoute();
+}
+
+init();
