@@ -7,47 +7,47 @@
     {
       "id": "atoms",
       "title": "Atoms: The Smallest Building Blocks",
-      "summary": "Atoms are the basic units that make up all matter. Each atom has a nucleus containing protons and neutrons, with electrons moving around it. Different atoms are different elements, like hydrogen, oxygen, carbon, and iron. Atoms are tiny, but they are not simple lumps of stuff. Their structure determines how they behave, what they bond with, and what kinds of substances they help form. When we talk about matter at the most basic level, atoms are where the story begins. They are the pieces that everything else is built from.",
+      "summary": "Atoms are the smallest units of a chemical element that still behave like that element. Each atom consists of a nucleus of protons and neutrons surrounded by electrons, and the arrangement of those electrons determines everything about how the atom behaves — what element it is, how reactive it is, and what kinds of bonds it can form.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
-            "Everything in the physical world is made of matter, and matter is made of atoms. This is true for living things, rocks, water, air, and metals.",
-            "Before you can understand molecules or cells, you need to understand what an atom is and how it behaves."
+            "Everything around you — the air you breathe, the water you drink, the bones in your hand — is made of matter, and all matter is made of atoms. An atom is the smallest unit of a chemical element that still behaves like that element. A single atom of gold is the smallest possible piece of gold that is still chemically gold. Break it apart and you no longer have gold — you have subatomic particles that have no chemical identity at all.",
+            "Atoms are extraordinarily small. A single strand of human hair is roughly a million atoms wide. There are more atoms in a grain of sand than there are grains of sand on all the world's beaches. Despite their size, atoms are not featureless points. They have internal structure, and that structure determines everything about how they behave — what elements they are, how they interact with other atoms, and what kinds of matter they can form."
           ]
         },
         {
-          "title": "Key figures & forces",
+          "title": "The science behind it",
           "body": [
-            "The key parts of an atom are protons, neutrons, and electrons. Protons and neutrons sit in the nucleus. Electrons occupy the space around the nucleus.",
-            "The main force that matters is electric attraction between the positive nucleus and the negative electrons. That force keeps atoms together and sets up chemical behavior."
+            "Every atom consists of two parts: a dense central nucleus and a surrounding cloud of electrons. The nucleus is made of protons, which carry a positive electrical charge, and neutrons, which carry no charge. The electrons that surround the nucleus are negatively charged and extraordinarily light — a single proton has about 1,836 times the mass of an electron. The number of protons in the nucleus — called the atomic number — is what defines the element. An atom with one proton is hydrogen. An atom with six protons is carbon. An atom with eight protons is oxygen. Change the number of protons and you change the element entirely.",
+            "Neutrons contribute to the atom's mass but not its chemical identity. Atoms of the same element can have different numbers of neutrons — these variants are called isotopes. Carbon-12 and carbon-14 are both carbon, both have six protons, but carbon-12 has six neutrons while carbon-14 has eight. Most isotopes of a given element behave identically in chemical reactions; they differ mainly in mass and, for some, in radioactivity."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "How it works",
           "body": [
-            "An atom is the smallest unit of an element that still behaves like that element. Hydrogen atoms are hydrogen, oxygen atoms are oxygen, and so on. The number of protons defines the element.",
-            "Atoms are the foundation for all chemistry because their electrons determine how they bond and react."
+            "The electrons surrounding the nucleus occupy regions of space organized into shells, with the innermost shell closest to the nucleus and each successive shell farther out. The key chemical property of any atom is determined by the outermost shell — specifically, by how many electrons it contains and how many it would need to be full. A full outermost shell is a stable arrangement. An atom with a nearly empty or nearly full outer shell is highly motivated, chemically speaking, to gain or lose electrons to reach that stable state. An atom with a full outer shell is chemically inert.",
+            "This is why the noble gases at the far right of the periodic table — helium, neon, argon — almost never react with anything. Their outer shells are already full. And it is why the alkali metals on the left side of the periodic table, like sodium and potassium, are so reactive. They each have just one electron in their outer shell, and they readily give it up to reach the stability of the shell beneath."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world examples",
           "body": [
-            "Atoms can exist by themselves in some cases, but they often bond with other atoms to become more stable. Their outer electrons are the ones most involved in bonding.",
-            "The arrangement of those electrons is what makes one atom reactive and another stable."
+            "Hydrogen is the simplest atom: one proton, one electron, nothing else. It is also the most abundant element in the universe — roughly three-quarters of all ordinary matter is hydrogen, and it is the fuel that powers the sun. Carbon has six protons and four electrons in its outer shell. That specific arrangement makes carbon uniquely suited to form long chains and rings with other atoms, which is why carbon is the backbone of all biological molecules — proteins, fats, DNA, sugars.",
+            "Oxygen has eight protons and needs two electrons to complete its outer shell, which is why it so eagerly combines with hydrogen to form water, or with iron to form rust. Every element's behavior in chemistry — its reactivity, the kinds of bonds it forms, the compounds it makes — flows directly from the arrangement of electrons in its outer shell."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "Common misconceptions",
           "body": [
-            "Atoms are the starting point for all substances, from gases in the air to proteins in your body. The structure of atoms determines what kinds of molecules and materials can exist.",
-            "Without atoms, there would be nothing to build from. They are the lowest-level units in this topic."
+            "A common misconception is that atoms are tiny solid balls. They are not. An atom is mostly empty space — if the nucleus were the size of a marble, the electrons would be orbiting somewhere roughly a kilometer away. The nucleus contains almost all of the atom's mass but occupies almost none of its volume. What makes matter seem solid is not the solidity of atoms themselves but the electromagnetic forces between them: the electrons of neighboring atoms repel each other, which is what prevents you from falling through your chair.",
+            "Another common misconception is that electrons orbit the nucleus like planets orbit the sun. In reality, electrons exist in probability clouds — regions where they are more or less likely to be found — rather than in defined circular paths. The orbital model is a useful simplification, but the actual behavior of electrons is governed by quantum mechanics and is far stranger than any planetary analogy suggests."
           ]
         },
         {
           "title": "Connections",
           "body": [
-            "This concept sets up everything that follows. Molecules are built from atoms, and cells are built from molecules organized into structures."
+            "Atoms are the foundation of everything else in this topic. The way atoms bond together to form molecules — explored in the next concept — depends entirely on the electron arrangements described here. The properties of molecules, the behavior of cells, and the chemistry of living systems all trace back to atomic structure. Understanding atoms is not an optional preamble. It is the key that unlocks the rest of chemistry and biology."
           ]
         }
       ]
@@ -55,47 +55,47 @@
     {
       "id": "bonding",
       "title": "How Atoms Bond to Form Molecules",
-      "summary": "Atoms do not usually stay isolated for long. They bond because bonding helps them reach a more stable arrangement of electrons. Some atoms transfer electrons, some share them, and those choices create different kinds of bonds. When atoms bond, they form molecules or compounds. Water is one familiar example: two hydrogen atoms bond with one oxygen atom to form H₂O. Bonding is the bridge from individual atoms to larger structures. It is also what makes chemistry interesting, because the way atoms connect determines the behavior of the substance that results.",
+      "summary": "Most atoms do not exist alone in nature — they bond with other atoms to form molecules and compounds. Bonding allows atoms to achieve stable, full-outer-shell electron arrangements they could not achieve on their own. The type of bond formed — ionic, covalent, or metallic — depends on how atoms share or transfer their electrons.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
-            "Atoms by themselves are often less stable than atoms that have formed bonds. Bonding allows them to lower their energy and become more stable.",
-            "This is the chemical step that turns separate building blocks into organized structures."
+            "Most atoms do not exist alone in nature. They bond with other atoms to form molecules and compounds, and the reason they do so is the same reason discussed in the previous concept: bonding allows atoms to achieve the stable, full-outer-shell electron arrangement they could not achieve on their own. When two atoms bond, they either share electrons or transfer electrons between them, and the resulting arrangement is more stable — lower in energy — than the separated atoms were.",
+            "The difference between a world of individual atoms and a world of bonded molecules is the difference between a world without chemistry and the world we actually live in. Water is not two hydrogen atoms and one oxygen atom rattling around independently. It is a molecule in which those three atoms have bonded in a specific geometry with specific shared electron arrangements, and those arrangements give water properties — its surface tension, its capacity to dissolve other substances, its tendency to remain liquid over a wide temperature range — that no individual atom possesses."
           ]
         },
         {
-          "title": "Key figures & forces",
+          "title": "The science behind it",
           "body": [
-            "The key force is attraction between electrons and nuclei. Depending on the atoms involved, bonding can involve transfer, sharing, or a collective pool of electrons.",
-            "The number of valence electrons strongly influences which atoms bond and how they do it."
+            "The driving force behind bonding is electrostatic attraction. Positively charged nuclei attract negatively charged electrons, and when two atoms approach each other, the electron clouds of each atom are attracted to the nucleus of the other. If the resulting arrangement places electrons in positions where they are attracted to both nuclei simultaneously — rather than belonging exclusively to one — a bond forms and energy is released.",
+            "There are three main types of chemical bonds. In ionic bonding, one atom gives one or more electrons entirely to another, producing two oppositely charged ions that attract each other electrostatically. In covalent bonding, two atoms share one or more pairs of electrons between them, with both nuclei simultaneously attracting the shared electrons. In metallic bonding, a large number of atoms release their outermost electrons into a collective pool — a sea of electrons — that holds the positively charged metal ions together. The type of bond that forms depends largely on the difference in electronegativity — how strongly each atom attracts electrons — between the two atoms involved."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "How it works",
           "body": [
-            "Bonding connects atoms into molecules or compounds. The type of bond determines the substance's structure and properties.",
-            "This is the point where atom-level behavior begins to create larger chemical identity."
+            "Consider the formation of sodium chloride — table salt. Sodium has one electron in its outer shell. Chlorine has seven electrons in its outer shell and room for one more. When they meet, sodium transfers its single outer electron to chlorine. Sodium now has a full outer shell and a positive charge because it has one more proton than electrons. Chlorine now has a full outer shell and a negative charge because it has one more electron than protons. These oppositely charged ions attract each other strongly, forming the ionic bond that makes sodium chloride a hard, high-melting-point crystal.",
+            "Now consider water. Oxygen has six electrons in its outer shell and needs two more. Hydrogen has one electron in its outer shell and needs one more. When two hydrogen atoms bond with one oxygen atom, each hydrogen shares its single electron with oxygen, and oxygen shares one of its electrons with each hydrogen. All three atoms now count the shared electrons as their own. The bonds are covalent — shared rather than transferred — and the resulting molecule, H₂O, is stable."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world examples",
           "body": [
-            "Hydrogen and oxygen can bond to make water. Carbon can bond to four other atoms, which is why it forms so many different molecules. In every case, atoms arrange electrons to reach a more stable state.",
-            "Once the atoms are bonded, the resulting molecule has properties that are different from the individual atoms alone."
+            "The covalent bonds in molecular nitrogen — N₂ — involve three shared electron pairs, making nitrogen exceptionally stable and unreactive, which is why nitrogen constitutes 78 percent of Earth's atmosphere without participating in most chemical reactions. The ionic bonds in magnesium oxide are so strong that magnesium oxide has a melting point over 2,800 degrees Celsius and is used to line industrial furnaces.",
+            "The metallic bonds in copper allow its electrons to move freely through the metal, which is why copper conducts electricity so effectively. The same delocalized electron model explains why metals are malleable — the layers of metal ions can slide past each other without breaking the bonds because the electron sea adjusts to maintain attraction throughout the new arrangement."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "Common misconceptions",
           "body": [
-            "Bonding is how chemistry creates the diversity of substances in the world. It explains why water behaves differently from oxygen gas, even though both contain oxygen.",
-            "It also creates the molecular structures that cells depend on."
+            "A common misconception is that forming a bond always releases energy. This is generally true for the initial formation of a bond, but breaking bonds requires energy input, not energy release. Many chemical reactions involve both breaking old bonds and forming new ones, and the energy balance — whether the reaction overall releases or absorbs energy — depends on the relative strengths of the bonds broken and the bonds formed.",
+            "Another misconception is that ionic compounds are simply pairs of ions sitting next to each other. In reality, ionic compounds typically form three-dimensional crystal lattices in which each positive ion is surrounded by multiple negative ions and each negative ion is surrounded by multiple positive ions, all held together by the collective electrostatic attraction of the entire structure. This extended structure is why ionic compounds tend to be brittle solids — when the lattice is stressed, ions of like charge can be brought into proximity, and the resulting repulsion causes the crystal to cleave."
           ]
         },
         {
           "title": "Connections",
           "body": [
-            "This concept links directly to the chemical bonding topic and prepares the learner for molecules and then cellular structure."
+            "Bonding is the bridge between individual atoms and the molecules that chemistry and biology depend on. The type of bond formed between atoms directly determines the properties of the resulting substance — its physical state, its melting point, its solubility, its reactivity. Understanding bonding is the prerequisite for understanding why water behaves differently from salt, why metals conduct electricity, and why the carbon-based molecules of life can take such an extraordinary variety of forms. The next concept examines molecules themselves — what makes their specific shapes and properties so consequential."
           ]
         }
       ]
@@ -103,47 +103,47 @@
     {
       "id": "molecules",
       "title": "Molecules: Atoms Working Together",
-      "summary": "A molecule is a group of atoms bonded together. Some molecules are simple, like oxygen gas or water. Others are very large and complex, like proteins or DNA. Molecules are important because they are the chemical forms that cells use to build structures, store energy, and carry out life processes. A molecule is more than a collection of atoms. It has a shape, a size, and properties that come from how its atoms are arranged. That arrangement controls how the molecule behaves with other molecules. In chemistry and biology, molecules are where abstract atomic structure becomes something useful and functional.",
+      "summary": "A molecule is a group of atoms bonded together into a stable unit with a specific composition and a specific three-dimensional shape. That shape is not incidental — it is as important as composition in determining how a molecule behaves, what it can do, and what properties it contributes to the substances it makes up.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
-            "Once atoms bond together, the result is usually a molecule or compound. Molecules are common in both chemistry and biology, from simple gases to giant biomolecules.",
-            "They are the intermediate scale between atoms and cells."
+            "A molecule is a group of two or more atoms bonded together into a stable, identifiable unit. Molecules are the level at which chemistry becomes recognizable as the stuff of everyday life: water, carbon dioxide, glucose, oxygen, ammonia, aspirin. Each has a specific composition — a defined number of each type of atom — and a specific structure — a defined arrangement of those atoms in three-dimensional space. That structure is not incidental. The shape of a molecule is as important as its composition in determining how it behaves and what properties it contributes to the substances it makes up.",
+            "Molecules range from the almost inconceivably simple — molecular hydrogen, H₂, consisting of just two atoms — to the almost inconceivably complex. DNA molecules in a single human cell contain billions of atoms arranged in sequences that encode the information required to build and operate an entire organism. Proteins perform the structural and catalytic work of living cells as molecules containing thousands of atoms folded into precise three-dimensional shapes. The range of molecular complexity that chemistry can produce is one of the most remarkable facts about the physical world."
           ]
         },
         {
-          "title": "Key figures & forces",
+          "title": "The science behind it",
           "body": [
-            "The key factors are the types of atoms involved, the bonds between them, and the molecule's shape. Shape matters because it affects how the molecule interacts with water, enzymes, membranes, and other molecules.",
-            "Bond type and molecular geometry together determine the molecule's behavior."
+            "A molecule's shape is determined by a principle called electron pair repulsion: the electron pairs around a central atom — whether they are bonding pairs shared with neighboring atoms or lone pairs belonging exclusively to the central atom — arrange themselves as far apart from each other as possible, because like charges repel. This produces predictable molecular geometries. A carbon atom forming four single bonds arranges those bonds in a tetrahedral geometry, with bond angles of approximately 109.5 degrees. An oxygen atom forming two single bonds and holding two lone pairs produces a bent geometry — this is the shape of water, with a bond angle of about 104.5 degrees.",
+            "Molecular shape matters enormously because it determines how molecules interact with each other. The lock-and-key specificity of enzymes — biological catalysts that speed up chemical reactions with extraordinary selectivity — depends on the precise three-dimensional complementarity between the enzyme's active site and the molecule it acts on. Change the shape of the enzyme, and it may no longer fit its target. Change the shape of the target molecule, and the enzyme may no longer recognize it. This shape-based specificity is one of the foundational principles of biochemistry and pharmacology."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "How it works",
           "body": [
-            "Molecules are combinations of atoms held together by chemical bonds. Their properties depend not only on which atoms they contain, but on how those atoms are arranged.",
-            "That is why the same elements can make very different substances when arranged differently."
+            "The properties of a molecule emerge from three things working together: the types of atoms it contains, the bonds between them, and the three-dimensional shape that results. Consider carbon dioxide and water. Both are small molecules containing three atoms. But carbon dioxide is linear — the oxygen atoms are on opposite sides of the carbon — and although each individual C=O bond is polar, the bond dipoles cancel out, making the molecule as a whole nonpolar. Water is bent, and the two O-H bond dipoles point in different directions without canceling, making the molecule polar overall. This difference in polarity explains why carbon dioxide is a gas at room temperature while water is a liquid, and why water is an excellent solvent for ionic and polar substances while carbon dioxide is not.",
+            "The three-dimensional folding of large molecules like proteins is determined by the interplay of many chemical interactions simultaneously: covalent bonds that form the backbone of the molecule, hydrogen bonds between different parts of the chain, attractions between nonpolar sections that prefer to cluster away from water, and electrostatic interactions between charged groups. The final folded shape — which determines the protein's biological function — represents the arrangement that minimizes the total energy of all these interactions."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world examples",
           "body": [
-            "Water molecules bond in a bent shape, which helps explain many of water's unusual properties. Carbon-based molecules can form long chains and rings, which makes complex life molecules possible.",
-            "Cells use molecules as building blocks, signals, fuels, and machinery."
+            "Glucose (C₆H₁₂O₆) is a sugar molecule whose ring structure stores chemical energy that cells can release through respiration. Its specific shape allows it to fit precisely into the active sites of the enzymes that process it. Hemoglobin, the protein that carries oxygen in red blood cells, contains four subunits each with an iron-containing group that binds oxygen molecules. The four subunits communicate with each other through shape changes — when one binds oxygen, it shifts slightly, making the others more likely to bind oxygen too — a cooperative behavior that makes oxygen uptake in the lungs and release in the tissues dramatically more efficient than a simple binding protein would be.",
+            "Capsaicin, the compound that makes chili peppers hot, is a molecule whose shape fits precisely into a receptor protein in human nerve endings that normally responds to heat. That is why spicy food feels literally hot — the same signal pathway is activated by both actual heat and capsaicin molecules. The correspondence between molecular shape and receptor is not metaphorical. It is geometric."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "Common misconceptions",
           "body": [
-            "Molecules are the level at which chemistry begins to become life chemistry. They determine whether a substance is fuel, nutrient, toxin, signal, or structural material.",
-            "Without molecules, cells could not exist in any organized form."
+            "A common misconception is that larger molecules are always more stable. This is not true. Large molecules can be highly reactive if they contain unstable functional groups or high-energy bonds. The stability of a molecule depends on the specific bonds it contains and the energy required to break them, not on its size.",
+            "Another misconception is that the formula of a molecule tells you everything about it. Isomers are molecules with the same molecular formula but different structures and therefore different properties. Glucose and fructose are both C₆H₁₂O₆ — same atoms, same count — but they are arranged differently and have different shapes, different reactivities, and different effects in the body. The formula is necessary but not sufficient information."
           ]
         },
         {
           "title": "Connections",
           "body": [
-            "This concept connects atoms to cells by showing the middle layer of organization. It also overlaps with chemical bonding because bonds are what make molecules possible."
+            "Molecules are where chemistry begins to become biology. The molecules found in living systems — sugars, fats, proteins, nucleic acids — are distinguished not just by their composition but by their specific shapes, which enable the precise molecular interactions that make life possible. The next concept takes the step from molecules to cells, examining how the organized assembly of molecules into compartments and structures produces the simplest unit of life."
           ]
         }
       ]
@@ -151,47 +151,47 @@
     {
       "id": "cells",
       "title": "Cells: The Smallest Living Units",
-      "summary": "A cell is the smallest unit that can be considered alive. Cells are not made of atoms directly in a simple way. They are made of many molecules arranged into membranes, fluids, structures, and machines that work together. That includes water, proteins, lipids, DNA, RNA, and many other molecules. Cells can grow, respond, use energy, and reproduce because their molecules are organized in very specific ways. The chemical level becomes the biological level when those molecules are arranged into a living system. That is why cells are where atoms and molecules finally become life. Understanding cells starts with understanding the chemistry inside them.",
+      "summary": "A cell is the smallest unit of matter that can be considered alive — it takes in energy, maintains its own internal conditions, responds to its environment, grows, and reproduces. Every living organism is made of cells, from single-celled bacteria to the 37 trillion specialized cells of the human body.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
-            "Cells are the basic units of life in all living organisms. Bacteria are made of single cells, and plants and animals are made of many cells working together.",
-            "To understand a cell, you have to understand the molecules that build and power it."
+            "A cell is the smallest unit of matter that can be considered alive. This is not a trivial definition. It means that a cell does all the things living things do — it takes in energy, maintains its own internal conditions, responds to its environment, grows, and reproduces — but that no smaller component can do all of these things on its own. A protein molecule can catalyze a reaction. A lipid molecule can form a membrane. A DNA molecule can store information. But none of these molecules is alive in any meaningful sense. Only when they are organized together inside a cell does life emerge.",
+            "Every living organism on Earth is made of cells. Bacteria are single cells. A human being is made of approximately thirty-seven trillion cells of more than two hundred distinct types — neurons, muscle cells, red blood cells, immune cells, and many others — each performing specialized functions while cooperating with all the others to maintain the organism. The cell is both the fundamental unit of life and, in the case of single-celled organisms, a complete living system in itself."
           ]
         },
         {
-          "title": "Key figures & forces",
+          "title": "The science behind it",
           "body": [
-            "The key building blocks are water, proteins, lipids, nucleic acids, and carbohydrates. The force that organizes them is chemical interaction: bonding, attraction, and membrane formation.",
-            "A cell's membrane, internal structures, and genetic material all depend on molecular organization."
+            "All cells share certain features regardless of their origin or function. Every cell has a cell membrane — a thin, flexible sheet of lipid molecules with proteins embedded in it that separates the cell's interior from its environment, controls what enters and leaves, and enables communication with other cells. Every cell contains genetic material — DNA — that encodes the instructions for making the cell's proteins and for reproducing the cell itself. Every cell contains ribosomes, the molecular machines that read the genetic instructions and assemble proteins from amino acids. And every cell maintains a cytoplasm — the aqueous interior in which the cell's chemical reactions take place.",
+            "Beyond these universal features, cells vary enormously. Prokaryotic cells — bacteria and archaea — are relatively simple: they have no nucleus, their DNA floats freely in the cytoplasm, and they lack most of the membrane-bound compartments found in more complex cells. Eukaryotic cells — the cells of animals, plants, fungi, and protists — are much more elaborate. Their DNA is enclosed in a membrane-bound nucleus. They contain mitochondria, specialized compartments that produce the cell's energy currency. Plant cells also contain chloroplasts, where photosynthesis takes place. These specialized compartments — organelles — allow eukaryotic cells to perform chemical reactions in isolated environments, preventing incompatible processes from interfering with each other."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "How it works",
           "body": [
-            "A cell is a highly organized system of molecules. It is alive because those molecules cooperate in a controlled environment.",
-            "Life emerges when chemistry is organized in a way that can maintain itself, use energy, and reproduce."
+            "The cell membrane is the gatekeeper of the cell. It is made primarily of phospholipids — molecules with a water-loving head and two water-fearing fatty acid tails. When many phospholipid molecules are placed in water, they spontaneously arrange themselves into a bilayer — two sheets of molecules with their heads facing the water on both sides and their tails hiding from the water in the middle. This structure is stable, flexible, and selectively permeable: small nonpolar molecules like oxygen and carbon dioxide can pass through it directly, but ions and large polar molecules cannot. Protein channels and pumps embedded in the membrane control the passage of these substances, allowing the cell to maintain an internal chemical environment radically different from the external one.",
+            "Inside the cell, thousands of chemical reactions are occurring simultaneously, each catalyzed by a specific enzyme, each contributing to the cell's overall function. The network of these reactions — metabolism — includes processes that break down molecules to release energy, processes that use that energy to build new molecules, processes that copy DNA and read its instructions, and processes that allow the cell to respond to signals from other cells or from the environment. All of this activity is coordinated and regulated, with the products of some reactions serving as signals that activate or inhibit others, maintaining the dynamic equilibrium that keeps the cell alive."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world examples",
           "body": [
-            "The cell membrane separates the inside from the outside. Proteins do most of the work inside the cell. DNA stores instructions. Mitochondria help release energy. All of this depends on molecular structure.",
-            "If the molecules are damaged or not arranged properly, the cell cannot function well."
+            "Red blood cells are specialized to carry oxygen: they are packed with hemoglobin, lack a nucleus (allowing more room for hemoglobin), and are disc-shaped, maximizing their surface area for gas exchange. Neurons are specialized to transmit electrical signals: they have long, thin projections — axons — that can extend a meter or more from the cell body, allowing signals to travel from the brain to the tips of the fingers. Muscle cells are packed with proteins — actin and myosin — that slide past each other when activated, shortening the cell and producing force. Each cell type's structure is precisely matched to its function.",
+            "The mitochondrion — the organelle that produces energy in eukaryotic cells — contains its own DNA, its own ribosomes, and its own membrane system. This is not coincidental. Mitochondria are descended from free-living bacteria that were engulfed by an ancestral eukaryotic cell roughly two billion years ago and became permanent residents, trading their independence for a protected environment while providing their host with a vastly more efficient energy production system. The same story applies to chloroplasts, which are descended from engulfed photosynthetic bacteria."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "Common misconceptions",
           "body": [
-            "Cells are the bridge between chemistry and biology. They explain how nonliving matter can form living systems. Every tissue, organ, and organism depends on cells doing their jobs.",
-            "Understanding cells helps explain health, disease, growth, and reproduction."
+            "A common misconception is that cells are simple bags of fluid. They are extraordinarily complex, dynamically organized structures. A single yeast cell — one of the simplest eukaryotes — contains thousands of different proteins, each performing a specific function, each in the right place at the right time. The interior of a cell is not a random mixture but a highly organized environment in which molecules interact in specific ways, in specific locations, at specific times.",
+            "Another misconception is that all cells have nuclei. Only eukaryotic cells have nuclei. Prokaryotic cells — which include all bacteria and archaea, and which represent the vast majority of the world's biodiversity in terms of number of species — keep their DNA in the cytoplasm without a surrounding membrane. Prokaryotic cells are not primitive in any negative sense; they are exquisitely well-adapted to their environments and have been thriving for over three billion years."
           ]
         },
         {
           "title": "Connections",
           "body": [
-            "This concept completes the hierarchy: atoms form molecules, and molecules organize into cells. The rest of biology builds on this foundation."
+            "The cell is where molecules become life. The lipid bilayer of the cell membrane is possible because of the properties of phospholipid molecules described in the previous concept. The enzymatic reactions that drive cellular metabolism depend on the specific shapes of protein molecules. The genetic information in DNA is a molecule — an enormously long polymer of nucleotides — and its ability to encode, copy, and express information depends on molecular structure and bonding. The next concept examines how these molecular systems work together inside the cell to produce the chemistry of life."
           ]
         }
       ]
@@ -199,47 +199,47 @@
     {
       "id": "cell_chemistry",
       "title": "How Cell Chemistry Works",
-      "summary": "Cells work because their molecules are constantly interacting in controlled ways. Some molecules store energy, some build structures, some carry messages, and some speed up reactions. Water helps create the chemical environment that makes those reactions possible. Proteins fold into shapes that let them do specific jobs. Lipids build membranes that separate the cell from its surroundings. DNA stores the instructions for making all of it. Cell chemistry is the practical place where atoms and molecules become function. Without the right chemical conditions, a cell cannot survive.",
+      "summary": "A living cell is a chemical factory — thousands of reactions happening simultaneously, organized into pathways, controlled by feedback, and precisely calibrated to maintain the conditions that keep the cell alive. Understanding cell chemistry means understanding how cells manage energy, how genetic information is translated into proteins, and how the whole system is regulated.",
       "sections": [
         {
-          "title": "Context",
+          "title": "What it is",
           "body": [
-            "Cells are not static bags of stuff. They are active chemical systems with constant reactions happening inside them.",
-            "The molecules inside cells must be arranged and balanced carefully for life to continue."
+            "A living cell is a chemical factory. Thousands of different chemical reactions happen inside it simultaneously, transforming molecules into other molecules, releasing and storing energy, reading and copying genetic information, building structures, sending signals, and dismantling what is no longer needed. The remarkable thing about cellular chemistry is not merely that it happens — chemical reactions happen in every beaker in every laboratory — but that it happens in a coordinated, regulated, and purposeful way. The chemistry of a cell is not random. It is organized into pathways, controlled by feedback, and precisely calibrated to maintain the conditions that keep the cell alive.",
+            "Understanding how cell chemistry works means understanding three things: how the cell manages energy, how genetic information is translated into functional molecules, and how the cell regulates all of these processes so that the right things happen at the right times in the right amounts."
           ]
         },
         {
-          "title": "Key figures & forces",
+          "title": "The science behind it",
           "body": [
-            "The main molecules are proteins, lipids, carbohydrates, nucleic acids, and water. The important forces are bonding, attraction, and molecular shape.",
-            "Enzymes are especially important because they control reaction speed and allow the cell to function efficiently."
+            "Energy is the central currency of cellular chemistry. The cell cannot use heat energy directly — unlike an engine, it cannot run reactions by raising temperature without destroying itself. Instead, it uses chemical energy stored in specific molecules, the most important of which is adenosine triphosphate, universally abbreviated as ATP. ATP is a molecule that stores energy in the chemical bonds connecting its three phosphate groups. When those bonds are broken — when ATP is converted to ADP plus a free phosphate — energy is released in a form that can power other cellular reactions. When the cell has excess energy available, it uses that energy to rebuild ADP back into ATP. ATP is therefore not a fuel in the sense of being consumed and gone; it is a rechargeable battery that cycles continuously between its charged and discharged states.",
+            "The primary source of ATP in most eukaryotic cells is cellular respiration — a multi-stage process in which glucose is broken down in the presence of oxygen to produce carbon dioxide, water, and a large amount of ATP. Most of the ATP production occurs in the mitochondria, where a series of protein complexes embedded in the inner mitochondrial membrane use the energy released by the controlled oxidation of organic molecules to pump protons across the membrane, creating a gradient that drives a molecular turbine — ATP synthase — to assemble ATP from ADP and phosphate."
           ]
         },
         {
-          "title": "Core idea",
+          "title": "How it works",
           "body": [
-            "Cell chemistry is the set of molecular interactions that make life possible. Molecules are not just present in the cell; they are doing work.",
-            "The function of a cell depends on the chemistry of its molecules and the way they are organized."
+            "The instructions for building all of a cell's proteins are encoded in DNA. The process by which those instructions are read and executed has two stages. In transcription, a portion of the DNA double helix is unwound and one strand serves as a template for the assembly of a complementary messenger RNA molecule, which carries the information out of the nucleus. In translation, the messenger RNA is read by ribosomes — large molecular machines assembled from proteins and ribosomal RNA — which decode the sequence of bases three at a time, each three-base codon specifying a particular amino acid. Transfer RNA molecules ferry the appropriate amino acids to the ribosome, and the ribosome links them together in the sequence specified by the messenger RNA, producing a protein chain that then folds into its functional three-dimensional shape.",
+            "Enzymes — proteins that catalyze chemical reactions — are the most important functional products of this process. An enzyme works by binding to its specific substrate molecule, holding it in a conformation that makes the reaction it catalyzes much more likely to occur, then releasing the products. Enzymes can speed up reactions by factors of millions or billions compared with the uncatalyzed reaction rate, and they do this without being consumed themselves. The specificity of enzyme-substrate binding allows cells to run thousands of different reactions simultaneously without interference, each catalyzed by its own dedicated enzyme."
           ]
         },
         {
-          "title": "Actions / how it works",
+          "title": "Real-world examples",
           "body": [
-            "Proteins fold into shapes that let them act as enzymes or structural parts. Lipids self-assemble into membranes. DNA can be copied when the cell needs to divide. Energy molecules like ATP help power cellular work.",
-            "All of these processes rely on atomic and molecular structure."
+            "The hormone insulin illustrates how molecular signals coordinate cell chemistry across an entire organism. When blood glucose rises after a meal, the pancreas releases insulin into the bloodstream. Insulin molecules bind to receptor proteins on the surface of muscle and fat cells. This binding activates the receptor, which triggers a cascade of intracellular signaling reactions that ultimately cause glucose transporter proteins to move to the cell surface and allow glucose to enter the cell. The cell can then use the glucose for energy or store it as glycogen. Type 2 diabetes is essentially a disease in which this regulatory system fails: the cells stop responding normally to insulin, and blood glucose rises to damaging levels.",
+            "DNA replication — the process by which a cell copies its genetic information before dividing — is another example of remarkable cellular chemistry. The enzyme DNA polymerase reads each strand of the DNA double helix and assembles a complementary new strand beside it, incorporating the correct nucleotide at each position with extraordinary fidelity. The error rate of DNA replication is approximately one mistake per billion base pairs — a precision that puts the most advanced human engineering to shame — and most of those rare errors are caught and corrected by separate proofreading and repair systems."
           ]
         },
         {
-          "title": "Consequences / impact",
+          "title": "Common misconceptions",
           "body": [
-            "Cell chemistry explains growth, repair, metabolism, and inheritance. It also explains what happens when something goes wrong, such as a mutation, a damaged protein, or a broken membrane.",
-            "This is where chemistry becomes directly tied to health and disease."
+            "A common misconception is that cells simply run chemical reactions and that the interesting biology is at a higher level — in organs, organisms, or ecosystems. In fact, virtually all of biology traces back to chemistry at the cellular and molecular level. Cancer is caused by mutations in DNA that alter the regulation of cell division. Alzheimer's disease involves the misfolding of specific proteins. Antibiotic resistance occurs when bacteria acquire mutations that alter the proteins that antibiotics target. Understanding how cell chemistry works is not a background detail of biology. It is biology's deepest layer.",
+            "Another misconception is that the cell's chemical reactions are fully understood. Cell biology is one of the most active areas of scientific research precisely because the complexity of cellular chemistry is so immense that even the most studied cells continue to yield new discoveries. The cell is the most complex chemical system known to science, and we are nowhere near a complete understanding of how it works."
           ]
         },
         {
           "title": "Connections",
           "body": [
-            "This concept ties together atoms, molecules, and cells by showing how chemistry functions inside living systems. It is the practical payoff of the whole topic."
+            "This concept ties together everything in the topic by showing how atomic structure, chemical bonding, molecular properties, and cellular organization all converge in the living cell. The behavior of electrons in atoms determines the bonds that form molecules. The shape of molecules determines how they interact in cellular reactions. The organized system of those reactions, enclosed in a membrane and regulated by genetic information, constitutes the cell. And the cell — replicated, differentiated, and organized into tissues and organs — constitutes every living thing. The hierarchy of atoms to molecules to cells is not just a conceptual framework. It is the actual organizational structure of life."
           ]
         }
       ]
