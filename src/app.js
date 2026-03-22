@@ -791,10 +791,10 @@ async function renderDeepDive(topicId, conceptId) {
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
 
           ${hasNext
-            ? '<button class="cta-next-btn" id="next-concept-btn">Next: ' + escapeHTML(nextConcept.title) + ' &#8594;</button>'
+            ? '<button class="cta-next-btn" id="next-concept-btn">Continue without Marking + ' &#8594;</button>'
             : ''}
 
-          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${escapeHTML(topic.title)}</button>
+          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Exit deep-dive</button>
         </div>
       </div>
     </div>
