@@ -5,7 +5,7 @@ const BASE = '/Learning-App';
 
 const CAT_COLORS = {
   'History and Culture':     { g1:'#e74c3c', g2:'#9e1a0e', chip:'#fdecea', text:'#c0392b' },
-  'Psychology':              { g1:'#1abc9c', g2:'#0d8a72', chip:'#e8f8f5', text:'#0e7d64' },
+  'Mind and Human Nature':              { g1:'#1abc9c', g2:'#0d8a72', chip:'#e8f8f5', text:'#0e7d64' },
   'Economics and Finance':   { g1:'#3498db', g2:'#1c6fa0', chip:'#eaf4fb', text:'#1a6fa0' },
   'Science and Math':        { g1:'#9b59b6', g2:'#6c3483', chip:'#f5eef8', text:'#7d3c98' },
   'Languages':               { g1:'#f39c12', g2:'#b7770d', chip:'#fef9e7', text:'#b7770d' },
@@ -178,7 +178,7 @@ function renderHome(searchQuery) {
     return r > 0 && r < (t.concept_count || 0);
   });
 
-  const cats = ['History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
+  const cats = ['History and Culture','Mind and Human Nature','Economics and Finance','Science and Math','Languages'];
   const byCat = {};
   cats.forEach(c => { byCat[c] = []; });
   topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
@@ -642,7 +642,7 @@ function renderProgress() {
   const pct = totalConcepts > 0 ? Math.round(totalRead/totalConcepts*100) : 0;
   const CIRC = 214;
   const dash = Math.round(CIRC * pct / 100);
-  const cats = ['History and Culture','Psychology','Economics and Finance','Science and Math','Languages'];
+  const cats = ['History and Culture','Mind and Human Nature','Economics and Finance','Science and Math','Languages'];
   const byCat = {};
   cats.forEach(c => { byCat[c] = []; });
   topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
