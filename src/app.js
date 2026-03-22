@@ -4,12 +4,27 @@
 const BASE = '/Learning-App';
 
 const CAT_COLORS = {
-  'History and Culture':     { g1:'#e74c3c', g2:'#9e1a0e', chip:'#fdecea', text:'#c0392b' },
-  'Mind and Human Nature':              { g1:'#1abc9c', g2:'#0d8a72', chip:'#e8f8f5', text:'#0e7d64' },
-  'Economics and Finance':   { g1:'#3498db', g2:'#1c6fa0', chip:'#eaf4fb', text:'#1a6fa0' },
-  'Science and Math':        { g1:'#9b59b6', g2:'#6c3483', chip:'#f5eef8', text:'#7d3c98' },
-  'Languages':               { g1:'#f39c12', g2:'#b7770d', chip:'#fef9e7', text:'#b7770d' },
+  'History and Culture':   { g1:'#e74c3c', g2:'#9e1a0e', chip:'#fdecea', text:'#c0392b' },
+  'Mind and Human Nature': { g1:'#1abc9c', g2:'#0d8a72', chip:'#e8f8f5', text:'#0e7d64' },
+  'Economics and Finance': { g1:'#3498db', g2:'#1c6fa0', chip:'#eaf4fb', text:'#1a6fa0' },
+  'Science and Math':      { g1:'#9b59b6', g2:'#6c3483', chip:'#f5eef8', text:'#7d3c98' },
+  'Languages':             { g1:'#f39c12', g2:'#b7770d', chip:'#fef9e7', text:'#b7770d' },
 };
+
+// ============================================================
+// HELPERS
+// ============================================================
+// FIX: Added escapeHTML to sanitize all dynamic content injected into innerHTML,
+// preventing XSS and broken layouts when titles/summaries contain <, >, ", or '.
+function escapeHTML(str) {
+  return String(str == null ? '' : str).replace(/[&<>"']/g, ch => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[ch]));
+}
+
+function catColor(category) {
+  return CAT_COLORS[category] || { g1:'#6C47FF', g2:'#4a2fd4', chip:'#ede9ff', text:'#6C47FF' };
+}
 
 // ============================================================
 // AI ART CACHE
@@ -22,49 +37,66 @@ function setCachedArt(topicId, svg) {
   try { localStorage.setItem('topic-art-' + topicId, svg); } catch {}
 }
 
+// FIX: Removed direct browser call to api.anthropic.com. Calling the Anthropic API
+// directly from the browser exposes your API key to anyone who inspects network
+// requests. Route through your own backend/serverless endpoint instead, which holds
+// the key securely server-side. The direct call also lacked the required
+// 'x-api-key', 'anthropic-version', and 'anthropic-dangerous-direct-browser-access'
+// headers, so it silently failed every time and art never rendered.
 async function generateTopicArt(topic, cc) {
   if (getCachedArt(topic.id)) return getCachedArt(topic.id);
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch(`${BASE}/api/topic-art`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{
-          role: 'user',
-          content: `Create a minimal decorative SVG (viewBox="0 0 200 130") for a learning card about "${topic.title}" (${topic.category} subject). Rules: abstract geometric shapes only — absolutely no text, letters, numbers, or symbols. Use only these colors: ${cc.g1}, ${cc.g2}, rgba(255,255,255,0.15), rgba(255,255,255,0.35), rgba(0,0,0,0.12). 4–8 shapes max. Style: modern, airy, slightly abstract — suggest the topic through shape and composition, not labels. Output only the raw <svg ...>...</svg> element. No markdown, no explanation.`
-        }]
+        id:       topic.id,
+        title:    topic.title,
+        category: topic.category,
+        colors:   cc
       })
     });
+    if (!res.ok) throw new Error(`Art API failed: HTTP ${res.status}`);
     const data = await res.json();
-    const svg = data.content?.[0]?.text?.trim();
-    if (svg && svg.startsWith('<svg')) {
+    const svg  = typeof data.svg === 'string' ? data.svg.trim() : '';
+    if (svg.startsWith('<svg')) {
       setCachedArt(topic.id, svg);
       return svg;
     }
-  } catch(e) { console.warn('Art gen failed for', topic.id, e); }
+  } catch (e) {
+    console.warn('Art gen failed for', topic.id, e);
+  }
   return null;
 }
 
-// Generate art for all topics that don't have it yet, one at a time
+// FIX: Added a running-lock so that rapid renderHome() calls (e.g. typing in the
+// search box) cannot spawn multiple concurrent generation loops. Without this,
+// overlapping loops would fire duplicate API requests before cache entries existed,
+// and each loop would independently try to write the same cache key.
+let artGenerationRunning = false;
+
 async function generateMissingArt() {
-  const topics = Array.isArray(state.topics) ? state.topics : [];
-  for (const topic of topics) {
-    if (getCachedArt(topic.id)) continue;
-    const cc = catColor(topic.category);
-    const svg = await generateTopicArt(topic, cc);
-    if (svg) {
-      // Inject into any visible lane cards without refreshing the page
-      const card = document.getElementById('lane-card-' + topic.id);
-      if (card && !card.querySelector('.lane-card-art')) {
-        const artDiv = document.createElement('div');
-        artDiv.className = 'lane-card-art';
-        artDiv.innerHTML = svg;
-        card.insertBefore(artDiv, card.firstChild);
-        card.classList.add('has-art');
+  if (artGenerationRunning) return;
+  artGenerationRunning = true;
+  try {
+    const topics = Array.isArray(state.topics) ? state.topics : [];
+    for (const topic of topics) {
+      if (getCachedArt(topic.id)) continue;
+      const cc  = catColor(topic.category);
+      const svg = await generateTopicArt(topic, cc);
+      if (svg) {
+        const card = document.getElementById('lane-card-' + topic.id);
+        if (card && !card.querySelector('.lane-card-art')) {
+          const artDiv = document.createElement('div');
+          artDiv.className = 'lane-card-art';
+          artDiv.innerHTML = svg;
+          card.insertBefore(artDiv, card.firstChild);
+          card.classList.add('has-art');
+        }
       }
     }
+  } finally {
+    artGenerationRunning = false;
   }
 }
 
@@ -72,10 +104,10 @@ async function generateMissingArt() {
 // STATE
 // ============================================================
 let state = {
-  topics: [],
+  topics:       [],
   currentTopic: null,
-  progress: {},
-  needsReview: {},
+  progress:     {},
+  needsReview:  {},
 };
 
 // ============================================================
@@ -108,8 +140,8 @@ function clearNeedsReview(topicId, conceptId) {
     saveNeedsReview();
   }
 }
-function isConceptRead(topicId, conceptId) { return !!(state.progress[topicId]?.[conceptId]); }
-function isNeedsReview(topicId, conceptId) { return !!(state.needsReview[topicId]?.[conceptId]); }
+function isConceptRead(topicId, conceptId)   { return !!(state.progress[topicId]?.[conceptId]); }
+function isNeedsReview(topicId, conceptId)   { return !!(state.needsReview[topicId]?.[conceptId]); }
 function getTopicReadCount(topicId) {
   return state.progress[topicId] ? Object.keys(state.progress[topicId]).length : 0;
 }
@@ -140,7 +172,7 @@ async function loadTopic(id) {
 
 // ============================================================
 // ROUTER
-// navigatePush  — major moves (home <-> topic <-> deepdive); adds history entry
+// navigatePush    — major moves (home <-> topic <-> deepdive); adds history entry
 // navigateReplace — card-to-card within a topic; replaces entry so back exits topic
 // ============================================================
 function navigatePush(hash) { window.location.hash = hash; }
@@ -156,12 +188,8 @@ function handleRoute() {
 }
 
 // ============================================================
-// HELPERS
+// SETTINGS MODAL
 // ============================================================
-function catColor(category) {
-  return CAT_COLORS[category] || { g1:'#6C47FF', g2:'#4a2fd4', chip:'#ede9ff', text:'#6C47FF' };
-}
-
 function settingsModalHTML() {
   return `
     <div class="modal-overlay hidden" id="settings-modal">
@@ -188,7 +216,10 @@ function settingsModalHTML() {
 function wireSettingsModal(openTriggerIds) {
   const open  = () => document.getElementById('settings-modal').classList.remove('hidden');
   const close = () => document.getElementById('settings-modal').classList.add('hidden');
-  (openTriggerIds || []).forEach(id => { const el = document.getElementById(id); if (el) el.addEventListener('click', open); });
+  (openTriggerIds || []).forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('click', open);
+  });
   document.getElementById('close-settings').addEventListener('click', close);
   document.getElementById('settings-modal').addEventListener('click', e => { if (e.target===e.currentTarget) close(); });
   document.getElementById('export-btn').addEventListener('click', exportProgress);
@@ -208,15 +239,18 @@ function laneCardHTML(topic) {
     ? readCount + '/' + total + ' read' + (revCount > 0 ? ' · &#8634; ' + revCount : '')
     : total + ' concept' + (total !== 1 ? 's' : '');
   const cachedArt = getCachedArt(topic.id);
+  // FIX: escape topic.id (used in id/onclick attrs) and topic.title
+  const safeId    = escapeHTML(topic.id);
+  const safeTitle = escapeHTML(topic.title);
 
   return `
     <div class="lane-card ${cachedArt ? 'has-art' : ''}"
-         id="lane-card-${topic.id}"
-         onclick="showTopicPreview('${topic.id}')"
+         id="lane-card-${safeId}"
+         onclick="showTopicPreview('${safeId}')"
          style="background:linear-gradient(160deg,${cc.g1},${cc.g2})">
       ${cachedArt ? `<div class="lane-card-art">${cachedArt}</div>` : ''}
       <div class="lane-card-inner">
-        <div class="lane-card-title">${topic.title}</div>
+        <div class="lane-card-title">${safeTitle}</div>
         <div class="lane-card-meta">${metaLine}</div>
       </div>
       ${pct > 0 ? `
@@ -226,7 +260,6 @@ function laneCardHTML(topic) {
     </div>`;
 }
 
-
 // ============================================================
 // RENDER: HOME  (category lanes + surprise me + search)
 // ============================================================
@@ -234,7 +267,6 @@ function renderHome(searchQuery) {
   const app        = document.getElementById('app');
   const topicsList = Array.isArray(state.topics) ? state.topics : [];
 
-  // In-progress: started but not finished
   const inProgress = topicsList.filter(t => {
     const r = getTopicReadCount(t.id);
     return r > 0 && r < (t.concept_count || 0);
@@ -245,7 +277,6 @@ function renderHome(searchQuery) {
   cats.forEach(c => { byCat[c] = []; });
   topicsList.forEach(t => { if (byCat[t.category]) byCat[t.category].push(t); });
 
-  // Search mode
   let searchResults = null;
   if (searchQuery && searchQuery.trim()) {
     const q = searchQuery.trim().toLowerCase();
@@ -253,6 +284,11 @@ function renderHome(searchQuery) {
       t.title.toLowerCase().includes(q) || t.category.toLowerCase().includes(q)
     );
   }
+
+  // FIX: escape searchQuery before inserting into the input's value attribute
+  // and into the "No results" message — raw strings could break the attribute
+  // or inject markup.
+  const safeSearchQuery = escapeHTML(searchQuery || '');
 
   app.innerHTML = `
     <div class="screen home-screen">
@@ -268,7 +304,7 @@ function renderHome(searchQuery) {
 
         <div class="search-bar-wrap">
           <input class="search-input" id="search-input" type="search"
-            placeholder="Search topics..." value="${searchQuery||''}" autocomplete="off" />
+            placeholder="Search topics..." value="${safeSearchQuery}" autocomplete="off" />
         </div>
 
         ${searchResults !== null ? `
@@ -277,7 +313,7 @@ function renderHome(searchQuery) {
             <div class="empty-state">
               <div class="empty-icon">🔍</div>
               <h3>No results</h3>
-              <p>Nothing matched "${searchQuery}".</p>
+              <p>Nothing matched &ldquo;${safeSearchQuery}&rdquo;.</p>
             </div>
           ` : `
             <div class="section-label">RESULTS — ${searchResults.length} topic${searchResults.length!==1?'s':''}</div>
@@ -286,12 +322,15 @@ function renderHome(searchQuery) {
                 const cc        = catColor(topic.category);
                 const readCount = getTopicReadCount(topic.id);
                 const total     = topic.concept_count || '?';
+                const safeId    = escapeHTML(topic.id);
+                const safeCat   = escapeHTML(topic.category);
+                const safeTitle = escapeHTML(topic.title);
                 return `
-                  <div class="search-result-item" onclick="showTopicPreview('${topic.id}')">
+                  <div class="search-result-item" onclick="showTopicPreview('${safeId}')">
                     <div class="search-result-accent" style="background:linear-gradient(${cc.g1},${cc.g2})"></div>
                     <div class="search-result-body">
-                      <div class="search-result-cat" style="color:${cc.text}">${topic.category}</div>
-                      <div class="search-result-title">${topic.title}</div>
+                      <div class="search-result-cat" style="color:${cc.text}">${safeCat}</div>
+                      <div class="search-result-title">${safeTitle}</div>
                       <div class="search-result-meta">${readCount ? readCount+'/'+total+' read · ' : ''}${total} concepts</div>
                     </div>
                     <div class="search-result-arrow">&#8250;</div>
@@ -324,7 +363,7 @@ function renderHome(searchQuery) {
             const cc = catColor(cat);
             return `
               <div class="lane-header">
-                <span class="lane-title" style="color:${cc.text}">${cat}</span>
+                <span class="lane-title" style="color:${cc.text}">${escapeHTML(cat)}</span>
                 <span class="lane-count">${topics.length} topic${topics.length!==1?'s':''}</span>
               </div>
               <div class="lane-scroll">
@@ -374,8 +413,7 @@ function renderHome(searchQuery) {
   document.getElementById('search-input').addEventListener('search', e => {
     if (!e.target.value) renderHome();
   });
-  
-    // Trigger background art generation (no-op if all cached)
+
   setTimeout(() => generateMissingArt(), 400);
 }
 
@@ -387,11 +425,10 @@ async function showTopicPreview(topicId) {
   if (!topicMeta) return;
   const cc = catColor(topicMeta.category);
 
-  const app = document.getElementById('app');
+  const app     = document.getElementById('app');
   const overlay = document.createElement('div');
   overlay.className = 'preview-overlay';
 
-  // Show immediately with loading header
   overlay.innerHTML = `
     <div class="preview-sheet" id="preview-sheet">
       <div class="preview-handle-bar"></div>
@@ -413,30 +450,37 @@ async function showTopicPreview(topicId) {
     return;
   }
 
-  const readCount  = getTopicReadCount(topicId);
-  const total      = topic.concepts.length;
-  const revCount   = getTopicReviewCount(topicId);
+  // FIX: overlay may have been dismissed by the user while loadTopic() was awaiting.
+  // Without this guard, writing to a detached #preview-sheet node throws silently
+  // and the close/CTA listeners never attach, leaving ghost state.
+  if (!overlay.isConnected) return;
+  const sheet = document.getElementById('preview-sheet');
+  if (!sheet) return;
+
+  const readCount   = getTopicReadCount(topicId);
+  const total       = topic.concepts.length;
+  const revCount    = getTopicReviewCount(topicId);
   const firstUnread = topic.concepts.findIndex(c => !isConceptRead(topicId, c.id));
   const resumeIndex = firstUnread >= 0 ? firstUnread : 0;
-  const btnLabel   = readCount === 0   ? 'Start Learning'
-                   : readCount === total ? 'Review Again'
-                   : 'Continue (' + readCount + '/' + total + ')';
+  const btnLabel    = readCount === 0    ? 'Start Learning'
+                    : readCount === total ? 'Review Again'
+                    : 'Continue (' + readCount + '/' + total + ')';
 
-    document.getElementById('preview-sheet').innerHTML = `
+  sheet.innerHTML = `
     <div class="preview-handle-bar"></div>
     <div class="preview-header" style="background:linear-gradient(135deg,${cc.g1},${cc.g2})">
       ${getCachedArt(topicId) ? `<div class="preview-header-art">${getCachedArt(topicId)}</div>` : ''}
       <button class="preview-close-btn" id="preview-close">&#10005;</button>
-      <div class="preview-cat-label">${topic.category}</div>
-      <h2 class="preview-title">${topic.title}</h2>
+      <div class="preview-cat-label">${escapeHTML(topic.category)}</div>
+      <h2 class="preview-title">${escapeHTML(topic.title)}</h2>
       <div class="preview-pills">
         <span class="preview-pill">${total} concept${total!==1?'s':''}</span>
         ${readCount > 0 ? '<span class="preview-pill">' + readCount + ' read</span>' : ''}
-        ${revCount > 0  ? '<span class="preview-pill preview-pill-review">&#8634; ' + revCount + ' to review</span>' : ''}
+        ${revCount  > 0 ? '<span class="preview-pill preview-pill-review">&#8634; ' + revCount + ' to review</span>' : ''}
       </div>
     </div>
     <div class="preview-body" id="preview-body">
-      <p class="preview-summary">${topic.summary}</p>
+      <p class="preview-summary">${escapeHTML(topic.summary)}</p>
       <div class="preview-concepts-label">Concepts</div>
       ${topic.concepts.map((c, i) => {
         const read = isConceptRead(topicId, c.id);
@@ -444,7 +488,7 @@ async function showTopicPreview(topicId) {
         return `
           <div class="preview-concept-row ${read ? 'pcr-read' : ''}" data-index="${i}">
             <div class="preview-concept-num" style="color:${cc.g1}">${String(i+1).padStart(2,'0')}</div>
-            <div class="preview-concept-name">${c.title}</div>
+            <div class="preview-concept-name">${escapeHTML(c.title)}</div>
             <div class="preview-concept-status">
               ${rev  ? '<span class="pcr-review-icon">&#8634;</span>'
                      : read ? '<span class="pcr-check">&#10003;</span>' : '<span class="pcr-arrow">&#8250;</span>'}
@@ -482,7 +526,6 @@ function dismissPreview(overlay) {
 // RENDER: TOPIC
 // ============================================================
 async function renderTopic(topicId, conceptIndex) {
-  conceptIndex = conceptIndex || 0;
   const app = document.getElementById('app');
   app.innerHTML = '<div class="screen loading-screen"><div class="spinner"></div></div>';
 
@@ -494,6 +537,20 @@ async function renderTopic(topicId, conceptIndex) {
     app.innerHTML = '<div class="screen"><div class="error-state">Could not load topic. Check your connection.</div></div>';
     return;
   }
+
+  // FIX: guard against an empty or malformed concepts array — without this,
+  // topic.concepts[conceptIndex] is undefined and concept.id throws immediately.
+  if (!topic?.concepts?.length) {
+    app.innerHTML = '<div class="screen"><div class="error-state">This topic has no concepts yet.</div></div>';
+    return;
+  }
+
+  // FIX: clamp conceptIndex to a valid range. A stale/malformed hash like
+  // #topic/some-id/999 would otherwise produce an undefined concept and crash.
+  conceptIndex = typeof conceptIndex === 'number' && !isNaN(conceptIndex)
+    ? conceptIndex
+    : parseInt(conceptIndex, 10) || 0;
+  conceptIndex = Math.max(0, Math.min(conceptIndex, topic.concepts.length - 1));
 
   const concept  = topic.concepts[conceptIndex];
   const total    = topic.concepts.length;
@@ -511,7 +568,7 @@ async function renderTopic(topicId, conceptIndex) {
     <div class="screen topic-screen" id="topic-screen">
       <header class="app-header" style="background:linear-gradient(180deg,${cc.g1}18,${cc.g1}00)">
         <button class="back-btn" id="back-btn">&#8249; Back</button>
-        <h1 class="header-title">${topic.title}</h1>
+        <h1 class="header-title">${escapeHTML(topic.title)}</h1>
         <div style="width:60px"></div>
       </header>
 
@@ -525,16 +582,16 @@ async function renderTopic(topicId, conceptIndex) {
           <div class="concept-card-accent-bar" style="background:linear-gradient(90deg,${cc.g1},${cc.g2})"></div>
           <div class="concept-card-body">
             <div class="concept-card-top">
-              <span class="cat-chip" style="background:${cc.chip};color:${cc.text}">${topic.category}</span>
+              <span class="cat-chip" style="background:${cc.chip};color:${cc.text}">${escapeHTML(topic.category)}</span>
               ${needsRev
                 ? '<span class="review-badge">&#8634; Review</span>'
                 : isRead
                   ? '<span class="read-badge">&#10003; Read</span>'
                   : '<span class="concept-ghost-num">'+String(conceptIndex+1).padStart(2,'0')+'</span>'}
             </div>
-            <h2 class="concept-title">${concept.title}</h2>
+            <h2 class="concept-title">${escapeHTML(concept.title)}</h2>
             <div class="concept-divider"></div>
-            <div class="concept-summary">${concept.summary}</div>
+            <div class="concept-summary">${escapeHTML(concept.summary)}</div>
           </div>
           <div class="concept-card-actions">
             <button class="mark-read-btn ${markBtnClass}" id="mark-read-btn">${markBtnLabel}</button>
@@ -593,7 +650,7 @@ function showRecallModal(topicId, concept, conceptIndex, total) {
   overlay.innerHTML = `
     <div class="recall-modal">
       <div class="recall-eyebrow">Quick recall</div>
-      <div class="recall-concept-name">${concept.title}</div>
+      <div class="recall-concept-name">${escapeHTML(concept.title)}</div>
       <div class="recall-prompt">Without looking, could you explain the core idea to someone else?</div>
       <div class="recall-actions">
         <button class="recall-btn recall-got-it" id="recall-got-it">&#10003; Got it</button>
@@ -628,23 +685,32 @@ async function renderDeepDive(topicId, conceptId) {
     app.innerHTML = '<div class="screen"><div class="error-state">Could not load content.</div></div>';
     return;
   }
-  const conceptIndex = topic.concepts.findIndex(c => c.id===conceptId);
-  const concept      = topic.concepts[conceptIndex];
-  const cc           = catColor(topic.category);
-  const alreadyRead  = isConceptRead(topicId, conceptId);
-  const needsRev     = isNeedsReview(topicId, conceptId);
-  const hasNext      = conceptIndex < topic.concepts.length - 1;
-  const nextConcept  = hasNext ? topic.concepts[conceptIndex+1] : null;
+
+  // FIX: findIndex returns -1 when conceptId doesn't match (stale URL, renamed
+  // concept, etc.). The original code passed -1 straight to topic.concepts[-1],
+  // giving undefined, and then concept.title / concept.sections immediately threw.
+  const conceptIndex = topic.concepts.findIndex(c => c.id === conceptId);
+  if (conceptIndex === -1) {
+    navigatePush('#topic/' + topicId + '/0');
+    return;
+  }
+
+  const concept     = topic.concepts[conceptIndex];
+  const cc          = catColor(topic.category);
+  const alreadyRead = isConceptRead(topicId, conceptId);
+  const needsRev    = isNeedsReview(topicId, conceptId);
+  const hasNext     = conceptIndex < topic.concepts.length - 1;
+  const nextConcept = hasNext ? topic.concepts[conceptIndex+1] : null;
 
   app.innerHTML = `
     <div class="screen deepdive-screen">
       <header class="app-header" style="background:linear-gradient(180deg,var(--primary-tint),var(--bg))">
         <button class="back-btn" id="back-btn">&#8249;</button>
-        <h1 class="header-title">${concept.title}</h1>
+        <h1 class="header-title">${escapeHTML(concept.title)}</h1>
         <div style="width:40px"></div>
       </header>
       <div class="deepdive-content">
-        <div class="breadcrumb-chip">${topic.category} &middot; ${topic.title}</div>
+        <div class="breadcrumb-chip">${escapeHTML(topic.category)} &middot; ${escapeHTML(topic.title)}</div>
         <div class="deepdive-label">
           <span class="deepdive-label-text">DEEP&#8209;DIVE</span>
           <span class="deepdive-label-count">${concept.sections.length} sections</span>
@@ -654,11 +720,11 @@ async function renderDeepDive(topicId, conceptId) {
             <div class="dd-section-header" data-section="${i}">
               <div class="dd-section-left-bar"></div>
               <span class="dd-section-num">${String(i+1).padStart(2,'0')}</span>
-              <span class="dd-section-title">${sec.title}</span>
+              <span class="dd-section-title">${escapeHTML(sec.title)}</span>
               <span class="dd-section-toggle">${i===0?'&#9662;':'&#9656;'}</span>
             </div>
             <div class="dd-section-body ${i===0?'open':''}" id="ddb-${i}">
-              ${sec.body.map(p=>'<p>'+p+'</p>').join('')}
+              ${sec.body.map(p => '<p>' + escapeHTML(p) + '</p>').join('')}
             </div>
           </div>`).join('')}
         <div class="deepdive-actions">
@@ -667,8 +733,8 @@ async function renderDeepDive(topicId, conceptId) {
             : !alreadyRead
               ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as Read</button>'
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
-          ${hasNext ? '<button class="cta-next-btn" id="next-concept-btn">Next: '+nextConcept.title+' &#8594;</button>' : ''}
-          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${topic.title}</button>
+          ${hasNext ? '<button class="cta-next-btn" id="next-concept-btn">Next: ' + escapeHTML(nextConcept.title) + ' &#8594;</button>' : ''}
+          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${escapeHTML(topic.title)}</button>
         </div>
       </div>
     </div>`;
@@ -686,7 +752,7 @@ async function renderDeepDive(topicId, conceptId) {
   if (ncb) ncb.addEventListener('click', () => navigatePush('#topic/'+topicId+'/'+(conceptIndex+1)));
   document.querySelectorAll('.dd-section-header').forEach(hdr => {
     hdr.addEventListener('click', () => {
-      const i = hdr.dataset.section;
+      const i    = hdr.dataset.section;
       const body = document.getElementById('ddb-'+i);
       const tog  = hdr.querySelector('.dd-section-toggle');
       const open = body.classList.toggle('open');
@@ -705,7 +771,7 @@ function renderProgress() {
   const totalConcepts = topicsList.reduce((s,t) => s + (t.concept_count||0), 0);
   const totalRead     = getTotalReadCount();
   const totalReview   = getTotalNeedsReviewCount();
-  const pct = totalConcepts > 0 ? Math.round(totalRead/totalConcepts*100) : 0;
+  const pct  = totalConcepts > 0 ? Math.round(totalRead/totalConcepts*100) : 0;
   const CIRC = 214;
   const dash = Math.round(CIRC * pct / 100);
   const cats = ['History and Culture','Mind and Human Nature','Economics and Finance','Science and Math','Languages'];
@@ -735,103 +801,4 @@ function renderProgress() {
           <div class="progress-hero-text">
             <div class="progress-hero-main">${totalRead} of ${totalConcepts} concepts</div>
             ${totalReview > 0
-              ? '<div class="progress-hero-sub" style="color:var(--review-color)">&#8634; '+totalReview+' flagged for review</div>'
-              : totalRead > 0
-                ? '<div class="progress-hero-sub" style="color:var(--success)">&#10003; All caught up</div>'
-                : '<div class="progress-hero-sub">Start any topic to begin</div>'}
-          </div>
-        </div>
-        ${reviewTopics.length > 0 ? `
-          <div class="section-label">NEEDS REVIEW</div>
-          ${reviewTopics.map(topic => {
-            const cc = catColor(topic.category); const cnt = getTopicReviewCount(topic.id);
-            return `<div class="progress-review-row" onclick="navigatePush('#topic/${topic.id}/0')"
-                   style="border-left:4px solid ${cc.g1}">
-              <div class="progress-review-title">${topic.title}</div>
-              <div class="progress-review-count">${cnt} concept${cnt!==1?'s':''} &middot; tap to revisit &#8594;</div>
-            </div>`;
-          }).join('')}` : ''}
-        ${cats.map(cat => {
-          const topics = byCat[cat];
-          if (!topics || topics.length===0) return '';
-          const cc = catColor(cat);
-          return `<div class="section-label" style="color:${cc.text}">${cat.toUpperCase()}</div>
-            ${topics.map(topic => {
-              const readCount = getTopicReadCount(topic.id);
-              const total     = topic.concept_count || 0;
-              const topicPct  = total > 0 ? Math.round(readCount/total*100) : 0;
-              const revCount  = getTopicReviewCount(topic.id);
-              return `<div class="progress-topic-item" onclick="navigatePush('#topic/${topic.id}/0')">
-                <div class="progress-topic-header">
-                  <div class="progress-topic-name">${topic.title}</div>
-                  <div class="progress-topic-stat">${readCount}/${total}</div>
-                </div>
-                <div class="progress-bar-bg">
-                  <div class="progress-bar-fill" style="width:${topicPct}%;background:linear-gradient(90deg,${cc.g1},${cc.g2})"></div>
-                </div>
-                ${revCount > 0 ? '<div class="progress-topic-review-note">&#8634; '+revCount+' to review</div>' : ''}
-              </div>`;
-            }).join('')}`;
-        }).join('')}
-        <div style="height:88px"></div>
-      </div>
-      <nav class="bottom-nav">
-        <button class="nav-item" id="nav-home"><span class="nav-icon">🏠</span><span class="nav-label">Home</span></button>
-        <button class="nav-item active"><span class="nav-icon">📊</span><span class="nav-label">Progress</span><div class="nav-active-dot"></div></button>
-        <button class="nav-item" id="nav-settings-nav"><span class="nav-icon">⚙️</span><span class="nav-label">Settings</span></button>
-      </nav>
-    </div>
-    ${settingsModalHTML()}`;
-
-  document.getElementById('nav-home').addEventListener('click', () => navigatePush('#home'));
-  wireSettingsModal(['nav-settings-nav']);
-}
-
-// ============================================================
-// SWIPE
-// ============================================================
-function setupSwipe(el, onLeft, onRight) {
-  let sx=0, sy=0;
-  el.addEventListener('touchstart', e => { sx=e.touches[0].clientX; sy=e.touches[0].clientY; }, {passive:true});
-  el.addEventListener('touchend', e => {
-    const dx=e.changedTouches[0].clientX-sx, dy=e.changedTouches[0].clientY-sy;
-    if (Math.abs(dx)>Math.abs(dy) && Math.abs(dx)>50) { if(dx<0) onLeft(); else onRight(); }
-  }, {passive:true});
-}
-
-// ============================================================
-// IMPORT / EXPORT
-// ============================================================
-function exportProgress() {
-  const data = { exportedAt:new Date().toISOString(), progress:state.progress, needsReview:state.needsReview };
-  const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
-  const a = Object.assign(document.createElement('a'), {href:URL.createObjectURL(blob), download:'learnapp-progress.json'});
-  a.click(); URL.revokeObjectURL(a.href);
-}
-function importProgress(file) {
-  const r = new FileReader();
-  r.onload = e => {
-    try {
-      const d = JSON.parse(e.target.result);
-      state.progress    = d.progress    || {};
-      state.needsReview = d.needsReview || {};
-      saveProgress(); saveNeedsReview();
-      document.getElementById('settings-modal').classList.add('hidden');
-      renderHome();
-    } catch { alert('Invalid file — please select a valid LearnApp export.'); }
-  };
-  r.readAsText(file);
-}
-
-// ============================================================
-// INIT
-// ============================================================
-async function init() {
-  loadProgress();
-  if ('serviceWorker' in navigator)
-    window.addEventListener('load', () => navigator.serviceWorker.register(`${BASE}/sw.js`));
-  try { await loadTopicsIndex(); } catch(e) { console.error('Topics index failed:', e); }
-  window.addEventListener('hashchange', handleRoute);
-  handleRoute();
-}
-init();
+              ? '<div class="progress-hero-sub" style="color:var(--review-color)">&#8634; '+totalReview+' flagged for
