@@ -723,79 +723,196 @@ async function renderDeepDive(topicId, conceptId) {
     return;
   }
 
-  const concept     = topic.concepts[conceptIndex];
-  const cc          = catColor(topic.category);
+  const concept = topic.concepts[conceptIndex];
   const alreadyRead = isConceptRead(topicId, conceptId);
-  const needsRev    = isNeedsReview(topicId, conceptId);
-  const hasNext     = conceptIndex < topic.concepts.length - 1;
+  const needsRev = isNeedsReview(topicId, conceptId);
+  const hasNext = conceptIndex < topic.concepts.length - 1;
   const nextConcept = hasNext ? topic.concepts[conceptIndex + 1] : null;
 
+  const sections = Array.isArray(concept.sections) && concept.sections.length
+    ? concept.sections
+    : [{ title: 'Overview', body: [concept.summary || ''] }];
+
+  const totalWords = sections.reduce((sum, sec) => {
+    const text = Array.isArray(sec.body) ? sec.body.join(' ') : String(sec.body || '');
+    return sum + text.trim().split(/\s+/).filter(Boolean).length;
+  }, 0);
+
+  const readingTime = Math.max(1, Math.round(totalWords / 180));
+
   app.innerHTML = `
-    <div class="screen deepdive-screen">
-      <header class="app-header" style="background:linear-gradient(180deg,var(--primary-tint),var(--bg))">
-        <button class="back-btn" id="back-btn">&#8249;</button>
+    <div class="screen deepdive-screen" id="deepdive-screen">
+      <header class="app-header deepdive-header">
+        <button class="back-btn" id="back-btn">&#8249; Back</button>
         <h1 class="header-title">${escapeHTML(concept.title)}</h1>
-        <div style="width:40px"></div>
+        <div style="width:60px"></div>
       </header>
-      <div class="deepdive-content">
-        <div class="breadcrumb-chip">${escapeHTML(topic.category)} &middot; ${escapeHTML(topic.title)}</div>
-        <div class="deepdive-label">
-          <span class="deepdive-label-text">DEEP&#8209;DIVE</span>
-          <span class="deepdive-label-count">${concept.sections.length} sections</span>
+
+      <div class="deepdive-shell">
+        <section class="deepdive-hero" style="border-color:${catColor(topic.category).g1}22">
+          <div class="deepdive-kicker-row">
+            <div class="breadcrumb-chip">${escapeHTML(topic.category)} &middot; ${escapeHTML(topic.title)}</div>
+            ${needsRev
+              ? '<div class="deepdive-status-pill deepdive-status-review">&#8634; Review</div>'
+              : alreadyRead
+                ? '<div class="deepdive-status-pill deepdive-status-read">&#10003; Read</div>'
+                : ''}
+          </div>
+
+          <div class="deepdive-eyebrow">DEEP&#8209;DIVE</div>
+          <h2 class="deepdive-title">${escapeHTML(concept.title)}</h2>
+          <p class="deepdive-summary">${escapeHTML(concept.summary || '')}</p>
+
+          <div class="deepdive-meta">
+            <div class="deepdive-meta-pill">Concept ${conceptIndex + 1} of ${topic.concepts.length}</div>
+            <div class="deepdive-meta-pill">${sections.length} section${sections.length !== 1 ? 's' : ''}</div>
+            <div class="deepdive-meta-pill">~${readingTime} min read</div>
+          </div>
+        </section>
+
+        <div class="deepdive-sticky-nav-wrap">
+          <div class="deepdive-nav-top">
+            <div class="deepdive-nav-label">Jump to section</div>
+            <div class="deepdive-nav-progress" id="dd-nav-progress">1 / ${sections.length}</div>
+          </div>
+
+          <div class="deepdive-section-nav" id="deepdive-section-nav">
+            ${sections.map((sec, i) => `
+              <button
+                class="dd-nav-chip ${i === 0 ? 'active' : ''}"
+                type="button"
+                data-target="dd-reader-section-${i}">
+                <span class="dd-nav-chip-num">${String(i + 1).padStart(2, '0')}</span>
+                <span class="dd-nav-chip-text">${escapeHTML(sec.title)}</span>
+              </button>
+            `).join('')}
+          </div>
         </div>
-        ${concept.sections.map((sec, i) => `
-          <div class="dd-section ${i === 0 ? 'open' : ''}" id="dds-${i}">
-            <div class="dd-section-header" data-section="${i}">
-              <div class="dd-section-left-bar"></div>
-              <span class="dd-section-num">${String(i + 1).padStart(2, '0')}</span>
-              <span class="dd-section-title">${escapeHTML(sec.title)}</span>
-              <span class="dd-section-toggle">${i === 0 ? '&#9662;' : '&#9656;'}</span>
-            </div>
-            <div class="dd-section-body ${i === 0 ? 'open' : ''}" id="ddb-${i}">
-              ${sec.body.map(p => '<p>' + escapeHTML(p) + '</p>').join('')}
-            </div>
-          </div>`).join('')}
+
+        <div class="deepdive-reader">
+          ${sections.map((sec, i) => `
+            <article class="dd-reader-section" id="dd-reader-section-${i}" data-index="${i}">
+              <div class="dd-reader-section-top">
+                <div class="dd-reader-section-num">${String(i + 1).padStart(2, '0')}</div>
+                <div class="dd-reader-section-headings">
+                  <div class="dd-reader-section-kicker">${i === 0 ? 'Start here' : 'Section ' + (i + 1)}</div>
+                  <h3 class="dd-reader-section-title">${escapeHTML(sec.title)}</h3>
+                </div>
+              </div>
+
+              <div class="dd-reader-body">
+                ${(Array.isArray(sec.body) ? sec.body : [String(sec.body || '')])
+                  .map(p => `<p>${escapeHTML(p)}</p>`)
+                  .join('')}
+              </div>
+
+              <div class="dd-inline-nav">
+                ${i > 0
+                  ? `<button class="dd-inline-btn" type="button" data-target="dd-reader-section-${i - 1}">&#8592; Previous section</button>`
+                  : '<span class="dd-inline-spacer"></span>'}
+
+                ${i < sections.length - 1
+                  ? `<button class="dd-inline-btn dd-inline-btn-primary" type="button" data-target="dd-reader-section-${i + 1}">Next section &#8594;</button>`
+                  : `<button class="dd-inline-btn dd-inline-btn-primary" type="button" id="dd-finish-reading">Finish reading</button>`}
+              </div>
+            </article>
+          `).join('')}
+        </div>
+
         <div class="deepdive-actions">
           ${needsRev
             ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as reviewed</button>'
             : !alreadyRead
               ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as Read</button>'
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
+
           ${hasNext
-            ? '<button class="cta-next-btn" id="next-concept-btn">Next: ' + escapeHTML(nextConcept.title) + ' &#8594;</button>'
+            ? `<button class="cta-next-btn" id="next-concept-btn">Next concept: ${escapeHTML(nextConcept.title)} &#8594;</button>`
             : ''}
+
           <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${escapeHTML(topic.title)}</button>
         </div>
       </div>
-    </div>`;
+    </div>
+  `;
 
-  document.getElementById('back-btn').addEventListener('click', () =>
-    navigatePush('#topic/' + topicId + '/' + conceptIndex));
-  document.getElementById('back-topic-btn').addEventListener('click', () =>
-    navigatePush('#topic/' + topicId + '/' + conceptIndex));
-
-  const mrb = document.getElementById('mark-read-btn');
-  if (mrb) mrb.addEventListener('click', () => {
-    if (needsRev) clearNeedsReview(topicId, conceptId);
-    markConceptRead(topicId, conceptId);
-    if (hasNext) navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
-    else         navigatePush('#topic/' + topicId + '/' + conceptIndex);
+  document.getElementById('back-btn').addEventListener('click', () => {
+    navigatePush('#topic/' + topicId + '/' + conceptIndex);
   });
 
-  const ncb = document.getElementById('next-concept-btn');
-  if (ncb) ncb.addEventListener('click', () =>
-    navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1)));
+  document.getElementById('back-topic-btn').addEventListener('click', () => {
+    navigatePush('#topic/' + topicId + '/' + conceptIndex);
+  });
 
-  document.querySelectorAll('.dd-section-header').forEach(hdr => {
-    hdr.addEventListener('click', () => {
-      const i    = hdr.dataset.section;
-      const body = document.getElementById('ddb-' + i);
-      const tog  = hdr.querySelector('.dd-section-toggle');
-      const open = body.classList.toggle('open');
-      document.getElementById('dds-' + i).classList.toggle('open', open);
-      tog.innerHTML = open ? '&#9662;' : '&#9656;';
+  const markReadBtn = document.getElementById('mark-read-btn');
+  if (markReadBtn) {
+    markReadBtn.addEventListener('click', () => {
+      if (needsRev) clearNeedsReview(topicId, conceptId);
+      markConceptRead(topicId, conceptId);
+      if (hasNext) navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
+      else navigatePush('#topic/' + topicId + '/' + conceptIndex);
     });
+  }
+
+  const nextConceptBtn = document.getElementById('next-concept-btn');
+  if (nextConceptBtn) {
+    nextConceptBtn.addEventListener('click', () => {
+      navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
+    });
+  }
+
+  const sectionEls = Array.from(document.querySelectorAll('.dd-reader-section'));
+  const chipEls = Array.from(document.querySelectorAll('.dd-nav-chip'));
+  const inlineNavEls = Array.from(document.querySelectorAll('.dd-inline-btn[data-target]'));
+  const progressEl = document.getElementById('dd-nav-progress');
+
+  function scrollToSection(sectionId) {
+    const target = document.getElementById(sectionId);
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function setActiveSection(index) {
+    chipEls.forEach((chip, i) => chip.classList.toggle('active', i === index));
+    const activeChip = chipEls[index];
+    if (activeChip) activeChip.scrollIntoView({ inline: 'center', block: 'nearest' });
+    if (progressEl) progressEl.textContent = `${index + 1} / ${sections.length}`;
+  }
+
+  chipEls.forEach(chip => {
+    chip.addEventListener('click', () => scrollToSection(chip.dataset.target));
   });
+
+  inlineNavEls.forEach(btn => {
+    btn.addEventListener('click', () => scrollToSection(btn.dataset.target));
+  });
+
+  const finishBtn = document.getElementById('dd-finish-reading');
+  if (finishBtn) {
+    finishBtn.addEventListener('click', () => {
+      document.querySelector('.deepdive-actions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  setActiveSection(0);
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (!visible) return;
+      const index = parseInt(visible.target.dataset.index, 10) || 0;
+      setActiveSection(index);
+    }, {
+      root: null,
+      threshold: [0.3, 0.55, 0.8],
+      rootMargin: '-120px 0px -45% 0px'
+    });
+
+    sectionEls.forEach(section => observer.observe(section));
+  }
 }
 
 // ============================================================
