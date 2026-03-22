@@ -49,7 +49,7 @@ body {
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
-  min-height: 100dvh;
+  height: 100dvh;
   position: relative;
   overflow: hidden;
 }
@@ -60,11 +60,12 @@ body {
    SCREENS
    ============================================================ */
 .screen {
-  min-height: 100dvh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   padding-top: var(--safe-top);
   min-width: 0;
+  overflow: hidden;
 }
 
 .loading-screen {
@@ -74,15 +75,11 @@ body {
 
 .home-screen,
 .topic-screen,
-.progress-screen {
+.progress-screen,
+.deepdive-screen {
   overflow: hidden;
 }
 
-.deepdive-screen {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 24px;
-}
 
 /* ============================================================
    HEADER
@@ -252,12 +249,25 @@ body {
 }
 
 .home-scroll-area,
-.progress-scroll-area {
-  flex: 1;
+.progress-scroll-area,
+.deepdive-content {
+  flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 88px;
+}
+
+.home-scroll-area,
+.progress-scroll-area {
+  padding-bottom: calc(88px + var(--safe-bottom));
+}
+
+.deepdive-content {
+  padding: 12px 20px calc(96px + var(--safe-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* ============================================================
@@ -578,12 +588,6 @@ body {
 /* ============================================================
    DEEP DIVE
    ============================================================ */
-.deepdive-content {
-  padding: 12px 20px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
 .breadcrumb-chip {
   display: inline-flex;
