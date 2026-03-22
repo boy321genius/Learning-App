@@ -1579,3 +1579,54 @@ html, body {
   border-color: rgba(255,255,255,0.3);
   border-top-color: rgba(255,255,255,0.9);
 }
+
+/* ============================================================
+   AI-GENERATED TOPIC ART
+   ============================================================ */
+
+/* Lane cards need relative positioning for the art overlay */
+.lane-card {
+  position: relative; /* add this — it may already be there */
+}
+
+.lane-card-art {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.lane-card.has-art .lane-card-art {
+  opacity: 0.30;
+}
+.lane-card-art svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fade in cards as art loads */
+.lane-card.has-art {
+  animation: artFadeIn 0.4s ease;
+}
+@keyframes artFadeIn {
+  from { filter: brightness(0.95); }
+  to   { filter: brightness(1); }
+}
+
+/* Art in the preview sheet header */
+.preview-header {
+  position: relative;
+  overflow: hidden;
+}
+.preview-header-art {
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  pointer-events: none;
+}
+.preview-header-art svg {
+  width: 100%;
+  height: 100%;
+}
+
