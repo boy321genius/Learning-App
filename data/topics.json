@@ -173,5 +173,12 @@
   "category": "Mind and Human Nature",
   "summary": "Examines why people become hostile, defensive, and violent — from the frustration of blocked goals and misread threats to status conflicts, deindividuation in crowds, and the dynamics that turn minor friction into serious harm.",
   "concept_count": 7
+  },
+  {
+  "id": "stoicism",
+  "title": "Stoicism — What Can You Actually Control?",
+  "category": "Mind and Human Nature",
+  "summary": "A practical ancient philosophy built on one foundational question: what is genuinely within your control, and what is not? From Epictetus to Marcus Aurelius, Stoicism offers tools for equanimity, resilience, and purposeful action that are as applicable today as they were in ancient Rome.",
+  "concept_count": 8
   }
 ]
