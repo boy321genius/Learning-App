@@ -787,7 +787,7 @@ async function renderDeepDive(topicId, conceptId) {
           ${needsRev
             ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as reviewed</button>'
             : !alreadyRead
-              ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark Finished and Continue + ' &#8594;</button>'
+              ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark Finished and Continue</button>'
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
 
           ${hasNext
