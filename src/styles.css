@@ -256,7 +256,6 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
 }
 
 .home-scroll-area,
@@ -1156,7 +1155,6 @@ body {
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
 }
 
 .lane-scroll::-webkit-scrollbar {
