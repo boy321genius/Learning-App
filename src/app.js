@@ -586,7 +586,7 @@ async function renderTopic(topicId, conceptIndex) {
 
   const markBtnLabel = needsRev ? '&#8634; Mark as reviewed'
                      : isRead   ? '&#10003; Read'
-                                : '&#9675; Mark Finished and Continue';
+                                : '&#9675; Mark as Read';
   const markBtnClass = (isRead && !needsRev) ? 'marked' : needsRev ? 'btn-needs-review' : '';
 
   app.innerHTML = `
@@ -787,14 +787,14 @@ async function renderDeepDive(topicId, conceptId) {
           ${needsRev
             ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as reviewed</button>'
             : !alreadyRead
-              ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark Finished and Continue</button>'
+              ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as Read</button>'
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
 
           ${hasNext
-            ? '<button class="cta-next-btn" id="next-concept-btn">Continue without Marking + ' &#8594;</button>'
+            ? '<button class="cta-next-btn" id="next-concept-btn">Next: ' + escapeHTML(nextConcept.title) + ' &#8594;</button>'
             : ''}
 
-          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Exit deep-dive</button>
+          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${escapeHTML(topic.title)}</button>
         </div>
       </div>
     </div>
@@ -1092,4 +1092,3 @@ async function init() {
 }
 
 init();
-
