@@ -12,6 +12,63 @@ const CAT_COLORS = {
 };
 
 // ============================================================
+// AI ART CACHE
+// ============================================================
+function getCachedArt(topicId) {
+  try { return localStorage.getItem('topic-art-' + topicId); }
+  catch { return null; }
+}
+function setCachedArt(topicId, svg) {
+  try { localStorage.setItem('topic-art-' + topicId, svg); } catch {}
+}
+
+async function generateTopicArt(topic, cc) {
+  if (getCachedArt(topic.id)) return getCachedArt(topic.id);
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{
+          role: 'user',
+          content: `Create a minimal decorative SVG (viewBox="0 0 200 130") for a learning card about "${topic.title}" (${topic.category} subject). Rules: abstract geometric shapes only — absolutely no text, letters, numbers, or symbols. Use only these colors: ${cc.g1}, ${cc.g2}, rgba(255,255,255,0.15), rgba(255,255,255,0.35), rgba(0,0,0,0.12). 4–8 shapes max. Style: modern, airy, slightly abstract — suggest the topic through shape and composition, not labels. Output only the raw <svg ...>...</svg> element. No markdown, no explanation.`
+        }]
+      })
+    });
+    const data = await res.json();
+    const svg = data.content?.[0]?.text?.trim();
+    if (svg && svg.startsWith('<svg')) {
+      setCachedArt(topic.id, svg);
+      return svg;
+    }
+  } catch(e) { console.warn('Art gen failed for', topic.id, e); }
+  return null;
+}
+
+// Generate art for all topics that don't have it yet, one at a time
+async function generateMissingArt() {
+  const topics = Array.isArray(state.topics) ? state.topics : [];
+  for (const topic of topics) {
+    if (getCachedArt(topic.id)) continue;
+    const cc = catColor(topic.category);
+    const svg = await generateTopicArt(topic, cc);
+    if (svg) {
+      // Inject into any visible lane cards without refreshing the page
+      const card = document.getElementById('lane-card-' + topic.id);
+      if (card && !card.querySelector('.lane-card-art')) {
+        const artDiv = document.createElement('div');
+        artDiv.className = 'lane-card-art';
+        artDiv.innerHTML = svg;
+        card.insertBefore(artDiv, card.firstChild);
+        card.classList.add('has-art');
+      }
+    }
+  }
+}
+
+// ============================================================
 // STATE
 // ============================================================
 let state = {
@@ -150,10 +207,14 @@ function laneCardHTML(topic) {
   const metaLine  = readCount > 0
     ? readCount + '/' + total + ' read' + (revCount > 0 ? ' · &#8634; ' + revCount : '')
     : total + ' concept' + (total !== 1 ? 's' : '');
+  const cachedArt = getCachedArt(topic.id);
 
   return `
-    <div class="lane-card" onclick="showTopicPreview('${topic.id}')"
+    <div class="lane-card ${cachedArt ? 'has-art' : ''}"
+         id="lane-card-${topic.id}"
+         onclick="showTopicPreview('${topic.id}')"
          style="background:linear-gradient(160deg,${cc.g1},${cc.g2})">
+      ${cachedArt ? `<div class="lane-card-art">${cachedArt}</div>` : ''}
       <div class="lane-card-inner">
         <div class="lane-card-title">${topic.title}</div>
         <div class="lane-card-meta">${metaLine}</div>
@@ -164,6 +225,7 @@ function laneCardHTML(topic) {
         </div>` : ''}
     </div>`;
 }
+
 
 // ============================================================
 // RENDER: HOME  (category lanes + surprise me + search)
@@ -312,6 +374,9 @@ function renderHome(searchQuery) {
   document.getElementById('search-input').addEventListener('search', e => {
     if (!e.target.value) renderHome();
   });
+  
+    // Trigger background art generation (no-op if all cached)
+  setTimeout(() => generateMissingArt(), 400);
 }
 
 // ============================================================
@@ -357,9 +422,10 @@ async function showTopicPreview(topicId) {
                    : readCount === total ? 'Review Again'
                    : 'Continue (' + readCount + '/' + total + ')';
 
-  document.getElementById('preview-sheet').innerHTML = `
+    document.getElementById('preview-sheet').innerHTML = `
     <div class="preview-handle-bar"></div>
     <div class="preview-header" style="background:linear-gradient(135deg,${cc.g1},${cc.g2})">
+      ${getCachedArt(topicId) ? `<div class="preview-header-art">${getCachedArt(topicId)}</div>` : ''}
       <button class="preview-close-btn" id="preview-close">&#10005;</button>
       <div class="preview-cat-label">${topic.category}</div>
       <h2 class="preview-title">${topic.title}</h2>
