@@ -724,6 +724,7 @@ async function renderDeepDive(topicId, conceptId) {
   }
 
   const concept = topic.concepts[conceptIndex];
+  const cc = catColor(topic.category);
   const alreadyRead = isConceptRead(topicId, conceptId);
   const needsRev = isNeedsReview(topicId, conceptId);
   const hasNext = conceptIndex < topic.concepts.length - 1;
@@ -733,15 +734,8 @@ async function renderDeepDive(topicId, conceptId) {
     ? concept.sections
     : [{ title: 'Overview', body: [concept.summary || ''] }];
 
-  const totalWords = sections.reduce((sum, sec) => {
-    const text = Array.isArray(sec.body) ? sec.body.join(' ') : String(sec.body || '');
-    return sum + text.trim().split(/\s+/).filter(Boolean).length;
-  }, 0);
-
-  const readingTime = Math.max(1, Math.round(totalWords / 180));
-
   app.innerHTML = `
-    <div class="screen deepdive-screen" id="deepdive-screen">
+    <div class="screen deepdive-screen">
       <header class="app-header deepdive-header">
         <button class="back-btn" id="back-btn">&#8249; Back</button>
         <h1 class="header-title">${escapeHTML(concept.title)}</h1>
@@ -749,7 +743,7 @@ async function renderDeepDive(topicId, conceptId) {
       </header>
 
       <div class="deepdive-shell">
-        <section class="deepdive-hero" style="border-color:${catColor(topic.category).g1}22">
+        <section class="deepdive-hero" style="border-color:${cc.g1}22">
           <div class="deepdive-kicker-row">
             <div class="breadcrumb-chip">${escapeHTML(topic.category)} &middot; ${escapeHTML(topic.title)}</div>
             ${needsRev
@@ -761,12 +755,10 @@ async function renderDeepDive(topicId, conceptId) {
 
           <div class="deepdive-eyebrow">DEEP&#8209;DIVE</div>
           <h2 class="deepdive-title">${escapeHTML(concept.title)}</h2>
-          <p class="deepdive-summary">${escapeHTML(concept.summary || '')}</p>
 
           <div class="deepdive-meta">
             <div class="deepdive-meta-pill">Concept ${conceptIndex + 1} of ${topic.concepts.length}</div>
             <div class="deepdive-meta-pill">${sections.length} section${sections.length !== 1 ? 's' : ''}</div>
-            <div class="deepdive-meta-pill">~${readingTime} min read</div>
           </div>
         </section>
 
@@ -781,7 +773,7 @@ async function renderDeepDive(topicId, conceptId) {
               <button
                 class="dd-nav-chip ${i === 0 ? 'active' : ''}"
                 type="button"
-                data-target="dd-reader-section-${i}">
+                data-index="${i}">
                 <span class="dd-nav-chip-num">${String(i + 1).padStart(2, '0')}</span>
                 <span class="dd-nav-chip-text">${escapeHTML(sec.title)}</span>
               </button>
@@ -789,35 +781,7 @@ async function renderDeepDive(topicId, conceptId) {
           </div>
         </div>
 
-        <div class="deepdive-reader">
-          ${sections.map((sec, i) => `
-            <article class="dd-reader-section" id="dd-reader-section-${i}" data-index="${i}">
-              <div class="dd-reader-section-top">
-                <div class="dd-reader-section-num">${String(i + 1).padStart(2, '0')}</div>
-                <div class="dd-reader-section-headings">
-                  <div class="dd-reader-section-kicker">${i === 0 ? 'Start here' : 'Section ' + (i + 1)}</div>
-                  <h3 class="dd-reader-section-title">${escapeHTML(sec.title)}</h3>
-                </div>
-              </div>
-
-              <div class="dd-reader-body">
-                ${(Array.isArray(sec.body) ? sec.body : [String(sec.body || '')])
-                  .map(p => `<p>${escapeHTML(p)}</p>`)
-                  .join('')}
-              </div>
-
-              <div class="dd-inline-nav">
-                ${i > 0
-                  ? `<button class="dd-inline-btn" type="button" data-target="dd-reader-section-${i - 1}">&#8592; Previous section</button>`
-                  : '<span class="dd-inline-spacer"></span>'}
-
-                ${i < sections.length - 1
-                  ? `<button class="dd-inline-btn dd-inline-btn-primary" type="button" data-target="dd-reader-section-${i + 1}">Next section &#8594;</button>`
-                  : `<button class="dd-inline-btn dd-inline-btn-primary" type="button" id="dd-finish-reading">Finish reading</button>`}
-              </div>
-            </article>
-          `).join('')}
-        </div>
+        <section class="deepdive-panel" id="deepdive-panel"></section>
 
         <div class="deepdive-actions">
           ${needsRev
@@ -827,7 +791,7 @@ async function renderDeepDive(topicId, conceptId) {
               : '<div class="already-read-badge">&#10003; Already Read</div>'}
 
           ${hasNext
-            ? `<button class="cta-next-btn" id="next-concept-btn">Next concept: ${escapeHTML(nextConcept.title)} &#8594;</button>`
+            ? '<button class="cta-next-btn" id="next-concept-btn">Next: ' + escapeHTML(nextConcept.title) + ' &#8594;</button>'
             : ''}
 
           <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${escapeHTML(topic.title)}</button>
@@ -836,17 +800,15 @@ async function renderDeepDive(topicId, conceptId) {
     </div>
   `;
 
-  document.getElementById('back-btn').addEventListener('click', () => {
-    navigatePush('#topic/' + topicId + '/' + conceptIndex);
-  });
+  document.getElementById('back-btn').addEventListener('click', () =>
+    navigatePush('#topic/' + topicId + '/' + conceptIndex));
 
-  document.getElementById('back-topic-btn').addEventListener('click', () => {
-    navigatePush('#topic/' + topicId + '/' + conceptIndex);
-  });
+  document.getElementById('back-topic-btn').addEventListener('click', () =>
+    navigatePush('#topic/' + topicId + '/' + conceptIndex));
 
-  const markReadBtn = document.getElementById('mark-read-btn');
-  if (markReadBtn) {
-    markReadBtn.addEventListener('click', () => {
+  const mrb = document.getElementById('mark-read-btn');
+  if (mrb) {
+    mrb.addEventListener('click', () => {
       if (needsRev) clearNeedsReview(topicId, conceptId);
       markConceptRead(topicId, conceptId);
       if (hasNext) navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
@@ -854,65 +816,78 @@ async function renderDeepDive(topicId, conceptId) {
     });
   }
 
-  const nextConceptBtn = document.getElementById('next-concept-btn');
-  if (nextConceptBtn) {
-    nextConceptBtn.addEventListener('click', () => {
-      navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
-    });
+  const ncb = document.getElementById('next-concept-btn');
+  if (ncb) {
+    ncb.addEventListener('click', () =>
+      navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1)));
   }
 
-  const sectionEls = Array.from(document.querySelectorAll('.dd-reader-section'));
+  const panel = document.getElementById('deepdive-panel');
   const chipEls = Array.from(document.querySelectorAll('.dd-nav-chip'));
-  const inlineNavEls = Array.from(document.querySelectorAll('.dd-inline-btn[data-target]'));
   const progressEl = document.getElementById('dd-nav-progress');
 
-  function scrollToSection(sectionId) {
-    const target = document.getElementById(sectionId);
-    if (!target) return;
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
+  function renderActiveSection(index, shouldScrollPanel) {
+    const sec = sections[index];
+    const body = Array.isArray(sec.body) ? sec.body : [String(sec.body || '')];
 
-  function setActiveSection(index) {
+    panel.innerHTML = `
+      <div class="dd-panel-head">
+        <div class="dd-panel-num">${String(index + 1).padStart(2, '0')}</div>
+        <div class="dd-panel-heading-wrap">
+          <div class="dd-panel-kicker">Section ${index + 1}</div>
+          <h3 class="dd-panel-title">${escapeHTML(sec.title)}</h3>
+        </div>
+      </div>
+
+      <div class="dd-panel-body">
+        ${body.map(p => `<p>${escapeHTML(p)}</p>`).join('')}
+      </div>
+
+      <div class="dd-panel-controls">
+        ${index > 0
+          ? '<button class="dd-panel-btn" type="button" id="dd-prev-section">&#8592; Previous section</button>'
+          : '<span class="dd-panel-spacer"></span>'}
+
+        ${index < sections.length - 1
+          ? '<button class="dd-panel-btn dd-panel-btn-primary" type="button" id="dd-next-section">Next section &#8594;</button>'
+          : '<button class="dd-panel-btn dd-panel-btn-primary" type="button" id="dd-finish-reading">Finish reading</button>'}
+      </div>
+    `;
+
     chipEls.forEach((chip, i) => chip.classList.toggle('active', i === index));
-    const activeChip = chipEls[index];
-    if (activeChip) activeChip.scrollIntoView({ inline: 'center', block: 'nearest' });
+    if (chipEls[index]) chipEls[index].scrollIntoView({ inline: 'center', block: 'nearest' });
     if (progressEl) progressEl.textContent = `${index + 1} / ${sections.length}`;
+
+    const prevBtn = document.getElementById('dd-prev-section');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => renderActiveSection(index - 1, true));
+    }
+
+    const nextBtn = document.getElementById('dd-next-section');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => renderActiveSection(index + 1, true));
+    }
+
+    const finishBtn = document.getElementById('dd-finish-reading');
+    if (finishBtn) {
+      finishBtn.addEventListener('click', () => {
+        document.querySelector('.deepdive-actions')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
+
+    if (shouldScrollPanel) {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
-  chipEls.forEach(chip => {
-    chip.addEventListener('click', () => scrollToSection(chip.dataset.target));
+  chipEls.forEach((chip, i) => {
+    chip.addEventListener('click', () => renderActiveSection(i, true));
   });
 
-  inlineNavEls.forEach(btn => {
-    btn.addEventListener('click', () => scrollToSection(btn.dataset.target));
-  });
-
-  const finishBtn = document.getElementById('dd-finish-reading');
-  if (finishBtn) {
-    finishBtn.addEventListener('click', () => {
-      document.querySelector('.deepdive-actions')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }
-
-  setActiveSection(0);
-
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      const visible = entries
-        .filter(entry => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (!visible) return;
-      const index = parseInt(visible.target.dataset.index, 10) || 0;
-      setActiveSection(index);
-    }, {
-      root: null,
-      threshold: [0.3, 0.55, 0.8],
-      rootMargin: '-120px 0px -45% 0px'
-    });
-
-    sectionEls.forEach(section => observer.observe(section));
-  }
+  renderActiveSection(0, false);
 }
 
 // ============================================================
