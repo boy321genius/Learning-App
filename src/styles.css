@@ -643,6 +643,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 15px 16px;
+  min-height: 56px;
   cursor: pointer;
   user-select: none;
 }
@@ -697,7 +698,7 @@ body {
 
 .dd-section-body {
   display: none;
-  padding: 0 16px 18px 51px;
+  padding: 14px 16px 18px 51px;
   font-size: 15px;
   color: var(--text-2);
   line-height: 1.78;
