@@ -180,5 +180,13 @@
   "category": "Mind and Human Nature",
   "summary": "A practical ancient philosophy built on one foundational question: what is genuinely within your control, and what is not? From Epictetus to Marcus Aurelius, Stoicism offers tools for equanimity, resilience, and purposeful action that are as applicable today as they were in ancient Rome.",
   "concept_count": 8
+  },
+  {
+  "id": "cold_war",
+  "title": "The Cold War — How the World Split in Two",
+  "category": "History and Culture",
+  "summary": "The Cold War was a global rivalry between the United States and the Soviet Union that reshaped politics, war, technology, and daily life without turning into a direct full-scale war between them. From the ruins of World War II to the collapse of the Soviet Union, it divided the world into competing blocs defined by ideology, nuclear fear, proxy wars, and struggles for influence.",
+  "concept_count": 9
   }
+
 ]

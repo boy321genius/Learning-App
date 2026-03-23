@@ -723,79 +723,171 @@ async function renderDeepDive(topicId, conceptId) {
     return;
   }
 
-  const concept     = topic.concepts[conceptIndex];
-  const cc          = catColor(topic.category);
+  const concept = topic.concepts[conceptIndex];
+  const cc = catColor(topic.category);
   const alreadyRead = isConceptRead(topicId, conceptId);
-  const needsRev    = isNeedsReview(topicId, conceptId);
-  const hasNext     = conceptIndex < topic.concepts.length - 1;
+  const needsRev = isNeedsReview(topicId, conceptId);
+  const hasNext = conceptIndex < topic.concepts.length - 1;
   const nextConcept = hasNext ? topic.concepts[conceptIndex + 1] : null;
+
+  const sections = Array.isArray(concept.sections) && concept.sections.length
+    ? concept.sections
+    : [{ title: 'Overview', body: [concept.summary || ''] }];
 
   app.innerHTML = `
     <div class="screen deepdive-screen">
-      <header class="app-header" style="background:linear-gradient(180deg,var(--primary-tint),var(--bg))">
-        <button class="back-btn" id="back-btn">&#8249;</button>
+      <header class="app-header deepdive-header">
+        <button class="back-btn" id="back-btn">&#8249; Back</button>
         <h1 class="header-title">${escapeHTML(concept.title)}</h1>
-        <div style="width:40px"></div>
+        <div style="width:60px"></div>
       </header>
-      <div class="deepdive-content">
-        <div class="breadcrumb-chip">${escapeHTML(topic.category)} &middot; ${escapeHTML(topic.title)}</div>
-        <div class="deepdive-label">
-          <span class="deepdive-label-text">DEEP&#8209;DIVE</span>
-          <span class="deepdive-label-count">${concept.sections.length} sections</span>
+
+      <div class="deepdive-shell">
+        <section class="deepdive-hero" style="border-color:${cc.g1}22">
+          <div class="deepdive-kicker-row">
+            <div class="breadcrumb-chip">${escapeHTML(topic.category)} &middot; ${escapeHTML(topic.title)}</div>
+            ${needsRev
+              ? '<div class="deepdive-status-pill deepdive-status-review">&#8634; Review</div>'
+              : alreadyRead
+                ? '<div class="deepdive-status-pill deepdive-status-read">&#10003; Read</div>'
+                : ''}
+          </div>
+
+          <div class="deepdive-eyebrow">DEEP&#8209;DIVE</div>
+          <h2 class="deepdive-title">${escapeHTML(concept.title)}</h2>
+
+          <div class="deepdive-meta">
+            <div class="deepdive-meta-pill">Concept ${conceptIndex + 1} of ${topic.concepts.length}</div>
+            <div class="deepdive-meta-pill">${sections.length} section${sections.length !== 1 ? 's' : ''}</div>
+          </div>
+        </section>
+
+        <div class="deepdive-sticky-nav-wrap">
+          <div class="deepdive-nav-top">
+            <div class="deepdive-nav-label">Jump to section</div>
+            <div class="deepdive-nav-progress" id="dd-nav-progress">1 / ${sections.length}</div>
+          </div>
+
+          <div class="deepdive-section-nav" id="deepdive-section-nav">
+            ${sections.map((sec, i) => `
+              <button
+                class="dd-nav-chip ${i === 0 ? 'active' : ''}"
+                type="button"
+                data-index="${i}">
+                <span class="dd-nav-chip-num">${String(i + 1).padStart(2, '0')}</span>
+                <span class="dd-nav-chip-text">${escapeHTML(sec.title)}</span>
+              </button>
+            `).join('')}
+          </div>
         </div>
-        ${concept.sections.map((sec, i) => `
-          <div class="dd-section ${i === 0 ? 'open' : ''}" id="dds-${i}">
-            <div class="dd-section-header" data-section="${i}">
-              <div class="dd-section-left-bar"></div>
-              <span class="dd-section-num">${String(i + 1).padStart(2, '0')}</span>
-              <span class="dd-section-title">${escapeHTML(sec.title)}</span>
-              <span class="dd-section-toggle">${i === 0 ? '&#9662;' : '&#9656;'}</span>
-            </div>
-            <div class="dd-section-body ${i === 0 ? 'open' : ''}" id="ddb-${i}">
-              ${sec.body.map(p => '<p>' + escapeHTML(p) + '</p>').join('')}
-            </div>
-          </div>`).join('')}
+
+        <section class="deepdive-panel" id="deepdive-panel"></section>
+
         <div class="deepdive-actions">
           ${needsRev
             ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as reviewed</button>'
             : !alreadyRead
-              ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as Read</button>'
-              : '<div class="already-read-badge">&#10003; Already Read</div>'}
+              ? '<button class="cta-primary-btn" id="mark-read-btn">&#10003; Mark as read</button>'
+              : '<div class="already-read-badge">&#10003; Already read</div>'}
+
           ${hasNext
-            ? '<button class="cta-next-btn" id="next-concept-btn">Next: ' + escapeHTML(nextConcept.title) + ' &#8594;</button>'
+            ? '<button class="cta-next-btn" id="next-concept-btn">Continue without marking &#8594;</button>'
             : ''}
-          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Back to ${escapeHTML(topic.title)}</button>
+
+          <button class="cta-secondary-btn" id="back-topic-btn">&#8592; Exit deep-dive</button>
         </div>
       </div>
-    </div>`;
+    </div>
+  `;
 
   document.getElementById('back-btn').addEventListener('click', () =>
     navigatePush('#topic/' + topicId + '/' + conceptIndex));
+
   document.getElementById('back-topic-btn').addEventListener('click', () =>
     navigatePush('#topic/' + topicId + '/' + conceptIndex));
 
   const mrb = document.getElementById('mark-read-btn');
-  if (mrb) mrb.addEventListener('click', () => {
-    if (needsRev) clearNeedsReview(topicId, conceptId);
-    markConceptRead(topicId, conceptId);
-    if (hasNext) navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
-    else         navigatePush('#topic/' + topicId + '/' + conceptIndex);
-  });
+  if (mrb) {
+    mrb.addEventListener('click', () => {
+      if (needsRev) clearNeedsReview(topicId, conceptId);
+      markConceptRead(topicId, conceptId);
+      if (hasNext) navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1));
+      else navigatePush('#topic/' + topicId + '/' + conceptIndex);
+    });
+  }
 
   const ncb = document.getElementById('next-concept-btn');
-  if (ncb) ncb.addEventListener('click', () =>
-    navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1)));
+  if (ncb) {
+    ncb.addEventListener('click', () =>
+      navigatePush('#topic/' + topicId + '/' + (conceptIndex + 1)));
+  }
 
-  document.querySelectorAll('.dd-section-header').forEach(hdr => {
-    hdr.addEventListener('click', () => {
-      const i    = hdr.dataset.section;
-      const body = document.getElementById('ddb-' + i);
-      const tog  = hdr.querySelector('.dd-section-toggle');
-      const open = body.classList.toggle('open');
-      document.getElementById('dds-' + i).classList.toggle('open', open);
-      tog.innerHTML = open ? '&#9662;' : '&#9656;';
-    });
+  const panel = document.getElementById('deepdive-panel');
+  const chipEls = Array.from(document.querySelectorAll('.dd-nav-chip'));
+  const progressEl = document.getElementById('dd-nav-progress');
+
+  function renderActiveSection(index, shouldScrollPanel) {
+    const sec = sections[index];
+    const body = Array.isArray(sec.body) ? sec.body : [String(sec.body || '')];
+
+    panel.innerHTML = `
+      <div class="dd-panel-head">
+        <div class="dd-panel-num">${String(index + 1).padStart(2, '0')}</div>
+        <div class="dd-panel-heading-wrap">
+          <div class="dd-panel-kicker">Section ${index + 1}</div>
+          <h3 class="dd-panel-title">${escapeHTML(sec.title)}</h3>
+        </div>
+      </div>
+
+      <div class="dd-panel-body">
+        ${body.map(p => `<p>${escapeHTML(p)}</p>`).join('')}
+      </div>
+
+      <div class="dd-panel-controls">
+        ${index > 0
+          ? '<button class="dd-panel-btn" type="button" id="dd-prev-section">&#8592; Previous section</button>'
+          : '<span class="dd-panel-spacer"></span>'}
+
+        ${index < sections.length - 1
+          ? '<button class="dd-panel-btn dd-panel-btn-primary" type="button" id="dd-next-section">Next section &#8594;</button>'
+          : '<button class="dd-panel-btn dd-panel-btn-primary" type="button" id="dd-finish-reading">Finish reading</button>'}
+      </div>
+    `;
+
+    chipEls.forEach((chip, i) => chip.classList.toggle('active', i === index));
+    if (chipEls[index]) chipEls[index].scrollIntoView({ inline: 'center', block: 'nearest' });
+    if (progressEl) progressEl.textContent = `${index + 1} / ${sections.length}`;
+
+    const prevBtn = document.getElementById('dd-prev-section');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => renderActiveSection(index - 1, true));
+    }
+
+    const nextBtn = document.getElementById('dd-next-section');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => renderActiveSection(index + 1, true));
+    }
+
+    const finishBtn = document.getElementById('dd-finish-reading');
+    if (finishBtn) {
+      finishBtn.addEventListener('click', () => {
+        document.querySelector('.deepdive-actions')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    }
+
+    if (shouldScrollPanel) {
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  chipEls.forEach((chip, i) => {
+    chip.addEventListener('click', () => renderActiveSection(i, true));
   });
+
+  renderActiveSection(0, false);
 }
 
 // ============================================================
@@ -1000,4 +1092,3 @@ async function init() {
 }
 
 init();
-
