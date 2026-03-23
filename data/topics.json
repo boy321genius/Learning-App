@@ -187,6 +187,13 @@
   "category": "History and Culture",
   "summary": "The Cold War was a global rivalry between the United States and the Soviet Union that reshaped politics, war, technology, and daily life without turning into a direct full-scale war between them. From the ruins of World War II to the collapse of the Soviet Union, it divided the world into competing blocs defined by ideology, nuclear fear, proxy wars, and struggles for influence.",
   "concept_count": 9
+  },
+  {
+  "id": "israeli_palestinian_conflict",
+  "title": "The Israeli-Palestinian Conflict",
+  "category": "History and Culture",
+  "summary": "The Israeli-Palestinian conflict grew out of competing national movements, imperial rule, and conflicting promises made during and after World War I. Over more than a century, it has passed through phases of partition, war, occupation, uprisings, failed peace efforts, and repeated Gaza wars, leaving deep scars on both societies and shaping politics across the Middle East and the wider world.",
+  "concept_count": 9
   }
 
 ]
