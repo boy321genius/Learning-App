@@ -201,6 +201,13 @@
   "category": "History and Culture",
   "summary": "The Panama Canal turned a narrow strip of Central America into a shortcut that reshaped global trade routes and great‑power strategy. From failed French schemes and U.S. control of the Canal Zone to Panamanian sovereignty, expansion for megaships, and climate‑strained water supplies, its story shows how engineering, empire, and environmental change can converge in a single chokepoint.",
   "concept_count": 9
-}
+  },
+  {
+  "id": "beer_for_beginners",
+  "title": "Beer for Beginners",
+  "category": "History and Culture",
+  "summary": "Beer menus and bar conversations are easier to navigate than they look once you understand what beer is made of, how styles differ, and how to describe what you like. This topic takes a complete beginner from ingredients and families through flavor reading, serving formats, and confident ordering.",
+  "concept_count": 5
+  }
 
 ]
