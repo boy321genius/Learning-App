@@ -208,6 +208,13 @@
   "category": "History and Culture",
   "summary": "Beer menus and bar conversations are easier to navigate than they look once you understand what beer is made of, how styles differ, and how to describe what you like. This topic takes a complete beginner from ingredients and families through flavor reading, serving formats, and confident ordering.",
   "concept_count": 5
+  },
+  {
+  "id": "wine_for_beginners",
+  "title": "Wine for Beginners",
+  "category": "History and Culture",
+  "summary": "Wine lists and wine conversations become far less intimidating once you understand what wine is made of, how the main families differ, and how to describe what you like. This topic takes a complete beginner from grape to glass, covering ingredients, style families, flavor reading, serving conditions, and confident ordering.",
+  "concept_count": 5
   }
 
 ]
