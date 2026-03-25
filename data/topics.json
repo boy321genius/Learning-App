@@ -215,6 +215,13 @@
   "category": "History and Culture",
   "summary": "Wine lists and wine conversations become far less intimidating once you understand what wine is made of, how the main families differ, and how to describe what you like. This topic takes a complete beginner from grape to glass, covering ingredients, style families, flavor reading, serving conditions, and confident ordering.",
   "concept_count": 5
+  },
+  {
+  "id": "base_spirits_for_beginners",
+  "title": "Base Spirits for Beginners",
+  "category": "History and Culture",
+  "summary": "Whiskey, rum, tequila, vodka, gin, and brandy all start with the same basic process but produce completely different results. This topic explains distillation, walks through every major spirit category, and ends with how to order and describe what you like.",
+  "concept_count": 6
   }
 
 ]
