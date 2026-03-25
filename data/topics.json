@@ -222,6 +222,13 @@
   "category": "History and Culture",
   "summary": "Whiskey, rum, tequila, vodka, gin, and brandy all start with the same basic process but produce completely different results. This topic explains distillation, walks through every major spirit category, and ends with how to order and describe what you like.",
   "concept_count": 6
+  },
+  {
+  "id": "cocktails_for_beginners",
+  "title": "Cocktails for Beginners",
+  "category": "History and Culture",
+  "summary": "Every cocktail follows the same basic architecture, and understanding it turns any bar menu into something readable and predictable. This topic covers how cocktails are built, the families they belong to, the specific drinks that appear everywhere, and how to order with confidence.",
+  "concept_count": 5
   }
 
 ]
